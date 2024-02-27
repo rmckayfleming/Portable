@@ -1,0 +1,1198 @@
+* December 29th, 2023
+- Started reading Steve Jobs and The NeXT Big Thing. It came out in 1993, so still sort of in the middle of the NeXT story, but should be interesting to read about Jobs during his lost years. Very relevant to my story today. Reading it was getting me kind of excited because I feel like I need to chart a new narrative for myself, and I haven't read any biographies in awhile. I think I forgot how much of an impact bios had on me. In part because they are stories of people who have similar interests as myself.
+- Alright! Just got back from a walk (without the dog, she's at daycare), and was thinking about Cyfer. I had some good thoughts about it last night.
+  - I was looking at the wikipedia page on wikipedia and wikis. Very meta. It's kind of funny that I keep coming back to wikis and marrying them with a programming language.
+  - I think it's because they seem like an ideal information environment to me. They consist of a top level of names standing in for abstract objects of properties. In the case of wikipedia, the primary objects are "pages" which have content, but of course there are others.
+  - The thing with wikis is that they're centralized! Whereas I think I want a more decentralized wiki.
+  - But the mapping is nonetheless the same. We'll start with named abstract objects which have properties. Then we can just start adding all of the concepts that we've been thinking about and start linking them together. That'll be interesting since it's a very freeform method of development.
+    - And wikis are more general purpose, lots of people who might not program still create information graphs of text.
+- To keep going on this, there are a few things I need to figure out though.
+  - The first is that while I can render content, I don't really have a way to interact with it in a meaningful way. So I need a bit of a web framework. That is, generating and submitting forms. Or, AJAX and websockets. It's kind of nebulous.
+  - I'll also need to render syntax somehow (ideally into something like codemirror).
+- I should think about the interface a little bit as well.
+  - I can start with a sidebar that shows all of the named abstract objects. Eventually, I expect that to get too big, at but I won't have that problem for awhile.
+  - The right hand side will be a rendering of the abstract object, which can be shown as a list of properties and property values. The properties and property values can just be Lisp primitives for now. Then we need a big button on the left saying "New Object".
+  - After that would be adding "New Property".
+- Okay, have a top level, and an idea of an abstract-object. Need to add the button I guess.
+  - Hmm, this requires some thought. Ideally, it should render something like a modal.
+  - I think I might need to refactor this response generation a bit...
+  - Like, the web server should serialize the response, the response being some object (such as HTML).
+  - Response is the final object.
+- Hmm, I think I'm having trouble abstracting requests and responses.
+  - It's just an interpreter bro! What's the DSL?
+  - A path is just an identifier. Think of that as denoting some object to be called.
+  - There are a few different methods: GET, POST, PUT/PATCH, DELETE. They are called with the object, and some parameters.
+  - So, we resolve the name to an object, then we call a specific method on it.
+    - A router resolves a path to an object, then the server invokes the correct http method on it.
+    - The HTTP methods should return an object to be rendered. Rendering is a generic function specialized on mime-type I guess.
+- Okay, have that working. When the router returns nil, it calls http-get specialized on null.
+- Just need a way to build response though.
+- A response starts with a status code. Maybe create methods for each of them?
+- Alright, cleaned up the server a bit. Now we have methods to create responses (respond-with, redirect-to, and render). redirect-to and render are generic methods, so you can customize those.
+- Oh, just had a thought. If you navigate to a page that doesn't exist, we should render a response that allows you to create said page.
+  - That means having an "undefined page" page. And also an action for POST to create it.
+- God REST is such a stupid paradigm. The path identifies an object, GET means "give me some representation of this object" (with query params clarifying how you want it rendered). DELETE obviously means "delete the object denoted by this identifier". But then you have POST, PUT, and PATCH and they're nonsensical.
+  - Okay, so reading the MDN docs a bit, PUT is idempotent whereas POST is not.
+  - So I'd rather explain them as follows: GET means give me a representation of the object identified by the URI. POST means, call the object identified by URI with data. PUT means replace the object identified by URI with this data, and PATCH means "here's a set of instructions to update the object denoted by this URI".
+  - Ah my problem is with RESTful/CRUD, that's where it never made any sense to me.
+  - Right, so when you submit a form it sends a body encoded in application/x-www-form-urlencoded (or multipart/form-data). And notably, forms are just key/values. So another form of object representation.
+    - Can also be text/plain apparently.
+    - Also, x-www-form-urlencoded is essentially the same as a query string.
+- I guess we can treat the URI as essentially a symbol then. POST means call it, PUT means replace it, PATCH means update it, DELETE means delete it.
+  - Only thing is, everything is text, so no numbers/symbols,etc.
+    - Actually, that's not a bad thing for now. Since it means that every key is a property, and every value is text. We'll need to layer on other object types later.
+  - So CLACK unwraps the form as :body-parameters on the request. Actually, I wonder if that's LACK?
+  - Oh, LACK provides a make-request function which creates a struct for the request... maybe I should use that instead?
+  - Oh lol, it uses another library called fast-http to parse the http body.
+    - And that handles multipart and form parsing from the looks of it.
+  - Well, I should be able to import and reexport the request methods from lack/request.
+
+* December 28th, 2023
+- Went to the mall this morning. Bought Super Mario Wonder! Also, stopped at Toys R Us, because Sarah wanted to look at baby stuff. And we ended up buying two more Lego sets lmao. Got the other Indiana Jones set, and the hogsmeade harry potter set (which is winter themed, so will become a Christmas Set).
+- Was feeling sad last night, and a bit today too. I'm not sure what I'm doing with my life or why I'm doing anything at all. And at the same time, I feel bad about what I am doing and like I'm just doing the same thing day after day, thinking the same thoughts, and failing in my relationships. Like I sit at this computer, and think the same damn things without any idea why I'm doing it. And I can barely think of anything else. Like, I want to play video games. But do I? No. I'll be thinking about the fucking computer.
+  - There's also so much I should be doing otherwise. Like, I could be researching the Hawaii trip. Or planning out dinners for the week. But no. I don't think about those things.
+  - And I think despite having fun at the computer (maybe only 50% of the time), I can't help but wonder... why? Why am I thinking about this so much? And what am I even building? It's all so vague. And I don't know to what end.
+  - I don't have a narrative for my life anymore, and any other one I come up with feels meaningless and arbitrary.
+  - I feel so disconnected with people too. Like I'm not interested in their lives, or rather, I can't get my brain to like... actively listen to them and take an interest in their lives? And then it feels like I'm being a bad "whatever".
+  - And I think those feelings all intertwine in that the project I'm working on is niche, and I don't know what to talk about, or who to talk to it about, so it's just this thing I'm doing in secret, and so again we ask. Why?
+- I think I'm missing the collaborative aspect of working on something bigger than myself. Something where I'm working with people with a shared interest in achieving the goal. I'm definitely not getting that from work. And the thing about getting a different job (apart from the hurdles in getting one in the first place), is that for all it is said to be, the actuality could be not what I want.
+- I've also been using THC every day... at least my sleeps have been good. It doesn't seem to effect my thinking too much. The ups and downs are the same on it as off of it. But it's become a habit. And again... I feel bad about it.
+- One thought I had is that I should probably set a schedule for myself. One of the main things being to plan my schedule for the week in earnest. Like, we've kind of stopped watching movies. But I wanted to set up like a schedule of movies to watch and when rather than on a whim. I can probably do the same with my other interests. I think part of my feelings stem from the fact that sitting at the computer results in the same thing every day. And so I only have like... one interest being entertained at a time.
+  - For other hobbies, I need to give myself space to engage in them. For programming, I actually need to constrain it.
+- Gotta remember to pay off Flexiti for about $6000 since the no interest promo expires on the 24th of January.
+- Hmm, let's create the interface for the wiki. Let's just call it wiki for now.
+- Alright, I have the beginnings of a wiki style layout. Looks pretty cool. The sidebar needs some work. But it's decent inspiration.
+  - So that's essentially the template. Next thing is to create the root object.
+  - We should start with an empty CyferSpace. (That is, we should render the empty states).
+  - Then, we need a big button that says "New Symbol".
+    - When you click it, it asks for a name.
+    - When you click submit. It creates it and navigates to it.
+  - Then, we need essentially the same thing for those objects to create properties.
+  - Then, we need to let you edit the value of properties.
+- An alternative navigation paradigm would be to introduce a key command to pull up a prompt, and when you enter a symbol name it takes you there. We can add commands for creating as well. (Like /new "Object").
+- That took a bit longer than I wanted it to. CSS just doesn't work for my mental model. It feels like a bunch of magic words to make it do what I want.
+
+* December 27th, 2023
+- Hmm, switch seems to have stopped working again. Really weird. I should look at getting someone to install Cat7...
+  - Restarted it and it's fine now.
+- Also, I've been downloading stuff from Usenet, and it's currently only doing 5MB/s. Very odd.
+  - Ah it's on MaximumUSENET for these articles.
+  - Maybe I should get Frugal Usenet.
+  - Server hasn't shut down though. It's still showing 26 days of uptime.
+- Took the dog to daycare this morning, then came back and started on the big Lego Indiana Jones set. Finished the first part (of three) which includes the boulder. It's pretty cool, it's mounted to a mechanism so that the boulder doesn't just roll right off the thing.
+- We've got the ultrasound today. Hopefully comes back clean and there's no issues with the baby.
+- Saw this tweet: https://twitter.com/patio11/status/1739801838386336007 (this morning I think).
+  - Someone else I follow had quote tweeted it. Oh right, Emmett Shear. He said "A good thread on how teaching Agency works in practice".
+  - "You'd be surprised by how much of management, consulting, teaching, senior ICing, etc. is: 'I want to X.' 'Have you written down a plausible plan to get to X with steps listed in order?' 'No.' 'Alright, let's sketch it. OK step one: are you going to do it?' 'Why would I do that?'"
+  - "Generally the person doesn't sound that silly or pathologically helpless in the meeting. Sometimes they are a committe of extremely intelligent people, because only a large and well-resourced organization acting in concert can reach the heights of no-agency-exists-anywhere." Lol
+  - "I have scheduled a performance review for the director of hiring people who manage people that do feasibility studies into best practices for doing step one! I deserve a promotion! Again, doesn't sound quite that silly when you're spending literally tens of millions doing it."
+  - "While I'm on the subject of questions not asked. 'How do you plan to X?' 'I don't know.' 'Have you read how to X?' 'Nothing responsive on Google.' 'Has anyone ever Xed before?' 'Probably yes.' 'Have you talked to them about X?' 'Talked to who?' 'Seriously name one person any...'"
+  - "'Well I suppose this team at this company might have Xed.' 'Great who leads that team go talk to them.' 'I don't know who leads that team.' 'And you searched LinkedIn and Twitter before telling me that because of course you would.' 'LOL what.' 'OK in future that is a thing'"
+  - "'But today OK let's navigate that org by starting with one well-placed person inside of it. Literally anyone works.' 'Can you intro me to them?' 'Quite plausibly but this is a really important skill can you find one person who works there.' 'Uh I could email customer service.'"
+  - "'Wow I am impressed that is actually the tiniest possible spark of greatness. But could you start somewhere more efficient than going through CS like say a staff engineer.' 'I don't know any.' 'Does GitHub or YouTube or any conference speaker list or...'"
+  - "'Ok supposing I can name someone then what.' 'Send an email.' 'What should that email say?' 'It can say so many things, but two important ones are your name and that you want to talk about their experience with X.' 'Will they want to talk about X?' 'Likely; we will read reply.'"
+  - "This is devolving into Kids Get Off My Lawn and I don't want to be overly cynical so let me underline:
+    - the tiniest measurable amounts of agency are surprisingly rare
+    - you need to budget for more effort than you expect teaching people basic professional skills'"
+  - "'If people who have no greater connection to the field other than living in the same country and reading the NYT cannot name them, then they read their own email and reply to lots of it.' is a useful lesson to internalize. (Also true of many people who are well-known)."
+    - I had a hard time parsing this at first, but he essentially says "if your mom has never heard of them, they're not famous enough to not read their own email".
+  - Why this resonated with me: 1) Has some good tips about searching out engineers, 2) it's a reminder that I should reach out to people who can help me more often.
+    - My issue has been not even thinking that it's worth reaching out to people. Like I'd do that for business, but not an engineer. Strange.
+- Another good tweet: https://twitter.com/Duderichy/status/1740036664779760120
+  - It's a quote tweet of Ramit Sethi about this guy on Reddit who has like $15M in networth and can't justify buying a flashy sportscar (lmao).
+  - "at some point you have to realize you can just do things because you want to. you dont need to justify them, you need to realize that you want to do something and you can afford them. this extends beyond financial things, people forget as an adult they can just chose to do things"
+  - Yup.
+- I think why those last two resonate is that I just don't feel agentic at times. But it's odd, because I can be. Most of the things holding me back are internal, and often super-ego motivated ("what would other people say").
+  - Like, I've known since I was a kid that I was different and that I wanted freedom. But now that I have the finances for it, I'm like "oh no, I'm so constrained!" lmao.
+- The other day I was thinking about how I need to let go and stop grasping at Cyfer. Like, what if I just abandon my attachment to it. And, although I've ended up not doing that, that thought process seems to have helped me with it anyways because I've been having more fun with it the past few days.
+  - It's like, it's hard to enjoy something when you're tense, and when you're striving for something or grasping at it, that's pretty tense! You need to let go a bit, it's all fine, there's no stakes. It's not fun being tense. And by relaxing it's become more fun.
+  - Part of that might have also been me recognizing that if no one knows what I'm doing, there aren't any stakes anyways. Like, even if I wanted this to be BIG, more likely than not it won't be and it'll just be some niche thing. So like, why so serious bro? Just have fun.
+- Reading a bit of "A Theory of Objects" and was curious about used copies. Turns out they're like US$150 plus shipping. Oof.
+  - It's an interesting book, I've just read through most of the description of object vs class systems, and I guess the rest of the book is essentially a formalization of them all as an Object Calculus in a similar way that lambda calculus is a formalization of procedural application.
+- Another way to look at my struggles is that I've been trying to define things in a bottoms-up approach when a lot of my ideas are top-down. And so I've been struggling to connect them. And that's a natural struggle because explaining a system tends to happen top-down (such as a tutorial/book), but the implementation is necessarily bottoms up. And because I've been writing code, I keep ending up thinking about bottoms-up. But maybe I should clarify the top down.
+  - Cyfer is a system of Abstractions.
+  - New Abstractions are created out of existing Abstractions.
+  - Abstractions have an Identity. That is they are distinguishable from each other.
+  - Obviously, to make abstractions out of abstractions implies some basic building block abstractions.
+  - The most basic Abstraction is the Atom. It is conceptually an abstraction with no other properties.
+  - There are a bunch of different Atoms which we call values:
+    - Nil
+    - True/False
+    - 0,1,2,3...
+    - ...-2,-1,0,1,2...
+  - These values are further distinguishable by what we call a Type.
+    - Nil is the only value of the type Nil
+    - True and False are the two values of the type Boolean.
+    - 0,1,2,3... are the values of the type Natural
+    - ...-2,-1,0,1,2... are the values of the type Integer
+  - Type is the first property we give Abstractions. As we'll see, it's more than just a name though.
+  - The first compound Abstraction we'll consider is the Tuple. A Tuple has N properties (other than Type), with the properties being 0 through N-1.
+- Okie dokie, back from the ultrasound. No more cysts in the brain that they can see, so they went away (I guess once you've had the pre-screening, then those aren't a problem, they're just like fluid). Also, debris is still in the stomach, but it's relatively smaller (that is, the baby has gotten bigger, and the debris has not). It should start being flushed out around 24 weeks (we're 22), which is when that system kickstarts I guess.
+- And of course, spent much of the drive thinking about Cyfer stuff. Happily though I've managed to check my attitude so that if Sarah is talking, I'm not bitchy. Like they're just recurring thoughts in my head, and I haven't resolved them so far, how can I expect to do so in the car anyways?
+  - I'm kind of confused/concerned about type. Is my understanding correct?
+  - Was just googling a bit about type vs class and the distinction is that class is the implementation, type is the interface (that is, what requests does an object respond to)... and that sounds a lot like behaviour/function.
+    - It's like the dispatch function.
+    - I guess like, one is concrete and the other abstract. We only really need concern ourselves with the concrete types (as the abstract ones are more concerned with static types I believe).
+- Had sex last night for the first time in what feels like forever. Was good too. Sarah seems a bit more into it as well, she came by my office earlier today showing her other new set of lingerie.
+- Scala and C# are examples of languages with unified type systems, that is, everything inherits from Object (in the case of C#). That's one way C# stands apart from Java because Java has the primitive types that are not Objects.
+- Eh, I'm probably overthinking things. Because you can always define new formalisms in a given system. Hell, there are always new types of Type Systems.
+- It's funny, I started talking above about top-down vs bottom-up, and said "I should clarify the top down" and then immediately started talking about things bottom up lmao.
+  - I guess because you kind of need the base to define the top level in.
+  - But really, I should think about the top level in terms of "how do you interact with the system in the common case".
+  - In the common case, you provide an interpreter with literal data and then it returns some other literal data.
+  - There are "things" called Abstractions. An abstraction melds computation and data.
+- Why am I afraid of calling them Object? Is it because that's a bit of a dirty word these days?
+  - I mean, you can call it Any.
+  - But part of the issue is conflating Type and the thing itself.
+- We could have a convention whereby properties are necessarily public. That is, (:prop A) returns the value of :prop on A. Whereas (A :prop) may not do such a thing.
+- Actually, something I think would be nice is that if you call (1 a bunch of variables), it throws an error because the procedure for Number returns Nothing (and so is an error).
+  - Hmm, maybe they have a property "call". And if they don't have that property, we look it up on their type.
+  - "call" is how the message should be handled.
+  - We can also just call it "dispatch".
+  - Or how about "eval"? Or "apply", actually I think that's defined for JS. Functions have a property "apply".
+- Okay, so we have a property "apply", we also need Type.
+  - Alright, so we just say these are primitive properties.
+  - There is "apply" which is how the Abstraction is "applied".
+    - Right, "call" calls "apply" with the object itself as the first argument. (just like JS where .apply(a, b, c) sets a to be the value of this).
+  - There is a property "is-a" which determines where it comes from.
+  - By default, "apply" throws an error I guess. (whereas @(...) creates an abstraction with Syntax as the apply?).
+  - Numbers are obviously fine with the "throws an error".
+    - Really, all of the numbers already "exist", we just lazily instantiate them.
+  - get is reflective, so it belongs in the implementation.
+- Everything is an Abstraction. Then we have the Atoms (which do not have apply defined), and the data structures (which provide indexed access), and generic procedures (which make decisions based on their arguments).
+- God dammit. I'm feeling confused again. I think I really need to write sample code... and then categorize from there.
+- Hmm, JS has `call` defined for Function.
+  - The difference between it and `apply` is similar to funcall and apply in CL. That is, call takes individual arguments, apply takes a list.
+- Maybe I should just rip off JS without the bad bits...
+  - There's no . syntax for instance. So that means using get and set!. And basic objects implement basic property lookup.
+  - Maybe we should label is-a and apply as <is-a> and <apply> to make them look different.
+- Hmm, like JS Function when used as a constructor should take Syntax. I guess that'd be its primary property.
+  - Well, a procedure would be a function without arguments.
+  - Well, actually maybe a procedure would take an environment (@).
+- Which things are atoms? Atoms are not callable.
+- Eh, this is kind of annoying to like... replicate the Object hierarchy in CLOS.
+  - Then lets build them out of a single root class.
+- I think part of the issue is that if everything is Object, it sort of implies that everything can be invoked. But that's not true.
+- Mutation must come later then?
+- I think the idea is that Objects are composed out of atoms and other objects.
+  - And notably, because you can't set properties on atoms (they are immutable), then they can be optimized down. And their type can be hard coded.
+- Hmm, what if we defined method invocation like this?
+  - (1 + 2) where + is defined as a generic function.
+  - That is, an object when given a generic function and a bunch of arguments will invoke the generic function on itself and the remaining arguments.
+- Okay, was thinking about this a bit more. I think I need to stop worrying so much about syntax, primitives, etc. It's thinking about those that get me all wrapped up in the implementation. Instead, we'll start with Abstract Objects. So Cyfer is a system that lets you build and work with AbstractObjects. An AbstractObject is a collection of properties. Cyfer, the interactive system, is in essence a wiki. The "pages" are abstract objects, the name being a way to identify the abstract objects.
+  - Cyfer maps names to Abstract Objects. Like a browser.
+  - We can create Abstract Objects (without any properties) by adding a name.
+  - We then create an Abstract Object called "Property". And give it a description ("description" being a property).
+  - We then create Abstract Objects for all of the primitive data types that we want.
+- Yea, this makes sense. By working on Lisp, I'm focusing too much on code and less the overall design. All I need to implement is a simple top-level mapping names to "abstract objects" which have "properties". Then we can render it as a wiki. When you enter an Abstract Object name in the browser, it renders the properties.
+  - Once we have that, we start adding the terms we want in the language. They're just names for now after all! We'll slowly fill in the details.
+- We can start with a simple text prompt in a browser textarea and go from there. Doesn't need to be the final syntax homie.
+  - Should be interesting building something to do this in CL actually.
+- Make the page render as a bunch of sections for each property to render its value.
+
+* December 26th, 2023
+- Good Christmas! Talked to Mom and Auntie. I guess the Howards are intending to come to the shower (staying at Caitlin's), weather dependent of course.
+- The other day I was getting kind of frustrated because I was going around in circles with Cyfer, and it's really annoying when that happens. But, I was just thinking that I should be taking more deliberate breaks. Like, I think about stuff when walking right? Most of the time when I start going around in circles, it's because I've probably been sitting on something for awhile and not noticed how long I'd been sitting there. That's a sign that I need to move on and do something else. But I don't tend to notice that in the moment, so set reminders for myself. Also, that's probably going to be forced on me with a baby anyways. Like, I need to get used to working in smaller chunks of time anyways. So having a kid is probably a good forcing function.
+- Based on where I was last, I was thinking: Nothing, and then Atom is the top type. That is, everything that is a "thing" is an Atom. The prototypal Atom is an object without any properties. The only property it really has is that it is itself. It has no prototype (since it's the top type).
+  - A Property then is an Atom with a name. (Whereas Text is better understood as a collection.)
+  - I think this is where I was getting tripped up because I was trying to abstract them and getting confused because how do I describe properties with properties? Was meta-circular. But really I need to come up with Axioms (no formal system works without axioms).
+- All of the numbers are atoms (they don't really have properties do they?).
+- Atoms aren't of much use by themselves though. So we combine them together. The simplest such compound object is the Tuple. A Tuple is an ordered sequence of N objects. The simplest such Tuple is the Tuple with no elements. Since it has no elements, this Tuple is special in that there's only one of it. We call this Tuple Nil.
+- The next most simple Tuple is the 1-Tuple, that is a Tuple with one element. This might not be super interesting because it's just an object that contains another object, but there are variations on this idea that will come later. We call this a Box.
+  - All of these are just terms for given Tuples.
+- We create Tuples with the primitive "cons".
+- Now we create some compound objects. The first is the Property. A Property is an object with one property: a name.
+- Somehow need to fit in Lambda.
+  - What properties does it have? In a sense it's a suspended object.
+- Well, let's just keep defining bigger objects... most of the ways we'd define the smaller objects would be different anyways.
+- Lambdas are pairs, they have a variable list (a tuple), and a body.
+- Hmm, looking at the definition of tuples in lambda calculus and am reminded that to create a Tuple, one returns an Abstraction that takes an Abstraction.
+  - Lambda variables are Atoms then. Technically, they just need to be different, the name can be removed.
+- So kind of weird that Lambdas are themselves pairs. And of course boolean numbers can be represented as lambdas.
+- So just call them Abstractions then? And they should be near the top.
+- Hmm because we have side-effects, an abstraction can be called with nothing.
+- Yea, I think everything is an Abstraction.
+  - The simplest abstraction is an Atom. Represents identity.
+- All abstractions have properties, and behaviour. Behaviour is determined by type.
+  - We can also use Atom to mean primitive essentially.
+- cons creates tuples.
+- Ah, I think where I'm getting caught up on functions is that they need a body, so that essentially necessitates literals.
+- Right, everything has properties and behaviour. Building programs is about defining properties and behaviour.
+  - Primitives have simple properties and simple behaviour.
+- It's just sort of cyclical in that the properties is a tuple. But because they have a primitive implementation, it works.
+  - (cons) => ()
+  - (cons 1) => (1)
+  - (cons 1 2) => (1 2)
+- (cons (cons a b c) (cons a b c))
+- Wait... is quote lambda? It's a deferral...
+- See, I think part of the problem with lambda is that it doesn't actually have its own notation. It means that you have to special case things. If Syntax represents behaviour, then a lambda wraps behaviour and properties (specifically, new properties). And there's an implicit creation of an environment in which to keep said properties.
+  - Hmm interesting... maybe @((lambda-list) body)? And then within the body, @ means this lambda. @1 and @2 can mean the parent scopes.
+  - Right, and that maps to "properties" meaning the actual names of variables, their bindings are defined with -get.
+- How do literals fit in?
+  - Ignore that for now I guess.
+- Lists are the next compound data structure. They are addressable by number, but so are records... But remember, lists are of a different type.
+- Then we just need objects. Which have different behaviour.
+- Oh, well we don't actually need to get to Object quite yet. We can define other primitive data structures.
+- Oh yea, text is a sequence of symbols.
+- I think an object has properties and elements.
+- Okay, added the basic data types. Now defining object. What sets an object apart from a table is that it is both a sequence and a mapping. It has associations by property and associations by number.
+- Maybe we'll define Object a bit later then. We should probably define behaviour for the various primitives and ADTs.
+- Most things should be simple. By default, they'll just throw an error.
+- Alright, that's all defined.
+- Yea, everything has a type and values. Type is synonymous with behaviour. Values are state.
+  - And of course, every type has a type, since everything is an abstraction with type and values. Really then, I wonder if it makes sense to just have everything be a pair.
+  - Where there is no Type field, we are the most primitive abstraction.
+  - Right, so @() creates a new Abstraction.
+    - And the type of the abstraction is essentially the body. That is, its type is its behaviour.
+- Okay, need to make properties deduplicate.
+- This seems good. I'm happier with where things are now. I just need to fill in the interfaces for the various ADTs.
+  - Still need to figure out what to do with Objects though.
+- Prototypal inheritance is a behavioural thing. That is, it's an abstraction that does a recursive lookup on the type.
+- So question then is, what do we do about Objects (since we want them as the root of our database essentially), and also how do we handle syntax?
+- @( means lambda. Means we can't use it for unquote splice. But that's fine. I think we should use ... as splice. ~...
+- We'll probably be able to eliminate the various CL classes at some point, but may as well keep them for now.
+- I feel like these primitive types still have properties and what not, they just kind of get boxed up. It's more of a meta style thing.
+  - Like, Objects as created by object literals act like Dictionaries (when given a property or number, they return the binding), but most other objects have to access properties via -get. And naturally, get is sort of meta, it treats the object as exactly that... an object. Whereas otherwise they are treated as actors.
+  - is-a should return the type of an object.
+  - has-a should return whether or not something has a property.
+    - The primitive types have to do a lookup some other way.
+    - And Boxed primitives essentially work by delegating all messages to the underlying value.
+      - Yea that makes sense. (cons a) creates a 1-Tuple, but there are different types of boxes.
+- Where do new and clone fit in?
+- All of the primitive objects have named and indexed properties. The rest of the difference is behavioural. And Object covers all of them. That just means that creating a new Number inherits the behaviour.
+- I mean it's kind of funny when you think of it. A Pair actually has three values, its type, its car, and its cdr. The type is usually just encoded in the address.
+- Maybe properties should be public (since anyone can create one), but then if you want to close access, you define specific symbols.
+  - Like, instead of calling ((Stack 1 2 3) :head) to get the head of the stack, you call ((Stack 1 2 3) head). That is, head is a named function that Stack created so it knows about it. Then you can call (head (Stack 1 2 3)) just as well.
+- Okay, well I think it's time to do something else. Think I'm gonna start reading Class (which I bought for myself and then had Sarah give to me for Christmas lol).
+- Also, got $50 for Best Buy and $50 for Gamestop from Lisa and Aquarius. Need to figure out what I want to get with those. Maybe Super Mario Wonder from Gamestop.
+- Ok, read a bunch of Class. Interesting book, although being from the 70s/80s I wonder how much the signals between classes have changed.
+- I read a tweet last night I think that resonated with me. It was something to the effect of "my parents live as if everything they do has no cost, doing the dishes, cleaning, etc. don't cost anything and I think there's something to that." And I think that's something I could learn. I get kind of angry when things waste my time, that I'd rather be doing something else, but yea, you just need to do those things, and doing them is good for you.
+  - Think that's another way to see "chop wood, carry water".
+- I guess that @( creates null Abstractions, but new/clone are essentially how you subclass.
+  - new gives you super after all.
+  - Hmm, actually, if @( creates a simple abstraction, then new is more akin to creating closures. And not surprising since closures capture state.
+    - Like lambdas are an abstraction for "creating an activation frame with these variables".
+    - Mmm, yea they create an environment, but they need not be captured.
+      - Oh, no lambda is all you need. Because they're first class, you can just capture the lambda. It's just that the simplest abstraction for behaviour is a sequence of instructions. When they run, they have state. A closure is categorically different in that its prototype is the enclosing environment.
+- I wonder how macros fit into this then...
+  - They're functions called with Syntax and an environment (which is just super I guess).
+  - Or rather, we could have it that macros come first...
+  - Hmm, maybe new is actually just a form of @?
+    - Another way to think of lambda is as a form of {} since that's actually what lambda does procedurally, it creates an enclosing environment with a sequence of instructions.
+    - What about @{}()? Create an abstraction with a set of names (which have a certain value by default), and then a sequence of instructions to follow when it is called.
+- An object is a mapping from keys to values (which is exactly what a function is btw).
+  - The "primitive" objects are simply those which are specialized in some way. And because they are specialized, we can represent them in a different manner.
+- Otherwise, all objects are a collection of Type and Data.
+  - Type builds on Type as Data builds on Data.
+  - Behaviour is synonymous with Type.
+    - Objects are considered similar based on how they ACT.
+- Primitive types are simply types with predefined behaviour and maybe a different internal representation.
+- Oh, maybe we could use @(), @[], and @{} to represent the most primitive abstractions. @() is the lambda abstraction and is the base of all abstractions. It's written as a phrase and then an expression defining how it operates. @[] is the simple form for a mutable vector/array. That is, it's a lambda that takes a tuple of N args, and its behaviour is that it will return a value by numbered index. @{} is the primitive for a Record.
+  - That's how we can render them that is.
+- For syntax purposes then, it may make sense to call () an expression or phrase, (a lambda is essentially an encapsulated expression).
+- Hmm, idea:
+  - @() -> this is a progn/block/do. This is the primitive for code without state.
+  - @[] -> this is a mutable array. This is the primitive for state without code, an indexable sequence.
+  - @{} -> this is the primitive for an environment, a mapping from names to state. property (keys) and values. This is a partial function. Note that it's not dynamic.
+  - Then there are some combinations!
+    - @[]() -> this is the lambda expression, a combination of code and data.
+    - @{}() -> this is a closure, the values in {} are closed over, and the body determines behaviour.
+- Wait, is Syntax just the primitive for code without state? Or rather, code as state.
+  - Well shit, then code must be '(). That is, you should be able to invoke syntax like a lambda. You pass it an environment!
+  - Right, that's why there'd be special numbers to represent specific positions. Like #1 being a part of the enclosing environment.
+- Oh that's an interesting idea, you could define the language semantics on the syntax objects. That is, the interpreter grows out of syntax invocation.
+  - Oh that's interesting, it's like creating a whole different inheritance scheme. Syntax is called with an environment and then... does something with it.
+  - Like, syntax determines lexical scoping rules. So lexical scoping is similar to prototypal inheritance.
+- Hmm, Syntax is making code first class. Which naturally is the reification of code, and turning it into data. Note that it is persistent! Because it can be serialized and restored. It's the boundary between I/O and the system at runtime. All I/O is in essence, Syntax. So of course it closes over reading/writing.
+- What's cool about this is that this trifecta of first-class control over behaviour, first-class control over state, and first-class control over persistence, is that it's all expressable in terms of a few key data types.
+- Syntax is the persistent form of the primitives. And because Syntax is first class, you can build syntax within syntax.
+- This makes databases pretty cool actually. You're essentially just building a system to execute programs/messages. You can change how syntax works by turning it into a thing that drives an interpreter. Oh right, like, we have syntax provide a function to create a variation of syntax that uses a different behaviour function. That lets you take syntax from storage, change its prototype to the interpreter, and then invoke it. Syntax by default is just a box over these primitive objects.
+  - And of course, by doing this, they're essentially working just like a macro.
+  - And boom, we're now essentially laying the foundations for the compiler/macro utilities.
+  - All encodings are, afterall, a syntax for a specialize DSL.
+- An atom is essentially, any data that has a primitive encoding. More complex objects are composed of atoms.
+- While syntax encodes data, it also is used to compress it.
+
+* December 23rd, 2023
+- Brain wave, why don't I use Clojure mode for highlighting syntax for Cyfer? It's more or less the same, at least for how I want to use it. Then I can parse it and generate objects myself.
+  - The reason this came up is that I feel like I just need to get a lot of concepts out of my head. Ones that keep banging around inside because if they aren't externalized, I'll continue to obssess over them.
+    - Core concepts like, I know there'll be "cons", and "Box", and "Tuple", and "Object", and... the names might change but I haven't meaningfully changed how I think about them.
+    - Likewise, those things will have "descriptions" and "examples", all random properties.
+    - I've been avoiding writing because it's too loose and unparseable, and writing in my own syntax because I'd need to write an emacs plugin to help write it...
+- Also, I think I have an unhealthy relationship with this whole project. Some thoughts going through my head on the walk:
+  - I'm obsessed with this. It's about the only thing I can think of, and while there are other things I want and need to do, I feel like I'm not attending to those things properly because of this.
+    - Like, talking to Sarah, I'll be thinking about this. While playing video games, I'll be thinking about this.
+  - And I'm worried that when we have a kid... I'll be thinking about this and... that just makes me feel really bad.
+- Okay, I've written down a lot of the core objects I want. Next up is some core functions I guess.
+  - Oh actually, we need an Object representing a function. Not sure what to call it.
+- I feel a lot better getting this out already. This is data that I can actually work with. Still need to figure out what to call functions though... and syntax.
+- Think I need to get lunch. Thinking thai express.
+- I'm sitting in the basement with Andreas Kling optimizing his JavsScript JIT and realized, why am I not down here programming? Also, I should not feel guilty about wanting to program! If that's what you want to do, then do it! We can play games later :)
+- So was reading the wikipedia article on abstraction, and I'm realizing that if I want to make a really new and interesting programming language, I should NOT be thinking about existing programmers (who are super opinionated and assholes). I should be targeting people who have NOT programmed before. That frees me from so much baggage. The idea I had was, why am I copying the object hierarchy of CL/Smalltalk at all? I think they should be embedded within a more logical/philosophical framework.
+  - Here's the idea. The top level of our hierarchy is not Object/Any/T, it's Abstraction.
+  - We create new Abstractions! Programming language fall into paradigms, but Cyfer allows you to implement EVERY paradigm. We are object-oriented, functional, etc.
+  - This also frees you to come up with your own formalisms!
+  - At the heart of it all, programming is about creating Abstractions.
+  - We start with Nothing.
+  - Like god, we then create something out of Nothing.
+    - The empty Abstraction, which we call Nil.
+  - The unit Abstraction, that is, creating an abstraction from a single other abstraction, is called a Box.
+  - An Abstraction composed of another abstraction is called a Box.
+- Hmm, I don't know... think I'm losing clarity.
+- This is just Lambda calculus by a different name.
+  - Yo everything is though bro.
+- An Abstraction is an Abstraction. It's the primitive recursive definition, and so is the root object.
+- Hmm that was weird. Asked if I wanted to allow TS3+ to connect when I plugged it back in.
+- When programming, we act as god. That is, our job is mostly to create something out of Nothing. This process is called Abstraction.
+  - Now, most of the time we don't actually want to create something out of nothing, that's a lot of work, so it helps to create something out of existing things.
+  - We combine Abstractions to create new ones.
+  - A CyferSpace is a collection of Abstractions that you can change.
+  - Firstly, what does a basic CyferSpace contain?
+    - It contains the truth values true and false (or yes and no).
+    - It contains the numbers (natural numbers, integers, fractions, floating-points).
+    - A way to create new things.
+
+* December 22nd, 2023
+- Finished Christmas shopping for Sarah, also got my money from PS. Need to convert it, but that ain't happening until next week.
+  - Went to the Apple store and nothing called my name. Although, I forgot that the new phones had liquid retina displays. So smooth.
+- I feel like I have to get as much of this fucking thing out of my head as possible and it feels like I'm constantly getting in the way as well. Why's this so frustrating?
+- I think Property is still the right word for words that are = to each other. That is, properties are really just interned text. However, was thinking that instead of identifier, I'll just call things Words. Properties are just a special type of Word.
+  - Huh, hadn't considered using Phrase instead of Expression: https://en.wikipedia.org/wiki/Phrase
+- I've been like, captured by this idea for so long...
+- Cool, well I can inspect things from the root...
+- I think it's time for a reader? No. What was I thinking about on the walk?
+- I'm obviously really attached to this, but maybe to move forward I have to release some attachments to aspects of it.
+- Reading The Early History of Smalltalk for inspiration, and Smalltalk 76 had 50 classes in about 180 pages which covered the full system down to Ethernet.
+  - Just ordered Smalltalk-80 The Language and the Implementation from Abebooks. Most of the PDFs of it are scans anyways.
+  - The first prototype Smalltalk was written in Basic (lol) and took AGES to compute 3 + 4.
+  - Smalltalk talks about Images, and those are clearly just persistent objects.
+- Syntax and data are different. It's data in context.
+- I think most of JavaScript's problems (outside of syntax) are 1) weak types (all of that WAT shit), and 2) undefined being a value instead of an error.
+- Honestly, should probably just start filling in the basic Objects/Types that I think are necessary.
+- I think I need to implement a reader... it'll make life easier.
+- parse is a function that returns Syntax, which is literal data.
+  - Parsing involves tokenizing the text. That is applying a series of regexes until we find one that matches.
+- God, CLOS is actually kind of annoying. Prototypal objects are just so much more straightforward to use.
+  - Like, I want to create a class called Token. Fine and good, except now I have different types of tokens such as Whitespace, Digits, Words, etc. And I want to associate specific patterns to them... except... how? I can't use a class allocation slot since I want to use the class itself to lookup said property, not an instance of it.
+  - So what do I do? I think I need to add a slot to the class itself...
+- This is really dumb. I guess I'll just have to write it a different way for now.
+  - I switched to using an ALIST for now. It works.
+  - Alright, now that we have the token list (or at least a shitty version thereof), we need to actually parse the token list.
+- Well, have most of the parser ready. Just kind of stuck now on how to handle object literals...
+  - The thing is, literals sort of belong in their own domain if you think about it.
+  - Hmm, I think it's because technically, everything is either a tuple or a primitive type.
+- Hmm, I think I'm confusing the objects as defined in the system and the primitive implementations thereof.
+  - I don't need to create the objects yet, I'm defining this reader for CL use anyways.
+  - Hmm, the tokens are the literals no?
+- Okay, well I'll just throw them all into a list prefixed by a symbol for now.
+- The idea then is that we use the parser to generate the actual objects.
+- What if we drop the pretext of putting proto on the primitive object?
+  - Everything should be an instance of object. Only different one would be primitive values which have an underlying lisp value.
+  - Number and Text are primitives (in that they have a lisp value). Property and Words don't actually though (they text slots), though Property is weird because slot definitions have properties. I guess that's a matter of unboxing.
+  - Other thing I'm struggling with is where to put proto. Should probably be on the object class no?
+  - Ah, you know, should probably just use structs.
+  - Ah, I am genius. Set proto to class-allocation for the primitives, then I can update them once it's in place.
+- Properties should probably be implemented in such a way that the Constructor keeps track of them in a property-table. So they are just Words with a special constructor.
+  - I think everything else can be implemented in terms of object.
+  - We can just create all of our words, and then since we retain references to them, we can update their prototype to be Property later.
+- Yea the prototype of the object is more of a meta property since it's a reflective action.
+
+* December 21st, 2023
+- Last work day of the year! Gotta put in my hours and should probably finish that last ticket...
+- Started playing Horizon Forbidden West, but just barely.
+  - Something odd is that when I switched to Balanced mode for graphics, it switched to 1080p120 for some reason lol. Apparently, Balanced targets 40FPS, and that's ideal for 120Hz displays, and because I have 120Hz enabled on the PS5 but the receiver isn't negotiating 4K120, then it must be jumping to 1080... Odd.
+  - Also, good news! They have motion controls while aiming! Just needed to enable it.
+- Okay, so I was thinking last night before I left that really I should be calling the thing a listener. I'm not sure if that comes from Smalltalk or Genera, but it makes more sense than REPL (which probably isn't a correct name for what I'll be making).
+  - Now trying to remember what else I was thinking about. Couldn't stop thinking about it while at the theatre.
+- Oh, well, I'll come back to that. What was really interesting about the theatre was it became super clear to me why people send their kids to dance. The nutcracker had a bunch of dancers of various ages, but a lot of kids, and it occurred to me that I'd be so fucking proud to see Evelyn up on stage like that in front of a huge audience. It's so cute.
+- I was thinking about how lambda really is the ultimate abstraction, since it denotes the creation of environments as well as instructions.
+  - Oh, that might have been what it was! Object oriented programming as a term makes little sense in the same way that procedural programming makes little sense. They are both different views of the same thing. Programming is about working with abstractions. In object-oriented programming, we say that everything is an object. Even functions are objects.
+  - Evaluation in the context of Lisp makes it clear that there are two ways to look at an abstraction: as subject and as object. The left hand side of the pair (the function, the macro) is treated as subject, the right hand side is treated as objects.
+  - Object-oriented programming shines in system definitions in that its abstraction is based on sending messages to things. That's a natural way to look at distributed communication. Where it tends to fall apart is in procedural matters. That's why you end up with classes that have verb names. And so people wrap them up with a method called "call" or something like that.
+  - With Cyfer, we see that there are two sides to every coin. Everything has two interpretations: subjectively, and objectively.
+  - An expression consists of a subject and an object. The subject determines behaviour. The objects are subject to behaviour.
+  - This maps to how language works. Most expressions are composed of a subject, a verb, and an object.
+- Objects are just a reification of environments.
+  - And it's why packages and symbols in CL feel so... weird. They're like a half-assed version of objects.
+- The other thing that occurred to me is that type determines behaviour. That is, types are procedural.
+- Biggest problem with JS is probably that undefined is a value that can be returned when really it should be a continuable error. I get why CL throws a slot unbound, because you can always continue.
+- I should read the RABBIT paper (I think that's what it was called), the first Scheme implementation, since it was implemented in Lisp.
+- You know, actually one of the nice things about playing games before going to work is that I feel very viscerally when my meds kick in. If I'm at the computer, I don't. I experienced this this morning. (Same for watching YouTube at the TV).
+- Hey hey, my used book came (Steve Jobs and the NeXT Big Thing). Interestingly it's a former library book, but it seems to be in pretty decent condition all things considered. From Salem Massachusetts.
+- Added my hours for the month and submitted, just to make sure that's out of the way.
+- Let's text Reid about Alice.
+  - Okay, sent him a message, hopefully he responds.
+- On the walk was thinking about how the Listener takes text (or maybe streams of text), and then passes it to a Parser. The Parser returns Syntax (that is, literal data composed out of primitive data types). That syntax is then passed to an Evaluator along with an object constituting the World state. The Evaluator will return the result along with the (potentially modified) World state. The Listener then prints the result (using the Printer, which converts objects into text).
+  - Interesting thing about the Printer is that raw objects just print out their literal forms, but Syntax (that is literal objects) could have properties that define indentation levels.
+- Okay, so what now? I think what I wanted to do was start implementing the beginnings of a Top Level for Cyfer. Or rather, this is the CyferSpace Compendium, which includes the Reference, Guide, etc.
+  - Right, then we can start thinking about rendering it as text.
+  - So, following the Emacs guide probably isn't bad either. Like, there's the Manual, and then the Emacs Lisp Reference.
+- Okay, simple enough. Just noticed that the order of the properties are in reverse insertion order... interesting.
+- Already this is getting weird because the document object model should be defined in the language itself, but we're not there yet.
+  - It's all of these matters of bootstrapping the system that tie me in knots. But it's unavoidable in a reflective system.
+  - Well, here's the thing, I can define the objects using cyfer objects without actually embedding their definitions within the documents themselves (for now).
+    - Right, because CL IS the implementation. Much easier to build objects for now within it. AND, at some point I should be able to have them export themselves as code.
+- My armpits sweat so much recently. Antiperspirant my ass. I swear, I put it on and then immediately start sweating like mad. But I can't not use deodorant because then my pits start stinking... sad.
+- Huh, I tried opening localhost:5000 on Chrome and it gave a 403. The server is AirTunes... wtf.
+  - So I look it up and yea, Monterey added airplay to port 5000.
+  - But... why do I not get that in Firefox???
+  - Well, I've set the server to start on 5001 now.
+- Interesting, so Number has a few methods in JS such as toPrecision(), but also toString(). But you can't call them on literal numbers like 1.toPrecision() which I guess is really just a syntactic restriction.
+  - Oh, reading the docs on Primitive and it says that "primitives have no methods but still behave as if they do. When properties are accessed on primitives, JavaScript 'auto-boxes' the value into a wrapper object and accesses the property on that object instead. For example, `"foo".includes("f")` implicitly creates a String wrapper object and calls `String.prototype.includes()` on that object. This auto-boxing behaviour is not observable in JavaScript code but is a good mental model of various behaviours - for example, why "mutating" primitives does not work (because `str.foo = 1` is not assigning to the property `foo` of `str` itself, but to an ephemeral wrapper object)."
+  - That makes a lot of sense actually. It's essentially like saying "any time this object is in `subject` position, then deoptimize the object such that it looks like an ordinary object." Otherwise, it optimizes it down.
+    - That is, when you look up the object's type, instead of it being in a typical object header, it's a hard coded value in the logic (looking at the address for certain set bits for instance).
+  - In JS, "By definition, `null` has no prototype and acts as the final link in this prototype chain."
+    - And I guess that makes sense. Null is the name for the empty tuple, that is the tuple with no elements. And because there are no elements, there is only one such tuple, the empty tuple itself.
+  - Oh, I think functions in JS are objects that have an apply function.
+    - Oh yea, that's kind of funny actually. function's prototype is Object, but it has properties apply, bind, call, etc. which are themselves functions, so they point back to themselves.
+- Okay, let's rebuild this hierarchy then in those terms.
+  - Oh, and this should help clean up the naming scheme (that is prefixing things with -).
+- I think instead of creating actual bindings for -primitive object's proto, slots, etc., we just use defmethod to return specific values later.
+- JS also has something called sealed objects. Symbols are sealed objects actually.
+  - Ah, Symbols have a property called description, not name.
+- Ah, you know, objects really should maintain their properties in insertion order so that they render back and forth correctly. If people don't care about the ordering, then they could use a HashTable specifically.
+- I just had a thought. You actually do need the @ lookup function within Cyfer. Normally Objects take a property and return its value, but some objects (such as functions) do different things when given arguments. For those objects, you need @ to lookup their property values. Naturally, that's a function implemented by the host since it's REFLECTIVE. How it acts depends on the type of its arguments, when given a primitive, it does a lookup in a global table. It's NOT a method on Object.
+- The most primitive Object (that is Object with prototype null in JS) would actually have prototype being an unbound slot (that is its value is Void).
+- Alright, I've done away with @ as the name in CL and switched to -get and -set! which feel a bit better.
+- (cons) returns the value of the Unit type (it's the 0-tuple).
+- Okay, I've defined the main primitive objects. That is, there is a CL class for each, and the proto accessor for each class is set to return a specific object which inherits from Object.
+- Alright, feeling pretty happy with where I'm at here. I think time for a break.
+- Just had a great wank. Having blankets tense over me while writhing around is unbeatable in terms of overall bodily sensation.
+- Let's take a look at what we've achieved so far:
+  - We have a very basic prototype hierarchy for our primitives. We have a universal lookup and assignment operator. And we have a creation mechanism.
+  - From here we can create some new prototypes that will be used to render the wiki.
+  - Oh, I was thinking about how the inspector essentially takes a list of properties, and a root object, then it recursively calls get on said object to drill down the path. That is, it's a graph traversal.
+    - We render a view for each object along the path, essentially by calling "list all properties", except for the final object, which we call print on (to render its value).
+    - The wiki then is a similar traversal actually. Except we just render the final object (a page).
+  - Okay, had to fix the inspector so that it'd use the new hyphenated names. But it renders now. Will need to adjust `what` it renders next.
+  - prototype needs to be a property that is bound. But it'll be special.
+  - Nice, inspector is working again! Just need to render the terminal value.
+- Okay, I think I'm a bit too blitzed to work any more. Good job today though.
+  - Mmm, I think I know what to do for the drill down on the miller columns, where I'm getting caught up is on how to handle rendering different variations depending on the object. And that's because, while I could do it for -primitive and -object, really I want to do it based on the prototype chain, but defmethod won't really work for that I don't think.
+  - Oh, maybe not. I can start with defmethod for -object and -primitive, and then have -object defer to a different one.
+  - Hey hey, got it working properly with do.
+- So now I think we need to render some sort of display name.
+
+* December 20th, 2023
+- I've extricated the PS5 from the rack. Sarah was telling me last night that it would randomly shut down while playing, which is exactly what happened to me when I was trying Ghost of Tsushima! So it's now sitting on top of the rack, which honestly, isn't a bad thing since it means I'll be able to switch between consoles more easily (since there's only one 8K port). First time I've had the PS5 in a standing position.
+  - Then spent the morning watching youtube on the big screen until I had to shit again. Ah, old times.
+- Tonight going to see the nutcracker at the ballet. Need to figure out where to go for dinner though.
+  - Thinking maybe Anejo? That'd be good.
+  - Going to miss Minecraft again tonight. Sad.
+- Excited to get back to Cyfer though. Slowly coming together.
+  - So where I left off was wanting to render Miller Columns to drill down into objects from the root.
+  - Okay, have objects rendering. Need to figure out the drill down mechanism. You kind of need to keep track of the path as you go down for building links.
+  - It's almost a reduction... you take a remaining path and an object and you return the rest of the path and the next object.
+  - We could do it in two parts. We build the columns as a list, and then map across said list to generate the actual HTML.
+- Okay, have miller columns working. Reminds me that I kind of hate the Lisp Loop construct. I spend more time trying to figure out the best way to express something and just end up kind of confused. It's interesting that I find myself using the do construct far more often.
+- Time for some VR, then walking the dog, lunch, etc.
+  - And back.
+  - On the walk had the idea that I can prefix all of the symbols in lisp with a hyphen to denote them as being Cyfer related the same way Emacs has that dash.el package that adds -map and shit like that.
+- Man, I was on a roll this morning. I think doing just chill YouTube/Video Game time in the morning until my meds kick in is goated. I go directly to toilet, then once done toilet, I'm probably thinking about Cyfer, so I start on it immediately. The longer I spend on the computer not doing that, the harder it is to start.
+- I think I'm just unsure where to go next. That's usually the issue. I left myself some breadcrumb trails last night to follow. Now that I've done them, I'm unsure about what's next.
+  - Next obvious step is adding a panel for primitive objects to render.
+- Thinking I should head to the basement and maybe play some video games for the rest of the afternoon?
+- Gotta remember tomorrow to fill in my hours for the month, and also finish that outstanding ticket lmao.
+- While I'd like to get Alice out, I really need to ask Reid about writing something as a tribute. I don't want to make it public without his input.
+  - I think what's holding me up is where to host it. Clearly I have it working with Docker. That should be mostly straightforward, it's just... where do I host it more permanently?
+- As for Cyfer, I have the values rendering now. But not sure where to go next...
+- Something that's been going through my head today is that I really wish I was more interested in other people's lives. I feel like I'm not being a good partner to Sarah because I mostly am not interested in what's on her mind, and that's not fair to her. But it's not just her, it's literally everyone. And it makes me wonder if I'm gonna be the same way with my kids, which wouldn't be very good to them. It's just... my mind is always preoccupied with "things".
+  - And maybe with Cyfer, it's beyond just sort of idea capture. It's like, I feel I need to do this because I need to get it out. And I can't be done with it until it's out. But the struggle is that I have such a hard time getting it out. It's so bizarre.
+    - Perhaps it's because it feels almost like a thesis project, or disertation. Like, the product to me is a work that implies that I know what I'm doing. It's a statement of knowledge.
+- Okayyyy. That was weird. I couldn't access the network all of a sudden. I think my problem might lie with the other switch?
+  - Huh, on a ServeTheHome review of this switch, someone in the comments noted that it'll stop working randomly requiring reboot for things to start working again. I can return mine through Jan 31st. So if I don't have any issues with the netgear one, I may as well return it and get the $200 back. Figure if a time comes where I actually need 10GBe, I'll use an actual Ubiquiti switch.
+  - Unfortunately, that means I'll be stuck at 1GBe for Prophet. Maybe Unifi has a 2.5GBe mini switch? Then I could use that here, and put the netgear one back on this desk, replacing it once I get 10GBe.
+  - Hmm, there aren't really. They have the 10GBe switch which only has 4 10GBe ports, and I'm worried that it wouldn't connect properly with Cat5e. There's a single smaller switch with 2.5GBe ports, but it costs more than the 10GBe one...
+- Think what I need to do next is implement a printer for the primitives.
+  - Okay, that works. Obviously not complete, but it's good enough for now.
+  - Really, the browser's job is to just render objects with specific views. That is, we apply a generic function to each.
+    - Hmm, we could handle nesting with Miller columns essentially by making each one a new view lmao. There isn't actually a list of columns, there's a nested list of pairs.
+    - Yea that works reasonably well.
+- Well, I can now navigate between objects along a path pretty well.
+  - Should probably rename this to browse or something like that. Then, we can have a different view for rendering things as documentation for instance.
+- Navigating between objects is some level of interactivity, but we obviously need more. Not sure what that could be though.
+  - One option is adding a prompt. Which would necessitate a reader. Not sure if I want to do that next.
+  - Another option is to actually try and use the object model from CL and build out the beginnings of a site. That's kind of what we want from documentation for instance.
+    - This would be cool. It's essentially saying, let's build a wiki using this prototypal model.
+    - Going down that route would allow me to start writing things "within" Cyfer.
+    - Yea, I'm kinda digging that.
+  - That and I wonder if a prompt really makes sense until we actually want to execute things.
+- Let's rename this route to inspect. Since it's like the inspector in the browser.
+  - Then we can write a /wiki path which is a different way to render the objects.
+  - Alright, we have a stub for the wiki, and we've renamed cyfer to inspect.
+- I think we need to look at reorganizing the repo a bit so that we organize things by path.
+- Kinda fucked up that things seem a lot clearer when I'm high... I'm not sure what to make of that tbh.
+- Okay, ballet is 2hrs long (including the intermission).
+- Okayyy, really digging uiop:define-package's mix and mix-reexport.
+- Alright, need to think about getting ready. Things are nicely sorted out now. Next step is to think a bit about the organization of the server in terms of the root object.
+  - That is, start thinking about the layout of the CyferSpace compendium so to speak. Then build out that structure.
+  - Then, we want to start rendering said compendium as a document. Will mean specific render functions for different objects.
+  - Obvious step from there is adding a feature to let you text nodes.
+    - Maybe defining a little DSL for documents? Should be defined using Cyfer objects with prototypes.
+
+* December 19th, 2023
+- Wow, got some function stubs in last night while high. My job to day is to fill them in! Essentially, I'm writing a primitive implementation of the object model.
+- There's a macOS update, wonder if I should install that while I'm out getting my haircut. It's been awhile since I've done a restart too. Wonder if that's why I've been having weird issues with Firefox...
+  - Only thing is... my CL code is probably not in a place to start cleanly again.
+  - Eh, not a bad thing. Needs work anyways.
+- So I think the idea is, build out the object model such that you can use it within CL. Then, get it rendering basic objects on the site. Next, have it update dynamically when I run commands on the environment from within CL. Then, add a prompt to the site itself so that changes can be made live.
+- Huh, reading the SELF paper and it talks about how activation records (stack frames) are conceptually the same as other objects, that is the previous activation record is the prototype of the current one. Which I've recognized before. Activation records are... closures! Consisting of a bunch of bindings (properties) and a function.
+- Classes are just a pattern of prototypal inheritance. That is, they create an object prototype and a constructor function that builds them. And that's what ES5 classes do I believe.
+- Most user objects will be descendants of the base Object, that is an object with hash-table like characteristics. It's the default object type I guess. But there are a bunch of other primitive objects that need to be defined because they allow implementations to make things faster. Those would be numbers (of various types), properties, text, lambdas, tuples, and buffers (bytes or packed interpretation of bytes). Somewhere in there we need to figure out I/O as well. But first and foremost will be Objects, properties, and numbers.
+  - Which is kinda funny because Objects will be implemented in terms of lambdas, tuples, numbers, and buffers.
+  - Like, objects with numeric properties should put those in a list instead of the hash table.
+  - Also, Objects should probably have a hash.
+- Classes are clearly just named prototypes. There's no reason that you can't have multi-methods with prototypal inheritance. The point of multi-methods is that they are objects themselves and they just use meta properties of the objects in question to make decisions. Classes in CLOS have a class parent list. That's no different than the prototype inheritance chain.
+  - I guess you do need to think about multiple inheritance a bit.
+  - Inheritance works essentially by taking the union of all properties of the parent objects. If there are no collisions, no problem! If there are collisions, this is when you need to determine a precedence relation.
+- Ah, I was thinking about how prototypal object models sometimes use two parent pointers. I think it was NewtonScript that did. The reason being that HTML for instance would have a problem of parent as in the prototype of the element, and parent as in which element it is embedded in in the DOM. But I think those are separate concerns and should be treated as such.
+- I'll start by creating CLOS objects, but eventually the primitive objects will make sense as defstructs.
+- Prototypes definitely lend themselves to building up structures from the ground up. Classes are formalizations.
+  - Like, our whole thesis is that we can create an environment that is just objects, and then add in behaviour with lambdas. It's like, start by building a database, then make it turing complete.
+  - Oh yea, and they are so much clearer for singleton objects.
+- Got my haircut, bought some snacks, took the dog for a walk, and changed the cat crapper. Now having steak for lunch.
+  - Fuck, steak is so good. When you really salt it, the fat tastes SO FUCKING GOOD.
+- Lol, oops. Didn't realize I had a 1-1 with Jonathan today. He's rescheduled it to 2:30.
+  - Oh nice, my "training" on Udemy counts lmao. Just "watch" a Common Lisp course and get my hours. Dope.
+- Ah, I think why prototypes are such a good model for things is that they are so flexible. They can be arrays, they can be records, they can be dictionaries, etc.
+- Well, docker is installed. So should look at creating a dockerfile and trying to build with that.
+  - God dammit, I need to enable the docker service which means a system reconfigure again, which means more slow as shit downloads.
+  - A few people replied to my post, one suggested a traceroute and suggested that my ISP might not have proper peering with AS680 which is the internet provider for Guix. Alas, routing traffic through Shaw hasn't noticeably impacted dowload speeds. Still seeing around 50KB/s.
+- Huzzah! Completed my TREE training for the quarter LMAO.
+- Okay, we have a basic object model set up, at least for properties. Delegation works too. So asking an object for the value of its :a slot first looks up in its slots, then it defers to its parent, and so on and so forth.
+  - This is rather simple for objects just as data types. But behaviour is not currently contained within them.
+- Alrighty then. I think we need to build a browser. A browser takes a path which is a tuple of properties. Then it does successive lookups from the root object down.
+- Okay, I think sirfrancistowne should be able to load again. The /cyfer specific stuff isn't loaded yet.
+- WTF, I think it's the switch that's causing speed issues. Specifically, the one on my desk here. I plugged the ethernet directly into the dock and it finished the download instantly...
+  - But that's so weird. A speed test is perfect. Why would it slow down everything else???
+  - Hmm, I had the other switch plugged directly into the 10G port, I wonder if I should plug it into the 2.5G.
+  - But that would be weird.
+  - Well I'll be damned, it was the switch. That's so weird. I've plugged in one of the old TP-Link ones and now it's fine. Downloads are much faster on the mac AND nebula. The only thing I can think of is that the operating temperature was too high. The switch's instructions said the operating tempertature cap was 40C, and with the switch sitting on top of my dock (thereby taking all of the heat), it was operating too high.
+  - The odd thing is that speed tests weren't affected. It was all random services.
+  - I'd kind of noticed things being weird on sites on here and I chalked it up to the mac being weird, but I think it's been the switch this entire time.
+- Hmm, still no money in my account.
+- Alright, alice works! Had to use host networking instead of port mapping. Not sure why.
+  - Changes pushed. Should look to pull in my changes from sirfrancistowne though.
+  - Next step is deploying it with docker compose for SWAG. Could just do at home server for the time being.
+- Not sure what I want to do now. Great success in terms of getting Alice working and figuring out that the switch was being dumb.
+- sirfrancistowne successfully loads (forgot to add lass and parenscript to the dependencies).
+  - So goal is to render objects I guess.
+  - Okay, well simple enough to render the sidebar of properties and the selected property on the right.
+  - Need a few basic datatypes though. Namely numbers, properties, text, etc.
+    - Might be worthwhile to render it as miller columns. That is, columns align with the path, and then the final column shows the content.
+      - A column would correspond to a basic Object. Other primitives would render by printing.
+  - We need a property symbol table for looking up properties from a string.
+  - Alright, we have properties as actual objects (instead of using keywords). But they need work because they should actually have Object as a prototype.
+- The syntax #abc{} is short hand for (new abc {}), that is, it's a constructor short hand.
+- We should add a "primitive" object type which is implied to be implemented by the host environment. Interestingly, Properties probably wouldn't be? But text, integers, bytes, etc, those can be implemented as primitive objects which use a different mechanism for evaluation. That is, they're special operators.
+  - That means, we need to implement primitive text as probably the first one. Then Number (refining to Int8, etc.). Then arrays. Then Object actually (which is a primitive type representing the combination of properties and values, and with numbered accessors being different).
+  - Once we have some primitives, then we can start building out interesting things. Those primitives correspond to things the reader creates. Ah, so yea, natural next step to encoding things.
+- Okay, I need to go downstairs. NOTE TO SELF: You have a root object with properties and primitive datatypes. Your next step is to render this in HTML. Primitives should render a panel with their value. Otherwise, Objects should render another column with their properties listed.
+- Not surprising that the primitive types correspond closely to what the reader produces. It is an encoding of primitive data types.
+
+* December 18th, 2023
+- Good weekend. Installed black out curtains in the basement so that we can actually use the theatre during the day. Was just watching Level1Tech videos on it. Fucking rad!
+- Jesus, still trying to do a system reconfigure on Nebula. The build failed when not building from substitutes.
+  - I really need this done so that I can try deploying Alice! Or rather, getting it to fucking build.
+  - It's so weird. I've posted a thread on Reddit about it to see if it's a general problem.
+- Wow, well it's almost 11am.
+  - Bubs is at daycare today. She had the shits last night! But my night wasn't so bad actually, I went to bed early so while I was woken up around 7am, not a big deal.
+- The Level1tech video was about 45Drives' HL15 case. 45Drives is based out of Nova Scotia, I wonder if they make stuff there...
+- Huh, Rogers wants to give me more data... again! Another 20GB/month for free.
+  - Okay, so the last offer was 10GB/month. My plan is 25GB, but I was on 35GB, now I'm getting 55GB. That's kinda nuts. I don't think I come close to using that much data though.
+- Usenet is so fucking good. Building our collection out quite quickly. Shaw is probably like "huh". From no usage for like a month, then TBs of data.
+  - Hmm, I should set up a parity checking schedule. It should be incremental though. Need to investigate that plugin. Also, should I enable TRIM on the SSDs as they're in a cache setup?
+  - Okay, set up a monthly parity check (which will happen incrementally from midnight to 7:30am).
+  - And no need to enable TRIM apparently since BTRFS has a mount option for handling that which is enabled by default.
+- Been thinking recently about how weird it is that I beat myself up about not being productive enough and why I'm not "changing the world" "doing big things" but that's actually a really shitty worldview because it puts a value judgement on literally everyone else! But society is a collection of random specialities. Where would I be without roofers for instance? Also, what will my child want to do with their life?
+- Hey, it finally did a system reconfigure!
+- Was looking at getting another PS5 or Xbox for the basement so that we have them both for each floor. Sadly, PS5s are not on sale, so they're like $650 each. However, something interesting was that the Xbox Series X was on sale for $500 and not only that, it includes 24mo of Game Pass Ultimate, which I'm currently paying for every month. What's crazy is that that's $19/month. So if I bought the Xbox, I'd end up getting $456 worth of Game Pass, and so the Xbox itself would be about $50...
+- iPhone 15 Pro Max is $41/month... I think I'll skip this one and upgrade next year. Haven't felt constrained by my phone at all. Goes to show how mature they are now.
+  - And unlike a PC, not as much of a need to upgrade for performance.
+- What am I going to do today!
+  - Why do I always have such great ideas while high and on the weekend when I don't actually want to work. Then when I am READY TO WORK, I can't remember what they were?
+  - Oh, one thing I need to remember to tell myself is that everything I write right now is just a prototype for things to come. Doesn't matter if they're bad, in fact they should be! But by doing them once, or twice, I'll learn what works well and what doesn't.
+  - I wish I had someone to critique my code...
+- I kind of need to create custom elements. Like hstack and vstack and shit like that.
+  - I guess that's what classes are for. They're a trait that says, oh this has these properties. Any more complex sets of boxes are odd.
+  - One thing I need is a function for combining classes.
+- Ah, I think I might be looking a bit too far ahead. I can just keep returning full pages and refactor to sending fragments (since that requires some JS).
+- Hmm, a layout actually starts with HTML and BODY. You need to set properties on them. So what we think of as a layout is rather more like a template.
+  - I do like how we generate scripts/styles while executing the creation of the body.
+  - Oh, something else that'd be nice is to try out native JS modules. Design with that in mind since they're supported by all major browsers now and have been for awhile.
+- You know, I think I should put together some "fake" dictionary entries to render in the site. Can just take them from Scheme (the language) or Common Lisp (the Reference).
+  - An entry has a name, a type, a docstring (or rather, documentation which should be more like HTML), some tests (examples), and an (the actual definition).
+- Okay, pulled two examples from CL and Scheme. Now we need to do a few things. First is that we'll need a dictionary class to actually hold them. Second is we'll need a macro to add them to it. Then we can think about rendering them.
+- Coolio, got the first entries rendering.
+  - A few things I'm noticing. Should clean up the page code a bit. Break them up into different packages. In particular, need shared stuff and page specific stuff.
+  - Another is that lazy sequences are generally a good idea. Right now when I traverse the trie in order, it calls a function that builds a list, then we have to reverse it. Yada yada, lots of work. Vs, a lazy sequence being a description of how to get the next item which you can then just apply to a bunch of sequence methods.
+- However, this points a few directions I can take. The big one I think is that we can start implementing some of the primitive data structures of Cyfer (like Dictionaries).
+  - Second is that I should take the definitions out of the main code and instead put them in separate files which we'll read to initialize the data base on load.
+  - That means that we can start on a reader.
+  - On the other hand, I think there's a lot that we can clean up in the code base more generally. Especially around requests.
+    - Another one would be generating links. A page is really a pattern.
+    - An alternative is also instead of using dictionaries, we can use packages and symbols with symbol plists for everything that we're currently doing.
+- I like the idea of a code base being a wiki. In point of fact, if I develop a wiki engine, Cyfer will just be implemented within it.
+- Huh, didn't realize that Wiktionary groups all languages together. That actually kind of makes sense for what I'm doing then.
+  - Our equivalent of language would probably be something like "domain". Which specifies where it comes from.
+  - Then, there are equivalents to parts of speech. That is, variable, constant, functions, macros, type, etc.
+  - A full project then is the combination of all these different dictionaries.
+  - A different way would be more like wikipedia where a word points to specific meanings which are elaborated on.
+- A Cyfer space then is the summation of all the entries?
+- Probably overthinking this.
+- It's also kind of funny because the dictionary could include definitions for the properties themselves. That is, entries have a synopsis, examples, etc. Those are entries for the subtopic of dictionaries.
+- I think I need to work on some quality of life improvements before I go any further. Namely, I want a simple object implementation so I can use things more like prototypes.
+- Well, I can build alice again. Seems that the problem is in fact that accesslog for lack is readonly. So need to determine how to configure that.
+  - Should also probably update Alice with the improvements I made to HTML5 in Cyfer.
+- I think that lack is out of date on Guix. I think I need to like... update all of my dependencies...
+  - Would be a lot easier if I had full access to quicklisp.
+  - Gonna need to go back to the drawing board with this I think... maybe using a base SBCL image with quicklisp support?
+  - I guess I'll install docker on Nebula, then try using fukamachi/sbcl.
+- There should really be a guix import from quicklisp and ultralisp.
+- Somehow I always find myself back to building wikis. Something poetic in that probably.
+  - Wikis are text databases I guess.
+  - Pages are denoted with a text identifier. Then you have aliases to identifiers. The identifiers are in a global namespace.
+  - Interesting that function application is equivalent to identifiers without side effects. That is, a function without side effects is a pointer to its value under the given arguments (this implies that compound identifiers are really just function application on persistent data).
+- Hmm, yea, I think I kind of need to implement a basic form of objects...
+- I think I should go for a walk.
+  - I should also work out tonight.
+- Okay, main take away of the walk was that we're essentially building a specification and a reference. Sort of like how there's wiktionary and wikipedia.
+  - Bare identifiers refer to the current environment (or dictionary), whereas we can have compound ones using function application to specify.
+  - We call keyword style symbols "properties" as in object properties (or even properties of a function call).
+  - Then there are tuples, lists, and property lists being the main types of short hand.
+    - Nice thing about property lists is that they are by order of insertion.
+  - Like, we're writing both Common Lisp The Reference as well as Common Lisp The Language. One is more book, one is more dictionary. Both are part of a larger "Cyfer" topic area and depend on each other.
+    - If that's the case, I should have the site reflect that.
+    - Actually, there's probably more like 3. There's a reference, there's an "implementation", and a guide.
+- Docker still installing, or rather, it's reconfiguring my home which means updating a bunch of software.
+- Insertion order of properties is only meaningful for printing back I think.
+- But yea, I need to implement property lists/objects since that's essentially what I'm building.
+- Huh, just found out about uiop:define-package which provides a bunch of other options, namely a :mix option which works like :use, but it shadowing-imports by order of appearance.
+- Okay, so /cyfer needs to point to a function that views the path as a tuple of identifiers. Then it needs to recursively look up said identifier by using the head and then passing the tail.
+- Then the pages themselves are just a function of the returned object.
+- Hmm, dictionaries and objects are very clearly the same thing. The main difference is probably more that dictionaries and what we think of as source code are persistent rather than mutable. Modifying a dictionary returns a new dictionary similar to the previous one. Modifying an object returns the same object. Otherwise they are the same. And, by instantiating a dictionary (i.e. running a program), you're turning it into an object where the prototype is the persistent variant.
+  - Also goes to show that the difference between an identifier and a property is that properties are a datatype whereas identifiers exist only in a reader context.
+- Okay, I'm high and having great ideas again.
+  - It's occurred to me that I should be working on the object model and focusing on mutable objects. Reason being is that the difference between a "library", "package", "module" what have you and an "object" is that the former are persistent and the latter mutable. So, we start building a viewer for objects (mapping of properties to data), and when we "intern" them, we get a persistent object which is immutable.
+  - Then, they combine together. By calling "new" or "clone" or something on a persistent object, we get an instance of it with its prototype being the persistent version.
+    - Note that this is how you spawn new environments! What is a program other than an isolated piece of mutable memory with an associated persistent memory component (the source/binary code).
+    - What we think of as the top level is a short form for looking up properties on specific objects. If we maintain @, @1, @2, @n...n, etc., those are short forms to denote "the current object", "the prototype of the current object", "the prototype of the prototype of the current object", etc. An identifier is a property lookup on a persistent object. Source code uses modules, which is to say persisent objects, the same way objects defer lookup to their prototype. That is, they import properties from other persistent objects.
+    - There are some rules that @, @1, @2,... follow by default, but you can specify order for symbol lookup.
+      - That also sort of leaves open the possibility of @person for CyferSpaces.
+    - Macros operate on a current environment, which is a persistent object with defered lookups.
+    - This gives us a natural path to follow to build this out. We make a mutable object editor, we add lookup with a reified prototype to look at the parent.
+      - Eventually we add persistence, and boom, we have the makings of languages.
+    - Right that makes sense. We're developing the primitive user interface. Operating system UIs and CLIs are all dynamic environments, they are I/O related which implies side effects. So we should try and aim to develop as much of the application in its interface.
+      - The quickest next step would be to add a REPL! Since we want to do that anyways. And it can start with inserting properties to the current environment.
+      - We have our little command language as well. /quit for instance.
+      - Then, we can start developing within the interface.
+      - We can always add new web UIs to simplify things.
+    - Once we add persistence, that's when we'll want to look at canonization.
+      - Actually, we can start by recording a series of actions as a journal.
+    - It should be easy to define a simple interpreter in JS once we have one in CL. We can have it talk by sending back and forth JSON (which should have a pretty direct mapping to make parsing easier for the browser).
+      - But we don't even need JS for awhile, we can just render everything as responses (or even push HTML fragments directly to the browser).
+    - The reference and specification then are essentially meta programs. You trim the document trees to extract tests or definitions and then take the union of their results.
+  - In a way we're just gonna go ahead and implement prototypal inheritance in CL. It'll be a bit verbose, but we'll write a translation layer to make it simpler.
+  - Arrays, or lists rather, are collections which can be indexed by integer.
+    - Actually this is the defining trait of literal data types. They are all indexable by integer (that is they are sequences).
+    - Funny then that HTML nodes are a combination thereof. They have integer indexes for their children, and property indexes for attributes.
+  - In CL, we'll define @ as the lookup function. In Cyfer this won't be necessary because all objects are functions. But we'll need it for CL.
+  - I think that's it. object, new, clone, @, and setf @. That's the API.
+  - Then I need to create some default objects: Property first and foremost.
+  - Fuck, I really want to program right now, but I need to eat and relax. I think I need to try getting high and programming during the day again. Fuck.
+
+* 15th December, 2023
+- Lol, slept through stand up. Woke up at 7:30ish with the alarm, turned it off, and fell back to sleep lmao.
+- OMG, it finally finished building!
+  - And... the built version of Alice failed to load! Says something about accesslog being a read-only file. Which sounds like a Lack thing. Worth looking into. In the meantime, gonna do a system reconfigure since it's been awhile.
+  - Oh no, it's downloading more packages... 43KB/s...
+- Guix's SBCL is only version 2.3.7... which is really old. That's from July.
+- Well, just got back from walking the dog. She's always ready early and has been wanting walks earlier and earlier, which, to be fair, isn't a bad thing. It's nice to get it out of the way.
+  - Oh forgot I need to toss the cat turds... (and didn't do it yesterday because the dog was at Dogtopia). So I'll do that just before lunch.
+- Guix still downloading stuff... god it's so slowwwww.
+- Instead of , for meta commands at the shell, I think it'd make sense to use / which is similar to \ (meaning escape), and it's the character used for commands in Discord and Slack and Notion and...
+- I got FUCKED UP last night. Although it weirdly took quite awhile to hit. Like I felt really high while trying to sleep... which was like 5hrs after I took the oil. Edibles are so weird like that.
+- Need to think a bit about the shell for Cyfer. I mostly want to try having a simple browser really. On the left is all of the identifiers for a dictionary, on the right, the currently selected identifiers' different entries (probably starting with a single one). At the bottom will be a prompt which uses the reader to modify the dictionary's contents.
+  - Because I'm starting with the interface, I think I should look at Parenscript for generating JS.
+  - We can kind of look at this as a prototype for how I'll generate HTML in the future using native CyferScheme.
+- Reading a bit about Flex vs Grid since I think I'll need to use those for layouts. The main difference is that Flex is for controlling layouts on one dimension (row or column), but grid allows you to control layout on both dimensions.
+  - Grid is layout in, whereas Flex is content out. That is Flex relies on the size of its content, whereas Grid makes its children conform to its layout. They say that if you find yourself disabling flex properties, you should probably use grid (such as making a specific item a certain percentage to have it line up properly with the one on the previous line).
+- I think I'm just a little unsure of how to handle CSS. Like, I had a good idea for how to generate HTML as a DSL (i.e. rip off SXML), but less sure about CSS. Mostly because I don't really like the experience of CSS. Part of the problem is that you need to generate styles, but then like... keep track of the ones you've sent to the client.
+- Jesus, I'm within spitting distance of a $4M net worth.
+- Well, simplest way to get started would be by loading parenscript and generating an alert.
+  - Have that working, also introduced a fragment class which renders essentially a list of elements. We flatten lists by default, but if you want to just pass a bunch of HTML nodes between functions it's a bit annoying to try and look for lists with generic methods...
+  - Started pulling things out into components. Works pretty well.
+  - But I still don't really know what to do about CSS.
+  - Hmm, since the template is a function that wraps the passed in HTML, then those calls can set the contents of dynamic variables to be added to the head...
+    - Yea that works really well actually.
+  - Tried out LASS for generating CSS, not bad, but I think I'll want to do something myself if I want to maintain state. You can essentially view each selector as a symbol which has a bunch of associated properties. A page is built by building essentially a package of symbols and properties. Then you just need to dump it out as a style sheet.
+- Hmmm, I feel like I'm trying to generalize layouts too early. Should probably focus on trying to build the specific layout I want.
+- I think a lot of the times when I encounter weird things with HTML/CSS it's because HTML is essentially designed for documents, and it's kind of a pain to get it to conform to more application style layouts. Like having to set height 100% on html, body, and etc. Like layouts are more about cutting the page into bits, then within those bits you might want document style flow.
+
+* December 14th, 2023
+- I need to send Mark the statement of account for November.
+- Feeling good this morning! Agmatine?
+- Lol, Nebula is still doing something. I think it suspended itself though, so it's continuing where it left off.
+  - Realized that no-substitutes must imply that it has to do EVERYTHING itself because substitutes are signed by someone else, so by specifying no substitutes it must mean "absolutely no substitutes, only stuff we've checked ourselves".
+  - Oh, now she rippin. 78C all cores pegged.
+- Okay yea, looks like ci.guix.gnu.org is just... slow. Tried a wget from the mac and was also getting under 100Kbps.
+- Something that occurs to me is that I think the hashes for builds in Guix/Nix are based on the inputs not the outputs. So they aren't really content addressable? But maybe I was reading that wrong.
+  - Like, last night I was thinking that you could build a shell, then just import binaries/directory structures into Cyfer, and have it just cold execute the binaries. Boom, content addressability. Just need to set up paths correctly.
+  - Using such an approach, it totally makes sense to start "from the top", that is with a language interpreter and then just work down the stack.
+  - This is also along the thought train of: "what if we didn't use Bash? What would Unix look like with a Lisp shell instead?".
+- I think I want to look at EShell to find out what it does differently.
+- Also thinking I should learn more about the main environment variables.
+- Realistically, a shell is just a REPL that invokes native binaries. So you just need to shim over alien binaries somehow (and provide them with context).
+- Right, have a 1-1 with Devin today at 1pm.
+- One thing I keep thinking about is how to name read (as in read syntax) and read (as in read byte). To me, read implies some sort of interpretation, so it makes sense for reading syntax. But then, what do we use for reading from a port?
+  - Similar situation for the inverse operation, write. Like it seems people use "write" for actually sending data to a port, but then use "print" for generating syntax. Which is odd, since they aren't antonyms...
+  - Could be that you say ports use push and pull. Or get, send (that makes them more like objects actually).
+  - There's also a weird dichotomy in that in-ports can be treated as sequences, but out ports it doesn't really make as much sense.
+  - Might make more explicit sense to just use read-byte and write-byte...
+  - Well, actually read as in reading syntax would only really be used for user input anyways. It should arguably be less commonly used than read and write for bytes.
+  - But "parse" is also a dumb name for that.
+  - Lol, "devour". See, print makes sense for generating content. So we're looking for a better opposite for print.
+    - Scan is another one. But that usually means "scanner" as in turning it into tokens.
+  - This kind of gets into stuff about mimetypes though. Like, taking some stream of bytes and interpreting it as data is very much a generic action. It's like you provide a stream and the type of data you want to get back. Likewise for writing. You provide a stream and the type of data to output.
+    - So I guess they come in pairs. Readers and Printers. Which form a common interface.
+    - Then, by not providing a type to read, you're defaulting to bytes.
+- Our reader does consist of a scanner (applies a set of rules to generate tokens). And a parser, which converts said tokens into structured data.
+- God I wish fucking Guix wasn't so fucking slow... really puts a damper on what I want to do right now. Suppose I could close all of the Alice files locally and just work on here.
+- Back from my walk. God, I feel so good today.
+  - Feels a lot like what being on Vyvanse used to feel like.
+- Huh, Guix is still building, but downloads seem to be going faster now. Seeing around 5MB/s with a peak of 300Mbps...
+- Well, Devin can't join due to a hackathon meeting...
+- Although the 5900HX is rated for 4.5Ghz Turbo, it seems to peak around 4.2 sustained. I'll see it go to 4.3 occassionally, but it'll regulate down almost immediately. Thermal limit of the laptop I guess.
+- Interesting: https://github.com/mlc-ai/mlc-llm/
+  - What stands out is the performance comparison between a 4090 and 7900XTX. 7900XTX is a bit slower, obviously, but competitive. Especially considering it's like half the price.
+  - Oh, and it's two 4090s and two 7900XTXs. That's cool that they have it working with dual 7900XTXs, last I heard (in the summer) was that there were problems with multi-GPU support in ROCm.
+  - I think it'd be cool to try out a 7900XTX build.
+- Oh damn, Guix download peaked at 800Mbps.
+  - Well, whenever this completes, I guess it'll be pretty cool to have everything built from source.
+  - Wonder if it automatically adjusts to CPU microarchitecture.
+  - Jesus Christ, how many versions of Rust does it need to build???
+- Well, I should probably just let this machine build. I feel like I'm sitting here just waiting for it to finish to get back to Alice stuff, but honestly, who knows how long it'll take. At least rust is R, so we're close to the end of the alphabet.
+  - Everything with Alice is up on the repo. No unsaved changes. So I can just kill SLY and all of the open files.
+- Kind of annoying, I've started sweating from my armpits a lot... even while wearing anti-perspirant.
+- I think I'm procrastinating once again because I don't know where to start. So where should I start? I think I wanted to bring some of the code from Alice over to the personal site, then I can use it essentially a display. Was thinking that I'd just write "articles" on the blog.
+  - Was thinking about pulling the HTML stuff out into a separate package, but that'll complicate the Guix deployment a bit. So I think I'll just rip the code over as is.
+  - It'll be mostly the same anyways. I don't think I'll edit it too much.
+  - Maybe I can clean things up a bit though.
+  - Okay, replicated the structure of alice for sirfrancistowne. I'm using the output.css from tailwind. But I'll need to generate those myself (or write my own CSS, yuck).
+  - Can also just run tailwind for the time being...
+  - Alright, added tailwind, pretty simple stuff (just uses the CLI essentially).
+  - Created a repo for it and pushed it up.
+  - Cleaned up symbol importing for HTML5 tags a bit.
+- That the reader creates symbols in Lisp is kinda annoying.
+  - It makes understanding the various passes a bit hard. Since the defpackage happens not in that package, and then in-package switches to that package, and then it continues reading which interns stuff...
+- Well, that's good for today I think. Or at least a little break. I should really think more about what I want to build next as far as demos go. Probably making the Cyfer page be a rendering of the dictionary.
+- Stupid thing happened on the PS5 last night. Although PSPlus includes Ghost of Tsushima, apparently I can't run it without the disc? Even though I have it digitally? Why would it require the disc if I have a digital license???
+- Man I feel so good. Feel like going for another walk.
+  - Yea, let's go for another walk.
+- Bit of a hiccup. Not sure how to handle `call`, or rather variadic functions generally. You can't call them with a tuple (doesn't make sense from a type perspective), so you need to call them with a list. But then, how do you create lists? Like functionally, you can create them with recursive conses as per usual, but we don't want lists to be just a convention for nested conses. So lists need to be abstracted somewhat and made primitive. By making them primitive, the system can do whatever it wants in terms of implementation (like, you don't necessarily want a list to be a bunch of pairs, it's wasteful in terms of compute and space since you're constantly dereferencing things). Like, lists should probably be vectors or vlists most of the time. And I noticed that you do this a lot in C (but sketchily) in that there are a lot of calls that take a number representing the length of the sequence, and then a pointer to a pointer type (like argv) to allow for variadic arguments.
+  - Only thing is, we need a different way to build lists... (since you don't want people consing on top).
+  - The funny thing is that VLists and Vectors are probably more wasteful than singly linked lists in the small.
+  - But, copying vectors is easy when they are segmented into 8 words, it's a cache line, gotta flush that much out to memory anyways.
+  - A primitive implementation can use nested conses anyways. Simple implementation that you optimize.
+  - I guess similar to using vector-push-extend.
+  - There are a bunch of different sequence types anyways that conform to the idea of a list as an ordered collection of items.
+  - Most arrays are just a special type of List really.
+  - It's honestly kind of odd having lists and vectors be quite separate anyways.
+    - Like Lisp has a lot of stuff that works on Lists, but about the only time it makes sense to actually use Lists is when you want structural sharing, or you want stack like insertions.
+  - It's kind of the difference between abstract data types and concrete data types. List is an abstract data type, and there are various implementations thereof. When you ask for just an ordinary List, the implementation is free to do whatever it wants in terms of how to represent it. This is opposed to asking for a specific implementation such as LinkedList.
+  - And the primary purpose for Lists at least from a semantics stand point is variadic functions. You'd usually build a specific structure otherwise.
+  - A lot of what I intend to build is making things more explicit anyways.
+  - (Not to mention that cons isn't /really/ the primitive for allocation).
+- Hey, good news! No longer building rust. On to samba.
+
+* December 13th, 2023
+- Projector now has an 8K cable to it! Geoff came by last night and was able to fish it in place. I should get one of those things.
+  - So PS5 now works! Though, it's saying 4K120 isn't capable, which I think is due to the HDMI cable from it to the receiver, but I have two on the way today.
+  - Also, I should buy a PS5 controller charging station. They're like $40 at Best Buy. But because the PS5 isn't in the room, it'd be nice to have somewhere to park them.
+    - Okay cool, they have an AC adapter, I was worried I'd need to plug them into a USB brick.
+- Well, I have Alice done as far as imports. Guess I can try deploying it maybe? Actually, that's kinda cool, I should be able to deploy it to the NAS as a container to see if that works. May be worth using that same container as for the reverse proxy.
+- Calendrical Calculations is out for delivery!
+- I should buy Fish Tape. Looks like they're about $30 at Home Depot.
+  - Although, what would I use them for?
+  - Oh, should also get a taller ladder.
+- Was thinking last night about fine tuning an LLM on Cyfer. If we have a standard layout for definitions (like name, type, documentation, examples, and implementation), then it makes it rather simple for an LLM to generate entries. Since you'd provide a name, what you're looking to make, and maybe an initial description, then have it autocomplete the rest. With examples, it'd be even better, since you could run said examples, and only accept the entry if the examples pass.
+- Yea, I should try deploying Alice to Aegis, and then I can probably expose it from tailscale to share it with Reid.
+- Went to Home Depot, Best Buy, and Real Canadian Supercentre. Bought fish tape lmao. And a charger for the PS5 controllers.
+- Put the filter back in the hot tub and checked the chemicals, and... the pH is down, and the alkalinity is a bit too. But now I have to bring the pH back up and I wonder if that'll shoot the alkalinity back up too... This is kinda frustrating. Might need to ask Rahul about it.
+  - I wonder when it makes sense to cut my losses and just do a full refill. It also seems like there's always something on the water line making bubbles.
+- I want a better way to test the levels. The colour strips are too fucking hard to read.
+  - There are different strips on Amazon that also tell you total vs free chlorine. They're still strips though.
+  - This weekend looks to be pretty warm, maybe I'll do a full refill then.
+  - I have a feeling I'll keep having to deal with Alkalinity though.
+  - And I suspect that constantly needing to use foam away has added a lot to the total chemicals in the water.
+  - Probably best to just call it a day.
+  - Thing is, I wish there was like a flow chart of what to do. Rather than vague instructions about daily, weekly, etc. Especially since alkalinity affects pH as well. Like I wish I knew to add pH Minus first (or that pH minus lowered alkalinity).
+- All of the other shit is out for delivery. Looks like both deliveries should arrive around 5ish.
+- I think for deploying Alice! it looks like we need a SWAG container set up as just a reverse proxy (and SWAG provides us with SSL certs), then we set up another container running Alice. We use a user defined network that connects them. Wonder if we can use Guix to generate the container for Alice...
+  - If we go with Guix, then I should pull Alice down and try and get it running there.
+  - Not sure how to do this actually. Do we do a build? I don't think so, I think it's just an env.
+    - https://fredmanglis.me.ke/running-a-swank-server-within-a-guix-shell.html This blog post essentially manually tells asdf where to look using asdf:load-asd
+    - Another option could be to do a core dump and just run said binary.
+  - Oh interesting, Fukamachi has a blog post about Docker for Common Lisp.
+  - Hmm, Nyxt apparently uses Guix for development.
+- Okay, so I have a executable being built. I think then it's a matter of just creating the docker file? I can load that all into a makefile and just go brrr. But might be worth trying with Guix.
+- That's weird. Cloning the repo is super slow. Thought it was Nebula being weird, but it's slow as shit on Prophet too.
+- I guess what I need to do is setup a package definition for alice, then have it build the executable. Not sure where /public comes in though...
+  - Usually, I'd say have it mount as a directory or something, but not sure how to provide that.
+  - Hmm, well that might not be an issue. Instead of having it generate a docker image, we can have it generate a pack that a separate dockerfile uses.
+  - Okay, I think I just need to create the image as a base. Then I can just create the rest of the Dockerfile by importing it like usual (just need to know the image name and tag).
+  - So the base will be the Guix container including the binary, then we need to import the /public folder, and then run it.
+  - Okay yea, that sounds reasonable. Just wish this fucking repo would clone holy shit.
+- Okay, now we're building. Except substitutes server is fucking slow.
+- Once again annoyed that the keybindings seemingly don't work for Wayland. So dumb.
+- Looks like one of the packages is a tad delayed, but should at least get Calendrical Calculations in an hour or so.
+- Feels like I need to have my own substitutes server... Like fuck, these downloads are so fucking slow it feels like it'd be easier to build from source.
+- Oooo, Prime truck just showed up.
+  - Oh weird, it's the stuff that was supposed to arrive later.
+- Guix substitutes being slow is really annoying...
+- So you can create a guix system docker image, but I have no idea how that works with mapping devices. Like, can I map a user share for gnu/store?
+- Apart from lack of documentation for a lot of things, the bigger issue I have with Guix, and I guess Nix as well, is that they feel tacked on. Like, you have this weird interaction between the file system, derivations, but also the source directories themselves. It feels uncohesive.
+- Calendrical Calculations is here! It's really dumb that the license is restrictive. Why write a text like that and then not allow any use outside of personal. So weird.
+- Took some Agmatine about an hour ago. Let's see how it works with weed.
+- So apparently if you say no substitutes it builds EVERYTHING from scratch? Why doesn't it have the existing stuff???
+- Well, should go check the hot tub situation and see if the pH increased without fucking up the alkalinity. If not, I think we gotta abandon ship on this one.
+
+* December 12th, 2023
+- Sarah's sad.
+- Gotta look at Hawaii. She's now suggesting Jan 3-10th, which is just before the doctor meet and greet.
+- Well, I can probably finish importing Alice today. It'll be less work than yesterday. Then I can start thinking about deploying it.
+  - Also, wonder if I can get Guix Pull working today.
+- Mistral's instructions have been updated with Mixtral-8X7B.
+  - Ah, it requires a lot more VRAM. Mistral requires 16GB, but Mixtral requires like 100GB. A 2-bit quantized one fits in 24GB of VRAM. Wonder if I can spread it across two GPUs though.
+  - https://huggingface.co/blog/mixtral
+    - This post says that 8-bit quantization requires 45GB of VRAM. Wonder if it can split...
+    - Guess there's only one way to find out really.
+  - Man, I really need to learn more about all of this shit.
+  - https://www.reddit.com/r/Oobabooga/comments/18e5wi7/mixtral7b8expert_working_in_oobabooga_unquantized/
+    - LMAO, people talking about their machines with like 5-7 3090s. They have them all running off of riser cards on essentially a mining rig. Based.
+  - https://huggingface.co/blog/moe This post talks about how Mixture of Experts models work, which is what Mixtral is.
+- Ok, well Guix Pull is working. But jesus, these substitute servers are so fucking slow. May be worth just telling it to build everything itself
+  - Actually, wonder if it makes sense to run my own substitute server on unraid and have it do a pull every once in awhile, or overnight.
+- Should login to Udemy and start playing that Common Lisp course to get some training hours in.
+- A really interesting project would be to fine tune on all of the Common Lisp books I like.
+- I should do some Beat Saber.
+- Went to Shoppers to buy some vitamins. Looked Olly, which I've bought the past few times, but decided to look at some other ones instead. Found the Jamieson ones were about the same price, and it seems like a nicer mix. Firstly, it has fish oil in it, which I was thinking of buying separately, so that's a plus. More zinc, but also magnesium, calcium and copper, which is good because I think magnesium and calcium are antagonists, and copper and zinc are to each other. Otherwise, has pretty much the same vitamins, with D being more. Also, can take just one instead of two. Also, bought Maca and Lecithin for you know what.
+  - Also bought some flowers for Sarah to cheer her up. I guess she likes roses, and they aren't toxic to the cat.
+- Well, Guix Pull worked this time, now I ran it again, and it's doing more. Odd.
+  - Okay, yep, done.
+- Don't have a 1-1 today, or next week. So year is more or less done for me lmao.
+- Was thinking about Polygamy last night. Turned me on, which was unexpected. It's such a recurring thought. And it's a struggle, because I've rationalized reasons for it (more children than what one woman wants to give birth to, leading to better chances of grand children, more child rearing resources, etc.). Obviously to do so would have tradeoffs, namely I'd need to make it my life essentially, more family time since kids need to have a present father.
+- I need to pull the email addresses for Sarah.
+- Okie dokie, time for Alice I guess.
+  - Well that's it! 1057 comics all imported.
+  - Just need to fix error handling now, and come up with a home page. Though I should ask Reid about that.
+- Feeling super focused right now. I wonder how much of that is due to the vitamins and if I've been lacking something. Also could be total placebo... But it's odd how often this seems to happen. Could also be creatine and protein.
+  - Wonder what supplements are best for cannabis consumption.
+    - People are talking about Agmatine, which apparently helps with tolerance. Huh, you can get it on amazon.
+    - Ordered some, why not?
+  - I'm thinking about getting high again tonight. But Geoff is coming by around 7. So don't want to be blasted.
+  - But I've also been a good boy today.
+- Hmmm, get high or don't get high. I don't really have any other obligations today.
+- There was a tweet last night to the effect of "purpose and meaning are anxiety. sorry" Oh here it is: https://twitter.com/WoohkaStylie/status/1728802523597729873
+  - "Purpose and meaning are forms of anxiety. Sorry"
+- I should top up the hot tub a bit. It's getting a bit low again. Also need to check the chemicals. Will probably need to buy more super clarifier soon.
+- I've probably been avoiding Nebula in large part because I don't actually know what to DO with it. Like, I can get it up to date... but then what. I'd have to remember all of my keybindings and shit like that. Need to think on that some more and come up with a plan.
+  - That and with Alice coming to an end, I'll be able to program on Prophet again.
+  - Oh, and probably a bit of not wanting to distract myself from Alice too much.
+- God dammit. Turns out pH Minus is also a total alkalinity reducer. I've been putting in pH plus because I thought pH was a bit low, but it's actually alkalinity that you need to keep an eye on first.
+  - I topped up the water, and it's foaming like crazy. I'll have to check it again in an hour or so and see where the alkalinity is at.
+  - Also, I should rinse out the other filter over night. I guess I'm supposed to rinse both, but I haven't rinsed the ecopure one. It's just that one isn't supposed to be used with the special cleaner is all.
+
+* December 11th, 2023
+- Watched The Last Crusade last night. So good!
+- Dinner with Will tonight. Think I'm driving.
+- Will be interesting to try out Mixtral (the new model from Mistral).
+- So this weekend was thinking about upgrading the home theater in the bonus room.
+  - Ideas: 85" TV, which is insane but also, it's still 35" smaller, nearly 3 feet, than the projector screen lmao. This will definitely help to fill out the wall in the bonus room though. That's a good size for that room.
+  - Upgrade the speakers a bit. Firstly, get an ES30 for the center channel and be gone with that S35. Should make dialogue much easier to understand.
+  - Second, get a pair of ES60s to replace the S50 fronts. Then, we'll put the S50s where the rears currently are. The stands for the rears aren't the best, and one is broken, so that'll be a nice upgrade all around.
+    - Not sure what to do with the S15s after that though. Could just sell them and the centre channel, but... eh.
+    - Could put them in my office and have 4 of them lol. Like stack them on top of the current ones to make fake floor standing ones.
+- Well, just walked the dog, guess she needed to poop. Also, on the walk I saw the Canadian Pacific Holiday Train. Was so intent on seeing it that I pulled bubby half way up a hill while she was trying to pee lol.
+- Thinking I should update Nebula today. Do some more Alice too obviously. But I want to get started on Cyfer again. Should also try out recording with the capture device I bought and have yet to use lmao.
+- I got high for the past four days. On the one hand, made it really nice to watch movies. On the other, I'm feeling almost hung-over this morning. Don't want to do anything. But realistically, do I ever do anything in the mornings as is? I mostly think about doing things later while doing shit like beat saber or what not.
+- Ah, another Aella post that made me feel FOMO. 600K+ respondents and the average "body count" for people at 30 is 12.5...
+  - It's not like people are having great sex anyways, and I far more enjoy just having sex with myself. So, it's not REALLY about the sex. So it's something else.
+  - Probably a big part of it is that I felt late to the game, and that I didn't understand it, so it makes me feel stupid.
+  - There's also an aspect of being unlovable I guess? Like no one would invite me.
+- Was thinking the other day that I'd considered a little male me, and a little female Sarah, but it had not occurred to me to consider a female version of me, nor a male version of Sarah. And that makes me go hmmm. Since I'm essentially a male version of Mom.
+- I think with Nebula I kind of want to do a fresh install. And yet, that'd probably be kind of a pain in the ass. May as well just clean it up a bit then.
+- Had to switch Plex on Aegis to host based networking again. It was doing this weird thing where it was compressed to shit. I had to pull up stream info and it was actually capped at 2Mbps... Reason was two things apparently. The first was that by putting it on the Docker custom network, devices connecting from on the LAN had a different subnet, and so it saw them as remote. I added 192.168.1.0/24 as local to the plex settings, but that didn't address it. That's why I switched to Host networking. But as I did some more googling, it turns out that the "feature" that caps bandwidth at 2Mbps was the "Relay" feature, which I guess sends the data to a plex server, and then back. So I ended up turning that off, and maybe that will address it as well? But it's working fine with Host networking as is. Nothing really needed to connect to it with plex as a hostname anyways (it just watches the directory).
+- Also, something really annoying is that Plex on Shield TV is absolute shit. It will freeze the box entirely at times, and the whole thing needs to be restarted (because it'll take like 5min before it does it itself). I wonder if Daniel has this issue at all.
+- Hmm, weird. Nebula doesn't seem to see the external monitor anymore???
+  - Man, the substitute servers are so fucking slow....
+  - Guess it'll just be 48KB/s...
+- Ah cool, Mixtral support in the latest vLLM. Will have to give that a shot at some point. Same with SDXLTurbo.
+- Alright, that's a wrap for 2001. 2002 has a lot more long story lines that go into the teens or even twenties.
+  - 642 down.
+  - I can probably do some more later. But that was another 100 or so. Took about an hour. So about 4 more hours to get everything done...
+- Huh, Nebula went to sleep, and when it woke up the external monitor started working...
+  - And it's not building a derivation... no idea what's up. I'd probably have to open it in Guile?
+  - The derivation has "profile" in the name, which might be something to do with my own config maybe?
+- Okay, did all of 2002, 762
+- And done with 2003, 828. About 200ish left. I could finish this today.
+- 2004 is really small. Makes sense, bad year.
+  - 850 after 2004 and a bit of 2005. 2005 is the next largest year I think.
+- Think I should finish it up tomorrow...
+  - What else am I going to do for the next hour and a bit though? Why not keep going and finish it?
+  - Hmm, was that three hours?
+- Apparently there's a bug with nonguix builds at the moment. Maybe mine is related? The issue was created 2 hours ago.
+- 871.
+- Maybe I should work out before I go out with Will. He wants me to pick him up at 5:30. It's just about 4 now.
+  - Yea, let's do that. Gives me an excuse to listen to music too.
+- Well, I worked out. But I'm not feeling any better.
+- Calendrical Calculations's code is in the public domain apparently. Just requires attribution, which makes sense. Should mean just converting it to Cyfer.
+  - Just ordered a paper copy, only ~$40. Will be here Wednesday.
+- 7 Minutes to Will's place. So I'll leave in about 10min.
+
+* December 8th, 2023
+- OBGYN appointment today... and I almost passed out. I don't know what it is about medical stuff that makes me so light headed, it just comes on and then it doesn't really stop.
+- I really want to order a Power Mac G4. Ideally, I'd like to own a G3, each of the G4 models, a G5, and a Mac Pro.
+  - There's a nice listing for a Quicksilver 933Mhz with original box! Too bad the keyboard is french though. At least I have that Mattias keyboard which pretends to be an Apple one.
+  - Another nice listing of a first revision G4 with a bunch of manuals. Both of these are in nice condition, so many of these machines are scratched to hell.
+  - G3s are much harder to come by from the looks of it. I found one, but it was mislabelled as a G4.
+    - Ah yea, they were discontinued within a single year. Kinda crazy.
+    - The Graphite G4 was introduced in August 99, whereas the G3 was only on sale starting in January of 99. So like 8 months. Then, the PCI variant of the G4 was discontinued by the end of that year. The G3 and PCI G4 shared the same motherboard, so total lifespan was like a year.
+  - I really like the G5s, but... not only are they often scratched up, the bottom handle is often warped. And the more powerful ones have problems with liquid cooling leaks. So probably isn't worth it to go for a Quad G5.
+  - Both of those G4s are single CPU I think. It'd be really cool to get a dual G4, maybe the MDD one?
+  - I'd definitely need monitor adapters I think.
+  - Would also be cool to get one of the old Cinema Displays.
+  - I'd also need to look into the SSD solutions for these machines.
+  - There are a LOT of graphite G4s, a reasonable number of Quicksilvers, and not many MDDs.
+  - It'd also be nice to get an iMac G3. Iconic machines.
+  - I'd really like to try Macintosh Common Lisp on these machines since it essentially immediately crashes on an emulator. I figure because of something about the implementation.
+- Huh, apparently I should move the UPS to the bottom of the rack in case the battery leaks... Yea that's probably a good idea. Maybe tonight.
+- Was thinking last night that it'd be really cool if Guix went one step further by providing a Guile interface to binaries rather than just build instructions. It's just kind of odd that you have Scheme to coordinate the system (Shepherd) and for building executables (Guix), but then you still mostly sit at an old school shell. Kinda dumb.
+  - Then I was thinking about how I could build something like this and call it CyferShell. That would be the interface on top of a Unix core. Obviously it can be text based, but it lends itself to graphics as well.
+  - Like the train of thought I had was, "a big part of the flavour of Unix is the shell, most of which are bourne shell variants, but if you replace that with a Lisp, then the kernel is rather just a hardware abstraction layer, and binaries are just foreign services that communicate via streams."
+    - So, one of the things about using CL on Unix is that you kind of need to know the Unix abstractions since they map the names directly, but you don't necessarily need to do that. You can have the language translate some abstraction to another one.
+- I kind of wonder how the Guix daemon works. Where is the code for that?
+- This is interesting: https://v8.dev/blog/wasm-gc-porting
+  - Talks about the new WasmGC, which provides a way to have the VM manage memory for you since with Wasm you'd have to manage all memory yourself, essentially meaning that you'd have to ship a GC or allocator with your programs. I guess it provides struct and array types, sort of like what I've been thinking about with Cyfer.
+- Don't know what led me to look at this again, but nice comments on this HN thread about "The Power of Prolog" online text: https://news.ycombinator.com/item?id=37473933
+  - In particular, one comment mentions "The Art of Prolog" as belonging with PAIP, SICP, and "Concepts, Techniques, and Models of Computer Programming" as the dynamically typed programming canon. I don't think I'd heard of CTMCP. Though the cover looks familiar.
+    - Oh yea, I do have a PDF of it. Should give it a read. Maybe order a hard copy.
+  - Same thing links to "Program Analysis: An Appetizer" which apparently uses Datalog for program analysis. 208 pages! Colour me interested.
+  - Prolog is very much a DSL pretending to be a full programming language. The paradigm is super useful, but it's really annoying to express other paradigms within it. Hence why it's hard to integrate with too. That's the cool thing about Lisps, any paradigm feels like home.
+    - Hence why I think Datalog is more popular these days, and seems to be growing in usage. Prolog seems to have flown to closely to the sun, and by doing so scared people off from the paradigm entirely, even if it's super useful. Like, sure you can do some crazy shit with Prolog, but it was really simple stuff that made me go "ooohhhh, that would've made <thing> so much easier to express".
+- Should look into a solution for hosting ebooks/pdfs. I have enough in Apple Books now that I'm seeing the faults it has (namely search is kind of shit).
+  - Calibre is apparently good, it's a server. I wonder about clients though.
+  - Bookfusion is a client, and although it has a Calibre sync plugin, it's a subscription piece of software...
+- Time for washroom, and hopefully get this photo shoot done, empty cat crap, and walk dog.
+  - Alright, all done.
+- Hmm, can't access the Docker page from mckayfleming.systems. I think it's because there are specific rules for .php requests to route it differently in nginx. So I've commented that out and we'll see if that fixes that after a restart.
+- HDMI cable is out for delivery. Should text Geoff and ask when he was expecting to come by.
+- Need to do some Alice today. Otherwise not sure.
+  - Did about 60, will do some more in a bit. I'm hungry.
+- Thinking I should probably update Nebula. Or rather, do a new install on it.
+  - Would be good to record some of that.
+- Oh, there's a new web tool for helping define Guix packages: https://guix.gnu.org/en/blog/2023/write-package-definitions-in-a-breeze/
+- Another blog post that's interesting: https://guix.gnu.org/en/blog/2023/a-build-daemon-in-guile/
+  - Points at something I've found frustrating with Guix: seeing what's actually happening during the build. The issue is that the build daemon is written mostly in C++ (since it's a fork of nix-daemon), and so you don't get the introspection of Scheme.
+  - "For example, I think having a build daemon written in Guile will simplify implementing a way to jump in to a build and inspect the environment."
+    - God, I absolutely wish that was a thing.
+  - Ah, so they're announcing some financial support to allow this dude to work for a year on writing a Guile implementation of the daemon. That's cool.
+- I've got what feels like a headache. But I wonder if it's tension or something.
+- Ok, let's do a bit more Alice!
+  - Ok, did a bunch. Huge story line that was like 33 pages.
+  - Also, had the first occurrence of a prefix! Comic titled "Spring" through a continuable error since there was another comic starting with Spring. So had to change the initialize-comics! call to continue on error. First time using a continuation like that in code. Had to look up what to do.
+  - 537 comics down. So over half way now.
+- Think it's time to listen to some music!
+
+* December 7th, 2023
+- Lol, I missed sprint retro. Ooops.
+- I don't want to do anything right now.
+- Learning that the baby is a girl kinda hit me hard last night. I just don't really know what to expect. Like I see what mother daughter relationships look like, and father son, but father daughter relationships are so... foreign? Took me awhile to think of a good example, and that's Zamal. But like, Sarah doesn't speak with her dad. Mom seems to have a close relationship with her dad though.
+- Found out last night that the cable to the projector isn't rated highly enough for some content. I brought the PS5 down and it just would not show a picture. I thought it might be the receiver, but eventually tried plugging it in directly to the projector and... nothing. Ruled it as the cable after I connected the projector to the receiver with the super long HDMI cable I got from the office. And it worked instantly. Geoff is coming back sometime to install wall plates and he said we'll try and feed it through by attaching it to the existing cable and pulling it back. He said not to do it alone in case the cable tie came loose in the ceiling at which point we'd be fucked, but I have a bunch of plastic zip ties which would hold them together no problem. What stopped me was that I'd need to move the rack out of the way to reach where the wires go into the ceiling, and it's fucking heavy. So I'll just wait for Geoff.
+  - After fucking around with the projector, I think I fucked up the alignment a bit. We were watching a National Treasure last night and the picture was bleeding across the felt outline on the screen.
+  - Oh, something else was that the content from Plex was playing in Stereo. I was so confused. Turned out you needed to adjust Advanced Settings and enable passthrough to HDMI. Then it got atmos everything.
+  - Still don't know if Atmos is worth it or not. Maybe I'll look into it in the new year, especially after everything has been adjusted for the room.
+  - Oh interesting, the cable is a full rated 18Gbps, so 4K60. I should look at 8K rated ones though.
+  - Hmm, might need to order a fiber optic HDMI cable.
+  - Ok ordered a 33FT fibre optic cable, gives us a bit of extra length. Will be here tomorrow.
+- Wonder if I should just get TIDAL for playing music. Apple Music is via AirPlay and I notice it'll skip. You can sideload Apple Music on the Shield, but apparently it kinda sucks.
+- Should cancel Crave and upgrade the connection speed.
+- I don't know where the fuck I'm gonna put the boxes for the speakers... I wonder if I can collapse them at all?
+- Gonna go to the basement and check out the test pattern again, and figure out what to do with these boxes.
+- Moved the boxes downstairs. Put a few behind the rack, others in the closets. I wonder if it'd make sense at some point to get a storage locker somewhere for shit like this.
+- I fucked around with the picture some more. Focus seems good, adjusted the shift and zoom a bit too. Looks good! Found out the reason the picture was bleeding over last night... it was because the aspect was set to Zoom rather than Native. That's probably good for films actually, but obviously not good for things like games. But good to know that you can switch it. Might make sense to set up a quick profile or something for that.
+- Think I want to go for a walk in the snow... also need to fucking shovel the cat shit. Maybe I'll do that before the walk...
+- Turns out if you toss the cat turds more frequently, it's much easier. lmao. I was worried that it'd be worse than it was today because I kept meaning to do it over the past few days, so I must've been putting it off even longer before hand. I think the problem is that I don't have a routine for it. I don't have time in the morning, and I don't want to do it right before bed/hot tub because I don't want to track dirty cat turd feed around the bedroom. The best bet is probably to do it right before I take bubs for a walk.
+- Thinking I should set up nginx forwarding using the guide Daniel sent me.
+- Oh cool, you can set up your own IP addresses with Tailscale now. https://tailscale.com/blog/choose-your-ip/ Used to be the addresses were all part of the same space, for all tailscale users.
+- Aegis's webui is now on port 8000 (8001 for SSL).
+- Created a network called media for all of the containers. Gonna set those up now, so ideally they can talk to each other by container name.
+- Ok, all updated! Also got SABNzbd working with bridge networking, problem was that the docker subnet wasn't whitelisted (or its hostname of sabnzbd).
+- Now I have to set up the nginx container I guess.
+  - It lives! mckayfleming.systems.
+  - Now to set up forwarding.
+  - Huzzah! radarr.mckayfleming.systems works.
+  - It all works!
+- Dope, dope, dope. All good. Now you can access every service at *.mckayfleming.systems. So plex.mckayfleming.systems, radarr.mckayfleming.systems, etc.
+- Think I want to get high tonight.
+- Well, I did what I wanted to do today. Should add more Alice though.
+- Not sure if it's worth looking at Whisparr or not. Maybe for VR?
+- There's also Readarr (books) and Lidarr (music).
+- Alright, let's do some Alice.
+- Think this is gonna be a good high. Less than an hour into taking it and I'm feeling it. Feels good. It's so much better doing this only once a week.
+- I need to do an order with that supplement place. Maca, magnesium, zinc? Also, multivitamin.
+- Not a fan of these spicy dill pickle nachos. A) dill pickle is better on potatos than corn chip, and B) the spice doesn't actually add any flavour, it just tastes like dill pickle, and then your tongue kind of burns.
+- THC makes the id more prominent.
+- Time to listen to some music?
+
+* December 6th, 2023
+- Ahhh, the home theater is so fucking cool.
+  - Can't stop thinking about how to plug the PS5 in though. I might try running the long 4K HDMI cable I have through the wall plate so I can plug random things in as needed.
+  - Dimensions of the PS5 are such that they'd fit in the rack, but I think I'd need to move a bunch of shit around in there.
+- Meeting with Daniel to chat piracy then ultrasound!
+- Ok, so Daniel essentially set his NAS's WebUI to another port, then set up an Nginx container on port 80 which reverse proxies to the other services on his machine using subdomains. He then bought a domain and routes it to his local IP addresses.
+- It's a girl.
+- I need to reset the iPad, it's being really weird. One thing is that about half of its storage is taken by I think some videos that were never purged, but also, I can't listen to a few songs because it's saying they aren't available in this country, but I CAN LISTEN TO THEM ON THE MAC AND THE IPHONE NO PROBLEM.
+  - Just need to make sure my notebooks are backed up.
+- Still haven't received my wire yet... Need that as I'm running low on funds.
+- Considered a new PS5 for the basement, but they aren't meaningfully thinner, they'd still take up 3Us.
+- Couldn't fall asleep last night, then was feeling frustrated at the ultrasound since they kept us for like half an hour after they did everything.
+- Oh interesting, Frugal USENET has two backbones. One is the same as Fastusenet, the other is a third one I haven't used. Might be worth grabbing them too.
+- Alright, iPad restored and now it's downloading apps.
+- Hey, my songs load again!
+- I think I need to do some work for PS tomorrow. They asked what my active ticket was and they also mentioned something about the RTE again (fucking want to blow my brrains out).
+- Interesting article talking about ECS: https://news.ycombinator.com/item?id=38545417
+  - Thing to note is how it aligns with how I've been thinking about Tuples. Tuples/Records are relations. Simple as.
+  - Couple in the ability to adjust the storage and persistence of said tuples and boom, you have a database!
+  - A distinction between database and application is kinda weird, especially for local software.
+
+* December 5th, 2023
+- Eeee, home theater day!
+- Also just got my email about the electrical inspection, they'll be here between 8am and noon.
+- Need to look at cancelling Backblaze, or rather setting up Kopia and backups exchange with Daniel.
+- Windy today!
+- K&W has started the installation, and the electrical inspector came like 10min after they arrived lmao. They're probably thinking wtf.
+- I ran a CAT7 cable over the ceiling to the rack for the home theater. They'll also use the two switches I have. Lots of ethernet. May be worth getting a larger switch, more specifically a Ubiquiti one, especially one that'll rack mount.
+  - Ah, a Standard 24 port switch with no PoE is about $300. Thing is it's also 1G SFP, but I can probably directly connect the ethernet tbh.
+  - Ah yea they can direct connect via ethernet. Makes sense. Kinda weird that they'd have 1G SFP ports though.
+  - $334 from MemoryExpress.
+    - https://www.memoryexpress.com/Products/MX00121259
+    - Kinda dumb finding that link, can't search for "Standard 24", you have to search for the SKU since they name it differently.
+  - Yea might be worth it. We'll see how many things we have to plug in. I'd like to have all Ubiquti switches eventually.
+- Ooo, there's a Common Lisp course on Udemy for 5.5hrs, and I have access to it through work.
+- Time to download some test footage!
+- I should probably restart Prophet. The efficiency cores are always at 50% for some reason, even though I don't really see anything in the processes list that's using CPU. Then there's always a core or two at 15-30%. Total memory usage is now at like 50G lmao.
+- Ah youtube-dl is slow, was only getting like 50KB/s. Found out about yt-dlp which is a fork, and now I'm gettigng like 100MB/s-ish.
+- Screen is up! They're putting together the stuff in the rack and the centre channel speaker now.
+- Hey hey! The popcorn machine is out for delivery! It was originally scheduled for tomorrow.
+  - Also in the order is a Zorbie. I've been having a lot of issues with foam in the hot tub. Like I'll use the foam away, but it'll be back like the next day. And you'll see a bunch of scum floating at the top of the water after the jets have been on. There's also constant bubbles being formed near where the jets are cycling. It's obviously because we don't shower or anything before going in, so there's probably a lot of stuff from our bodies, in my case probably a lot of deodorant. Anyways, I noticed on the instructions that it talks about Zorbie, and so I ordered one on Amazon. It's like a sponge that floats and absorbs stuff like body oils and suntan lotion and shit like that. Eventually it'll get sort of clogged up with shit and will go below the water line at which point you replace it. So hopefully that cleans all of that crap up!
+  - I've noticed that the tub has a bit more of a smell to it, and supposedly that's what Zorbie helps with, because you're smelling the scum.
+- Hmm, got the new Indiana Jones movie, but can't redeem the digital copy. It also only shows Cineplex Store instead of iTunes. And even if you try Cineplex it fails. So... maybe it's because it only comes out today? So it's not actually ready yet?
+- The reason to do Leetcode, in some sense, is to learn a bunch of tricks. I like learning tricks. That's the cool thing about PAIP for instance.
+- Not sure what to do about the consoles in the basement tbh... I think it'd make more sense to have them down there, but... where do we put them??? We'd still need to put a hole in the wall to run HDMI to the utility room, since it doesn't make sense to have them in there.
+  - Probably will need a little entertainment unit for the wall there.
+- https://github.com/OpenAccess-AI-Collective/axolotl <- A tool for fine-tuning.
+  - Linked from this post: https://generallyintelligent.substack.com/p/fine-tuning-mistral-7b-on-magic-the
+    - Lots of other interesting links.
+
+* December 4th, 2023
+- Been downloading a lot of stuff from Usenet, though I've run into a few "missing articles", likely due to DMCA takedowns. From what it looks like online, people mention getting a block account to fill in the blanks. Though not sure who to go with for that. Getting another provider is generally really cheap though, so might get one from another backbone. Otherwise, think it'll all be filled in properly with Torrents.
+- I switched the router to distributed traffic while we were out, and at 50/50 that gave me 63Mbps of download. I kind of want to just direct all of the usenet traffic through Shaw though. But not sure if I can without knowing the IPs since it's all SSL.
+- When I talk with Daniel tomorrow, I'll want to ask about how he's handling domains for his shit. Like how is he set up to allow requests.dan.af?
+  - Then we should exchange creds for Torrents and Usenet.
+- Ok, also signed up for NZBPlanet, which seems to have Grand Tour S4E02 in 4K which NZBGeek did not.
+  - Doesn't seem to login with Prowlarr yet, should try in an hour or so.
+- I downloaded Hogan's Heroes last night. Two things: 1) holy moly, they look so good; turns out it was a 1080p Bluray rip, had no idea they mastered them in Blu Ray, 2) the episodes weren't playing in the correct order? Like the titles of the files are correct... need to investigate to see if the episodes themselves are mislabelled or if Plex is being dumb.
+- It seems to have finished some ones which were outstanding after adding the Euro server and the block accounts, but I'm not sure where it went through since it deleted the history... I've adjusted the history settings on Radarr and Sonarr to not delete them when finished.
+  - MaximumUSENET still says 0TB used.
+- Huzzah! Found Grand Tour Eurocrash 4K on NZBPlanet. Now it's downloading, and confirmed that the traffic route worked! It's downloading via Shaw. Going at 569Mbps, which is dope.
+- Ah looks like Hogans Heroes was a bad import, the files themselves are wrong. Not only that, two of the episodes were DVD quality, so I figure I'm actually missing two episodes then. I've gone ahead and deleted the files, and am downloading a different release now (from NZBPlanet!).
+- Wonder if I should turn off the cache for the media share... It's not like it needs crazy write speeds anyways. And then it just puts wear and tear on the SSDs.
+- Something I need to do is look into Plex Pass, apparently you can't watch Plex on the iPad without Plex Pass, which is dumb. But also, I wonder if it's worth doing hardware transcode for the TV upstairs.
+- I wonder if you can set Apple Music up to use a second source for music. Because it's really annoying when they match a song to a different version. Like there's a bunch of Stompin Tom I'd like that are the old versions rather than later re-records.
+- Alright, upgraded to Plex Pass, I'll have to look at enabling hardware transcode in the docker container though.
+- Was thinking on the walk about Cyfer a bit. In particular, there isn't a great term for content-addressable stores. I think that's where we can introduce the term Cyfer Store. It's the domain from CIDs to actual objects. You intern things into the store, and then you can retrieve them by dereferencing them. Can't really call them HashTables or HashSets, because they aren't really a set (you use them for looking things up), and they aren't really HashTables in the traditional sense since you don't actually give them a key, just the value.
+  - Was also thinking on the weekend about how the Dictionary really should be what we build out first, in terms of UI that is. It's such a cool concept, presenting it as a book that you lookup keywords in. And much like a dictionary in real life, there'll be multiple entries for each word. That's when you introduce the concept of namespaces.
+  - I think it's a nice metaphor, and a completely different way to interact with a computer.
+  - The most primitive form of the Dictionary would just map symbols to definitions (that is the literal code), but later ones would include content.
+  - And it'd be pretty cool to work with from a persistence point of view. Like you can have an abridged version of the dictionary which is just the definitions, and an extended one with all of the "commentary" (which would be tests). But because it's all persistent, the full version is the canonical work, and the abridged variant is really just a derived variant of the larger one.
+  - It's also interesting in that it flips the orientation of namespace and key a bit. You always lookup the symbol first, then you specify which version you want. Most programming languages are the opposite, you do the namespace, then the key. But that's also a bit odd because there's a namespace of namespaces. You kinda get around that by putting the key first, because essentially there's a global keyspace, and then refinements on them. Makes the Symbol pre-eminent.
+- Should start my work day by doing some Alice.
+  - Did about 40 some comics. Wonder what I'm at now.
+- I need to send Mark the next statement (and also add the accrued interest to it).
+- I'm so excited about the home theatre that I don't know what to do.
+  - Oh yea, figure out hardware transcoding.
+  - Hmm, I wonder if it's even worth it TBH. Since I don't want to assign those GPUs to transcoding duty only if I'm gonna use them for AI stuff.
+  - If we tease this machine apart such that it's a content only box, then I can get an Intel ARC card just for transcoding purposes then.
+- What dooooo....
+- I keep thinking about Cyfer, so it's very clearly something I need to express and get out. My mind keeps coming back to it because it's something it needs to let out. But how? Why do I keep thinking about it and doing nothing? Probably some manner of not knowing where to start, but I think a big part is that I've had a few aborted attempts, and I'm afraid of just having another aborted attempt.
+  - So one, I need to have a "win" of some sort where I can say "good job, that's exactly what we wanted to do".
+  - The next is that that project needs to be completed in some way such that I can come back and keep working on it. Losing context is a pain in the ass.
+  - What will keep me motivated.
+  - Could also be that I'm thinking too far ahead in some respects.
+  - Also, really the UI is the thing that I need to "show off".
+  - I also feel a bit incompetent at documenting things.
+  - I've written a reader a number of times now.
+  - I know how to do ALL OF THIS.
+- Part of the confusion might be between the stored data vs the REPL interface which works on it. But we can get around that by just working on the stored interface for now. Focus on retrieval.
+- Another thing I seem to do is combine multiple things into one and then it gets hard to tease them apart. Like there's a very big difference between reference writing and tutorials, but it seems like doing something twice.
+- Ah, another thing stopping me right now is that I have Alice running in SLY and it's annoying to work on two projects at the same time...
+  - Could be a matter of me working on this on Nebula again...
+  - But then I don't want to yak shave Nebula's Guix dependencies and shit.
+- In that case, it might just make sense to work on Alice and get it done. Why am I moving on to another project so soon?
+- I also feel like it's a pain to do anything other than work right now because I find it annoying having to explain myself to Sarah if she sees me playing video games or something.
+- Finished Alice up through the year 2000. There was a nice easter egg in the Christmas Eve one.
+  - That puts us at 393 comics out of 1057. So more than a third of the way. I guess later years are a bit more sparse.
+  - Looks like 2001 is the most populated year, and then 2002, then it falls off a bit in 2003 and 2004.
+- I think for deployment I just need to use nginx as a reverse proxy.
+- Looks like I might be able to use Google Cloud Run for the hosting. That's the serverless offering. Hmm, it's based on CPU seconds... Maybe Digital Ocean on a cheap droplet?
+- Was thinking about working out today, but I think a better use of my time would be to 1) clean up the front hallway (which means bringing down the exercise bike and building it) and 2) cleaning up the basement a bit in anticipation of all the shit coming tomorrow.
+  - Also, I'll be incentivized to work out later this week because I'll have a new stereo to listen to.
+- Maybe I should just do all that now then...
+- Think I should get a Zorbie for the hot tub, it floats in the water and absorbs body oil and product and shit like that which makes the pool kinda foggy.
+  - Just ordered it from Amazon, should be here tomorrow.
+- Ok, I think I'm gonna clean up the front hall a bit.
+
+* December 1st, 2023
+- Occurred to me that I didn't adjust the C-states on the mobo. But I'm wondering if that wasn't actually a meaningful thing to do, I think the random sleep and then not waking up thing that happened must've been a memory thing. We'll see!
+- Had sex last night! First time in a while. I think weed definitely makes me horny. Otherwise, evening was nice.
+- Was thinking a lot about Cyfer last night. And the recurring thought I had was that the main reason I like Lisp is that it is narratively compelling in a way that I have not found in any other programming language. I think this would make an interesting blog post, or rather mission statement for Cyfer.
+  - In particular, Lisp isn't so much a programming language as it is a folk tradition that's passed on.
+  - Whenever Lisp comes up in general discussion, you'll have people ask what's unique about it. People will bring up things like homoiconicity, garbage collection, the REPL, conditions/restarts, macros, continuations (more Scheme than CL), etc. And while those are all true, they're easy to dismiss. Garbage collection? Everything has that. The REPL? Oh Python/Ruby has that. Macros? Oh Elixir has that, or "I don't like metaprogramming, it's spaghetti and hard to understand". Continuations/conditions/restarts? Huh???
+  - And I've been wondering this myself, why am I so captivated by Lisp? It's not actually about the technology itself.
+  - What I actually find so compelling about Lisp is the culture of Lisp. Lisp isn't a programming language, it's a folk tradition.
+  - And what I find most compelling is the idea that "you can understand it all".
+  - I don't know of any other language community that talks about implementing the language, let alone within itself. Lisp not only does so, it's so common that it's a rite of passage. A shocking number of Lisp books will reimplement a limited subset of Lisp.
+    - Similarly, a shocking number of Lisp books implement a subset of Prolog/Logic Programming.
+  - The take away from this is that you can go really far by eliminating complexity. And when you eliminate complexity, it's easier to pass on that knowledge from person to person.
+  - REPL driven development goes hand in hand with literate styles of programming.
+    - Good literate development doesn't explain how the program works (that's what the code itself does), instead it documents HOW THE PROGRAM COMES TO BE.
+    - The REPL is great for this because it allows you to slowly build up a program and modify it and optimize it as you encounter new challenges.
+    - That's what makes Lisp so great. I have many Lisp books no my shelf because they're fantastic demonstrations of how to design programs. And an important part of the tradition is how to implement Lisp itself.
+      - Taken to its logical conclusion is the idea of a Lisp Machine. That is, a computer that contains within it a description of how to build it from the ground up.
+      - The problem I have with most software development today is that it's deeply intractable and opaque. It can be shockingly hard to pierce layers of abstraction.
+        - How does your C compiler work? \o/
+    - The ideal literate program is a tutorial on how to write that program.
+- My idea for Cyfer is that literate programs are the ideal, and we should treat them as living documents more like the bible.
+- One topic notably lacking in the Lisp literature is actually how to implement readers. Which is an interesting omission, because the reader is just as important as the interpreter.
+- Another one is using Lisp as an environment/database. Common Lisp kind of has this with symbol plists, but they aren't exactly used that much anymore. I think it's because CL is a bit messy here, and Smalltalk probably did this better overall.
+- What do I want to do today? Probably do some Alice. Walk the dog. I also kind of want to get Usenet set up.
+  - Well, just messaged Daniel to get a sense of what services he uses.
+  - Ah Daniel uses Deluge for torrents on a box in the netherlands.
+- Man, the Meta download servers are shit. I was getting like 200kbps download. Fucking glacial. I thought it was the wifi, but Unifi showed the Quest having like 500Mbps uplink. So...
+- Daniel says the biggest benefit for Plex Pass for him is hardware transcode mostly because people he gives access to often don't have devices that can handle it. So probably not worth it for me for the time being.
+  - Anyways, have Plex set up. Should now look at adding the downloading and shit.
+  - Ok, I have Overseer, Radarr, and Sonarr set up. Or rather, Overseerr sees Radarr and Sonarr, now I have to set them up to download I guess. Which means setting up Usenet.
+  - Oh, Prowlarr is used to make setting up Radarr and Sonarr a bit easier. You put your creds in it, and then the other services can just grab them from it.
+  - Ok Prowlarr set up and configured in Radarr and Sonarr. Now I need to add the indexers, which would be NZBGeek and shit like that.
+- Think I'll take a break and walk bubs.
+- NZBGeek setup in Prowlarr. Now need to setup the downloader and provider.
+- Grand success! I've successfully downloaded the first season of Poirot from Usenet using Overseerr. Ran into one hiccup which is that I had to set Radarr and Sonarr to mount /mnt/user/media to /data on their containers since that's the same setup that SABnzbd uses and it was telling them to move files from /data/Downloads but that path didn't exist on those containers.
+- I guess this evening I could try the Shield with the TCL TV and get it prepared for the home theatre install.
+- Should also set up Bazarr which is for subtitles.
+- Hmm, maybe I should have set it all up using this specific section of the guide: https://trash-guides.info/Hardlinks/How-to-setup-for/Unraid/#media-server
+  - Oh, well I already have it all set up. I think it's just maybe cleaning up the downloads a bit more.
+- Ok ya this is pretty dope. Only thing left might be to set up Hardware transcoding.
+- I feel like you probably could set up a second NIC and then route the downloader docker container to it. It'd still be the same network.
+- Emacs has been really slow while adding entries to Alice. Like there was a noticeable delay as I typed. Wasn't sure what was the cause, so I disabled minor modes one by one and... it was prism. So I've disabled that for now. It must recalculate after every keystroke...
+  - All the more reason to implement my own editor at some point.

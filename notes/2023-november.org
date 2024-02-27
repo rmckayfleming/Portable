@@ -1,0 +1,938 @@
+* November 30th, 2023
+- Okie dokie, today is about replacing the CPU in the NAS.
+- Also have a meeting with Devin at 1pm.
+- Alright, Aegis going offline! May as well do the cable management first I think.
+- Lesson learned, Dremeling metal indoors isn't a good idea lmao. Shot off some sparks and that was like NOPE.
+- Hmm, went down to make my lunch came back and it was just starting memtest, not sure if it started and failed while I was away or not.
+  - It had a hard restart at 4800 with DOCP-II, so I switched it to 4800 with DOCP Tweaked, and it hasn't restarted yet and no errors...
+  - Only thing I'm worried about is accidentally frying the thing again.
+  - OMG: https://www.reddit.com/r/Amd/comments/114jpyc/your_pc_will_not_reboot_if_you_try_passmarks_ram/
+    - This is exactly what happened to me.
+  - I think I'm gonna let it run at 4800Mhz for awhile and see what happens. Not sure if I want it to go through a full test though.
+  - I'll let it do a full pass and if that's fine, then it's probably good. If I encounter any random shutdowns, then I'll consider dropping the speed again.
+- 7900XTXs are available in 2.5 slot sizes. Interesting.
+- M3 Ultra Mac Studios are going to be beastly for inference. 256GB of unified memory, 80 something GPU cores, 32 CPU cores. That'll be a beast. Get two of them and rack mount them. *chef's kiss*
+- Oh no, errors on 4800. Sad. Gonna go down to 4400 I guess.
+- Consumer Ryzen is so limited unfortunately. It'll be fun to build a Threadripper Pro or EPYC build.
+  - Although if I were to do that, I think I'd need to have my electrical box upgraded and add additional power.
+- Well, now that I'm no longer required for Rembrandt, I can start using both ISPs for Aegis.
+- Okay, so for USENET, first thing I need is a provider. Here are two that seem promising:
+  - https://www.newsgroup.ninja/en#intro
+  - https://www.fastusenet.org/signup/usenet-signup-promo.php ($4.95 via https://www.reddit.com/r/usenet/wiki/providerdeals/)
+- Should talk to Daniel about splitting Torrent access (via his Netherlands server) and then he can have USENET access too.
+- Figure if Aegis is okay at 4400, I can also try 4600.
+- Hmm, I guess you can route specific traffic to specific WANs using Traffic Routes, but you can't load balance them. I'd like to make better use of having two connections. Only thing is that TELUS is symmetric and Shaw is not, so outbound is always better through TELUS. Maybe put streaming on Shaw? Like Netflix, etc.
+  - Another option is to connect both of Aegis's NICs and have the 10GB use TELUS and the 2.5G use Shaw.
+- Something that'll be cool to play with is the new SDXL Turbo, it can do quite detailed images in a single pass! Like less than a second...
+  - Was also thinking it might be interesting to fine tune a model on Alice.
+- Now that I'm not working on Rembrandt, I think I feel more free to work on AI stuff, or at least start studying it.
+- Was trying to remember the site that Daniel sent me for ECC memory, but also EPYC CPUs. It's atic.ca
+  - It's kinda crazy, the 96 core EPYC is only about $5K. That's like half the price of a Threadripper Pro 96 core. Though it clocks a lot slower I think. Yea Threadripper turbos up to like 5.1Ghz, but EPYC only goes to like 3.7Ghz. Base clock is about the same though, 2.4 vs 2.5. Comes down to "do you want more RAM or clock speed?".
+  - Ah looks like atic stocks threadripper pros too, but they don't have the newest ones yet. Which makes sense.
+  - Huh, EPYC only has 128 PCIe lanes, threadripper pros are 144.
+- There's a new LLM model from China that's supposed to be pretty good. They mention using vLLM and FastChat. I've used vLLM for Mistral, should look into FastChat.
+- Still not sure what to do with the 3090Ti's cooler. Especially now that I have blanks on the rack to get past lmao.
+  - I think I'm just gonna hang it off the bottom instead of the top. It also might make sense to put the machine lower on the rack so it's not scraping against the switch...
+  - Would be easier to get it on the rack too if it were just a bit lower down.
+- Eh, I think I'll just stick to 4400MT/s if it's fine. It's weird how Memtest reports that as 51GB/s. Makes no sense.
+- Alright, moved the panels and I'm gonna put it directly under where the panels end. Also adjusted the rails. It's at 92% now and no errors at 4400, so thinking I'll probably just put the GPUs in and bring it down once it's fully done the pass.
+  - And it just finished! Only thing on my mind is if there's a nice way to tie the heatsink to the case. Like if I have any string or anything. Well, it's lower on the rack now, I wonder if it'd actually touch the floor if it fell...
+- Alright, Aegis is back online. I mounted the GPU cooler to the bottom of the case, but not sure if the fans are actually going or not?
+  - Adding the GPUs back increased total power draw by about 40W on idle. Battery shows a load of 220-240W rather than 180W as before. And that makes sense, Nvidia SMI shows about 21W for the 3090Ti and 16W for the 3090.
+  - Drive temperatures are a bit lower too. We'll see if they come up a bit as it settles, but it could be that it's further away from the other heat generating things, and it's closer to the floor so colder.
+  - It's good to have 16 cores again.
+- I think I want to get high tonight. It's been awhile. The idea is I'll just have my regular evening, that is dinner, play some vidya, hot tub, then zzzz. Think I'll take some and then go for a walk.
+- I'm actually feeling good today. Wonder if that's also because I had breakfast this morning (home made egg sandwich). But also feeling better after processing some shit last night.
+- Was thinking that I've had it in my head that I don't get horny anymore, not in the traditional sense, but really I just don't really let myself get horny? Also, I think I group it in with aggression since it comes to a same place.
+  - Also realized that a shadow exercise is imagining yourself raping someone. I'm so immediately turned off by that idea, but it's the ultimate in putting self over everything. And watered down, it's just enabling yourself to be sexually aggressive.
+  - Something else worth considering is, why haven't I wanted to have sex lately?
+- On the walk was thinking about Cyfer again. Tuples are so clearly the correct primitive and not lists. There's no meaningful reason to have everything based on pairs. In essence then, the first version of the reader is simply a function that reads characters off a stream and returns either a Symbol/Tuple. A tuple is relation between N objects. (The difference between them and lists is that tuples relate values of individual types, while lists denote a sequence of uniform type). Notably, the reader allocates tuples using variadic cons. Everything that isn't a Tuple is a Symbol.
+  - It does this by way of prefix patterns. A prefix pattern is a regex that is always anchored at the beginning of the sequence. The reader then is simply a repeated search for a series of patterns. This series of patterns forms a precedence list.
+  - When a prefix is encountered, it consumes the matching characters from the stream, and then invokes a function with two parameters, the characters consumed, and the remaining stream. That function is expected to return an object which will be the result of the call to read.
+  - The simplest such prefix is the glob. It consumes all characters. This returns the characters consumed in the form of a Symbol.
+  - First we add end states. That is there is an out of input indicator. If a reader is called on an empty input, it will signal an Error!
+  - Next we add whitespace. Whitespace includes spaces, tabs, newlines. This function throws a condition, Skip! It causes the reader to invoke itself recursively with the remaining input.
+  - Now we introduce tuples. Tuples denote relationships between values. They are notated with a (. They are special in that they invoke cons with an endless
+  - The second version of the reader introduces Symbol resolution. That is, we take the output from the reader (a list of symbols) and pass it to a function that takes symbols and returns different objects. For instance, taking a symbol that looks like a number and returning the number itself. Or returning an object like a keyword (that is a special type of symbol).
+  - The third version introduces sequence resolution. 
+
+* November 29th, 2023
+- Hey hey, the mortgage has been closed!
+- The Nvidia Shield and CPU are out for delivery.
+- I'm feeling bittersweet about alice coming to a close... on the one hand it'll be really good to get it back up, on the other hand it'll be done and then that'll be it. No more projects with Dad.
+- Well started playing Beat Saber upstairs since I figured the CPU and Nvidia Shield delivery would be around now, and I was right! Good thing, since Sarah was in a meeting, so had to run downstairs. Anyways, there's something really weird going on with the Quest 3, every time I play with it, it feels like it can't keep up with Beat Saber. Like it feels like microstutters. And not only that, the tracking seems to be lagging, because I'll miss notes that I should have hit. It's so weird since the Quest 2 is SO SMOOTH in comparison. I don't know what's happening. I wonder if it's fighting between Wifi APs? Like if you open it up, it goes from 2 bars to 4 bars back and forth. Which is kind of what seemed to be happening with the Steam Deck too. I think I need to adjust the power for them or something.
+  - Turned off the 120hz option and maybe that'll help? Haven't tried though. Also people say to turn on Developer mode and then pay US$10 for something called Quest Games Optimizer.
+- With how dumb the TCL TV has been recently, I wonder if I should order another Shield while they're on sale. Then I could set this one up and get familiar with it.
+- Maybe today or tomorrow I should figure out USENET.
+  - Hmm, maybe I should do that after it's working again.
+- Also wonder if I should get a Blu Ray drive for ripping movies lmao. They're about $150. Media is so expensive though. 100GB discs are like $20 each. 25GB discs are cheaper, but 4K movies seem to only fit on 100GB drives.
+  - Only thing is... none of my cases will fit a 5.25inch drive.
+- Something else to try with the Shield TV is game streaming.
+- Wonder if I should move the access point from the bedroom to the bonus room. Then set the power to low on the office one...
+- Feels like I'm procrastinating. I feel like I should be working on Alice... but I'm not. Part of it is that I'm kind of waiting for the fans to get here, even though I know they'll realistically only show up late tonight.
+- Went for a walk before lunch, and was feeling a little down. Though it might have been due to blood sugar since I didn't really have breakfast. While I ate, still feeling kinda... meh.
+- Well, I've done 100 something comics... Only 900 more to go. Nearly 90 just today I think. So will take me a few days at this rate.
+  - Okay, did over a hundred. I figure it makes sense to intersperse this with other stuff I want to work on.
+- I pulled out the page rendering stuff from main and into its own file. So main is now just "initialize characters, initialize comics, start server".
+- I guess as this comes to a close, I should start thinking about my own site.
+- Oh, the fans are out for delivery via Amazon. It's the Indiana Jones box set that's with Intelcom. Fans are supposed to be here by 5:30ish.
+- SBCL has seen a LOT of updates. There's another one out now. Seems like they cut a release every month.
+- I'm officially being kicked out of Rembrandt! Will's removing me from the Discord, Notion, and GSuite.
+  - Honestly, this is for the best. My heart was clearly not in it.
+- Was just watching some VR Porn, once again I felt... envy. And I think I'm probably supressing that feeling because it's negative. I avoid it.
+  - I started masturbating, and I felt sort of old school horny. And it occurred to me that I probably haven't felt that way in awhile because IT FEELS AGGRESSIVE.
+  - I've spent a lot of time suppressing those negative feelings. In particular anger and agression, and the result is probably that I suppress them even if they're useful.
+- I was then reading a less wrong post that must've been linked from a QC tweet (or a QT of his tweet). Anyways, it talks about how if you suppress your emotions, you don't actually process them, and if you do that for long enough, they bubble up in mysterious ways. This isn't new. What was interesting was that suppressing is in some sense just the act of doing a value judgement. Deciding that it's not appropriate to feel some emotion is enough to suppress it. Moreover, if you do this long enough, not only do you no longer "feel" those emotions (or rather recognize them consciously), you won't even be able to query for them. The post talks about how you can feel like a grey blob, and when you try and prod the grey blob, nothing comes out. The reasoning he gives is that you can look at your emotions as children. They come to you with something "i'm hungry" and then if you say "no you're not hungry" that doesn't make the feeling go away. You just invalidate it. And to a child, that's no different than yelling at them that they're wrong. This is problematic because, as a child, they aren't going to bring those to your attention anymore if they expect to be yelled at or slapped. And not only do they not bring them to you, they won't respond if you ask, for the same reason (they expect to be yelled at).
+  - And maybe this is part of what's going on with me. I've been feeling this general angst or whatever, and I prod and prod and prod, and nothing really comes up. And maybe it's because I've suppressed some underlying feeling SO HARD, that it won't actually express itself to me anymore.
+  - And I have to wonder if it's coming up in a round about way about general negative feelings that I've shut down because they're bad.
+  - Like is this grey blob just my shadow? I focus so much on duty and doing what's right for people, that I almost NEVER advocate for myself. It's like during dad's death, I put people ahead of myself. And so I essentially invalidated, in part, the fact that dad's death was MY GRIEF. My grief is valid. Life's so fucking unfair.
+  - And it's like with Will, I'm just deeply afraid of disappointing people by saying no. And then I feel bad about it because I don't actually do the thing I don't want to do. And not doing the thing is no different than actually disappointing them.
+  - Somewhere along the line I picked up the idea that I'm like the least important person in my life.
+    - Why does this keep coming up? I voiced this back when I learned we were expecting and it really hurt.
+  - And by searching for what I'm feeling bad about, it's like the eye of sauron, they hide from the gaze.
+  - It might be helpful to just find a list of emotions and ask myself what I'm <emotion> about. Like what am I mad about? What am I sad about? They're there, they just aren't being voiced. Like obviously you feel those things, if you think you haven't felt that way, then it's probably just suppressed.
+- If I don't know what I want, what DON'T I want?
+- Ah you know what, I probably don't talk much for fear of saying the wrong thing. For fear of offending someone, saying something rude, etc. Like was kind of beat into my head by Will but mostly Suraj that "why'd you say that?" Don't talk, can't disappoint.
+  - And probably why I ghosted that girl. I can't even remember her name...
+
+* November 28th, 2023
+- Daniel cancelled today, he's coming down with something.
+- Ordered a Shield from Best Buy and some Blu Rays from Amazon (the entire Indiana Jones set, and Ran). Will order Lord of the Rings more in anticipation of Reid coming here.
+  - Also reached out to Geoff about Blu Ray players, looks like the only Panasonic one that works with Control4 is the top of the line which is like $1800. That's a commitment for sure.
+- I should set up Usenet and Plex. Can probably start with monthly for Plex and see if I actually like it and upgrade to lifetime only if it makes sense.
+- Cool blog post on HN this morning about designing for SIMD: https://mcyoung.xyz/2023/11/27/simd-base64/
+  - Also like the little minimap of the post on the right. It looks like they render the full content in the minimap, it's just scaled down.
+- Waiting for RBC Insurance to call me to take payment for a full year's worth of insurance. Then figure I should toss the cat turds. Then maybe some Beat Sabre?
+  - Also asked about Umbrella insurance. I guess we never completed that since I was in Dubai and couldn't sign it and so it just... fell off lmao. So he's gonna send me an updated quote and package for that.
+- Need to call the city to book this electrical inspection. Keep forgetting to.
+  - Ok, you can do it online without needing a login or anything. Submitted. Here's the Service Request Number: 23-00878014
+- Okie dokie. Wonder what I should do with Alice today. I think it's mostly cleaning some stuff up. Like I should put the server side concerns into its own package and then have main essentially be a "load database", "launch web server".
+- Got MAMP working without needing Pro. I think there was just a cached SSL redirect from the looks of it. Loads fine now.
+- Time to work on the 404 page. Doesn't look like dad had anything special for that.
+- Alright, cleaned up the code a lot. Looking really good actually. Put a lot of web specific concerns into the server.lisp file and then moved character and comic initialization out into the main file. Might move the actual pages and shit off to a pages.lisp and then have main just be the actual initialization for everything since there'll be a thousand some lines of comic definitions.
+  - Just a matter of updating all of the comics now... and doing the main page I guess. 404 page is done.
+  - That's all gonna take awhile. But I am reading through it which is nice.
+  - Should think about how to deploy it actually. And also what to write for the home page. Should probably ask Reid about it.
+- Was just reading two blog posts about 1) shamans, and 2) keys. In the one about shamans, it talks about how most of what we consider psychosis, schizophrenia, BPD, all that shit, those are all mental "disorders". But they occur far more often than chance. They also tend to be related. If you have one, you have others. But what's interesting is that a lot of those traits would've been considered material for shamans in pre-religious societies. And the reason is that those people undergo a different experience of reality. During psychosis, you see that what the world "is" is in fact just a perception. Same thing can happen taking psychedelics. Reality is subjective, not objective. Shamans are those who know this, and their job is to help other people see this when the time comes. Hence why they used to be doctors. Anything out of the ordinary is the realm of the shaman. The one on keys was about how your life is mostly two acts: realizing you're a key, and then finding the lock that your key fits. Most people don't. Some people are preordained, others forge them. It was kind of hard to understand his specific points though. Anyways, keys are determined by the specific traumas you undergo. Reminded me of the tweet I was thinking of sending which was along the lines of "the two great tragedies of my life were the unexpected death of my grand father, and the unexpected death of my father, both well before their times"
+  - One take away was that while I know I'm different, I think somewhere along the line I decided I wasn't special. Which is odd. Since by actual lived experience, I clearly am special. That is, I feel blessed and favoured by God.
+  - Why am I here? What is the mission I'm here to fulfill?
+- Interestingly, Will called me today to talk about Rembrandt and where I was leaning. I told him that I'm on the fence. On the one hand, I'm not interested in it, on the other I don't want to miss out. He told me that working on it and investing in it are separate decisions. He'd be happy if I were to invest (fees would just pay for Daniel anyways). This helped. I think I was afraid of losing them as friends by not working on it with them. But it makes it clear to me. This is not my next act.
+- Working on Alice has been extremely helpful though. It'll be the first project I'll launch using Lisp. This is not to be understated. I've done so much with it that went nowhere. It'll be nice to SHIP something for once. The second is that it's gotten me back to working in general.
+- But as I look ahead, I know my value has never been in the specifics, it's been in setting vision. I'm not the guy who's going to optimize the hell out of a thing. I'm the guy to kick start something new. My goal is to make something that inspires people to work with me. And so when I'm captivated by these ideas for Cyfer, it's about tying things together in the most minimal of ways that express a vision for what computing COULD be. The demo IS the product. And I just need to build it in public, and iterate, and write about it. I have all of the skills I need to make this happen.
+  - It should really be a natural outgrowth of my blog. The blog will be an extension of what I've done with Alice. The blog should act as a record and explanation for the stuff I'm building and why. It should be living documentation. How did I write an HTML library?
+
+* November 27th, 2023
+- Built the final structure for the Lego Village yesterday. Also got Minecraft installed on the Steam Deck (which I also started using again). There's a mod for it that allows you to use the controller, and in concert with the steam deck's controls, it's just so much easier than trying to get the fucking thing working on Windows on the Ally. In that way they're a good complement to each other. Some things are just easier on the Ally while others are just easier on the Deck.
+  - Strongly considering getting the OLED Steam Deck, specifically the special edition one with the transparent plastic and orange thumbsticks. Looks rad.
+  - Annoyingly though the streaming from Hyperion is kinda busted. Probably out of date software or something. I'm really confused. Like even the Steam Remote play is being really weird. Like Spiderman wouldn't render properly even though the resolution was set to 1280x800. The picture was weirdly squished.
+- Estimated delivery date for the CPU is the 30th (Thursday).
+- Should order the Lego for Sarah for Christmas. Also should order the Nvidia Shield while it's still on sale.
+- Responded to RBC Insurance about the quote for Mom's place. It was insane, they quoted $750K for the full replacement cost of the house, which... wat. They'd be able to rebuild the house and get something like ours at that price. And that's not even including the workshop!
+- On the docket for today is continuing with Alice. Will apparently did a write up on calculating the back test. So should probably do some of that this week.
+- I updated my finances the other day. I'm up over $100K since last I checked, and that's even with forex depressed somewhat. It's kind of insane to think about. That's literally my annual salary in the span of under a month. It's all just funny money.
+- I really need to update my will and do the cohab agreement soon.
+- Oh, should read that book on calendars since I have to deal with dates in CL. Albeit not crazy.
+- For comics, I think I need a few indexes. Essentially one based on date, but really chronology, to find out where it is. Another by slug to make retrieval simpler. Actually that's probably it. Can still be stored in a list for full iteration I guess.
+  - Dates can be converted into numbers and then sorted simply. Well, actually I'll maintain them all in a chronological list anyways.
+- Alright, have the navigation between comics working now. It now calculates the next and previous comics using a reverse lookup of the index. And the pages load by using find-comic which looks things up in a trie. Next thing, apart from loading in the rest of the comics, is generating the archives table. Should get a few with different dates so I can have it generate the table automatically by year.
+- Archives should be indexed on the year I think.
+- Okied dokie, time for some beat saber.
+  - Done, I started using my legs more, I tend to stand kind of in place without moving around my legs and torso as much, but instead of straining my arms, I should be fully embodied while playing.
+- Time to grab some lunch. Bought more of those pasta shells and meatballs from Chef Boyardee. Good shit.
+- La la la. La la la. I'm actually feeling really good today. And this weekend. Didn't feel much in the way of inadequacy or anxiety.
+- Alright, ordered the Hogwarts Castle, supposed to ship by the 14th, so hopefully will be here before Christmas lol.
+- Bubs was barking at the door. May as well go for a walk now.
+- Think I'm gonna read some 12 Rules for Life and then come back to working on Alice. Suppose I should work on the Archives page next, then all of the main pages will be complete really.
+- Wrapped up reading Rule 4, something that resonated with me was that instead of asking what you want, you can ask "what's bothering me?". It wasn't exactly for that reason, but it was about how by asking what's bothering you and then fixing that, you're giving voice to parts of you that want things that will make your life better. Making your life better is hard in the abstract, but you can make your life better by eliminating the things that bother you. It's a negative framing for positive effect.
+  - Also, later he goes into this idea of opposites with respect to psychology. A lot of things are better understood by looking at the opposite question. Like drugs, it't not useful to ask why you're on drugs, it's better to ask why everyone isn't using them all the time? Or anxiety, why are you anxious is better understood by asking, why isn't EVERYONE anxious all the time?
+- Will finally set up Google accounts for Rembrandt. So we have ryan@rembrandt.technology and rembrandt.run is an alias for it.
+- Another line from the book that was interesting was essentially "you're far too complex to understand yourself. You're the product of your actions not what you say you are. So you can only really know who you are by observing what you do", and that's interesting because there was a twitter poll about that recently. Was essentially, what do you consider to be yourself?
+- Ok back to working on Alice. Gonna do the date string rendering.
+- Alright, the comic page renders the date correctly now. Time to build the archives page. Should be indexed by the year.
+- And the archives page is done! I think I just want to have it set up such that the comics are sorted so I don't have to worry about it.
+- Now on to optimize the represenstation of comic indices a bit.
+- Ok, did that a bit. Only real functionality I think that's remaining is figuring out the number of comics that each character appears in. Honestly, should probably just memoize all of this anyways.
+- Character page is complete! Shows first and last appearance and shows only a single link if they only show up in one comic.
+- Just a matter of adding all of the pages in now, apart from error checking and shit like that. And the landing page needs a tribute.
+- Oh, I also need to fit in Lil Alice somehow.
+- Should also clean up the code a bit now.
+- Need a break I think. It's interesting. I'll just hit a point where I have an idea of where to go, but I'm still like... meh. And then I'll come back later.
+  - It's an odd state to be aware of. It's not exactly hyper legible. And it's not boredom.
+- Oh shit! K&W just called, they've booked me in for next Tuesday! Hmm, I should figure out what's up with the cabling to the theatre room. I think I'd rather the cabling all come out near the bottom instead of up where it is. Also means that we should probably do some drywalling and painting... I guess that's this weekend. Oh, should also check to see if we have the paint for the black wall or if we'll need new black.
+- Also, am I ever gonna receive payment from Gowlings??? Might need to dip into the LoC just to make these next payments...
+- Ahhhhh.... not sure what to do right now. Should probably work out actually. Gives me an excuse to look at the basement home theatre set up too. Oh, Sarah's gonna want me to bring the bike downstairs too.
+  - Yea, okay, let's do that. We'll do legs since they're the most important to keep up with.
+- Oh there's Nvidia Shield Pros at Memory Express for the same price as best buy, and they're in stock in Calgary. May as well go and check those out.
+- Should think about making dinner. Takes forever to heat up the oven anyways.
+
+* November 24th, 2023
+- I realized the difference between tuples and lists/arrays is a difference in Type. Tuples are product types, lists/arrays are parameterized types.
+  - Although, Racket seems interesting in that typed racket has Pair, and Vector, but also Vectorof. So Vectorof is like Listof, but Vector is more like tuples in that each element is typed separately. I think that's odd.
+  - A pair is just a tuple. Cons is generalized to N-ary arguments. It returns an N-tuple. The type being the product of the types at each index.
+  - Meanwhile, a list/vector has a type as a parameter and each element in the list/vector is of that type. To have a list/vector of multiple types implies the type is a union of the types in the list/vector.
+  - List is an abstract data type.
+  - Structs then are just tuples, except the first element is always a reference to the struct's constructor.
+- Damn, just updated my finances and my portfolio is poppin. Added like $100K in value since I last did it. Market's going crazy. Net worth north of $3.8M.
+- Need to contact the city about inspection.
+- Cleaner is here, finally have clean toilets after nearly three months. Just got back from walking the dog. Spent it thinking about Cyfer and how quote is the operator for creating literal data. Much the same as how you can create symbols in CL with 'symbol (due to the reader) or via intern (which is dynamic). We'd have intern be the operator for converting primitive data structures (tuples, lists, etc.) into persistent data structures, and ' is a reader version thereof.
+- Alright, where did I leave off yesterday? Think I was working on dispatching to different pages. May as well do that and get the character page working.
+  - I think I'm gonna switch the characters package to just be something we load instead of instantiating things.
+- Okay lots of good progress on Alice today. I have the character page essentially complete (apart from outbound links), and I've got the first two comics imported. Once I have a few more comics in, I should look at indexing them better for retrieval. I think that should be a matter of storing the comics in a vector instead of a list, and then having a lookup table (probably a trie) for string based indexes. Once that's done, I can finish off the navigation between comics, and then it's just a matter of implementing the archives page. Not much to go in terms of functionality, then it's mostly just content.
+
+* November 23rd, 2023
+- Had a great time playing Minecraft again last night.
+- I was thinking this morning about how I don't really like board games, I actively avoid them now. And it's probably the same as competitive multiplayer video games. I don't find the competition enjoyable because cooperation with others on a shared goal is so much more fun. The last thing I want to do with friends/family is play something that pits us against each other. I'd much rather be building something together, and board games are just too common of an activity that people suggest in group settings.
+  - And I think part of this comes back to school. Like I spent years competing with others for grades, and after school I realized it was all pointless. The most enjoyable things in life are working together as a team to bring something into the world.
+  - It's a real shame that group projects in school end up being so miserable so often. It teaches the wrong lesson entirely.
+  - Like it's so much fun playing Minecraft with the guys, or working on Chalk 2.0.
+  - Zero sum competition is just so... meaningless.
+  - Especially since so many games have randomness in them, so if you play to win, you'll just have a bad time.
+  - And then, if I feel like I've figured the game out, it's not fun anymore.
+- Huh, I got a text from the electrician that I have to call the city and book an electrical inspection.
+  - So you can book them online... theoretically. It's not letting me create an account for some dumb reason.
+- I was reading more of 12 Rules for Life today. Finished Rule 2, more or less skimmed through 3 (surround yourself with people who want the best for you, essentially), and started on 4. 4 is interesting since it's about how you should compare yourself to who you were yesterday rather than others. And yea, that's something I've been struggling with. You see the highlights of other people's lives, and what they're good at. And not just that, you're likely to see the people who are the ABSOLUTE BEST at a given thing, of course you'll look like shit in comparison. But consider for instance Elon Musk, even he says you wouldn't want to be him. It's probably far easier to be a better parent than him for instance.
+  - I hold myself to an unreasonably high standard that I've never come close to meeting. Why would I torment myself so?
+  - Like, the fact that I do any programming on a given day is a win! Doing an hour is far better than nothing. It's not a failure to not do a full day of it. What a ridiculous notion. There's far more to life than that anyways.
+  - He goes through some conversations you can try and have with yourself, which was interesting. Reminded me a lot of stuff Dr. K talks about actually.
+  - "Start from the observation that we indeed desire things - even that we need them. That's human nature. We share the experience of hunger, loneliness, thirst, sexual desire, aggression, fear, and pain. Such things are elements of Being - primordial, axiomatic elements of Being. But we must sort and organize these primordial desires, because the world is a complex and obstinately real place. We can't just get the one particular thing we especially just want now, along with everything else we usually want, because our desires can produce conflict with our other desires, as well as with other people, and with the world. Thus, we must become conscious of our desires, and articulate them, and prioritize them, and arrange them into hierarchies. That makes them sophisticated. That makes them work with each other, and with the desires of other people, and with the world. It is in this manner that our desires elevate themselves. It is in that manner that they organize themselves into values and become moral. Our values, our morality - they are indicators of our sophistication."
+  - "Imagine that you are thinking enviously 'I should have my boss's job.' If your boss sticks to his post, stubbornly, and competently, thoughts like that will lead you into a state of irritation, unhappiness, and disgust. You might realize this. You think, 'I'm unhappy. HOwever, I could be cured of this unhappiness if I could just fulfill my ambition.' But then you might think further. 'Wait', you think. 'Maybe I'm not unhappy because I don't have my boss's job. Maybe I'm unhappy because I can't stop wanting that job.' That doesn't mean you can just simply and magically tell yourself to stop wanting that job, and then listen and transform. You won't - can't, in fact - just change yourself that easily. You have to dig deeper. You must change what you are after more profoundly."
+  - And he goes on to talk about how "you might ask instead, for the revelation of a different plan: one that would fulfill your desires and gratify your ambitions in a real sense, but that would remove from your life the bitterness and resentment with which you are currently affected. You might think, 'I will make a different plan. I will try to want whatever it is that would make my life better - whatever that might be - and I will start working on it now. If that turns out to mean something other than chasing my boss's job, I will accept that and I will move forward.'"
+  - It's interesting. If I don't know what I want, decide that I want whatever it is that would make my life better. What would that even be?
+  - I'm not resentful or anything about where I am in life. There's so much about my life that I like. What I'm lacking is a direction, and I'm not even sure how to find that.
+  - Perhaps in some sense I currently don't believe that my life should be better. That I already have so much, what is the point in wanting more? But that's also a twisted vision of what life can be.
+  - His point is that we're often blind to what would satisfy our desires because we narrow our vision to one possible solution to those desires without looking at what the desire is more generally. There are many solutions. Insanity is trying to make one work that clearly isn't.
+- You find meaning in building things, but most importantly with other people.
+- My next thing to do on Alice is build out the template. What's holding me up? Part of it I think is probably dreading doing CSS...
+  - But I don't really need to do CSS yet. I can probably figure out stuff around what meta tags to have.
+- Okay, good job. Have the base template set up, and have started on page routing. I think I'm done for the time being. Next up will be creating the about page (which contains characters), and then creating the comics page itself. I think it's a matter of setting up the database of comics essentially.
+
+* November 22nd, 2023
+- Last night I started reading 12 Rules for Life again and man... the first rule really got me. It's the one about stand up straight with your shoulders back. The chapter about lobsters. In it, it talks about how defeated lobsters are more likely to suffer defeats and for those that succeed they're more likely to succeed again. And it occurred to me that for the past year and a half, I've been wallowing in defeat. What should have been the triumph of my career, selling Chalk, was instead the most humiliating thing I've ever experienced. I saw sides of people that I'd never seen before. Just childish, contemptible behaviour on the part of our investors, who had the gall to say that it was in our best interest. It was so needlessly cruel and I felt so helpless during the whole debacle that I essentially came out numb. And I haven't really allowed myself to be really angry about it. That it's "better to look on the brightside", that "anger solves nothing". And really, I should be angry. It felt like such a betrayal.
+  - And it also had me thinking about how men aren't allowed to be angry. Even Sarah talks about how I need to keep my anger in check. And sure, there are a lot of stupid reasons to be angry. But anger can absolutely be productive. I've just been suppressing it.
+  - I've essentially been walking around feeling defeated and powerless. It's like when I was talking to Will about it last year about how I don't feel like I have any agency, and everything is just happening to me. And it's because for 5 months that was my life. Sure I got a paycheque out of it, but I felt utterly defeated.
+  - Couple that with my entire life being upended after the fact, and yea. Of course I feel listless.
+  - I think part of it too is that I saw a part of my shadow at the time. When DreamIt came back with their claim on $200K, I pushed back hard. Even though they were in the right, I felt so manhandled that I lashed out at them because I had no one else to lash out at. But that didn't excuse the behaviour since I was just acting like the investors themselves. And that scared me. In essence, I used the anger destructively.
+  - One of my takeaways here is that I need to allow myself to be angry, but to do so productively. I think this is one of the things that Steve Jobs was good at, you can be angry when people aren't living up to their potential. It's not mean to hold people to a high standard. To make great things is to honour beauty in the world, and it's absolutely worth fighting for.
+    - The other side of the coin though is that I'm not good at giving praise. That's why people stuck with Jobs, because despite how hard he could be on people, when they did something right he'd heap on the praise.
+    - Where Jobs was toxic was when that anger became a personal attack ("you never did anything good, everything you do is crap, you're a loser").
+- I'm most of the way through Rule 2 now which is about treating yourself like someone you're taking care of. And it talks a lot about order and chaos and in particular the creation myth. But what was interesting in that reading was about how when Adam and Eve ate the apple, they became aware of their nakedness and so when God called Adam and Adam hid, it's that being in the presence of God is overwhelming. Like you're just some idiot with a bunch of flaws and vulnerabilities, who are you to stand in the presence of the divine? It's the same reason that really beautiful women are so terrifying. But it's true of all beautiful things.
+  - And it had me thinking about my childhood. I've always felt deeply inadequate, and yet I'm also blessed with intellect, beauty, health, family, love... but I've always felt targeted and misunderstood. Perhaps I'm a reminder to other people of their inadequacies and they hate me for it, especially if I make it look easy or I don't recognize those traits. People highlighting my inadequacies or flaws or oddities had me focused on all the wrong things.
+  - Hell, that's essentially the story of Cain and Abel. Abel was favoured by God and Cain killed him for it.
+- Why would God give me such wealth and success? Why me?
+- Every day is a gift.
+- https://www.youtube.com/watch?v=Ke3a7jMKt04
+  - Freud said that depression is anger directed at the self.
+  - If we don't deal with our anger, it'll express itself in weird ways. It'll turn into depression, or explosions (leading to further self-blame).
+  - Anger is villainized in society, villains are always portrayed as angry.
+  - Anger can express itself as disrespect.
+- To be favoured by God is a tremendous burden. For having the favour of God implies the possibility of losing it. If you don't have the favour of God, there's nothing to lose.
+- Re: our relationship with our investors. Our only sin was our youth and inexperience, and they never forgave us for it.
+- What is my purpose? What is my duty?
+  - Honour your father.
+- Ok, let's continue on this HTML library. I believe I was working on printing.
+- I have attribute printing working now with escaping of strings. I think I just need to print out text nodes now, which should be simply a matter of calling print-escaped-string.
+  - Hmm, actually not so simple to pretty print with text since do you break it onto a newline or not? Usually you don't want to. Also, pre tags will need special printing instructions. But not really necessary for this project.
+- Huzzah! We've generated our first HTML page response! Guess we can start on the template next. CSS can just go in the public folder.
+- Time to reward myself with a few strokes.
+- Just waiting on Minecraft time now.
+
+* November 21st, 2023
+- God dammit, I really want a simple fucking dictionary in CL.
+- OOoo, the switch is out for delivery! Can't wait to try super speed.
+- Dog is barking. Maybe take her for a walk right now seeing as how I just ended my meeting with Daniel.
+- Back from walking the dog, no Purolator delivery yet, but got my JBP books from Amazon. Think I'll do some Beat Saber then lunch.
+- Big thing today is uncompressing those huge files of financials.
+- I should probably start the next ticket too.
+- Well, alas I cannot connect at 10Gbps, but I can at 2.5. It was being really weird since the Aggregation Pro was connecting to the Gateway via meshing the Office AP. WTF. Anyways, I've since disabled all meshing which should also hopefully get rid of those adoption messages I keep getting.
+  - 2.5Gbps seems solid though. I can now move files from the PC to the NAS at like 250MB/s, which is as fast as a hard drive. Pretty dope.
+- Alright, with that excitement out of the way, let's do some stupid PS work.
+- I worked out last night for the first time in a month. Felt good. I got downstairs and Sarah was like "what are you doing for dinner?" and I was like "I don't know, I'm not hungry", but then a part of me was like "well, you get hungry by working out", so I worked out to get hungry lol. My abs hurt today. Legs not yet, but I figure they'll start in a few hours.
+- Starting to unzip everything. No idea how long that's going to take.
+- Did a bit of programming this morning before meeting with Daniel. That's a first. Put together a macro for defining the tag classes and constructors, and also attributes. Just need to set up the printing now.
+
+* November 20th, 2023
+- Mortgage meeting at 10. Gotta send off documents to the lawyers.
+- This weekend was insane because of all the shit happening at OpenAI (and so twitter was ablaze). It's at times like this that I feel a deep tension. There's a large part of me that says "you need to be doing big things" but then every aspect of my actual life goes against that and I don't know how to reconcile this. There's this call to do great and big things, but then I don't do them. Why not? Where's this tension coming from? Why do I even need to do big things?
+  - And more than anything it's that tension that makes me feel bad about myself and my life. Which is ridiculous.
+  - Over the weekend I was also thinking about starting to pray and read the bible. I think some of this tension may be due to a disconnect between what I think I'm supposed to do and what's good for me. Is it that I'm not doing big things because I'm doing it for the wrong reasons and there's an unvoiced part of me that understands that?
+  - I'm having a crisis of meaning.
+- Today I should install those new SSDs into Hyperion. Also replace the switch at this desk.
+  - Also should dust off the desk.
+- Successfully returned the Mobo on the weekend. Memoryexpress is way better than Canada Computers. Also dropped the corpse of the 7950X at Purolator. Once the new one is on the way, I'll order the 80mm Noctua fans.
+- huh, you can order A6000s from memoryexpress. $6500, so you could get like 2 of those for the price of one RTX 6000 Ada.
+- God dammit, pretty sure I need to contact RBC Insurance to get a quote for mom/mark, but they're so fucking dumb now.
+- Oh interesting, reading about TrueNAS and apparently the company that makes that was responsible for PCBSD.
+- Need to reach out to Geoff about what's happening with the home theatre.
+- Fuck ya, Lego out for delivery.
+- 7 More days on MAMP. Need to clear that out.
+- Don't think I should do Beat Saber today, I twisted my shoulder somehow on the weekend. Flailing my arms around probably isn't a good idea.
+- Something I was thinking about on Friday evening (while at the mall) was that I should really aim to just start writing down WHY I like the things I like. What's the vision for Cyfer? It's really about beauty to me. It's a bunch of ideas I find beautiful. So write about why I find them beautiful. Building any sort of community involves communicating a clear vision. It's the work I did at Chalk. And I need to stop viewing it as unneccessary or less than, it's the most important thing I can possibly do.
+- The reality is that I'm essentially feeling FOMO about all of the stuff happening in AI despite the fact that I know that there's no way I can make a meaningful splash there anyways. That stuff is all downstream of years of work. Why engage in that arena? Choose a different pool.
+- Alright, moved to the new switches and plugged in the 2.5G port to the dock.
+  - Oops, the connection to Aegis hanged... Well, the docker container will die once it's done.
+  - The Ubiquiti stuff is still scheduled for Wednesday. Really excited to see if I can hit 10G to the office.
+- Pulled out my bible today and the first page I turned to was Ecclesiastes 3, which is the one that has "a time to be born and a time to die" and it talks about work. "So I saw that there is nothing better for a man than to enjoy his work, because it is his lot. For who can bring him to see what will happen after him."
+  - Holy moly, good shit.
+  - 5:18: "Then I realized that it is good and proper for a man to eat and drink, and to find satisfaction in his toilsome labour under the sun during the few days of life God has given him - for this is his lot. Moreover, when God gives any man wealth and possessions, and enables him to enjoy them, to accept his lot and be happy is his work - this is a gift of God. He seldom reflects on the days of his life, beacuse God keeps him occupied with gladness of heart."
+  - Remember every day is a gift.
+  - Just before that He talks about how "whoever loves money never has money enough; whoever loves wealth is never satisfied with his income. This too is meaningless" and I get it. Going for more money will not bring happiness. But neither will going for fame. I may have wealth, but there are other non-wealth things that I feel a need to strive for. But as always, once I have those I'll find there's no meaning in them either. Fame? more problems. Sex? meaningless. The only meaningful thing is to accept that every day is a gift and to enjoy life for the gift that it is. Stop worrying.
+  - Do work because you enjoy it. You do enjoy the struggle.
+  - Before enlightenment, chop wood, fetch water. After enlightenment, chop wood, fetch water.
+  - You can spend the whole day feeling bad about yourself, but remember that you could die tomorrow.
+- I should learn how to use TMUX so I don't have a hung session again.
+- This is why I need to work on Cyfer. It's not for riches or fame. It's because I have a duty to bring beauty into the world.
+- That's also why I need to bring Alice back online. It's karmic duty to my dad, but also because it's beautiful.
+- Should go walk the dog.
+- I'm as much afraid of prayer as I am meditation. But I think prayer has the added social disapproval from it. Why do I care?
+- Deep down I'm afraid of people. It's not even social anxiety, it's far deeper than that. Can I talk to people? Yes. But I'm afraid of their judgement more than anything.
+  - Again. Why???
+- Back from walking the dog. Time for lunch, then thinking I'll put the 990 Pros in, then the panels on the rack.
+  - Oh, realized I probably need to adjust the WOL app to use the MAC address for the 10G NIC.
+- Alright, added the two new drives. It's really weird, once I added them Steam had no issue adding them to the Steam Library. I noticed that the old drive was MBR rather than GPT so I wonder if that may have been why. Anyways, I know what the format is, so I added SteamLibrary to the root of D since that's the folder name it uses for the other drives.
+- Time to put the panels on the rack.
+  - And done! That looks so much nicer. I have 7U still exposed at the bottom. So 3 more panels and a 1U if I want to get one of those.
+- What makes edging so dangerous is that you can keep going forever. It's really good at shutting down your thoughts.
+- Think it's time to do some work on Alice. In particular, need to work on the API for generating HTML.
+- Got the foundations of an API, mostly just replicating the browser's guide. Next thing up is the attributes. I think I can just define these as a plist essentially, with keywords being the attribute name, and then whatever is associated with it as the value. Then to create them we just go element by element and parse it essentially. So if it's a keyword, check that the next thing is an attribute. Once we're done processing the attributes, we can set a flag to throw an error if we get anything else.
+  - An alternative option is to check if the first argument is a list, and then just process it as a plist. Might be simpler and more extensible.
+- Ehhh, not feeling like doing anything else.
+- Finished downloading all of the stuff from algoseek though.
+- Ah okay, elements that can't have children are called void elements.
+- Think we can call write-html as the primitive, then we can have html->string for converting to a string (simple wrapper).
+- Since we're really only dealing with tags, not sure if we actually need the node distinction and stuff like child-nodes vs children.
+- We can probably set up a macro for this stuff now that we have a basic understanding. I guess the big thing at the moment is dealing with attributes (which are really a type of text node I guess).
+- I'm being perfectionistic again. I think I should just create the page layout, then convert it to Lisp.
+
+* November 17th, 2023
+- read "what happens when you get what you want?" last night. my main takeaway was "wow, this book is short, but surprisingly long winded". could've been a blog post
+  - anyways, had me thinking about my life and what to do next.
+  - what was interesting was that it talks abouth how "what are you doing next?" is the most annoying question. as soon as you're done with something, people ask "what's next". And trying to answer that question is rather stressful.
+  - Like, why do I have to be doing anything?
+  - There's this undercurrent in society that you have to be doing something at all times. Like you have to be working towards something.
+  - And looking back on having spent the better part of 10 years on something... I don't know what to do. Or even what I want to be doing?
+  - Some of that is a value judgement I put on myself. That is, what I end up doing has to be "valuable". And so it feels like a lot of what I do enjoy doing feels frivolous. And it could be, per the book, that it's really a lack of a narrative as to why.
+  - Like, playing with computers and lego and trains is fun, but why? What's the meaning of it all?
+- I wonder if the reason I'm working on Rembrandt at all is really a case of 1) fear of missing out (that is that Will will make buttloads more money than me), and 2) that I'm afraid of losing him and Daniel as friends. Because really, it's clear that I'm not interested in it. I'm only interested in the tangential parts of it.
+- And I'm also afraid that starting another business is like a rebound relationship. Like, all I know is being an entrepreneur, and I don't know how to sit with myself otherwise. And the thing is, there's a LOT about being an entrepreneur that I didn't like. Running a business is a lot of not doing the thing you actually want to be doing.
+- I don't know if I actually like programming all that much.
+- I do like building things. And working with my hands. Despite all of the frustration with Aegis. I've found that more satisfying than fucking around with software. But I'm not sure what to DO with that information.
+- How much of my disillusion with software stems from stuff around it. Like working jobs doing it. How do I spark the childlike wonder again?
+- Today I have to download some of the data from Algoseek's S3 bucket. Not sure what's the best way to go about this. Probably want to spin up a docker container for it. That means figuring out how to provide it with volume access and then also figuring out how I want to run the pulls. Ideally whatever I write can be reused for pulling recent data via a CRON job or something. Daniel was saying there's a metadata file of some sort that you can pull to get a listing of everything and how big it is so we can get an estimate for how much it'll cost to download it all.
+- I think I should take the motherboard back for a refund tomorrow (since we'll be going out tomorrow anyways).
+- Oh shit, the UPS daemon works! Just enabled it and it detected the UPS and is telling me how much battery I have left, the current load, and all that jazz.
+  - Cool, you can set how much battery or runtime left to initiate a shutdown.
+  - Alright set it to 25% to initiate a shutdown, or 10 minutes of runtime remaining (whichever comes first).
+- I think what impressed me about learning that unraid is 18 years old is that you could run a business like that for that long. It also explains why all of their shit is PHP.
+  - Like I had the thought of: "could you start a company that commercializes GUIX?".
+- No idea what box I'll ship the CPU back in...
+- Did VR, walked the dog. Now eating lunch. After this need to look at Algoseek docs.
+- I was thinking about starting a computer company on the walk.
+  - As much as I'd like to work with hardware, the best way to finance it is by starting with software. Essentially, the idea is to use Guix as the base for a commercial distribution. The target is essentially an unraid competitor, since you don't need a GUI to boot to.
+  - Most things on unraid are Docker anyways.
+  - Then we build essentially a replication service on top. That's the thing with unraid, it's not really clear how to make sure stuff is backed up across devices.
+  - I need to think on this more to plan how to build it.
+  - It'd also be cool to develop an LLM natural language interface for interacting with the system. Essentially translating between structured data and unstructured language.
+  - The challenge for me is communicating the vision to others. I think this is where building in public fits in. Like having an audience like servethehome or jeff geerling or someone like them is really beneficial. People like watching that stuff. And it'd be building for that audience in particular.
+  - I can build a lot of this on top of unraid, that's kind of what I'll be doing with Rembrandt.
+  - I believe the most difficult thing about building an unraid clone is the actual RAID part, because the use specific kernel modules to build it. Apparently because of GPL you can actually look at the code since it's distributed with Unraid.
+- My natural inward focus is my blind spot. I think what stops me from working on Cyfer is that it's a BIG project, and I get overwhelmed without consciously recognizing that fact. But the reality is that, of course I'm not going to do all of the work, I'll get other people to help me. Likewise for my perfectionism. My greatest strength is vision and showcasing that vision, not necessarily bringing it to production. Like the stuff at Chalk, I did a lot of the demos, got people intrigued by the possiblities, then kicked it off to Daniel/Chris/Devin to execute. That's easy to me. What's hard is toiling away fixing small edge cases and shit like that. I'm the guy who cuts a path, not the one who paves it.
+- Ok, got a rough estimate for the cost to download shit from S3. I also found there's an AWS CLI docker image. Figure I'll use that, the idea being I mount a directory to it and then run the sync command. The sync command is supposed to only download stuff that's changed, so could set that up as a CRON job, though probably want to approve it in case somehow the file structure changes or something.
+- I still can't believe the CPU died. That's fucking crazy.
+- Oh, I should set up Time Machine with the NAS now that it's steady state for the time being.
+- Ubiquiti order is due to arrive on Wednesday. I need to print off that label for the CPU and return it ASAP.
+- I have no idea where to put this CPU though. All of the boxes I have are too big. Maybe there's one in the basement?
+- Man, I kinda want an OLED Steam Deck. Sure, it's less powerful than the Ally still, but it finally has a 90Hz display. I still like the experience of the steam deck better for streaming than the Ally.
+- Interesting Dr. K video: https://www.youtube.com/watch?v=Ddfgq3K4_vY&list=WL&index=7
+  - We think we need to argue with our negative thoughts, but we don't. All you need to do is subvocalize positive thoughts. No need to respond.
+  - Subvocalization activates a different part of the brain than other thoughts.
+  - Ah, that's what mantras are.
+  - Negative thoughts activate negative emotions that spur more negative thoughts. These are thought loops.
+    - People who experience these often want to stop thinking. This is why they reach for substances.
+    - Perseveration/rumination are the follow on thoughts. Too much of this is a mental illness.
+  - Mantra works because you're essentially planting specific thoughts, which back-propagates and so it becomes routine.
+    - And interestingly it turns out that chanting mantras is weaker than subvocalizing them. Speaking out loud activates the rear of the brain, subvocalizing activates the frontal lobe.
+  - Ah that's probably a part of why success and getting something breaks things. Because you have all of these pre-existing thoughts about what you are, but then after the fact your thoughts are unaligned with reality, and that's disconcerting.
+  - Oh, this is actually interesting because a few months ago I was thinking about actively talking to myself more, and it turns out that's not as effective???
+  - Cognitive reframing involves essentially talking to yourself as if you're talking to a friend or your child. When we do that, we tend to be easier and more caring/forgiving than we are to ourselves naturally.
+  - One thing I'm confused about though is he talks about how you can bypass the whole arguing with yourself bit by subvocalizing. But aren't those thoughts subvocalization?
+    - I asked this question on Discord! Someone else kinda expressed confusion at it too.
+- Okie dokie, time to set up Time Machine.
+  - Okay it's backing up. I gave it 100GB, but I wonder if it makes sense to set it to a TB or so. Hmm, let's do 2TB. Okay, well it's 2.2TB apparently. Fucking disk bits.
+- Hmm, should figure out how to configure Docker containers for AWS. Kinda sketch to have credentials just sitting on a share though.
+- Alright, have the command for syncing, but jesus christ, just a dry run is taking forever. No idea what's going on.
+- Sarah wants to go to SouthCentre tonight to get a new phone. I think there's a Shoppers there, or at least close by. I'll see if I can find a box for the CPU. Should measure the dimensions. 13cm x 13cm x 9cm.
+
+* November 16th, 2023
+- Gonna head out to Memoryexpress in about 30min. They open at 11.
+  - Might want to buy a bit of thermal paste too.
+- Still wonder if I should swap the CPU to check if it's the problem. I seriously doubt it.
+- Ok that's cool. The 10G switch will be green if it's at 10G, and amber if it's 5/2.5/1/0.1.
+- The other switch as well as the 2.5G ethernet adapter will be here today as well. That and the Ally screen protector and Noctua fan.
+- I feel like I should dremel the rough PCI card slots on the case while I have everything out.
+- All of this shit with the motherboard and RAM makes me think if I'm gonna do builds in the future, I'll stick to server/workstation grade equipment...
+  - Although ASRock is supposed to be good.
+- See the issues with RAM at 5200, even though it was technically rated for it, makes me think that might have been the board to begin with.
+- Part of my problem with Cyfer I think is that I'm not sure how to organize it in a way that makes it easy to come back to. And I'm not sure what to do about that.
+- Well I'll be damned, I think it might be the CPU. On the new board it's randomly spinning the fan up and down and it still hasn't posted.
+- Well I'll go buy a 7600 from Memoryexpress for $300 and see. If that works, then I know for sure that the CPU is dead and I'll just keep the 7600 installed until the replacement can come. That's so bizarre. Memtest must have killed the memory controller somehow? I'm stunned. Must have been silicon lottery seeing as how it couldn't handle 5200 without throwing errors.
+  - Should be able to return the board I just bought. All accessories will be there, and didn't open anything other than the CPU cover.
+- Installed the screen protector on the Ally! Much better. Seems to keep dust off much better. That's honestly the worst thing about the Ally, magnet for fingerprints and dust in particular.
+- Just spoke with Devin, nice to catch up. Now back to memory express!
+- WTF, just got a bill for $123 from Fedex for duty/clearance from Serverpartdeals...
+- Damn. It was the CPU after all. Guess I'll need to RMA that one.
+- I figure I'll stick with the 64GB of RAM for the time being and only install it once I have the new CPU. I'll also just use the stock cooler that came with the 7600 for now. No point in unmounting it.
+  - I'll try and return the new mobo tomorrow as well.
+- Ok everything is booting again. I think once we get the new CPU, I'll rerun the wiring. I realized I can get rid of a cable if I get rid of the included 80mm fans and get two that are controlled by the fans on the motherboard. Then I can run the CPU cables behind the PSU and over. I think it'd also make sense to remove the drive caddys and run some cabling underneath them.
+  - Alternatively, I could try mounting the AIO behind where the 80mm fans would be. Would make fucking around with the machine easier I think.
+  - Here are Noctua 80mm ones: https://www.amazon.ca/Noctua-NF-A8-PWM-4-Pin-Premium/dp/B00NEMG62M/ref=sr_1_1?crid=2SOQLWSPK27XC&keywords=noctua+80mm&qid=1700177646&sprefix=noctua+80%2Caps%2C120&sr=8-1
+    - Comes with Y-splitters so that you can use the same fan header to control both.
+- And we're back online.
+- Just need to find a fucking box for this CPU to fit in.
+- Also, I missed a fucking meeting today for Rembrandt because stupid Google won't show me invites on my calendar...
+
+* November 15th, 2023
+- Ooo, the UPS is out for delivery, and the 10GBe switch and capture card are supposed to be delivered today too. No idea when the Ubiquiti order will be here, my guess is sometime next week.
+- Good news! The NAS passed Memtest86 at 4800Mhz. Sure it's not 5200Mhz, but still, that's crazy! It makes me curious to see if I could hit 4800 with the 32GB DIMMs on Hyperion (though for gaming having 64GB at 6000Mhz would be better).
+- Figure I'll wait for the UPS before turning the NAS back on. While it might be worth trying 5000Mhz, I don't know if it's really worth it since I'd have to stress test it over night again. Like sure, it might not throw errors immediately, but that's not enough for me (at least for a server role that is).
+- Just ordered a screen protector for the Ally, $15 on Amazon. It was recommended when I was looking at SSDs for it. Looks like Seagate makes a 2TB one that'd fit, still, costs like $260. A bit steep. 1TB might be worth it though, since 512GB is a little tight these days for games.
+- Figure when the 980 or 990 Pros 2TB drives go on sale again, I'll pick up 2 or 3 to pop in Hyperion.
+- Woah wtf, just saw a promo video for the Union Pacific LionChief and it's clearly the same locomotive as the Polar Express one, and yet it seemed to go over a switch slowly without issue! I need to investigate what's up with it...
+- I wonder if I could clean up the PSU wiring in the case. Also wonder if there's a 4U compatible fan instead of the 3U one. The 7950X runs a little toasty. Actually, the fan only has one mounted, I wonder if I could attach another 92mm fan to it. Oh yea you can, it mentions it on the box. Needs an NF-A9 fan. Ok $22, ordered!
+- Looking forward to having the home theater for working out. The iPad just doesn't cut it ya know.
+- Looks like it'd be about $300 for custom cables from Cable Mod. Considering how much I ended up spending on Molex adapters, that's not terrible. And you can choose the lengths for everything which is cool, even the amount of space between each connection on a 4x Sata cable. And you can get 90 degree VHPWR cables.
+  - The main problem with the build right now is that there's so much slack in the cables that the 3 120mm fans at the front are largely obscured, so there's not a lot of airflow from the front which is already reduced by having hard drives in the front.
+- Hmm, I wonder if I should put the UPS at the top... and move the switch and NAS down a bit.
+- I should Memtest Hyperion as is. I wonder if some of the weird shit that's happened is actually memory related.
+- I wish I knew why the NAS takes forever to boot and what it's doing with the hard drives.
+- Sadly the blank panels for the rack come on Sunday, the longest wait. But they should still be here before the Ubiquiti stuff I think.
+- Huh, so the UPS should run for about 20min when the server is idle. Also a matter of if I want to put the switch and everything on the UPS. Probably should.
+- I still haven't checked to see what the power draw is with the GPUs on actual idle. It's about 260W when it boots.
+- Too bad I need the iGPU. If I turned that off I wonder if it'd be fine at 5200 since the iGPU shares silicon with the memory controller.
+- Oh damn, Unraid is like 18 years old. Huh, also based on Slackware.
+- Wish I knew how to better make use of the Shaw connection.
+- Nice, second package is out for delivery.
+- Back from walking the dog. Fucking dog starts barking when Sarah's in a meeting. She didn't even poo or anything. God she needs to be back at daycare...
+- Was thinking on the walk about how the general abstraction of a system is to provide tuples of various size (generalization of cons). A tuple has a number of cells. Cells either contain literal data (numbers), or more commonly, pointers to other data. Cells come in three types: persistent, variable, and volatile. This abstraction exists in hardware too. Persistent cells are ROM, variable cells are RAM, and volatile cells are I/O ports. That is, a persistent cell always has the same value. A variable cell has the expectation that writing a new value to it and then immediately reading it will return the same value. A volatile cell is expected to change at any time, writing something to it and then reading it won't necessarily return the same thing. Actual variables, or rather identifiers, are just aliases for those objects. The primary difference syntactically at least with volatile cells is that because they are expected to change, the operation of actually looking at them tends to be explicit. We hold them indirectly. But they exist at the hardware level. Essentially, a port is an abstraction over volatile cells.
+  - Yea man this makes sense.
+- Was also thinking about how really we have symbols and identifiers. Symbols are always equal to each other if they have the same name. They're essentially textual identifiers (in fact they're literally numbers, the number being their UTF8 encoding). Identifiers are a symbol plus some context, and they exist only as a syntactic construct. Identifiers only make sense in a given context. Like when you talk about "Ryan", is that me? Or Ryan Gosling?
+- Records or structs are just tuples with the first element being some identifier representing the type.
+- Had a great wank session. I just wish my UPS was here.
+- Omg weird. Using the Mac after using Hyperion feels so weird. The mouse acceleration is part of it, but also that the Pro Display is only 60Hz.
+- Updating the Steam Deck, and jesus, it feels so heavy.
+- Ya know, I could go downstairs and adjust the stuff on the rack before the UPS gets here. I even need to put the lid back on the NAS...
+- Oh shit, UPS is here I think! Yep that's it. Funnily enough, the other package must be on another van, even though it's essentially the same delivery window. All of that stuff is for up here though (video capture "card" and switch).
+  - But finishing a bunch of updates on Hyperion first. Updated Sunshine, nVidia driver, windows updates, that shit.
+- Good post about how some of the most productive people just do things without even thinking about them as work: https://www.lesswrong.com/posts/rbXoZFWdwaP4pW9hu/intrinsic-motivation-is-crucial-for-overcoming-akrasia
+  - Makes me think about what I could be doing that's just "natural".
+- Alright time to go fuck with the NAS. Oh, I can't take the switch offline while Sarah's working. But she's leaving soon, so I'll do it then.
+- Need to figure out why Sly-mrepl gets really slow over time. I have a feeling it's some minor mode, but not sure which one.
+- Okay, it seems to happen once you get a bunch of compiler notes.
+  - Not prism.
+  - Ah, it's aggressive indent mode! Okay, a bit annoying not to have, but it is what it is. I should learn to use scratch buffers for stuff anyways.
+  - Alright fixed!
+- Honestly, it's a bunch of random things about emacs that probaby turn me off from using it and thereby working on Lisp generally. But it's just constant yak shaving and it feels like I'm not making progress.
+- Well, have the characters package more or less done I think. That has the names, descriptions, and slugs. Oh, should check how the symbols turned out.
+  - Okay yep, looks good!
+- Next thing then is to create the template for the site I think. Because now I'll have a page that'll actually have content.
+- I need to create an HTML DSL essentially. I'm not really a fan of spinneret. Fun project.
+  - Shouldn't be so bad. Big thing will be escaping text.
+  - Needs a plist for attributes.
+  - Essentially, a DOM element is a function of keywords that are the properties. Then everything else in the list also needs to be a DOM element. If it receives anything in the body that isn't, it's an error. Raw strings need to be wrapped in a RAW tag.
+  - Just need to create the elements that I need. One by one.
+- Okay, Sarah's going. Time to NAS.
+- The NAS is no longer booting and I have no idea why... it's just stuck at the DRAM light. I've tried reseating the CPU, reseating the RAM, switching the DIMMs, nothing works. I'm so confused.
+- Well, I guess I'll have to go and buy the ProArt board from MemoryExpress and start a return for the board through Amazon. This is so fucking bizarre. I can buy a little speaker too.
+- Not exactly impressed with the quality of these boards tbh. But there's nothing really else that'll work for this build. The only other board with 10G built in wouldn't be able to accommodate the HBA (not to mention more expensive).
+
+* November 14th, 2023
+- RBC mortgage specialist will be setting up a call today to discuss mom and Mark's situation and me co-signing.
+- Today thinking I'll run Memtest86.
+- Need to go to the grocery store today to pick up litter for the cat (and cream for my coffee, it's so annoying that Sobey's doesn't carry cream with a fucking closing lid).
+  - Thinking I'll do that right after my chat with Daniel.
+- Today I can order all of the network equipment.
+- Heh, good news the other half of my theater will almost certainly be on a different credit card statement.
+- Hmm, startech blank panels aren't that much cheaper than the Ubiquiti ones, and they look a lot uglier. How many would I need?
+- Well, finally turned off those stupid reactions in video. I have no idea why Apple would enable those in every fucking application that uses your webcam without telling you. And it was NOT clear how to disable them.
+- Alright, time to go get litter for the cat.
+  - Went to Real Canadian Superstore, and they didn't have cream with a cap on it either... at least I got litter. Oh and they had flats of Diet Coke! So bought 3 of those.
+- Time to run Memtest! I bought Pro. Figure I'll get that running, then do some VR.
+- Well, Memtest failed like immediately. It actually rebooted the first time without even showing a memory error. Sounds like what happened on the weekend! Anyways, I started running it again with the XMP profile enabled, and I got errors on the A channel, B didn't have any, but who knows, it may have showed them if I ran it longer. Switched it to the default speed, and it's going fine now. Without XMP, Memtest shows the memory bandwidth as 40GB/s, with it enabled it shows 56GB/s, so 40% faster. Meaningful, but if we can't get it we can't get it. I seem to recall from my readings when I was working on Hyperion that the A channel is more finicky with timings than the B because of something having to do with how the memory controller works. I might try swapping the A and B channel DIMMs (and blowing them out with some compressed air) to see if that does anything. Considering that I swapped things around a lot in that case, there might have been dust that found its way into places it shouldn't be. Maybe that'd help. Barring that, I might try at 4800Mhz which is the JEDEC speed. If that's stable, that'd be fantastic!
+- I have 18Us exposed at the bottom. 25U, minus 3U for the switch and two spaces below it, then 4U, so 7U used. So 9 panels? That'd be like $225, honestly, not bad. Paid about that much for the shelf and PDU. Think I'll get the Startech ones, and then maybe the brush one from Ubiquiti to feed cables through. Oh, I can only buy 4 lol. That's fine.
+- Hmm, I'm not sure if I want to buy a PiKVM or not right now. They're kind of expensive... and assuming the machine is fine, it'd just sit there most of the time.
+- And we've ordered! One of the switches I could spread out over 5 payments with no interest, so I took Amazon up on their offer lol. So just over $2000.
+- Finally could do the cat litter. Glad that's over with.
+- Now, need to ask Sarah Nash for a letter of employment.
+  - She's out of office, so asked Melisa instead. Downloaded the rest of the stuff. Need to get my property tax statement though. Not sure how I can get that.
+- I should just do this filtering thing with the text editor options and be done with it.
+- Then we'll get back to work on Alice.
+  - But I feel a bit of trepidation at doing so. Not sure where that's coming from or why.
+- Okay all of the stuff for the mortgage has been sent. Just waiting on my property tax statement, which I've put in a request for.
+- Time to do some PS work I guess.
+  - Well that was easy. It also wasn't actually a task I was scheduled to do. Whateva.
+- Dog just barked. Guess I'm going for a walk!
+- Back from walking the dog. Checked Aegis before I went and still no errors. So I think it's good at 3600Mhz, which implies most likely a mobo/CPU thing than memory. Either way, I'll let it run the full time so that I know it's properly good.
+- Meditated for 5min using the alternating nostril technique. It's been awhile.
+- I should probably order the Hogwart's Castle lego set sooner rather than later in time for Christmas.
+  - Just ordered the santa's visit set, the last of the winter ones for this year (they didn't have it in store). Also ordered an Indiana Jones set based on the plane chase from Last Crusade. And apparently I'm getting another Gallileo tribute lmaoooo.
+- Ok, I guess I can get started on Alice again. I think I want to start with the characters page.
+  - Have everything from the character page I think. I've created character objects for each with the full name and description. I think it'll make sense to export them from the alice-characters package. Need to figure out how to do that. Probably a macro.
+  - Probably makes sense to have a different package with definitions and helpers. Then just have files that use those. Could even use a macro that takes the full name, generates a slug, then upcases that to create the symbol. Yea, that's probably a good idea.
+- Alright, started a bit of macrology to get the code down a bit. It's coming together, but I think I'm done for now. Something that's bothering me is that emacs keeps fucking hanging when using SLY at the REPL, and it randomly adds semicolons all over the damn place... I'm not sure if it's just SLY being stupid, or whether it's some other package causing trouble.
+  - Oh, it could be indentation related actually. I don't think you're really supposed to use the REPL directly the way I do...
+- Oh interesting, the primary difference between defparameter and defvar is that defparameter nerfs whatever's in the variable if it already exists and defvar does not. So defparameter acts like setf, but defvar only works on unbound symbols.
+- Let's go take a look at Aegis and see what it's up to.
+
+* November 13th, 2023
+- Had a great weekend actually. Didn't take any THC either lmao.
+- Spent yesterday building two of the Lego sets with Sarah (the winter village ones). Next weekend we'll do the Home Alone one.
+- Something I'd like to do today is play a video game in the morning like old time. That's something I'd like to work back into my daily routine.
+  - Need to think about what though.
+- Last night I was also thinking, again, that it'd be cool to make a video game. But what?
+  - With stuff like Stable Diffusion, and inpainting, that could be really helpful for generating assets.
+  - Oh shit, it's the 13th! That means I can order my networking equipment!
+  - Well, maybe tomorrow.
+  - Lol, balance is going to be like $19K.
+- Today I need to reach out to RBC about mortgages for Mark and Mom.
+  - Also need to send Mark the statement for October.
+- Just updated my Rogers billing info. Realized I still had it on Kitchener so I've probably been paying more in tax since.
+- Despite such a good weekend, I'm feeling really overwhelmed this morning and not sure why. I think it has to do with the fact that Monday is a "workday" and so all of the stuff around that bubbles up.
+  - The thought that came to mind is "I don't know who I am" and it seems like that keeps coming back up.
+  - And I think I get overwhelmed by not knowing what I should be doing. Or even what I want to be doing.
+  - Let's write the message to Wes first, and see if I feel better after that.
+  - Ok, I just sent the email to Wes and sent Mark the credit statement, feeling better now. But might be unrelated.
+- Oh interesting, it's really easy to add keys to ssh. You use the ssh-copy-id command just as you would ssh. That is, ssh-copy-id root@192.168.1.6 to login to root on that machine. It'll then ask for the password for root, and once that's done it'll add the key. After that, I can just ssh root@192.168.1.6 and it'll login using the key without asking for a password. Had no idea that was a thing!
+- Alright, added nvidia-persistenced to the go file which is located at /boot/config/go. Hopefully that works better.
+- Also, the system disconnected from Core again because the DNS stopped working. I've readded that share using the tailscale IP address and that works now. So hopefully that doesn't stop working again.
+- It's really weird. The NAS had an unexpected reboot at like 3am on Saturday morning. No idea what caused it. The router didn't go down, so I don't think it was power... After that, I configured it to start the array after a reboot, since the array was down until Sunday when I went to login. I'm thinking I should run a Memtest86 on it... god that'd take forever. Because it was an unexpected power cycle, it has to check parity, which started yesterday and of course takes like 20hrs. It's still going... Also, having drives going for 20hrs warms them up. They're usually at like 30c, but right now they're at 36C. It's kind of odd how the temperatures work because 3 of them are at 36c, while two others are at 32-33c, and I know for certain that one of those is beside another drive...
+- Think I'll just buy one of the Hi-Capacity Aggregation switches... not really worth waiting to save a bit of money, and also LOL. Also it comes with an SFP cable, but the other one doesn't, which is like $20 so saving money lmao.
+  - So main things is this, I need a SFP-RJ45 (might try one of the cheaper chinese ones).
+  - Then thinking of getting a Pikvm.
+  - One of those Netgear switches, one of those 10G ones, and a 2.5G ethernet adapter for Prophet.
+  - The two switches I have up here can go to the basement for the home theater stuff and other extra crap.
+  - This'll be like $2000 I think. Probably a bit more actually. $2500?
+  - Oh wonder if I should get some OCD panels too lol.
+  - Right, and a UPS. Okay, this'll probably push closer to $3K.
+- Think I'm gonna do some beat saber, then come up and feel negative emotions lol.
+  - Done that. Made lunch. Task for today is getting alice comics up and running.
+- Okay, I have alicecomics working locally, kinda. It's weird. It doesn't seem to show anything on the front page or rather any of the pages... I feel like a plugin is broken or something. Either way, I have access to all of the content, and it may make sense to just export the comics and build a site from scratch tbh.
+- I don't know if I have the physical book he did or not. It was falling apart though.
+  - It's a shame I don't have the original files...
+- Honestly, I can probably get a lot of this from web archive in terms of design that is. Mamp Pro is only 14 days.
+- Yea, there's something really odd going on. None of the pages are rendering, even the comics themselves.
+- Well, I put the alicecomics.old code in place, and now it won't load...
+  - Wtf, now it's working... maybe because the localhost site was fucked???
+- Okay, well it seems to work better now. Time to figure out what the hell comicpress does and what's done manually. Since the site isn't going to be extended, I can probably just pull all of the info into some big files. Hell, the whole database was only like 3MB.
+  - Looks like the header is dynamic, it seems to pull a different image each time.
+- Looks like each comic has a name, which is used to generate the slug for the URL. Then it belongs to a Chapter which is really just for whether it's Alice, Lil' Alice, or Alice and Dot. Then there are tagged characters, a publish date, and image.
+  - Not sure if this version of the site has the strips I did as a kid.
+- So I could probably load all of these as a bunch of objects/classes.
+- I mean the good news is dad wasn't really all that great at CSS, so it's not responsive or anything like that. The design is so simple, I can just replicate it myself.
+- Let's figure out how to get the images though. I have a feeling they aren't named very well.
+- Okay yea, not very good. I wonder if I can get ChatGPT to help pull that info. Like there's an export from Comicpress. Actually, let's look at that first. Actually that doesn't have the images in it...
+  - Looks like they're pretty standardly named though. Only annoying thing is that they include the thumbnails which are cropped. Yea that's going to be annoying. Not sure which regex would find those. I think there are 3 for each though.
+- You know. One option would be to literally do it one by one because I haven't read through them all myself anyways. I'm going to have to click through each as I do it.
+- Let's do that then. First thing's first, we build the basic theme. Or rather, get a basic site loading. We can also start by working on the characters page. Since we'll want to tag those to each comic as we go.
+- Well, Roswell is fucked. I guess versions of SBCL before 2.3.8 don't work with macOS 14. And roswell needs it to even run... So I've just nuked Roswell anyways since it's been such a pain in the ass. Just gonna use Homebrew to manage my SBCL. Installed Quicklisp and Ultralisp. Just need to setup SLY I think now.
+  - Alright, seems to work. Emacs couldn't find ros run, but it suggested sbcl through brew anyways. May as well update that.
+- I think I'll take bubs for a walk now. SBCL and Sly seems to be working.
+- Hmm, Memtest86 pro has special stuff for DDR5 and XMP. May as well buy it.
+- And back from walking the dog. Was thinking about Alice on the walk. I think this is a really good project for me actually. Guess I should look at spinning up a repo for it.
+- Alright, have a simple webserver running. Oh, should test that public works. Yep! Works. Alright then. May as well create the repository for this.
+- I'm really happy with where this is going. Next thing I need to do is essentially create the basic theme. Should be simple. Mostly just copying the colours that he used.
+  - I think why I'm happy about this is that it'll get me programming in Lisp again, and it'll likely be quite similar to my own personal site. Except alice has existing URLs I need to map to.
+  - Ah yea and it's better for long term maintenance if it and my personal site are largely similar in terms of how they work.
+- Now that I'm not even regularly using THC on the weekends. Maybe I can reintroduce it during the week. I didn't even crave it this weekend.
+  - Yea think I'm gonna get high tonight. We're not going out for dinner (the place we wanted to go to is closed on Mondays), so nothing else planned. Just want to do Memtest86 I think.
+
+* November 10th, 2023
+- Fuck the fucking CRA and fuck this stupid fucking company.
+- You know, I'm currently paying $33/month for the TV addition to TELUS, but with a NAS coming, all of that stuff on Crave could just be local instead. In which case, yea, may as well go for the 3Gbps service since that's only $20/month more than the gigabit I believe, and so I'd actually end up with a cheaper bill.
+  - Something I could do is make a VLAN that only accesses the Shaw connection, and run that to the second ethernet adapter on the NAS. Then could probably have that NIC used for Docker.
+- I saw a video last night about those weird Exos 2x18TB drives. We were really confused by those when we saw them on Serverpartsdeals. Turns out those are dual-actuator drives. And so you can run those as two 9TB drives, or a single drive. And we were like, why would you want that? Turns out, you can run them in RAID 0 with themselves, which effectively doubles performance. So finally there are drives that can saturate a 6Gbps SATA connection. They go for US$269 on Serverpartsdeals, at least right now, but I feel like they were cheaper before. Either way, that's $100 more than the ones I bought.
+- Well, since Daniel is so damn busy with work and automation, I need to take up the slack on the backtesting stuff. I have credentials for Algoseek (I guess we're doing that rather than Thetadata), and a PDF about how to get it. At least it's easier than Thetadata since it's just a bunch of S3 buckets that we need to download from. Only thing is it's requestor pays (i.e. we pay for the bandwidth), so we need to make sure we're not downloading things twice, or things we don't need. But it'll just be a bunch of gzipped csvs. No custom API or anything like that, we can even set up a docker container to run on a schedule to download them.
+- One more hour to go on the disk clear.
+- I don't know why I get so angry about having to deal with the tax stuff.
+- Mark called. The mortgage is coming due the end of this month and the lender doesn't want to renew it. I guess the mortgage amount is $391K. But obviously the house is worth a lot more than that, but nothing is selling right now. Like it's probably worth like $700K+. I'm wondering if I should just buy it...
+- Weird, had to reset tailscale on the NAS because it wasn't seeing Core anymore. SSHed into it and I could ping the IP address, but DNS went down. Very bizarre.
+- Was thinking last night that I really want to bring Alice back online, and I want to read through it in its entirety.
+- If I'm feeling angsty, that's a sign I have unresolved issues to address. And it's in my best interest to figure those out (as well as for my child). The way we do that is through journaling yes, but it feels like I've hit a limit there. I need to be doing meditations (of various sorts).
+  - One immediate question could be, why have I felt so averse to meditating in the first place?
+  - Does it feel like a waste of time? Why?
+- I feel so powerless. Like I think that's part of the issue with the tax stuff. It's a reminder that I'm at the whim of others (the government, Will), and that causes me a lot of pain because I know that I'll do it, but I can't use that power on myself.
+- And I still hold this idea that I need to be productive and I'm not allowed to have fun. And I've surpressed that for so long I've somehow forgotten how to have fun.
+- I'm afraid of meditating because of the unknown. On the one hand, if I do all of this meditation, and nothing comes of it? What was the point? On the other hand, what if I come out of it entirely different. I feel attached to my current self.
+  - BUT I DON'T KNOW WHO I AM!!!
+    - That's what pains me. It feels like I need to know who I am, and I'm not lovable without knowing that.
+- In retrospect, it's kind of ridiculous that I keep doing the same routine every day when I know it's not working. Pretty dumb bro.
+  - Probably because I start the day on autopilot and then that just goes on and on and on.
+- Good video: https://coaching.healthygamer.gg/guide/lessons/resistance-emotions
+  - The resistance to doing things is mostly emotional, and what we think of as a lack of motivation is in actuality emotions telling us not to do it for some reason. The issue is that we tend to jump to distractions instead of sitting with the negative emotions to process them. So they just sit there and fester.
+  - Feeling sad isn't something we should run away from, it's something we should work with.
+  - Today is an example of it. Why did I get so mad about the CRA stuff???
+  - I'm still not good about letting sadness surface. I very clearly suppress it. Obviously in part because I don't want others to see me being sad, or knowing that I'm sad.
+  - The problem with the computer, or rather the internet, is that it's a constant source of distraction.
+  - The point of meditating is to hone the ability to sit with an emotion or state of mind, to make them surface. That's why I need to do it.
+  - Ah, I'm afraid of meditating because I feel like I'm gonna be really sad and have a breakdown.
+    - Lol.
+  - "I don't want to do this, I'm tired. But that's patently false, you can do SO much while you're tired. The reality is that the feeling of being tired is a catch all for the actual emotions happening underneath." It's like sometimes what you think you're feeling is actually just a low-resolution image of what's actually happening. That's why you have to sit with them.
+  - Oh that's so true. It's probably why I feel like Vyvanse doesn't really work. It totally does, it's just the things that I'm left with are all having to do with emotional blocks. Like bro, you can put together a house, assemble furniture, all that shit no problem. Then you want to work on the computer and you can't. Like WTF.
+    - Almost certainly it's because the computer has easily accessible distractions. Not so when you're driving or walking the dog, or building furniture, etc.
+- Watching the follow up now and it's really good too: https://coaching.healthygamer.gg/guide/lessons/ahamkara
+  - The Ahamkara roughly translates to "ego" in English.
+  - He says that if you're struggling with a resistance to action that isn't a result of emotion, it's probably related to Ahamkara. And the reasons that we have trouble with those are that we fear what doing those things will mean to our identity. Usually that means 1) trying to preserve some part of our identity, or 2) to stop us from becoming something we're afraid of becoming.
+  - He gives the example of a young widow who was lonely and wanted to start dating. But she didn't. And after a lot of work it came down to, by being a widow she had a reason why she was lonely, vs if she started dating and couldn't find anyone, it means that she deserved to be lonely! This is the preserving part of our identity.
+  - The other one would be for example, not dating because we're afraid of finding out that we're ugly. Since it'd prove that we're ugly.
+    - The hard part is that the thing we need to do to prove the fear wrong involves facing that fear.
+  - And the ego enjoys giving you reasons to confirm existing beliefs. Like, oh, you didn't get that girl's number because you're ugly even though that's probably false.
+  - There are meditations to help highlight the ego in action.
+  - The hard part is that the ego is a filter, which is what makes it hard to see things clearly.
+  - But there are also some questions you can ask yourself. If you're stuck, "what does this mean about me as a person" "what if I engage in this behaviour and it works, what does this say about me as a person", "what if I engage in this behaviour and it DOESN'T work, what does this say about me as a person", "if I don't engage in this behaviour, what kind of hope do I keep alive for myself".
+- Through that lense, let's look at my resistance to various things:
+  - Work. First thing that comes to mind is that I have a self-image as being a terrible employee. I've literally told people that! It's like, I've considered myself a bad employee ever since working at Harris, and that's what fed being an entrepreneur. In fact, I know that I could go and get more money somewhere else, and yet I don't! Why not? Because I don't want to be an employee.
+    - There's definitely an aspect of not wanting to go for interviews either because it might turn out that I'm stupid and not a good programmer. I haven't been on the other side of an interview in forever, and despite knowing what it's like to be on the other side of the table, there's a fear that if I go out and look for other jobs, I won't actually get any, and that'll be a statement on my worth as a person. So I've decided to eschew that entire conversation by being 1) bad at my job at PS out of some sense of contempt, but also 2) not looking for anything better.
+  - That's probably why I don't do Leetcode either, because it's tied to the idea that I'd only be doing it for interviews and job prospects, which I'm avoiding.
+- I think my avoidance with respect to bringing Alice back online is that I'm very afraid of somehow fucking it up because it's really meaningful to me.
+  - Baby steps. Just get it working on my local network, no need to put it online until you've figured out how to make it static.
+- As for Cyfer, part of it is avoiding rejection from others. Since it's purely technical in nature, I'm holding myself to an extremely high bar because other programmers are assholes. And I don't want to come off as stupid. I'm probably also avoiding it in part because it's crypto related and so that opens up another attack vector so to speak.
+- Got back from walking the dog.
+- Sarah offered to take me out for dinner tonight for having taken Lisa and Aquarius to the airport, but I kinda want to have my mushroom soup pasta for dinner instead. So we'll go for dinner on Sunday/Monday.
+- Alright, installed the nvidia plugin so that I can use them in docker containers. Now gotta figure out how to do that with unraid...
+  - And we have first contact! vLLM seems pretty cool. It replicates the OpenAI API but you can then use whichever models you want, and it looks like you can provide multiple ones too. That's pretty cool.
+  - Gonna setup the stable-diffusion-webui-docker now to try some image generation.
+  - Side note, it's pretty straightforward to interact with Aegis from Prophet. I just have the share mounted as a volume and then I can use commands on my Mac to do shit, and I just have an SSH instance on Aegis for invoking things like docker.
+  - God dammit, there's some dependency issue with AUTOMATIC and I don't want to have to dissect this fucking docker file to figure out how to patch it. There's an open issue right now, guess it came out a few days ago...
+  - LOL, there's a problem with InvokeUI too. At least I found something in the issues about how to fix it. Let's try again.
+
+* November 9th, 2023
+- Alright, copying over the rest of my shit to the NAS. Created another drive called hoard. Think the next one will be to set up Time Machine, though I'll want to talk to Daniel about that one since not sure if I'll need to do anything special to enable copying to an offsite provider.
+  - Once that's all over, then I can put that drive in the NAS. I figure I'll need to wipe it first.
+- Really great tweet from Roon today: https://twitter.com/tszzl/status/1722507845373964381
+  - "wondering what the most efficient thing to do at any given time is an anxiety response. do the fun thing. your forager instincts are often superior to your farmer timetable reasoning at finding the long tail successes"
+  - "people who are having fun tend to Notice Things and improve them"
+  - "the prompt engineers you find on Twitter are like 100x better than me or my colleagues at it. why? they enjoy it whereas it's instrumental for us"
+  - fuck around, have fun
+- Ooo, I want to watch this: https://shoutfactory.com/en-ca/products/rocky-mountain-express-1?variant=40080768925830
+- Feels like once I have 10Gbe to the office, or at least 2.5Gbe, I should upgrade to the 3Gpbs Telus service. That'd be so rad.
+- There's something beautiful about how JS objects are indexed by symbol or number. Every object can be a collection, its children are the numbered indices.
+- There are simple tuples, lists, and tables. But what else? Sets?
+  - Was a bit concerned about what'd happen if you had a table in the syntax with an odd number of elements (such as for destructuring), but Clojure's destructuring on maps always seems to use even numbers too. Either way, not that big of a deal. Better to just treat them as a tuple as well.
+  - And within source code, you'd essentially never use literal tuples anyways since they represent code. But if you brought them in as data, you could use them.
+  - I guess one potential difference between quoted and unquoted tables is that they would necessarily be ordered.
+  - It'd be nice to be able to use tuples for multiple value returns... Python does this. Since anonymous tuples wouldn't really be used anywhere else (you'd probably prefer to use a list, or named tuple, i.e. a record).
+  - While tables are important, the tuple is clearly the most primitive of data structures in Cyfer and they are created with cons. Lisp doesn't actually operate so much on lists as it does on 2-tuples. Cyfer generalizes cons to any number of arguments. It's the primitive allocation function.
+  - So ideally, we build everything up from tuples, and optimization is done opaquely.
+  - Might want some syntax to distinguish mutable from immutable primitives. Persistent data structures are obviously immutable. But should be simple to convert from immutable to mutable, and maybe back?
+  - The primary difference between a tuple and a list then has nothing to do with mutation, and everything to do with semantics around extending them. Lists are meant to be extended, tuples are not. There could be functions to extend tuples, but the expectation is that you'd have to copy them every time. That's because tuples are product types and not parameterized data types.
+  - Oh yea, quote makes something persistent and immutable. And I supposed backtick would create a persistent one too (with holes to fill). Mmm, and they'd print differently I think...
+- The NAS is still running without doing that weird unresponsive thing. Looks like turning the C-states off solved the issue.
+- Backblaze is $6/TB/month. Cloudflare is $15/TB/month. Mostly thinking for my backups... Wonder how much Hetzner is per what Daniel is now doing.
+- Should do some Beat Saber.
+- Took the dog for a walk to get that out of the way. She was digging holes this morning apparently and her paws were all dirty. The walk probably helped loosen the dirt out a bit.
+  - It's so funny. I don't know why I keep thinking about programming while walking, it's immediately what I think about.
+- Oh, I might be getting more money from the indemnity than I thought. I'm not sure if I took into account the SRED return...
+- Took awhile, but Daniel and I have Unraid setup for the both of us. I created a rembrandt share and a daniel share, and he setup a ryan share on his. For some reason, he had to turn off NetBIOS on his before my machines could see his SMB shares. Was really odd. That apparently was a default that changed because mine didn't have that. Either way, we have both of our machines connectd together with SMB remote shares to each other. Pretty cool.
+  - Only stupid thing is you can only have one management user in unraid, which is root. So I can't like give him limited access to the portal to run docker containers and what have you.
+  - Daniel suggested using a docker webUI, since there are some that are available. So I guess we'll look into that.
+- I guess what I need to do next is the following:
+  1) Format the 16TB drive, remove it, and install it in the NAS.
+  2) Setup Time Machine backups from Prophet.
+  3) Look into Docker WebUIs
+  4) Look at nVidia plugin and some of the LLM/SD docker containers
+- I think those are the main ones. Later, I'll want to look at usenet/torrents/etc, but figure I'll do that once I have a better idea of when the home theater is coming.
+- Ok, killed the HDD. I should also just format the second SSD since I haven't had a need to boot into Linux on it. Could use that space for Steam. May even want to buy two more 2TB drives, and move that 1TB drive to M.2-3.
+- Alright, drive pulled. Let's go install it!
+  - Drive installled! Now it's clearing it because it needs to do that for parity reasons.
+  - So that'll take awhile lol. 16hrs, more like 20hr probably. Then it'll format it, and add it to the array.
+  - But once that's done, we'll have 70TB of storage!
+  - Figure we'll do the time machine backups tomorrow then.
+- I think I want to do Lego tonight after dinner/groceries.
+- Was thinking last night that eliminating weed from my day-to-day experience hasn't really changed what I do all that much. I don't feel like I let up on brain fog that much either... in fact, I probably did more coding while stoned than not. The stuff that I have been doing has been related to things I just didn't have back in Kitchener (NAS, trains, lego)...
+  - Oh, maybe one thing would be I can get hard easier. But I haven't even been having sex with Sarah lately anyways.
+  - Also hasn't gotten rid of my existential angst either.
+  - And yet at the same time, I'm not craving it anymore, so at least there's that.
+- God, love touching my penis so much. Love feeling the blankets on my skin.
+  - Only wish I didn't sweat so easily.
+  - I feel so lucky to be able to feel so much pleasure from this.
+  - Every day is a gift.
+  - Damn, just came buckets. Good shit.
+- Grocery time!
+  - Need hot dogs and ramen for sure
+
+* November 8th, 2023
+- Another day, another standup.
+  - Forgot it was retro today, so had to move my meeting with Daniel.
+- Huzzah, Aegis is still up from last night. Good shit.
+- Meeting with Jonathan is at 3pm. Have my meeting with Daniel at 11:30, probably gonna hang on the bi-weekly remote hang out in 5min. And we also have the minecraft party tonight from 5-7! Busy day.
+- Huh, if I spend $500 at Dell, I get $100 back from Amex. Also, if I spend $1000 at Microsoft, I can get $150 back. That's pretty cool.
+- Man, going to spend a bunch of money next month too. Between flights, car rental probably (although that'll be more like December), then more networking equipment (probably about $2000 worth between switches, aggregation, SFP-RJ45, two switches, etc).
+- Hmm, do I actually need a 24PoE switch? Since the 10G will go to my office, then the switches will be there. Definitely need the aggregation switch. I will need a smaller switch in the basement for the home theater stuff. But maybe just makes sense to get a small switch to put in there. How many ports do I need? Any other devices that'll go on the rack will use the aggregation anyways.
+  - So there are 8 on the Dream Machine. We have 7 different rooms, but one of those will be 10G. So 6, and then 2 ports are free. One would go to the home theater, the other goes to the AP in the basement. That's perfect I think. So yea. Aggregation it is then. Just need to order that whenever it's in stock.
+    - None available at Memory Express, unless I want to drive to Edmonton lol.
+  - Hell, I'll have two switches free from the office to use for home theatre.
+  - Well, if I'm not getting the Enterprise switch, I can get a bunch of the OCD panels lmao.
+  - Honestly, if I'm not getting the enterprise switch, I could also just order the Hi-Capacity Aggregation switch instead. It's about what I was going to pay anyways, and super future proof. Also it's in stock.
+  - Only annoying thing with that is that every time I get a new machine, it'd be about $100 to connect it to the switch due to needing an SFP+ to RJ45 adapter. But probably not that much of an issue. And if I need only 1G, it's even cheaper. Wonder if there are non-Unifi 2.5G ones that are cheap.
+  - Oh there are cheaper Chinese ones. Might we worth checking out.
+- Alright, time for some VR before chatting with Daniel.
+  - Oops, looks like Daniel needs to postpone again.
+  - I guess I should read up on Docker with unraid so I'm more well versed on it when I talk to him tomorrow.
+- You know, the reason I think I like making the videos so much is that it's a record of my accomplishments that other people can witness.
+- I could do videos on things like networking configuration, etc. Just like those other channels. I think part of my aversion to doing it though is that I'm afraid of leaking sensitive information from my computers.
+  - One option instead of recording my Mac's screen, is to instead record Nebula through a capture card of some sort...
+  - That might not be that bad actually, and having a capture card generally would be useful I think. I wonder how much they cost?
+  - Hmm not bad, there's a UGREEN one for like $80 (less with coupon) that does 4K passthrough, only thing is most of them are USB, so they can only output like 1080p60. Not sure how that would look with text. Well that's not true, they also do 4K, but 4K30, and that's probably fine actually.
+  - Ah, looks like you need an internal card for 4K60, which makes sense. I'd imagine there are Thunderbolt ones too, but they'd be expensive. Start with a cheap one!
+- Paperwork for the line of credit has come through! Also, apparently the Visa's credit limit should be good now. So I should call Geoff.
+- Oh yea! Now that I have the larger carpet mat, I can access Nebula without having to fuck around with the chair. Should clean up that side of the desk, mostly putting away the Lionel manuals (which can go in the filing cabinet) and the Neal Stephenson books.
+- I need another little USB-A hub just for Prophet because of the webcam, the mouse, and the Jabra.
+- Oh, another thing about using Nebula is that I can set the username to francis. Same thing with Oblivion actually! Nice way to cordon off my identities.
+  - Cool, so I think I have an idea of what to do with that machine then. I'm gonna need to reinstall I think, but that's fine, I think it'd be good to see exactly what I did and have a record of that.
+- I don't think anything is going to come out of the RBC visa this month since Sarah paid like $5K and I paid $10K, the statement balance was only $11K.
+- Hmm, line of credit was for $30K. Was expecting $40K, but whatever, I think that should be fine. Was probably going to finance only $20K of the home theater anyways.
+- Oh, can't use the 16TB drive yet, need to move off all of the other stuff on there.
+- Dude, don't give a shit about efficiency. Just get 'er done bro. Write the reader using CL, then transform whatever objects it returns into HTML. Then, they'll be cyfer from the get go.
+  - What's the interface?
+  - There are different "nodes", which are syntactic elements.
+  - We might provide the parser with a function to call on said node. The identity function just returns a tree of structs.
+  - So really, we're making a parser. And then a reader is just a transformation on the syntax tree (for instance, deduplicating symbols).
+  - Also, we want a parser anyways, since if something goes wrong, we want to know the line or character where an error occurred.
+  - I think I'm trying either to perfect this too early, or get lost in trying to generalize it. For instance, instead of writing a parser, writing a parser generator.
+  - But I'm not looking to write a parser generator! I haven't seen enough example grammars or problems to warrant it! That can come later.
+  - Also, it's not going to be perfect, and importantly, you should get it out for other people to look at such that they can find issues with it, or make meaningful suggestions.
+- I probably keep writing parsers/readers in part because I'm unclear about what to do after (essentially, draw the rest of the owl, but for a whole programming language). So while I can create a parser/reader, after having done so, I need to plan out the next steps from there. Also, it'd probably be a good idea to just use that code in production! That is, use my reader and write a transformer to HTML. That's a more limited domain.
+  - I had some initial work on content-addressable storage, and merklizing syntax trees, but that should probably wait until I have the basics of an interpreter/compiler in place anyways, since that has more to do with I/O than anything else. You can do a whole bunch with the language before needing that.
+- Eh, let's take the dog for a walk.
+- Hmm, people are suggesting using ZFS instead of BTRFS for cache drives. Might give that a shot while there's nothing on them of note.
+- Alright, time to see what my boss has in store for me! I hope I get dressed down lmao.
+  - Was not given a dressing down. In fact, he just asked if I was still enjoying the work and what I'd been working on. Went on a rant about rich text editors.
+  - Anyways, addressed some issues due to rebasing, and then started on the outstanding bug. But fixing that might get into weird opinions of Brian. So just threw it over the fence to them to debate.
+- I think a lot of my issues with work and even personal projects could come down to mostly focusing on what I'm going to do in a DAY rather than thinking on the basis of a week. Like, obviously I don't want to work for PS every day, I'd rather die. But doing a few hours on one day of the week isn't so bad. Likewise, I don't have to beat myself up about not coding every day when I could just look to achieve some coding once a week. Like Dr. K's video the other day, I'm setting unrealistic goals for myself. Probably the same of the gym too. I need to challenge myself to do a PS ticket once a week, do weights once a week, and write some of my own code once a week.
+- It's probably worthwhile for me to learn about macOS and iOS shortcuts. I know so little about them, but they could be quite powerful in concert with an always on server.
+- It's a key theme of the past little while that I should be planning more. But... why am I not doing that? Part of it is the uncertainty that comes from having a kid. It feels like I don't want to invest too much into something when I could end up putting it on hold for... potentially ever.
+- Just spent like 4hrs playing Minecraft with the boys. That was a lot of fun. We did a few of the rando minigames, but spent most of the time on survival mode which was a lot of fun actually.
+
+* November 7th, 2023
+- Figure I'll order the UPS next week when the CC cycle renews.
+- Well, I have an hour until I have to take Lisa and Aquarius to the airport. The need to be there by 11ish, so leaving around 10:30. At least that means I'll get back before noon.
+- Interesting, the 3Gbps internet is only like $20 more per month. It'd be $30 more to go from the 500 to the 1.5 on Shaw.
+  - Thing is, if I can actually have 2.5Gbps to my office, that might actually be worth the upgrade.
+  - Maybe less so the Shaw, but definitely the Telus. Shaw would just be for backup.
+  - Though it'd be nice to be able to use Shaw for stuff like downloading movies or what have you.
+  - Maybe you can set up a VLAN for that?
+- You know, if I unplug the 2.5Gbe WAN port, I can probably test to see if I can get 2.5Gbe to the office. Just connect it directly to Hyperion.
+  - Although, even if that doesn't work, may as well go for the Enterprise 24 with 2.5Gbe ports since it's only like $150 more than the Professional 24.
+- I think today is the day I try streaming from the NAS to the Oculus! I can do that from the office. If that's confirmed and working, I'll clear the 16TB drive and move it to the NAS.
+- The RAM has arrived! They rang the doorbell while I was driving Lisa and Aquarius to the airport, thankfully it was at 11am, so I think Sarah was between meetings since it was on the hutch or whatever it's called inside.
+  - Looks like it's good, the serial numbers are all above the one listed on the QVL page. Really curious to see if this'll actually hit 5200.
+- Well, my boss rescheduled the meeting to tomorrow even though I said I didn't have anything. Wonder if I'm gonna get a talking to.
+- Hmmm, I wonder if I could get 10Gbe over the Cat5e. Could try that while the NAS is unplugged.
+- I was watching this random video about cheap fast networking at home, and they used this switch: https://www.amazon.ca/QSW-2104-2T-6-Port-2-5GbE-unmanaged-Network/dp/B0BFCBSSD1/
+  - A bit more than the Netgear one, but it has 2 10Gbe ports and 4 2.5Gbe ones, so it's an additional port, and theoretically, if I can get 10Gbe to the office, then I could use 10Gbe on Hyperion.
+  - Well, may as well try that out. I can try the 10Gbe before I can try the 2.5 anyways (since the 2.5 would require unplugging Shaw).
+  - Actually come to think of it, this is the one time getting the 1/2.5/5/10 SFP adapter would've been better. Oh well.
+- Holy shit it works! By which I mean not only do I have 10Gbe to the office over Cat5e, the memory also works at 5200Mhz! Still a bit finicky, it didn't test properly after a reset, but these boards seem to do that a lot anyways. If I can leave it running, then should be good. Curious whether it's worth it to do a Memtest86 though.
+  - Also, I think I should get a pikvm.
+  - Damn, they're expensive! $475 for the PiKVM V4 Plus. Even the V3s are $340
+- Time for some beat saber, been awhile. Then take the dog for a walk.
+- Back from all of that. Took the box for the Rosewill case to the recycle place.
+- hmm, aegis not responding. Weird, it was still on with no status LED or anything. It rebooted without issue, well it said DRAM, but then it rebooted without going into Safe mode, and it kept the XMP profile. So I've turned off C-states for now.
+- Set Docker to directory (/mnt/user/system/docker/docker) instead of an image per Daniel's recommendation. And also set it to preserve user defined networks, also per his recommendation. I guess the default Docker network doesn't do container DNS resolution.
+- Was watching this really interesting video by Dr. K. last night. Was talking about the difference between active and passive challenges. Active challenges are ones you take on yourself, while passive challenges are those that are forced on you. What was interesting is that overwhelm and burnout seem to come from too many passive challenges. That is, people don't really get burnt out or feel overwhelmed when they take on challenges themselves, instead they feel that way when there's too many passive challenges on their plate. And furthermore, he says that counterintuitively, when you're overwhelmed due to too many passive challenges, you fix the feeling of overwhelm by introducing more active challenges. It's not the number of challenges that's the issue, it's the balance between them. And yea, I think that makes sense. Work is just a bunch of passive challenges, whereas it used to be active challenges.
+- I saw this tweet the other day: https://twitter.com/sashachapin/status/1721574380625433018
+  - "I have heard maybe a dozen people now tell me that their meditation practice became like 10x more productive after they did emotional work on their self-contempt. And yet most meditation books will not tell you this".
+  - And then in the replies, someone shared this: https://www.dhammasukha.org/forgiveness-meditation
+  - Sasha mentions in another reply that some of the stuff he did was Existential Kink and Ennegram stuff (which is interesting in that I've only heard about this recently).
+  - I think I should probably start doing that meditation. Essentially, it's just a mantra meditation but using "I forgive myself for not understanding" as the mantra (or some other similar one such as "I forgive myself for causing myself and others pain").
+- So tomorrow I'll talk with Daniel all about Unraid. What else do I need to work on?
+- Ok Skybox works reasonably well over SMB. Some videos you have to tell it to do 180 stereo for whatever reason, but hey it works.
+- Damn, copying files to the NAS already feels so fast, can't believe we'll be able to hit like 3x the speed with 2.5Gbe.
+- Well, the video streaming works well, but it makes me realize I need to get the larger files! They're definitely compressed. I may not have noticed it on the Quest 2, but I definitely do on the 3. I guess I'll just make sure to download ones I like.
+  - I mean, worse case scenario, just gotta buy more disks lmao.
+- Well confirmed that all works. What now?
+- I wonder if Dr. K's guide to ADHD has stuff on planning... since I think that's probably the main thing holding me up these days.
+- What I need to learn from Daniel:
+  - Docker, running services, DNS?
+  - Tailscale
+  - Time Machine and more importantly uploading to backblaze with Kopia
+- Things I need to look into after that:
+  - Local LLAMA, Stable Diffusion, whatever Chris and Daniel shared.
+- So yes, the next video (or rather one of them) in the ADHD module is "Planning and Goal Setting". Let's watch!
+  - There are four sources of goals:
+    1) Desires. "Wants". These come from the senses. Satisfaction is temporary.
+    2) Shoulds. These come from our conditioning, from internalizing expectations. They aren't highly motivating. A lot of the goals people have are actually shoulds. No wonder they have trouble working towards them.
+    3) Values. "Care about". These matter within, and they are very aligned to intrinsic motivation. When it's something you value, it's easier to do.
+    4) Duty. "dharma". Obligations. These are obligations that you yourself adopt rather than things you've adopted from society. Things like what it means to you to be a good parent or son, etc. These allow you to do hard things.
+  - Interesting. Desires and values are primarily about gains, shoulds and duty on the other hand are more costs. Desires and should are worldly (since they're more about social status), whereas values and duty are internal and intrinsic.
+  - When we form goals, if they're from the shoulds or desires side of things, they aren't intrinsically motivating. And worse, if they don't pay off, it's really demotivating! But the other side (values and duty) are easier to work on and easier to satisfy.
+  - Often we're not really aware where they're coming from, and by their nature desires and shoulds are the easiest goals to come up with! But they're the hardest to satisfy.
+- Doing the stuff with the NAS WAS WORK! Just because you enjoy it doesn't mean it doesn't matter.
+- Hmm, maybe part of the reason I feel more satisfaction from physical tasks is that they're the most unlike school work. I don't really get satisfaction from Excel or programming, etc in the same way I do as building a computer for instance.
+- Ah, this video is "Common Pitfalls in Goal Setting" and he's talking about moving goal posts. Like people will go to the gym once, then be like "I need to go to the gym three times this week", but that's moving the goal post. It should be "go to the gym once a week, for two weeks!" That is, that's more of a habit formation technique.
+  - And I probably move the goal posts on myself all the god damned time with software.
+  - Part of this is also about celebrating and recognizing that I did a thing I wanted to do.
+  - I've also had a problem abandoning things once they're nearly done, and then it's hard to come back to them. Actually, that's probably a problem. I essentially have a graveyard of things that aren't quite done, but I can't really come back to without making a big undertaking of it. Then I end up rewriting things a lot. Feels sisyphean. Mostly because I try to perfect things, instead of just moving on to different projects that are novel.
+
+* November 6th, 2023
+- The additional risers and the 90 degree power connector came. So get to try out the dremel today! Let's check on the RAM.
+- Fuck I need to poop!
+- God I've been spending so much money lately.
+  - Good news. I'm rich!
+- Oh, need to send the Credit Line Statement to Mark.
+- No more updates on the memory. Just says tomorrow delivery and that it left the Etobicoke sorting facility.
+- I was thinking yesterday that it'd be a lot of fun to make a video game, then I was thinking about making like a christmas one and generating assets with stable diffusion.
+- That previous thought I think stemmed from being off of vyvanse for two days. You need like one day to get over the sleepiness, and another to start feeling normal again. Also, got high on Saturday, and it was alright, but mostly just got sleepy.
+  - Honestly, only problem being off of vyvanse is that I tend to overeat...
+- Hey! The carpet mat is here! It's essentially the same length as the desk. Good shit.
+- Alrighty, today is "try the dremel on the Risers" day. I'll start with the current one, and hopefully that goes well, then I'll try on one of the newer ones so hopefully I get one without the pin popping out like the current one.
+  - Shutting the machine down!
+- The unboxing videos have the highest watch percentage, which makes sense, they're much shorter videos. I'm still pretty surprised by the engagement though, I have 10 subs now, and a lot of comments on my videos. A lot faster than Twitter.
+- Home Depot has Weller Helping Hands. I think I should go get one of those... feels pretty precarious to just hold the Dremel and the riser itself.
+  - Home Depot has a bunch of soldering stuff, which makes sense, and is good to know.
+- Alright! The Helping Hands were a little helpful lol, but I think some of the ones on Amazon are probably better. The Weller one only has two clips, and they're positioned sort of weirdly with the magnifying glass. Anyways, the Dremel was a success! Wasn't super clean, could've used a smaller bit, but it's way better than it was! The card actually sits flush with the bottom for the most part.
+- Also installed the 90 degree power adapter and I can successfully close the lid now! Just need the RAM now.
+- Curious to see what the temperatures are like with the lid closed. Disks are cool. It's odd that it doesn't bring up the array on boot.
+- Bar has arrived. Time to walk the dog.
+- I wonder if there's a way to disable looking at disks for booting. Because the BIOS spends a lot of time on the "press DEL to enter BIOS" screen and while it's there, I here it spinning up disks one by one.
+- Lisa and Aquarius go home tomorrow, but apparently I need to drive them to the airport since Sarah didn't book the time off...
+- I'm done more or less with what I wanted to do today, since Aegis is running with the cleaned up riser card and 90 degree power adapter. I think I just need to figure out what's next. Might want to reschedule my 1-1 with Daniel to Wednesday (assuming I've received the RAM and installed it). Also, once I get the RAM, I should run Memtest86.
+- Okay, guess we're going to the bookstore at 3pm. It's Fair's Fair, which is the bookstore by the Train store, but it's their other location which apparently has magazines and computer books and shit like that. Hoping to get some model train magazines, see what their is for computers, and maybe get a copy of Anathem that's nicer than trade paperback I have?
+
+* November 5th, 2023
+- Bought a bunch of Lego for Christmas and we put up the Christmas tree.
+- We need to buy some new Christmas lights, one of the strands is like half dead, no idea why. Then on the tree itself, there are a bunch of dead bulbs. Go figure, we've owned it for like 5 years now.
+
+* November 4th, 2023
+- Ahhh, Saturday. Wat do. Oh right get high lmao.
+  - Done!
+- Now what.
+- Well, need to take El Doggo for walkies. Then, ooo, might do some Beat Saber.
+- Another thing could be making sure Hyperion is working. And then maybe sending over the first files to the NAS?
+  - Maybe mount the power bar?
+- Should look at setting up Docker in a folder rather than image (per Daniel's suggestion).
+- Interesting, the manufacturing date on the new motherboard is earlier than the one in Hyperion.
+- Hopefully the power bar sticks this time. Used the full reel of Gorilla tape, and I put it on two sides, so it's attached by the top and the side, so twice the adhesive power, and nearly twice the surface area as well. That and no more power bricks attached to it.
+
+* November 3rd, 2023
+- Can't forget, I have a haircut at 12:30.
+- My Staples order finally shipped.
+- Sarah and the gang are off to Banff.
+- I was having a bitch of a time getting the rack to center. Finally found this guide this morning with the same slides and a Rosewill case: https://forums.serverbuilds.net/t/rack-mounting-the-rosewill-rsv-l4500/2804 So I'll give that a shot this evening (the drives are still parity-syncing).
+  - I guess you're supposed to use three screws per arm, and the actual rails need screws from somewhere else... I wonder if I can find some that'll fit...
+- Hmm, Dremels aren't that expensive. $140 for one with a kit of tips from Canadian Tire. Think I'll order some more of those risers and buy one of those and try again. The risers are so cheap, I can buy a few.
+  - I had safety glasses, no idea where they ended up though...
+  - https://www.canadiantire.ca/en/pdp/dremel-3000-1-24-1-2a-variable-speed-rotary-tool-kit-with-attachment-accessory-bits-24-pc-0541291p.0541291.html
+  - Aisle 19, and Aisle 18 has safety glasses.
+  - Figure I'll go get my haircut and then go to Canadian tire. Maybe I should go walk the dog now...
+- Also, joined the weekly wrap up and Chris was like "do you have a UPS???" and I was like no, and then he said Craig had a power outage that fried his computer. Now I'm thinking I should get one. Looks like it'll be about $300-400. There's one for like $280, but the rack mount version is $400. Decisions... decisions...
+  - https://www.amazon.ca/CyberPower-CP1500PFCLCD-Sinewave-Outlets-Mini-Tower/dp/B00429N19W?ref_=ast_sto_dp&th=1
+  - It's the same model, just variation of mounting style.
+- RBC finally sent docs to sign for the increase in credit limit for the cards.
+- Eh, I'll walk the dog when I get home.
+- Here's the list of plugins Daniel recommends for unraid:
+  - Fix common problems
+  - Parity check tuning
+  - Tailscale (plugin)
+  - User scripts
+  - CA backup/restore appdata (renamed to Appdata Backup from the looks of it)
+  - Disk location
+  - Dynamix Cache Directories
+  - Dynamix File Integrity
+  - Dynamix Active Streams
+  - File Activity
+  - Open Files
+  - NerdTools
+  - Recycle Bin
+  - Tips and Tweaks
+  - Unassigned devices
+  - unbalance
+- Installed all of those. I'm curious to check on how the CPU is doing in terms of temperature and clock speed.
+- Interesting, sdd and sde are both 35c rather than 33 and 32c for the other two drives. I thought those might be the ones beside each other, but no! Those are the drives that are in their own bays connected to the HBA. Odd.
+- Need to change the description for Aegis. The default is "Media server". Should look at transferring over the stuff from Hyperion. That would also mean setting up SMB or whatever, as well as streaming! Oh, and also look at Time machine backups.
+- It's interesting to see which videos have views. I didn't expect the 8BitDo unboxing to have so few, but then some of the build videos are doing rather well.
+- Something cool I learned yesterday is that the Thunderbolt port at the back of the ProArt can display from the iGPU! Doesn't actually need the passthrough from the dGPU. So I didn't need the HDMI cable on the portable monitor, it can run entirely from 1 cable.
+  - Oh interesting, both of the Thunderbolt ports go to the integrated. The DP-IN passes through to the first one, but the second one is still available with the integrated.
+- I think we need to try to put these GPUs to use!
+  - Also, I have the Kill A Watt coming today, would be fun to see what this thing does idle and under load.
+- I figure this machine will be teased apart into different machines at a later date.
+- I also wonder if I should set Hyperion up as an unraid system and then have it operate Windows as a VM, passing the GPU through to it.
+- Got my haircut, bought a dremel, ate lunch, took the dog for a walk, and now I'm back! Aegis says 3hr45min left... seems to be getting slower as time goes on. Only doing about 160MB/s now. So that puts me at about 6pm.
+- Also, Killawatt got here!
+- Not sure what to do now... maybe watch some videos about Unraid?
+- So I realized that yea, maybe I don't want Daniel to have full access to the NAS lmao. If I have pr0n on there.
+  - That means setting up user shares I guess.
+- I'll also want to run MemTest86+ once the memory is here.
+- Ok so I guess you create User Shares which are essentially file systems.
+  - And you also create different users if you want to give people access to the web ui.
+- Wonder if it makes more sense to use Guix containers or a Guix VM on unraid. Also, I wonder if you can have them share a guix store?
+- WTF, 3D printers are only a few hundred $$$???
+- Hmm, Daniel says that Time Machine really prefers having all of the files on a single disk, it gets fucky if the files get spread out.
+  - Makes me wonder if it makes sense to use dedicated disks for certain shares.
+- See one thing that'd be cool would be to have Guix be running as a build server on unraid. It's a nice fast CPU after all, and a fuck tonne of RAM.
+- So Daniel essentially has a bunch of user shares set up almost like you would in your home folder. He has a movies, a music, a tv, etc. Although he says that it'd be easier for tv/movie automation if those were a single share so that hard links and direct moves work better.
+- I feel like I'm just waiting for this Parity-Sync to finish...
+- I don't really want to look into anything with Plex because I kind of just want to wait for the Home Theater for that. And then the stuff with streaming to the Quest, later.
+- I think part of it is that I have the house to myself, and also the dog is here so I kind of feel like I'm still going to be interrupted by her at any moment.
+- Part of not programming at the computer is that I have all of these browser windows open. I think I did more actual programming on Nebula than I have on here recently.
+  - Hmm, maybe I should do most of my "browsing" on Hyperion come to think of it... that'd mean I get more time on it. And it'd reserve Prophet for programming, which is more what the Mac is better at anyways.
+  - Also would give me an excuse to use my new keyboards. :)
+  - I can send all of my stuff to Hyperion from here using the Firefox functionality anyways.
+- It's odd. I find I have an easier time executing on projects involving physical objects than I do with programming. Maybe because they have more defined end states.
+  - I mean this is probably a matter of planning more than anything else. Software projects can essentially be endless, but physical things have end states and configurations.
+  - Need to be more comfortable with a) planning, and b) setting clear end states.
+  - How much of this is me just being muddied by how software gets developed in team settings?
+  - I probably need to plan my software projects away from the computer, similar to what I did at Chalk. Even then, paper felt a tad limiting. I think I just didn't go into enough detail.
+- Had some me time in the basement, really nice on the couch with the blanket. Then decided to clean up some. So took the recycle out (nearly overflowing), then emptied and filled the dishwasher, then went outside and cleaned the shit off the deck. The poop-scoop works really well, only problem is bubby has been shitting up the side of the house a lot where the gravel is, and then you can't scoop it without taking gravel with it :/. Anyways, then I took out the hose and sprayed off the deck. Some is really stuck on there and will need the pressure washer... but got most of it, and hopefully it dries off before we hot tub in the evening.
+  - Funny how masturbating, or rather stimming acted like a nootropic. Did a bunch of cleaning after that.
+- About 45min to go on the parity-sync. Although I'm guessing it'll be a full hour, it's weird that it slows down over time.
+- Need to feed the pets shortly, I probably won't have dinner though (big lunch).
+- Sarah is heading back to Banff from Lake Louise, then they'll look around at shops and shit, so I don't expect they'll be back for a long time.
+- Was just playing with the trains, of course each one has some sort of problem. The Hogwarts has a car that's being sluggish, I think the electrical contact needs lubrication. Then the freight polar express disconnects over every switch... I'll need to see exactly when it loses contact. The other polar express is fine, but of course the front pilot has been fully removed.
+- Huzzah! Parity-sync complete! Let's restart this fucker and then turn it off and try to fix the mounting.
+- Fuck ya. Moved the case and it's actually lined up properly now. Not to mention I can actually screw in the front panel for extra security. Good shit. I'll figure out how to mount the AIO once everything is sorted out in the case.
+
+* November 2nd, 2023
+- God dammit. The M.2 has a 4x slot that's closed off (which is NOT like the picture). So I have to somehow file it out...
+  - Might try heating up the blade of this exacto knife.
+- Well, time to give this a shot I guess. I've filed it down as best I can. Worst case scenario, I get a soldering iron and learn how to solder...
+- I should try using the Jabra for the mic, I wonder if that might work better.
+- Wanted to see if the Jabra was better as a mic, but the Bluetooth on the Mac wasn't showing any devices as being available, so clearly needed a restart. Decided to just do the macOS update if I needed to restart anyways. So did that, finally saw the Jabra, tried it and... it was shit. iPhone mic stay winning.
+- RAM is due to be delivered on Tuesday. Just left the Purolator sorting facility in Etobicoke.
+- Lol, so parity sync will take like 18hrs. So I should probably just shut this shit down for the time being... should really go in the rack where it can stay put and then do that for as long as it needs. Don't want it just sitting here in my office for 18hrs.
+- Okay, shutting this shit down. I think I should just bring this to the basement, but maybe get help from Aquarius.
+- Otherwise, think I should probably order the 10G SFP-Ethernet adapter. I think I'll do the rest of the networking stuff for the office after this CC cycle.
+- Okay, uploading the HBA video, then I'll do the GPU one since it's shorter and will process faster.
+  - While that's going, time to clean up this office! And start moving everything down. I think I can just leave it all on the new couch.
+- Picked up the SFP+ to RJ45 transciever. Memoryexpress had them in stock locally. Notably, they were cheaper than online. I guess it's the previous version of the adapter. The current one is 1/2.5/5/10G whereas this one is only 1/10G. But seeing as how I need 10G and not 2.5 or 5, then that's perfect for me.
+  - Now I'll be able to have 10G of data running to the server... and nothing else lmao.
+  - Figure I'll put the case with 2U between it and the dream machine. That'll give me room for the Enterprise switch (for 2.5G), and eventually a SFP+ switch (whenever I add an additional server). Sure, there'll be an extra space for awhile, but that's preferable to having to fucking move it again.
+- While I was out I bought some more double sided tape, two rolls of the 3M stuff, and also a roll of the Gorilla Glue kind which says it's rated for 30lbs instead of 15lbs. Figure I'd give that a shot on the desk. I'll use a bit of the 3M stuff to mount the GPU AIO, though not sure where... I was thinking the case top, but that'd be annoying if I ever need to take it off. Maybe I can mount it to the rack? Use some cable ties in addition to the double sided tape.
+- Got a bit of a headache today. Took some tylenol. I feel like I was getting one last night too. It's one of those ones concentrated near the back of my neck. Could be from being hunched over the desk doing shit with the server in an unnatural position.
+- Well, I've subscribed for Twitter Premium... forgot it was like $20, but hey, I use it a lot.
+  - Reminds me, I need to cancel my Crave.
+- Where'd the time go today??? Feels like I blinked and it was 2pm, then I went out to get the shit from walmart/memoryexpress and now it's 4pm.
+- Well, the machine is mounted and doing the parity sync. The rails are really stupid, I couldn't get them to line up properly. When I get the RAM, I'll try doing it again.
+
+* November 1st, 2023
+- Ehh, new month. I should probably do a bit of PS work.
+- Shoulders feel a bit sore/stiff this morning. Not sure from what. Might do some hot tub.
+- Just took my meds, and it's 10am lol. Need to trim the remaining videos and upload them. Also need to figure out what tags to use lol.
+- Alright, everything has been uploaded and is now processing. The standard def ones process a lot faster.
+- Think I'll do Beat Saber now, then the next video to record will be the unboxing of the 8BitDo keyboards.
+- Hey hey, the HBA arrived! And the M.2 adapter is out for delivery. So I guess I'll just work on that when it gets here.
+  - Just noticed though that the orientation of the M.2 adapter is going to be wrong. I think it might end up sticking out the back of the case a bit lol.
+  - At least it'll be less janky than having the GPU radiator hanging outside of the case.
+  - I just feel like it's not really worth installing and formatting the drives if I have the opportunity to try them out with the HBA. Will be a good test of hot swapping for both the HBA and the mobo SATA ports.
+  - At least the Mini-SAS cables are super long, so they'll definitely reach wherever.
+- Guess I should record the unboxing of the keyboards though.
+- I can also probably just delete the untrimmed videos I have. I literally did no other editing to them than trimming off the extra dead air at the beginning and end of them.
+- Video complete! These are pretty nice keyboards actually.
+- Uhhh, I should do some work. Not really gonna do anything else until this M.2 arrives.
+- Oh, something interesting I learned is that 2.5Gb ethernet is supported over Cat5e (up to like 100M). So I could probably get a faster connection to the office from the basement. I'd need a 2.5Gb switch in the basement (an Enterprise 24PoE probably), and a 2.5Gb switch up here (probably would need to be Netgear). Having a 2.5 in the basement would mean I could do dual-NICs on the NAS, and have one of them on a different VLAN.
+- Well, finally addressed the stupidity of Suneditor I think. Had to manually clear a value that should've been cleared by setOptions. yayyy
+- The M.2 adapter hasn't arrived yet.
+- My stomach feels kinda weird. Was like this yesterday too. It's almost like heart burn. I had to take a tums yesterday.
+  - Not sure if it's actually my stomach or not. Today it actually might be from the abs/leg workout yesterday.
+- Alright, feeling a little bit better after the hot tub. I'm also a bit stuffed up in my left nostril. Tried doing a bit of meditation in the hot tub, and was having a hard time breathing in on the left.
+- I don't feel so bad about doing the work for PS today, despite it being a really stupid problem. Maybe it's because I've just been waiting for this NAS part, so it didn't feel like such a waste of time. And doing something like that while waiting at least makes me feel a bit better about having done some work for PS this week. I can also play it up as "this took a really long time for a one line fix".
+- That I never really have a six pack showing despite not eating much leads me to believe that I might be in a constant state of inflammation. I wonder what it could be though?
+- Wish the part would arrive...

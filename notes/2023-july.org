@@ -1,0 +1,774 @@
+* July 31st
+- Okay, met with Daniel. Today I have a dentist appointment at 12:50. I also need to call Sheffield to confirm the quote and get a sense of what the dates will be, what the process looks like, etc. Mark also needs another 5K.
+  - We also have the first people coming to see the house today at 6:30.
+- How do I channel my shadow?
+- Someone on twitter I follow said they took a 200mg CBD dose and that it was really good. Gave a body high. I've never tried a huge dose of CBD before. Maybe try a full spectrum one with CBN?
+- One recurring memory I have as a child: I'd had my nails painted and got made fun of for it. Can't remember specifically, but I remember not doing it again. I think what I took away from that was that it isn't right to like feminine things, or rather that it's embarrassing to like them. And I think I was ashamed of being interested in women at all for years. Couple that with teasing around dating from my parents, and I took away that being interested in connecting with other people, in particular women, wasn't a good thing. Then I didn't date for years, and it became really hard to do so. Hearing about other people having casual sex, or group sex, really makes me feel not quite jealous, but left out. Like it's something I'd never be able to do, or be invited to do, or even know how to broach something like that. It seems deeply foreign to me, but something I'd really want to experience.
+  - And to this day it makes me feel sad. What's wrong about me? Why not me?
+- I have a very deep sense of needing to be the responsible one at all times. It makes it really hard to have fun when I'm on edge watching out for everyone else.
+  - I feel like I'm not allowed to have fun.
+- I'm not a people pleaser, but I do withdraw from people whenever possible.
+- I want my dad...
+- I feel like I'm just doing everything for everyone else. I'm not good at advocating for what I want, so I just defer to others. And I've been doing this for so long that I don't even know what I want. I'll just go with what other people want because it's easy and it avoids conflict.
+  - But at the same time I feel unappreciated.
+- I don't like crying because I think it's imposing on others and more painfully, that it'll make them not like me.
+  - I don't want to be a burden, so I take it all on myself.
+- Another memory that comes up often was having to sleep on the floor when family came over. Reid never had to, only me. And it fucking hurt. I'd wake up with a sore neck and back. And when I complained about it, I was told by dad that he had to do the same as a kid (and of course Colleen had no such problems).
+  - Take away? That I was the least important person in the house.
+  - I don't remember having any choice in the matter. Like could there not be some other solution?
+- And when we first moved to North Bay, and for my birthday I got some books that I wanted, but Caitlin and Reid also got some random things. They were cheap toys or something like that, but it felt like they were having more fun at my birthday than I was. And we'd just moved, so I didn't have any friends.
+- I'm feeling unappreciated with respect to the engagement, the house, and everything else about that. It's like it's never enough and there's always something else to do. And it's not stuff that I particularly care about either, so it feels entirely like something I'm doing for Sarah and everyone is asking me about it, or when is this next thing??? When's the wedding??? And like, I don't care about that.
+  - And it just feels like a huge excuse to spend a bunch of money, as if spending a bunch of money provides any sort of meaning.
+  - Part of it too is that I expect I'll be the one on the hook for any sort of wedding. And so it's just a big thing for other people, whereas for me it'll just be a bunch of stress and expenses.
+  - But worse, I feel like because I'm wealthy, I have no reason to complain or feel bad about it. I'm just some douche.
+- I can't handle being the bad guy. Or being made out to be the bad guy.
+- I think I use masturbation for self-soothing. What's interesting, is that I use weed to feel emotions... Like, I use it to make sex feel better, but otherwise I use it to feel things which I don't seem to otherwise.
+- The thing is, while I feel unappreciated, I'm not really sure what would make me feel that way. It must be an inner child thing. Since getting thank yous, or hugs, just doesn't seem to cut it.
+- And I think I feel bad about masturbating or doing THC a lot, because those are both seen as vices, but they're clearly doing something, otherwise I wouldn't be doing either of them. Like, they haven't been an impediment to the work I want to do (on Cyfer), perhaps a bit. But it's the underlying sadness that's the real issue, and gets in the way of all of them.
+  - And more of my problems with my projects are about not knowing what to do next, and thinking about that tends to take a back seat for some reason.
+- I think it was good to write that out. And I have a plan in place. Once I'm in Calgary I'll be looking for a therapist. Not that far out!
+- I mean in other news, I did essentially all the work I had to do today. Both PS as well as the tasks listed above. So in spite of feeling sad, I've actually been rather productive the past few weeks. Which is interesting, since I'm usually really averse to that and have a hard time getting myself to do things, but it's been pretty natural actually.
+- I mean, masturbation is absolutely a hobby. I've been doing it a lot in part because I've gotten VERY good at it.
+- It's only a problem if you're using it to cover over bad feelings. Make sure that's addressed.
+
+* July 30th
+- Home from North Bay! Was nice seeing everyone, and grandma gave me dad's painting that I wanted. So I can bring that to Calgary.
+- Read through Mastering Emacs (I bought it the other day). Was an interesting read for sure, and I think I'll probably read through it again and practice some of the things it suggested.
+  - One of those things is sticking to emacs windows in a single frame rather than fucking with frames. And, yea, it'd be nice to learn that. Apparently window management has gotten a lot more manageable because of changes within emacs core such that you don't really need a window manager package to help you. You just need to learn how the system works and tune it to the modes you use. Luckily, there's a comprehensive guide on the mastering emacs site about it.
+  - In particular, I think this would be really helpful on the mac, since emacs really doesn't like when you switch spaces on the mac and then make emacs active. If I stick to a single window, I can make emacs fullscreen instead and just let it have its own space.
+  - At least on Guix, the idea is that emacs should be the primary environment for things (and maybe nyxt). And then stumpwm is rather that, a stump of a window manager.
+- I was also reading through a textbook on attachment theory and dealing with it in adults, and man, it's interesting. The dismissive avoidant attachment style actually resonates with me a lot. And it's not surprising. I'd imagine mom has attachment issues, and attachment issues are highly heritable.
+  - Like, I wonder if that's the root of some of my issues with respect to sex and connection. I was reading this short story called the feminist, and it was rather striking, since while it wasn't exactly what happened to me, it definitely felt like a path I could have gone down at some point.
+  - I'm curious what crossover there is with autism. This site I just found has a ven diagramm with commonalities, and differences. Definitely hit boxes on the autism side, and maybe a few on the dismissive avoidant.
+  - I'd really like to talk to a therapist...
+  - I just feel like to really advance with what I'm want to build, I need to involve people in that, both for impact, but also to get better as a programmer, but that involves connecting with people and I'm just not good at that. I want to be interested in people, I just find it really difficult. And I'm not even really sure how to make friends on the internet. Like it just does not occur to me to like join discord channels (which Will does for trading, but is also super common in open source), or even thinking back about how people would play games online and make friends (like Josh). It's just so foreign to me.
+  - A lot of my masturbation recently has been about self-soothing? Or rather, more that I imagine myself as forced to relax and enjoy the attention being given to me. And I think I'm afraid of attention? Or that, during sex I have a hard time letting go and just enjoying what's happening because I feel like I have to be in control.
+  - In particular, the dismissive avoidant attachment disorder is characterized by not noticing when they're in distress, and trying to become self-reliant. And the emphasis on self-reliance has been like my defining trait since... forever. Like, I've wanted to be rich to be free since I was a kid, and mom/auntie both recall things I said as a young child about that that I have no memory of. Like I've always felt that I've had to be mature and a grown up.
+  - I don't know, I was just feeling kind of sad and alone yesterday. Might have been because of the beers (two at bowling, and then one with dinner).
+  - I don't feel like I can actually truly depend on people.
+  - Omg, this list: https://juliastamman.com/2019/05/21/dismissive-attachment-aspergers/
+    - "Check out mentally when partner talks"
+
+* July 27th
+- I have a call with insurance at 2pm (they'll be calling me). Otherwise, need to respond to Catia about date. And need to send an updated contract to Mark.
+- Well, have to address any feedback on the MR for the responsive tables. Otherwise, not going to start anything else for PS this week seeing as how I'm off tomorrow.
+- Today, think it's time to install StumpWM! And start playing with Nyxt!
+  - I think once I have those set up, then I'll look at getting a build working on the mac inside QEMU. That'd be really cool.
+  - I essentially want to be doing all Lisp/Cyfer development inside a full OS that's Lisp underneath. I can start building out a triple store for environments to tie everything together.
+  - And then I can start developing all of the configuration UIs as HTML. You'll be able to use them directly on the machine with Nyxt, but also remotely by exposing a port.
+- Ok, work with PS is done. Did cardio early. Responded to Catia too. Just have that call at 2. I should put together that agreement for Mark, then I'm good for the day.
+- I was thinking, if I get guix working on QEMU on the mac, I can bring the mac up north and hack on it there.
+- Ok, CUA mode enabled in emacs. Although the shortcuts are disabled for now (since I'd prefer them to be on Super instead of Ctrl).
+- Need to confirm with Catia if they need insurance details.
+- Oh man, stump is something else... looks like shit. But lots of potential to customize!
+- Well, I've spent a lot of the afternoon masturbating, and while I don't regret it, I think the reason I'm doing it is I'm not sure where to go with Stump. It's essentially a blank canvas, and I'm not sure what to do with it. First thing would probably be getting a mode line working, and the correct keyboard layout.
+  - Well yea, let's get the keyboard layout working first.
+  - Hmm, looks like we need to set up slynk ourselves in the init file. Let's do that. Should pull over our Sly config from this emacs first.
+  - Hmm, also need to invert scrolling.
+  - Ok cool, we can connect to the running Window Manager! What can we do with it though?
+  - And we have vterm working through emacs now.
+  - I think the big thing I still need to do is clean up my system and home configs such that they actually have the packages I'm using (currently everything is just in the default profile).
+
+* July 26th
+- Figure out what's going on with Sheffield re: quote. Send Mark $5000, and generate an amended contract.
+- Omg, finally got ZSH autosuggestions working. What a nightmare. Really expect you to know how everything works. Needed to create a bashrc...
+- This is dumb. What needs to go in my zshrc??? Ok, I guess I just ignore GUIX_PROFILE? Just source from ~/.guix-profile
+- I think I'm fucking around with my shell too much. Should be fucking around with StumpWM instead.
+- Honestly, maybe should just stick to bash for now. Set up a basic prompt that isn't totally ugly and go from there. I should be spending minimal time in the shell.
+- Also need to setup emacs to but its backups somewhere else.
+- Hmm, okay, I think we should actually define all of our bashrc/profile files in Scheme. There's an example in the reference for the bash service about this.
+  - That way we can literally have everything as just scheme, which could be converted to Cyfer later.
+- I need to do some work today as well. :(
+- Interesting, I can get Lem working on this mac. Wonder what the issue is with the intel one.
+- Instead of just building asusctl, maybe I can reverse engineer what it's doing and then write equivalent scheme?
+- Alright, looks like I'm more or less done responsive tables (it's in code review and just needs some design tweaks now). They were probably thinking: "why is this taking so long???"
+- Man it's hot out. Took bubs for a short walk.
+- Ok, let's install StumpWM. Although, let's also send the emacs backups somewhere else. I wonder where system crafters keeps his?
+- Well that was weird. My console started hanging, Gnome literally wasn't able to force quit it either, and the system froze trying to shut down... odd.
+- There's this stupid overlay face when I type parens now. No idea why anyone would want that, and I can't seem to get rid of it...
+  - Omg, this is so dumb, it's not doing it at all. Even if I reopen emacs, it's still there.
+  - Turns out there's a variable you have to disable... and I have that in this init.el as well. FACE PALM
+
+* July 25th
+- Lawyer info sent to Catia. Still haven't heard back from Sheffield though about our quote... Odd.
+- Have a dentist appointment this afternoon. Need to do squats/deadlifts today.
+- Will was going over how the back testers worked this morning. Still a bit unclear on how deltas are computed? Looked up? Don't know. But at least the simplest version of the backtester literally just buys an option, and then finds the value at expiration. What was also interesting is that a lot of what Will wants to do is composing various positions, and the software that exists right now makes that either impossible (so you have to do it yourself manually), or really tedious. Sounds like a good place for a language!
+- Ok, I think I should actually do some work today, and now that I've worked out, it's probably a good idea to just get started on the responsive tables until I have to leave for the dentist. When I get back, I can play with Guix some more.
+- I think I'd like to get Guix home working, maybe set up a basic ZSH profile, and then start trying to package up asus-ctl?
+  - You know, I wonder if it'd make sense to run emacs on my mac via a Guix VM? Using emacs on the mac is kind of annoying since the window management stuff is broken between spaces.
+- Alright back from the dentist. I fucking hate downtown these days, nowhere to park, lots of weird people all over the place. Good news is I actually did do some work before heading out. Will keep it up tomorrow. Interestingly Jonathan messaged me to ask to fill out my daily status updates since apparently multiple people have asked him about it (they want to know if I'm blocked by anything lol).
+- I think that clearly I should be targeting building a Entity-Attribute-Value model.
+  - It's the ideal format to maintain a list of named, persistent objects consisting of sparse properties.
+- Well, I have a basic Guix Home setup. But I'm really not sure what's supposed to be in my zshrc. It seems to load fine, and running packages works. But the zshrc is essentially blank, and unlike bashrc, the system doesn't provide a default from the looks of it.
+- I'm feeling kind of weird. Might be because I'm hungry. Oh might be because of the maca I took... on an empty stomach.
+
+* July 24th
+- Send lawyer info to Catia.
+- Things to do today:
+  - Contact dentist.
+  - Get abreast of the stuff going on with the house. Anything else I need to do?
+  - Ask Mark when he needs to know about funding for van. When does he need a yes/no?
+  - Ask the questions about responsive tables. Need to actually do work you know.
+  - Book Friday off.
+  - Install Geiser on Guix machine.
+- Looks like Will used some other service for the car, but he used an agent to book everything for him. Will ask for quotes on the cars though.
+- Wifi works on laptopt, I can get rid of this ethernet cable for now.
+- Damn, installing the gnu modules takes forever...
+- Just installed btop to see what the system is doing. There's one core pegged for compilation looks like. But every second or so all of the cores hit 100%... wtf. Looks like it's Guile doing it.
+  - Oh, I wonder if that's the GC.
+- I think I need to set up stow next and get my configs up on git. Hopefully this is done when I get back.
+  - Well, it's still going. It's stuck on crates-io. Before that emacs-xyz took forever. Both of those are for packages. So yea, huge. Kinda weird that it's building all of them though.
+  - Lol, it's sitting at 18GB of memory now.
+  - 19GB
+  - Ok, it's moved on from crates and now is doing java.
+  - God, I hope this isn't the case each time I run this. I hope it's just compiling things.
+  - Now python. Interesting that crates seemed to take the longest. But I think that's because it suspended itself when I left to work out.
+  - Omg, it's done.
+- God this is dumb. So geiser will load the file of a definition, but it doesn't seem to actually take me to said definition. Why not?
+  - Oh, I think it's just operating-system that was weird. Keyboard-layout seemed to work fine. I think it's because operating-system came from the top level?
+  - Ok, well, I can leave that for now.
+  - Let's set up stow now.
+- Alright, dotfiles repo created. Stow seems pretty simple actually. Essentially, you create a folder that you want to store things in. So .dotfiles. Then in that folder you create a bunch of folders which are considered packages. Inside those packages, you just add files that you want to be symlinked out to the main folder. Now, when you run `stow <package>` the contents of the package folder will be symlinked into the parent directory. So if .dotfiles is in ~, and .guile is in .dotfiles/guile, when you run `stow guile` from .dotfiles, .guile will be symlinked into ~. It copies the directory structure entirely. So for .config, you just put .config/.../whatever in the package.
+- Now I just have to push this up to github. Which means figuring out ssh stuff...
+- Hmm, I think I should just use guix home instead of stow since it also takes care of the .guix-profile.
+- Interesting. In the wikipedia page for symbol tables it mentions that Prolog is essentially a programming language designed to manipulate the symbol table and reason about it.
+  - Might be nice to have single quotes mean symbol and double quotes mean text (sequence of characters).
+  - Since quote as it appears in Lisp doesn't make much sense for Cyfer. Literal data structures are really persistent data structures. Backquote is for building data structures. And otherwise a literal quote in front of a symbol should be a colon instead.
+  - I guess the difference with text is also that symbols are always the same under is? whereas strings are not.
+  - Man, programming really is just metaphysics isn't it. Properties, relations, identity.
+  - Hence why I've been thinking of just calling them Worlds. An environment is a world. And worlds can be composed.
+  - A world consists of a bunch of names that denote objects. Those objects have properties (themselves being identified by a name), that map them to other objects. A trait is a binary property, either you have it or you don't. They are simple predicates. Don't call them symbols then. Call them what they are: names.
+  - Since it's just a database, we start with unqualified names. Eventually we want to distinguish between them, that's when we introduce qualification.
+  - We start at the meta-level, in that we act as god. We can change the world introducing new objects, changing their properties, etc.
+  - It's only later that we introduce a language, first one that just keeps track of things like source code, but eventually that themselves modify the world state.
+  - And the initial data we want to record in said world includes things like sequences, or ordered lists.
+  - The programs will essentially live in the world, and may not even be expressly aware of it.
+  - We could just keywords atoms, but that seems a tad odd to me. I think it makes sense in the sense of CL that they are simply names that are in the category of attributes. So they mean exactly nothing more than themselves.
+  - Symbols, by virtue of being named singletons, are persistent objects.
+  - Calling them properties also has the nice advantage of being making sense as named parameters to functions. They're just properties of the call.
+    - This is also cool in that we can concatenate the name of the function with the properties (in order) to produce essentially qualified functions.
+- I shouldn't be trying to satisfy the desires of Lisp people exclusively. I take ideas from all over the place.
+- Eh, fuck it, call them Cyfer spaces. It's cool.
+- I like property better than slot too.
+- The defining trait of a macro then is that it can choose what to do with the names it's provided.
+- The :binding property of a name is the current value when evaluated. Could be called "evaluates to". Such properties would in effect be reflective, or rather they'd be qualified under :cyfer-scheme.
+- Then if you want to talk about objects, you serialize them, you just might not include all properties. Like, source code only provides definitions, and it leaves other properties of the objects to be re-computed.
+- Exploring building primarily a database is good in that it'll let me grow some muscles with CLOS.
+
+* July 23rd
+- Sarah's out galavanting again today, first brunch with Veronica, and then to Ikea with her mom, so house to myself again today. She's also on her period.
+- Got the Nand2Tetris text and Scheme Programming Language by Dybvig yesterday. Started reading through Scheme, it's a good reference from the looks of it. Will help in defining the initial version of Cyfer.
+- I'm thinking I'll continue with the Emacs from scratch series today, but more importantly set up Geiser to start fucking around with Guile. I definitely need to install 1Password. Not sure how best to do that. Could just use a binary for now, and set up a package for it later...
+  - Likewise, thinking I should install AsusCTL. Would be good to get a package for that.
+  - Other things to look into. Gnome should have touch gestures, but they do not seem to be enabled. Why?
+  - Should I install StumpWM? Seems like it'd be fun. But would need Emacs set up with CL support.
+  - Also weird that I can't install Lem on the mac. There are instructions to enable it (since it's not signed), but they didn't seem to work. But can probably try Lem on the laptop no problem.
+  - Also, is Stow the best way to manage the dotfiles? Or Guix home?
+- I think I should also install the new BIOS for Hyperion. Someone suggested that you can save BIOS settings for later restoration. While you can't restore the settings on the next BIOS, what you can do is save it, clear the settings, then apply them to show you the list of what changed. Then I can write those down and do the update.
+- First thing though, think I should do some cardio.
+- Alright, cardio done, lunch in the oven. I need to take out the green bin. Something smells in the kitchen.
+- Applied some THC oil to my penis before cardio, and I do feel a buzz. Not even that much either. Really interesting.
+- Ok, time to get back to the system configuration. Let's start by installing 1Password as a binary.
+  - Yea, no idea how this is supposed to work. 1Password wants to put stuff in /opt and I have no idea if that's a thing or not.
+  - But I have it installed as a Firefox plugin! So that's probably decent enough.
+- I guess gestures require wayland, and Gnome is running on X11. Looks like you can install wayland though.
+  - Oh, there's also Touchegg for X11 and there's an integration for Gnome called X11 Gestures. But may not want that if we're using StumpWM anyways.
+- Well, I need to install smartparens, and rainbow blocks.
+  - Oh, rainbow-blocks-mode doesn't have custom colours. So it takes it from the theme, which doesn't necessarily look great.
+- Something to do once we've setup Guix home: change the default system monospace font to Berkeley Mono
+  - https://guix.gnu.org/manual/devel/en/html_node/Fonts-Home-Services.html
+- 
+
+* July 22nd
+- Was reading through On Lisp, and it occurred to me that in writing my own Lisp I've stuck to using just the base functionality in the language and haven't done much in the way of macros or utilities. It's like I'm still stuck on the idea that I should be doing what the CoMmuNitY thinks is good rather than just tailoring the language for myself. Like I'm using perhaps the most flexible language ever devised, and I'm not really using any of that flexiblity myself. Odd no? I think I'm afraid of being yelled at by grey beards, but I'm a grey beard???
+- Sarah's at her mom's today going through childhood stuff, not sure when she'll be back. I think my task today is to go through the emacs from scratch course with my new Guix install.
+- Emacs:
+  - Look into Swiper (fuzzy search of buffers)
+  - Ok, have font installed (it's located in home/.local/share/fonts). Was really easy to install actually, just expanded the zip file in that directory and then emacs picked it up right away.
+  - I need to figure out the best way to create a new keyboard layout, I need to swap colon/semicolon.
+    - Ok, well it looks like there are some options to fuck around with the meta keys (like making caps a ctrl, which I'll do for now), but I'll need to do something else to swap colon/semicolon.
+    - I don't know I'm kind of confused... I think I might understand more once I'm able to explore the source of packages to see how the keyboard layout package is defined. Then I could make my own variant.
+    - Might also be easier to make this modification using stumpwm?
+  - Was wondering what diminish did (he had it in his use-package for ivy). It keeps it out of the modeline list. Which I didn't realize was a thing because my config on this machine doesn't even have the modeline.
+  - Before I can really use Github, I need SSH keys, and to even login to Github I need 1Password. Not sure the best way to do this.
+- Thinking I'll take the dog for a walk, and when I'm back I'll set up Geiser. Reason being, I want to try building a package with 1Password.
+  - Should also think about installing zsh, bash is dumb. Ok, well it's installed but I'll need some configuration for it.
+- The best way for me to take tolerance breaks from weed is to travel. Not such a bad thing. Easy for me to drop it, I don't crave it at all when gone. And when I come back, the weed hits better. Likewise, travel is fun, and I'm rich and can afford it.
+- I think I feel a difference when using cannabis oil on my glans. Yesterday I used CBD oil, and my dick felt so relaxed. I was also using tingling lube, so that probably had an effect, but that was much later, and honestly that feeling was probably enhanced by the relaxed CBD dick. Tonight, while I write this, I have THC oil on. One thing I noticed is that while my head was clean to begin with, it developed smegma over the course of the hour. Must be interacting with something. It feels really good though. Like my lower body feels high now, which isn't a common for me.
+
+* July 21st
+- Took the dog in. Have a phone call at 12 with the movers for an initial quote.
+- Otherwise, could keep going with the modelling. But would also be nice to fuck around with Guix some more. Could also do that tomorrow instead though.
+  - Ooo, maybe do a BIOS update of the PC.
+  - Wonder if I could get my memory to run at 4x32GB if I used similar values to the Kingston kits. Wonder what their exact timings are.
+- I think I should play around with Guix. Reason being that it'll probably inform how I think about Cyfer. Also, will be interesting for deployment.
+- Hmm, came back to the laptop and it was just a black screen... Weird.
+  - And when I came back, it was magically picking up my Guix profile.
+  - This is such a weird distro, it's both well documented but also not. Like why is there a .guix-profile and also .config/guix? I'm very confused.
+  - And if it's so reproducable, why does it act different after a restart?
+- I need to enter my goals for Q2! Yay!
+- Need to follow up with insurance and lawyers.
+- Guix:
+  - Okay, looks like I've fixed the issue with the lid closing makes it not come back after sleep. Added something to the system config for that. Reconfigured the system, closed the lid and opened it and it was fine. Thing is when you close the lid it doesn't actually seem to go to sleep? The fan is still going.
+  - Ok, first thing we need to do is set up the channels file.
+  - Cool, have the full kernel installed now (with microcode updates). Wifi even works! Need to check about amdgpu...
+  - What next? As much as it'd be nice to get asusctl installed, I think that will require some more research and I should get comfortable with the tools first.
+  - Need to install firefox. Should also install nyxt.
+- I think I should actually follow along to the system crafters emacs from scratch series.
+- I feel like once I move to Calgary, I'll order a Dell 6K (on sale). I think it'll behave better when connected to the desktop.
+  - The Samsung 5K is supposed to cost essentially the same as the Apple 5K, so... not much of a point.
+  - And I should order a display from PS. Although I think I'd only be able to get a non-manager one. I should look. Hmm, can't see anything apart from "standard 24""... so probably not.
+- I think a lot of my trouble with where to go with Cyfer comes down to the trouble of graphs. When you define a word, there's associations you'll want to create between that word and some data structure. Like, if I look at the word 'reduce', that will have a compiled procedure, it'll have a definition (it's description), and it might actually be a generic function with a few different implementations. The problem is, how do you store this all? And how do you maintain privacy? I suppose the ideal interface is a graph system of some sort. And I think part of it is that it's introspective, so you automatically have meta-problems. And what I've been thinking about a lot comes down to, how do you keep snapshots of graphs? You need to somehow bundle everything into some giant set. But maybe there are similar words, how do you resolve those definitions? If it's some sort of namespacing, well you also have to deal with the fact that you now have a namespace for namespaces. Meta problems.
+- When working on a program, you have the declarative meaning of the source, and you also have a sandbox. I guess that's the difference between set! and define at the top level. Define interns the expression, set! does not.
+- Ask mom about photos. Also ask if there's anything she has that should come with me to Calgary.
+
+* July 20th
+- Ok, things to do today. Sarah spoke with Gary (all in the time I was taking the dog to daycare). So I need to respond to Andrew about setting up the FHSA and transferring her accounts over. Will also need to respond to Mariangela about the lawyers. Also need to respond to RBC Private Insurance about the house.
+  - Done, done, and done.
+  - Just need to sign docs for FHSA now.
+- Today I think I want to get GUIX installed on this laptop come hell or high water. I can use Chatty-G to help me out.
+- AI should be good for trading. More volatility.
+- As I research a bit. I think Java's JSR-310 is likely the most well designed date time library in that it took JodaTime which was apparently really well designed, and then addressed its few issues.
+- I also need to figure out when to get back into coding up Cyfer. I've lost a lot of context since I left on vacation, and if I come back to it too late I'll essentially have to relearn what I was doing.
+- Mark is asking for an additional $22K to pay for and insure a van which would be for transporting special needs kids. Contract is three years, $200/day, 5 days a week, 48 weeks of the year. So $48K * 3, $144K nominal? Sounds pretty reasonable. Fuel costs obviously. Might make sense to understand the effect of leverage on this. I have $30K in right now, bump that to $60K, but using the $30K LOC, what's my rate of return? Looks like closer to 14% on invested capital.
+- Ok, so the ticker on OptionStrat is in fact the underlying price. And the net debit seems to be coming from the market. So for a strike on $SPY of $454, I can see that the ask is 0.36, times 100 (the number of shares in the contract), that's $36 which is what OptionStrat shows as the net debit. The chart is then just a P&L for that. Ok, I think that gives me something to work off of. Should be able to calculate P&Ls simply first. Just need to know the opening price and can work our way back out.
+- Ah, local-time is kinda dumb. local-time:today shows July 19th because it's 4 hours behind.
+- OOO, thunderstorm outside...
+- Ok, well I restarted the laptop and am trying a Guix install again. This time I just used the graphical installer and it seems to be working. I think the issue is that the graphical installer will use the libre kernel by default, but we'll see. Yesterday the graphical installer failed but it's probably because I was fucking around.
+- I should do a BIOS update on Hyperion. But maybe not tonight with this thunderstorm...
+- Oh cool, ChatGPT now has system instructions like the API.
+- Dope, Guix is installed. Next thing will be to actually start filling out my configurations! First and foremost, the real Linux kernel.
+
+* July 19th
+- Smells smokey today.
+- Going to keep at Guix. Tried last night, ran into an issue in that my wifi is not included in the kernel (the free one that is). So I think I'll need to plugin ethernet instead. Can always do wifi afterwards.
+- I was reading through the Guix manual and cookbook last night, and it was really interesting. You could easily use it to define clusters of machines. It has support for containers. Etc.
+- Hmm. I think I should try using Guix in WSL first. The guide from system crafters leaves a lot to be desired. It's also a pain in the ass to build the configuration seeing as how I'm not sure how to copy GUIDs between terminals.
+  - It'd be good if I could just copy a config and get going.
+  - It's so dumb that the Guix installer admonishes you for using non-free hardware. Like, wow, just insult people out of the gate.
+  - It would be nice if there were a nonguix distro...
+- Something interesting about guix or rather guile is that it uses lists of symbols to represent namespaced modules. So instead of defining nongnu-system-install, you do (nongnu system install). Cool thing about that is that they're essentially paths.
+- Oh, new BIOS dropped. Can never remember that settings I need to reenable though...
+- Could also try using QEMU on the Mac for an ARM64 build. It'd be interesting to try the cross-compilation.
+- Ok, I think I'll respond to Andrew tomorrow since Sarah speaks with Gary tomorrow morning. Today I should look into the moving company.
+- Alright, submitted a quote to Sheffield moving with email as the requested contact method.
+- Time to hit the gym I think. I should really look into the responsive tables when I'm done. At least get an understanding of what needs to be done. Poke around in the code, that sort of thing. Don't need to actually start coding.
+- Oh, would be cool to use $ as a prefix for tickers.
+- Would be cool to more or less build our own finviz.
+  - Like, it doesn't have any Canadian tickers for instance.
+- Alright, let's get work out of the way...
+- Oh, I should text Colleen, and firm up date for LAN.
+- Interesting, finviz renders charts to canvases.
+- I think I need to get familiar with options pricing so I can calculate the greeks. I guess that's all Black Scholes actually.
+- Alright, let's start building a little model. We have assets, which have some sort of quantity. Or rather, I think that should be a position. The actual assets correspond to a ticker.
+- Should the underlying be another asset?
+- I think I should talk to Will for this. Or rather, maybe in the group chat.
+- Time to take bubs for a walk.
+- So there are a bunch of different assets. These are the things that you sell, be it stocks, currencies, indexes, interest rates, commodity, whatever. A position is a product type of an asset and a quantity.
+- Kind of annoying since I want to reuse words. Probably means I don't understand it fully. We could just use pairs for quantities I guess. If it's a pair, it's a quantified asset, otherwise it's a singleton asset.
+- I think I'm getting confused by their being different types of positions. Like, if you buy stock, that's a stock position, whereas an options contract is itself a position.
+- The difference between being short or long is if proceeds/cost happen at the start or end. The person buying (long) has costs first and proceeds (potentially negative) later.
+- Most securities we can just call a position. Currencies are a bit different I guess.
+- I think I need to create functions that are more utility than anything else. And we'll introduce a little language on top to make the interface nicer.
+  - We have functions that create nouns (constructors), and then we have verbs that modify them. So complex items like an option position are composed out of the option, the position (long/short), and quantities. Then you call open to make an open position.
+
+* July 18th
+- Bring up the dumbbells!
+  - Phew. They're heavy to bring all the way upstairs...
+- Things we need to learn:
+  - How to decide on leverage.
+- So big reason you'd go for an RTX 6000 Ada is for memory, they have 48GB compared to 24GB on the 4090. Otherwise the 4090 draws more power since it clocks a lot higher I believe.
+- So today I need to respond to Catia that I just want to go for HELOC. I need to remind Sarah about talking with Gary, and respond to Andrew. Need to look into moving company. And we should give notice to the landlord.
+- So Samsung 5k pricing finally announced. Same as Apple. If that's the case, probably better to just grab a Dell 6K on sale.
+- I should look for books on options and derivatives. Get some ebooks, and maybe order some paper ones that are good.
+  - Okay, have a few books downloaded. Need to come up with a study plan.
+  - Also need to look at playing with AVX512 on the desktop with Linux.
+  - Should look at installing Guix on my laptop, see if that's good to work with the desktop then can set up a tunnel with Tailscale.
+- Ok, I should work out, need to bring my notebook down and think about this. Set out a plan.
+- First thing's first, learn the basics of options. Build it in code. Then try and replicate what options omega is doing. We do it slow first, then optimize.
+- Right, have a meeting with Jonathan at 1:35pm. Should be done lunch by then.
+- Forward contracts are a simple form of derivative. Very much in the name, it's a contract to buy something in the future, rather than at spot (aka immediately). Forward contracts for currency would be an agreement to buy GBP at some date for some amount of USD. The party buying is long, the party selling is short.
+  - The value of the contract is the difference between the spot price and the contract price. For the party in the long position it's the spot price - the contract price (i.e. if GBP:USD is 1.6 and the contract is 1.5, they netted out with more USD).
+  - A forward contract is essentially a futures contract, the primary difference being that futures contracts are standardized so that they can be traded on an exchange. Financialization baby!
+- Does long just mean the party that wants the price to go up? And short the party that expects it to go down? Or rather, the party that makes money when the price goes up is long, the party that makes money when the price goes down is short.
+- American options can be exercised at any time. Euro options only at expiration. Most traded options are American style. Euro style options are easier to analyze because they essentially have one variable fixed. While options are about the future, they are different than actual futures in that they give you an "option" to do something without the obligation. If you buy gold futures, you're expecting to take possession of gold.
+  - Call option means the option to buy something. Put option means the option to sell something.
+  - Long position implies you're the buyer, short implies you're selling. It's independent of the actual details of the contract.
+  - Put options are used to cap downside.
+  - The difference between forward contracts and options are that forward contracts fix a future price whereas options provide insurance. The person buying the option has the choice to exercise.
+- These terms can be confusing, but it strikes me as something you just get used to and they become second nature.
+- While futures can be used for hedging (kind of their original purpose), they can be used to speculate. The way you make money from them is that you're not actually in the position, you're only paying for margin. So trading futures is necessarily a levered bet. If you want to go long on sterling, you can either buy it today, but that requires buying it now. Whereas you can buy a futures contract for a smaller sum, and then invest your current dollars elsewhere.
+- Options are a form of leverage because they accelerate the returns at the tails. On a call option, you're capped at a loss of the initial outlay to buy the options (you don't have to exercise them). But if there's a lot of value in the stock in the future, you get to buy them for cheap.
+- I think a big thing I want to know is the exposure for positions and a total book. That's where I'm really sort of timid with respect to markets because I'm not familiar with the actual associated risk.
+- Interesting. Most futures contracts do not actually result in delivery. Instead most positions are closed out, that is if you were long cattle (i.e. agreed to buy cattle), you issue a short cattle contract the day before close (i.e. a contract to sell). Your profit (or loss) is then the difference between what you paid and what you sold. One result of this is that most people trading futures have no idea how the actual delivery mechanisms work if they forget to close out their positions.
+- Futures and options are also margined in effect because the exchanges take on some risk. If two people close on a deal, if one party defaults, the other party gets fucked and they'd go to court. The reason you have an exchange is to counterbalance this. You don't actually deal with the counter party, you deal directly with the exchange and the exchange takes on the risks of the contract. Of course, this has a cost to them, so you have to post collateral with them. Hence margin.
+- Whereas forward contracts are settled at the very end. Futures contracts are typically "settle"d on a daily basis. They're marked to market to calculate margin requirements. It's as if you close out the position and rewrite it every day.
+- Margin is compensated by the brokerage. If you're putting up cash as collateral, you need to earn interest on it.
+- Not all derivatives are settled in the underlying asset. If you have an S&P500 futures contract, delivery would be of a portfolio of 500 stocks. Kinda weird. So these contracts are settled in cash using prices based on a certain day and time (like opening price).
+- Just got back from walking the dog. I pulled something while working out today I think. I'm not even sure how it happened and it seems to come and go... left shoulder near the neck. Hmm.
+- Good day today. Didn't do anything for work though since Will scheduled a meeting with me and Daniel. I then spent the rest of the day reading about options and derivatives. It's making sense so far, will mostly be about just getting intimately familiar with things and asking questions as they come up. As I build out models of this stuff, that'll help a lot.
+  - Tomorrow I definitely need to start work. At least the ticket is due in the next sprint instead.
+  - Feels so fucking good to be rich I tell ya.
+- Definitely need to get familiar with stats again. Might not be immediately neccessary, but will be as I develop models of stuff. We can start with optimal/academic models of options, and then look at more statistical models as time goes on.
+  - For instance, stocks that have dividends means movements of the price leading up to and after the dividend. How do those play into option pricing?
+  - We can calculate the implied value on the announcement date.
+  - Are there measures of the effect of liquidity on prices? I'd think so.
+- Does quicklisp handle git repos? Need to look into this.
+- One thing we'll be writing a lot of is tables. We'll need a little API for plain text tables, but would be nice to render out to HTML, or CSV. For instance, variables on side (strike price), values for column headings, then get the values by combining column and value.
+  - This is the kind of thing where you're building a little language. Whether that ends up in a PDF, CSV, HTML, plain text, etc doesn't matter.
+  - You create queries and queries return queryresults that are serialized. How they are serialized depends on the parameters of the client.
+  - We need a language/library for dates too. Like nice language. This is one area where I think CL is rather lacking. Good news is we're rather familiar with the ins and outs of what makes a good date language.
+- I think we need to assemble our own utilities library that just includes a bunch of stuff that make things easier to use. Like match, and generic addition, and shit like that. You can always package qualify things when you want something specific anyways.
+
+* July 17th
+- Good chat with Daniel this morning.
+- Back to work! Yay! Lol.
+  - Have to do the actual responsive tables. Get a big thing done and out of the way.
+- Need to do some stuff with regards to the house. So need to forward the email from Mariangela to Catia. Also need to ask Andrew/Catia about the mechanics of the sale and HELOC.
+- Also need to remind Mark about the interest payment for this month.
+- Need to think about move, giving notice, and booking the movers. Might be a good task for tomorrow. Today I'll focus on the email with RBC.
+- Ok, emailed Catia. Reminded Mark. Now Andrew.
+  - And Andrew done!
+- I should go work out. Make sure to bring up the dumbbells.
+- Alright, worked out. It's interesting that if I haven't done cardio in awhile (i.e. a week), my heartrate increases. Was in the 170s rather than high 150s.
+- I'm not actually sure what to do this afternoon. I don't want to work on responsive tables that's for sure.
+- One thing I can do is start researching home theatre equipment. Will had a Bowers and Wilkins one I think.
+  - Thinking we'll put the existing home theatre set up in the bonus room. Maybe upgrade the TV to an OLED. Otherwise the sound system is good. Then do a projector in the basement with an Atmos setup and dual subs and ES60s.
+  - Main floor we can put the existing TV. Not sure about sound. Might be able to connect to the in ceiling ones. It's not really something I'll use a lot.
+  - Still kind of want to do a dope stereo setup in my office if the layout can work. Then go for a pair of L800s.
+- Interesting, so Andrew doesn't really recommend paying down the HELOC with dividends. I guess it's a trade off, the interest lets you knock out some of your top line income, and so long as you're making your interest payments with salary, it's better to let the funds stay in the market. Goes back to the "what's your weighted cost of capital?" The thing that's weird right now is that interest rates are rather high. Otherwise, yea, obviously you want to stay levered on the house. You can write the interest off, so the real interest rate is lower, and if your market outlook is positive, you get a better return.
+  - Only reason you'd want to pay it down is if your house decreases in value since you're essentially making a margin call on yourself.
+  - I guess the real question then is, what's my outlook? If I expect the market to go to shit, I don't really want to be in the market with borrowed cash. If I expect the market to grow, then yea baby lever up.
+- It's weird. It feels later than it is. But it should feel earlier due to the jet lag? Maybe because I'm tired?
+- I should order magnesium and zinc again.
+- Now that I have a bunch of projects on the go and a company in the pre-seed stage, I think I need to build myself a schedule. There's stuff I have to write (code), but there's also a bunch of stuff I need to learn (options pricing, option types, etc), and stuff I need to relearn (stats). Need to set out a learning/work schedule for myself.
+- Think I'm gonna take the dog for a walk and come back and do that.
+- It's interesting. I generally feel a lot better about life now. I don't feel stressed, and I feel really capable of achieving what I want. Maybe because I've had a bunch of "wins" recently.
+- Thoughts re: mortgage:
+  - So I was emailing Andrew about the house and logistically how that works. Confirmed that we'd be selling investments to cover the house, making sure the HELOC is at 0 on possesion, and then we'd take the cash out of the HELOC to invest. I asked about setting up a new account for dividend stocks and interestingly he says they can set up an automation to have the dividends cashed out when they come in, so you don't have to think about it. What was interesting to me is that he didn't really suggest paying the HELOC down, since if you're long you might as well just stay in the market. Now, obviously he'd benefit from that (more AUM), but it did trigger me to think more about the house from a financial perspective.
+  - Up until now, you and I have been looking at the house as a capital expenditure to be financed. The total cost of ownership being the interest (plus upkeep, property taxes, etc.). You'd use dividends to pay it down at an accelerated rate, with the bonus being that you have some tax incentives from the government to do so. This is essentially the traditional view of housing (mortgage) with extra steps (and incentives). It's also a rather myopic view.
+  - Another way to look at this is as part of a more wholistic view of your long term financial strategy. On close, you shift a bunch of capital from cash and cash equivalents to non-current assets. There's a cost to the transaction in that if you go to sell the house today, you'll have to pay fees to realtors, etc. So knock off a couple of percentage points on the value of the home. Otherwise, houses are generally a better asset than cash (Calgary is of course different than Ontario). But, if you were in cash before hand, it's not much of a difference to your net worth. The downside is that houses aren't as liquid as cash. That's where the bank steps in, they say, hey we'll lend you 65% of the value of the house as cash and it'll cost you prime. Now, we've been seeing the interest as an expense like rent. But you can also view buying your house as eliminating your rent. Like, it was kind of unsaid between us that you can just not pay anything. What you would have paid in rent can now go to savings instead. This is all obvious of course, but the reason I bring it up comes down to macro environment and what your expectations are on an ongoing basis.
+  - For instance, if you are very bearish on the market outlook, why would you take out money at a really high rate to invest into said market? Dividend stocks will pay a return yes, but they're still stock so if the overall market goes to shit, they probably will too, and now you've made a capital loss on the stocks themselves.
+  - The flip side, is that if you're bearish, you can decide to just park the money in the house. Then, if the markets take a shit, the fed will probably cut interest rates, and hey what do you know!? Fire sale on stocks and cheap debt to buy them! Lever to the tits baby.
+  - Essentially, use your HELOC as a part of a larger overall financial strategy. A HELOC being nothing more than a rather friendly form of debt. Where else can you take out a significant amount of cash, at a favourable interest rate, on a pretty illiquid asset? Comparatively, brokerage margin while perhaps being a bit cheaper, is subject to margin calls. Only way you get fucked with a HELOC is if you can't make the interest payments.
+  - One thing I left out is tax. Since we get to write off the interest as an investment expense, the government is giving us a discount on the interest rate. Due to the nature of income tax, you get more of a discount if you're in the top tax bracket (which, lol lmao). We get a big benefit from that this year due to being in the top tax bracket, but that's somewhat counter balanced by the fact that interest rates are also at their highest. But, the interest is still a real cost even if you're getting a discount!
+  - I think we're so used to paying rent, that we haven't considered what not paying rent allows us to do. By owning your house outright, you're now earning rental income, from yourself. So if you were going to use a $3500 monthly repayment figure on a $847,500 home, you're getting an effective 5% return on the cash invested into the home. Of course there are property taxes and maintenance on top of that, but in a rather traditional, long term view of housing, those should be counterbalanced by the appreciation of the house itself.
+  - Here's another idea I had stemming from this: use our HELOCs as part of our startegy with respect to NewCo. First use obviously is to fund the company using them. You can use them for paid in capital, or even loans to the company. All of those uses we should be able to write off against our taxes. The second one obviously is using them to fund the actual company fund. If we have strategies we think are working, we can invest money out of the HELOC. Given the risk profiles you seem to like in your strategies, this actually seems like the perfect fit for debt. Finally, by owning our own homes, we can hit ramen profitability a lot faster. In essence, we're able to jump ship earlier than anyone else, notably Daniel. Daniel has an actual mortgage payment to make, so he needs a salary, and while he won't demand a ton in comp (owning equity and all), it still makes sense to prioritize paying him a meaningful salary first.
+- Okay, sent that to Will, I wonder what he'll think of it. Honestly, probably will be happy that I'm applying a strategic mindset to the company already.
+  - So, I'll have $3.8M in September, with $2.6-$2.7 invested or so, and a $1.05M house. On top of that, I'll have $700K in available credit.
+  - I'll need to work out with Sarah what that means for her and her portion of the house. She wants to feel like she has a part of it, and we could structure it as she's buying equity in the house from me. That'll end up on our cohabitation agreement.
+  - Weird to think that I'll probably be over the $4M mark next year unless the markets take an absolute crap.
+- Oh dope, done paying off the display.
+- Should think about setting up a savings account or something to store cash from salary. Wonder what EQ pays these days. Hmm, only 2.5%... I guess money market accounts are always an option. Might want to break them out separately in my personal finances sheet.
+- Fucking crazy that I can buy a million dollar house, and then live of the returns from the remaining $3M!!! That's like $120K withdraw rate, but I'll have essentially no rent. My effective income has essentially doubled, and I don't think I realized that.
+  - God, I love being rich.
+- So I think the plan tomorrow is to work on the responsive tables. Pay my dues so to speak.
+- I wonder if I should set up a daily checklist of things to do. What would those be?
+  - Exercises first thing in the morning. Should figure out what those are.
+  - We should be benching. We should also probably be eating first thing in the morning before meds kick in. Only thing is, does eating in the morning fuck with my mental state?
+  - Should set up reminders to get up. Can use my apple watch for that.
+- Need to buy those supplements. Also, should buy that course on alexander technique... Will need to schedule when I watch and study it though. Honestly, should set up some study plans for all of the stuff I want to study.
+- Need to get off of my computer. Looking at screens all day. SMH.
+- Although, having a good session just thinking RN.
+- Also, spoke with Sarah about the house. I think it just makes sense to go 50% on it. If she leaves me in the next two years, yea, I'd be pretty pissed, but at least it's simple.
+
+* July 16th
+- Ah, good to be home again. But looking forward to moving.
+- Lol, Will had sex with weed last night and the verdict is "good shit".
+
+* July 15th
+- Smoked shisha again last night so was up until like 2am. Had a lot to think about. Random threads:
+  - I feel disconnected from my shadow (id)? Like, part of that was that I posted a tweet about not liking dunking on people, and someone responded that bad takes should be dunked on, you're not dunking on the person, you're dunking on the take. I think the reason I don't do this is because I'm myself afraid of being dunked on. But being wrong is how you learn things.
+  - Along those lines, there were two tweets last night that made me feel FOMO or envy. One was "Just had sex with a stranger" and another was Aella's talking about fucking 6 guys in an orgy at 30. What's interesting is that it's only sex that I really feel this way about. Like, seeing someone with a nice car or huge house or yacht doesn't make me feel envious. I think "wow, good for you!" and see it as sort of inspiring. Same thing goes for general material possessions, but man, sex is an entirely different story. I'm not sure what to make of this.
+  - Something else I was thinking about was that I want to take more control of my life. And this week cleared up two of the main things weighing on me: the engagement and buying a house. Now that those are done, I feel a sense of relief and opportunity. I think also having spoken to Will about the next company makes me feel more like having a purpose again.
+  - I was thinking that 1) I'd like to properly work out again and lift weights. I'm pretty active, but I'd like to build some muscle. One thought I had was to bring the free weights up to my office. I don't have to do a big regime, I just need to start by doing a single set at a time.
+  - Another is that I've been sort of running from responsibility. Err, maybe not that word exactly, running from control? I should be more decisive and clear in what I want. Lately I've just been deferring to other people. For instance, I feel like my morning is set up in a way to satisfy Sarah's needs rather than myself. My schedule is mine, and I should be clear about what I want on it and why I'm doing it rather than just going with the status quo.
+  - I think this thought stems from a bunch of not quite daydreaming, but inner roleplaying about being a dad. I realize that being a parent is largely about being the executive function for your kids and helping them develop that. But after role playing that in my head, I realize that I can do the same thing with myself. Act as dad to myself.
+  - Assertive, that's the word I'm looking for.
+  - Like, the engagement is all about being assertive. I was afraid that she'd not like it, but the reality was NOT being engaged was what she didn't like.
+  - I'm afraid of asserting myself generally, but that's what men do. And it's what women want from men.
+  - Like, do I really want to do South Korea for my bachelor party? I haven't actually thought about if it's what I want rather than something Will suggested and me just deferring to him.
+  - One nice take away from this trip is that I need more socialization. I think I sort of realized that. Obviously this trip is a bit more than I'd like generally, but the amount I get right now isn't enough.
+  - Once we move in, I'd like to have regular get togethers at the house.
+  - One thing I recognize is that I'm using twitter as a salve or escape, and to a lesser extent games. I use them to disconnect from people. Mostly Sarah since I'm with her the most, but it also happens generally. If I find the topic of conversation boring, I disengage and pull out my phone. And it's not like it makes me feel any better.
+  - At home, I spend a lot of time upstairs in part because Sarah mostly spends time with the TV on and I'd prefer silence. But, instead of running away, I can just tell her to turn the TV off. She'll do something else, it's just a default for her.
+  - Oh, another thought I had was that I'd like to cook more healthy food. Like today, my stomach was pretty good since we had BBQ last night which is just meat and vegetables I like (peppers and mushrooms). I think it makes sense to buy a grill once we're here. We have the hookup for it. William makes hot dogs for himself at lunch for instance. One good thing about the grill is that it's separate from the kitchen (whereas I feel like Sarah's in the way in the kitchen if we're both there). It makes it easy to cook meat. My biggest problem with cooking is that it's a lot of prep. But grilling is minimal prep and healthy (compared to what I eat a lot now). Also, that prep doesn't need to be all me. I can get Sarah to handle a lot of it, and then I just do the grilling.
+  - It's weird, I'm a rather disagreeable person, but I'm too polite. So I won't say no to things if I feel like I'm going to disappoint someone even if it's not meaningful.
+  - Another reason I was thinking of developing a bigger schedule was that I need a long term schedule for house maintenance. You need to check things every few months, and it's important to get those on.
+  - And I should be talking to myself. Point and do like those japanese train engineers.
+  - I'm not a person, I'm a bunch of personas. Embody those different personas instead of numbing myself and just mindlessly scrolling.
+- I'm looking forward to having so much more space. Instead of just two floors, one with a living room, we'll have essentially three. The upstairs bonus room is a living room, there's the main living room, and then there's the theatre room. My office should be solely for work.
+- I think I need to disconnect more often. From all devices and just read or draw or shit. I think that's something I'd like to enforce at our get togethers. Phones left at the door.
+- I should take that alexander technique course.
+- And I should take more deliberate stimulant breaks.
+
+* July 14th
+- Home inspection completed, obviously nothing really serious, just little minor shit. The report is pretty cool, it's set up more like a new home owners guide of things we need to do and how often. We'll want to turn that into a calendar thing. Honestly, the inspection was just like $650, so I figure we'd just want to do that every few years since it's pretty thorough (they even use a FLIR camera to look for potential water leaks since you'll see the temperature difference in the walls, crazy shit).
+- Looking at tick level data, for all of the major exchanges going back to 2010, the total size is 24TB, except that's all as CSV, so text, and with a bunch of redundant entries (the date). Looking at something like 50 bytes per record, which we'd obviously be able to bring down. That's also for stocks rather than options. Options will have more entries (since there are different closes, etc.), but the volume is a lot less (most of those stocks might not even have options). So should be able to fit it all into memory on a big server.
+- Oh damn, there's a 128GB (4x32) kit supporting 5200Mhz speed on my motherboard now.
+
+* July 13th
+- Make sure to follow up with RBC for home stuff. Mechanics of credit, etc. But also about setting up a FHSA (first time home saving account), which Will told me about (he was literally emailing Robin about setting this up).
+
+* July 12th
+- Proposed on the 8th!
+- Looks like we're buying a house. The one Sarah liked the most. Final price should be $1.08M. It's really beautiful. Spectacular view out the back looking over a ridge with a lot of green space that's protected. There's a bit of development going on at the edges, but doesn't affect the general scenery. Sarah wrote a really nice letter to the current owners, and they ended up writing us a letter back (which our real estate agent has never seen before). It's kind of weird, the family currently in the house bought it initially from the developers and made a bunch of adjustments to it, and they only moved in like a year and a half ago, but are moving again. Anyways, the house is designed exactly as Sarah would like, so no renovation needed, and the price will be less than other comparables we've looked at that would require work for us to like them. So that's all good. It's absolutely massive. The listing was for 2600sqft oddly, but in the description it's actually 3700. Three bedrooms upstairs. It was originally supposed to have four, but the family adjusted it so that the kids rooms would be bigger. Also, the doors are thicker, to keep sound from travelling. The basement is finished, with an additional two rooms, and there's an office on the main floor (kind of small for me though). Huge deck out back, and room on the ground floor walk out for a hot tub. It's also really well insulated, there were a bunch of kids playing out in the playground in the front of the house, but you'd have no idea they were there. Lots of other young families around too. Totally can see us staying there for the long term.
+- Was chatting with Will last night about what we want to work on next. He's been feeling really checked out at work over the past few weeks since they were doing a bunch of stuff to promote Chalk last month or so, but now it's all just internal politics and shit. Looks like we'll do something finance related. He has this software he uses to backtest option trading strategies, and it's run by this really small shop. They started about a year ago, and from the looks of it are doing north of US$300K per year already. Very niche product. There are other such tools that he uses and the interfaces are all really amateurish. The thought is we'd have a combination of a fund and SaaS. We'd build our own tools for the fund that we dog-food, and then sell them. Slowly build up a platform of tooling. Gives us a market where he's very familiar with and so he can do a great job promoting it, while also being interesting from a technical standpoint (it's a data storage and processing problem, unlike anything we've done at Chalk). Good excuse to use my new language. The thought is we'd bring on Daniel as a partner. And there's probably similar such opportunities in crypto which would be interesting. Would be nice to have a solid SaaS business that can pay the bills with the opportunity to grow.
+- Well, signed the offer. Lots of stuff to do now:
+  - Cohabitation agreement, determine how to split this.
+  - Mechanics of mortgage, heloc, smith maneuver, etc.
+  - Movers
+  - Giving notice at home
+- Alright, while Sarah's out and Will's working, I'd like to take a stab at doing some more work on Cyfer.
+- Perhaps I should design some functions to get at the underlying source of a symbol. Like how CL defines DOCUMENTATION and DISASSEMBLE.
+- I'm tired...
+  - Had a nap, that was nice.
+- I'm not really sure where to go from here to be honest.
+  - It's beginning to be a bit of a pain writing CL. I'd like to start writing in the language. What am I still uncertain about with it?
+  - I could create a package such that I could call :use :cyfer instead of :use :cl, and then provide the main things like =.
+  - Could also do storage to files.
+
+* July 8th
+- Dropped the dog off at mom's now just need to chill for a bit then pack. We leave around 4 (gotta drop the cat off at Sarah's mom's).
+- I think having first and rest of #nil return #nil is fine, but I'm wondering if it makes sense to have it be equivalent to false. Clojure does, and it makes for some oddities because empty collections aren't nil. Nil should just be the empty stream.
+- I think when we want persistence to disk, what we really are asking for is a commitment. That's why you do a commit! And it's the commitment that covers things like replication. Commitments are really replication and synchronization schemes. That's how you'd define things like "make sure this replicates to this hard drive immediately, and then lazily replicate out to this other drive" "when this drive is nearing full, replicate it to these other drives".
+- Fuck, kind of constipated. Must be in anticipation of travel since I had a fuck ton of fruit yesterday (cherries in particular).
+- I should make sure I have a bunch of books downloaded. Figure I'll just use the in-flight entertainment otherwise.
+- Now that we have dictionaries working. Need to work on commitment scheme.
+- Damn this is super cool. Interning objects works. Right now it's a package, but it could be a weak hash table.
+- I've got dictionaries serializing. Not very concise at the moment, but fine for now. I can think more about this on the flight.
+
+* July 7th
+- I think I need to just leave the inner reference stuff alone for now. Not really sure what the semantics should be for it yet.
+- I think I need to draw in my notebook what to do next.
+- Huh, didn't realize that Clojure has () be the empty list which is different from nil. I think that's probably what I'll want to do. Although not sure what it really means for us since it's a pair. Also, if it's a pair and (a . []) resloves to (a), what is the difference between (a . #nil) and (a . [])? I guess a . #nil is invalid? That's probably not a bad idea, needs to be a list.
+- Well, cleaned up the reader a lot. Should hit the gym now.
+- Ok, I think that's pretty good.
+- Need to think about persistence abstraction a bit. But I should focus on eating my lunch.
+- I think I need to actually implement the dictionaries now.
+- When we start a fresh session, we should have no entries.
+  - Actually, we could use a fresh CL package too. Eh, maybe later.
+- Dope. Got basic dictionaries working in the inspector. What next?
+- Yea, I'm thinking I'll just use symbols and packages for the moment. Why complicate it with SQLite?
+  - When you intern a data structure, we only need to generate the hash to get the symbol name.
+  - Then, the symbol value will be the data structure itself. So to get the value, we just call symbol-value.
+  - Likewise, when we deserialize a &sha256, we can convert it into a symbol to see if it already exists or not.
+  - We would want to mark them as pinned or not. Not sure if persist is the best word for this. Kind of annoying that it conflicts with persistent data structures. Persist probably makes more sense though, it freezes a structure giving you a deferred object to it.
+  - interning might be a better name? Don't know...
+  - Makes sense that interning it would do that recursively.
+  - Packages probably work best for the time being, but eventually you'll want to cull them.
+  - Persisting needs serialization, but actually saving said output to disk isn't necessarily what we want.
+  - Really the only problem with packages is that they won't get rid of symbols, they're actually persistent. That's probably fine for the time being though.
+  - Interesting, should be an orthogonal persistence mechanism. Literally shouldn't need to care about it.
+  - Rather, looking at object permanence is a meta operation. You're stepping out of the computation to look at its current state.
+  - The runtime should be responsible for garbage collecting data (or rather sending it off for archival). The current state of a dictionary represents what you want to save. And it will be so!
+  - So it should act rather like a mutable interface, it's just rather than actually mutating things, you're doing atomic swaps.
+  - Things are only ephemeral when you note them as such.
+  - Most users should not even have to call persist. Should be automatic.
+- I think quotes should have the type literal. And hash identifiers are then indirect literals.
+- Right, of course interning is separate from persistence. CIDs are what you retain and release. Persisting an object grabs a handle to it, and it makes it a literal data structure. In particular, it means that it has value semantics. Only when something is no longer value semantics does it necessarily mean doing something different.
+- So you can persist something, that gets you a literal. And then you can intern it, which is the act of saving it?
+- Disks, SANs, CyferSpace, are all just magic boxes. You either give them a CID and they give you a persistent object, or you feed them shit and they give you a CID in return. It's very much a lower level concern. It's a runtime concern. To the user, shouldn't really matter too much.
+- A Cyfer Runtime has a memory garbage collector, and also a persistent object garbage collector. That system is more of a retain release model.
+- Likewise, temporary files are the persistent data equivalent of weak boxes. They GC doesn't follow through them when marking live objects.
+- It's like designing the ultimate functional environment. We use different languages for mutable things. We have a safe environment up top (representing system calls), and then we can have dirty semantics in controlled environments (i.e. separate processes).
+- The initial environment should be User. Within which there is a magic box representing the system/supervisor.
+  - Right, when it boots, it knows that that's a special symbol. Likewise, there would be special ports for input/output. Those have universal symbols representing them.
+  - Disks are themselves ports. Persisting ports. They give you a CID back as part of their contract.
+
+* July 6th
+- I sent Will our flight details. And reviewed the houses to send off to the realtor. There's something else I need to do this morning...
+  - Oh right, I have to book parking at the airport. Done.
+  - And send off the interest statement to Mark. Done.
+- Lol, apparently the finance product team is waiting on responsive tables and that's what I'm working on. Well, they ain't gonna get it anytime soon lmao.
+- I guess atoms in clojure are atomic boxes. Variables are just boxes. Portals are also boxes. Question is, can you read out of or write into said box.
+- One problem with Lisp is that it's easy to use lists for everything and so you end up making things implicit rather than explicit. Like, using lists as a stack.
+  - I wonder what literature there is on turning functional code into imperative mutable code.
+  - Like, an object is essentially a box where any methods set the current value of the box after every operation. It's an implicit set!. set! is really more of an implicit release!. You're calculating the new object and releasing the old one. If you can prove that the lifetime of something is limited and there's only a single reference, you can replace it in place.
+  - Dynamic variables are essentially set! with dynamic extent. So a box that's secretly a stack.
+  - We should provide abstract data structures which are based on semantics rather than implementation. That way you can provide more information to the compiler.
+  - So many data structures come down to: what guarantees do I want? Rather than "what's fastest?". What's fastest often varies, so an optimizing JIT should be able to choose whichever based on runtime data. Like which sorting algorithm to use is more about "do you want it to be stable or not?". Choosing which variant to use isn't even something people are very good at. You really have to see how it works at runtime by profiling.
+    - That sort of stuff would then be amenable to a neural net to predict which type to use for a given program.
+    - Start with the most generic, specialize down.
+  - Sequences and streams are super tightly related. I think Scheme calling I/0 ports makes more sense than CL streams. Since CL streams have to worry about close and open and locks and shit like that. Really an I/O stream is a lazy stream applied to a port.
+- Well, I think I should hit the gym. Gonna do cardio again today and then lift weights tomorrow since I'm gone next week and don't want to have too much of a gap between lifting sessions. Means I'll need to lift on the Monday I'm back.
+- I should also ask Colleen about when to come visit this summer.
+- Big ole thunderstorm rolling in.
+- Man not feeling writing this scanner at the moment. Probably because I've gotta eat. Also because I'm probably doing to much at the same time.
+- Kinda wish we had regexes for character streams. Requires no backtracking.
+- Shorthand exists only for compound types like structs or sequences. Otherwise you'd just use some sort of bare word.
+- Feels like having a scanner isn't really all that beneficial... The only benefit to tokens is for the delimiters. Might be good for shorthand though.
+- Do we actually need shorthand though? Might not be necessary. Especially since this is supposed to be a verbose language...
+- Likewise, start and end doesn't really need to be attached to the tokens. It's only nice for errors later. I do like having the generic reads though.
+- We could just return characters as standing in for themselves.
+- Right, we could return objects with meta data the way Clojure does (if need be).
+- Well, I don't know if this was really a good use of my time. I more or less just reimplemented exactly what I had. I have dotted pair parsing working, but man, yuck. It's like the only infix notation in lisp...
+- Stop trying to make it perfect!
+- Ok well dotted printing works now too.
+  - And cleaned up a bit. When the parser encounters something like (abc . []) it should replace the empty list with nil. Generally though, I think we'll want to keep empty list distinct from nil because we want to render them differently as source. Empty list is more meaningful than nil in that it's a declaration of exactly a list rather than some other rando sequence.
+  - Need to fix symbol printing (when there are whitespaces for instance).
+- It feels like I'm getting stuck again. As in, the last time I started fucking around with how something felt or how pleasing I found it, it meant I was more unsure about where to go.
+- I think I need to actually start working on the interpreter, and that actually means implementing the primitives!
+- I think we're really close. While the parser is perhaps not really comprehensive, that's fine, we'll reimplement it in the future anyways. And it just needs to work well enough for the code we want to write now.
+  - And we have the most important part out of the way, dotted pairs! It ain't pretty code, but it seems correct. Which is all that matters.
+  - Oh, we need to implement hash integers for internal values.
+
+* July 5th
+- Well, back to work. Feels weird because it's Wednesday and we fly out to Calgary on Saturday. Didn't think of it much because of the holiday lol. Felt like, oh, that's a week away, but it's only a few days.
+- Lately I've been feeling bad about the fact that I'm not good at being present with other people. Like when I was at mom's or even just with Sarah. I keep thinking about programming or something else. Or I just want to get back to my computer.
+- An interesting thing about constraining myself to text UIs is that it forces me to think about how to integrate an LLM into the interface. Text native baby.
+- Something I thought about last night is that I've been creating packages for each file, but there's no reason I need to do that. In fact, they should all just be in the same package, but we can break the load order up by file. This allows us to set up macros first, then use them on each file. Should get around some of the weirder parts about compilation of files. Just break the compilation up into multiple passes with different files!
+- I think I should hit the gym, then get back to work on this! I'm so excited by what I'm working on here.
+- I'm thinking we need to add the concepts of the box, and the pair. Quotes are essentially mutable boxes, they get dereferenced for an underlying value. Function applications, symbol bindings, etc. are all types of pairs. There's no reason to serialize boxes themselves (it's just a no-op since the next object in the sequence will be the thing itself), but that's effectively what words are! Nominal identifiers for some other thing, they're an indirection. When it comes time to serialize a box, we have to decide on an identifier for said box. For persistent data structures, we can use a hash! The bytes become the name of the symbol, and then we pair it with another symbol (the hash function name). The upper nibble defines characteristics of potentially an underlying value.
+- Also, thinking of just dropping bit* since you can just use an unsigned and tag it as "hey I'm used as a bit field".
+  - 0x0000_0000 -> Void
+  - 0x0000_0001 -> Nil
+  - 0x0000_0010 -> False
+  - 0x0000_0011 -> True
+  - 0x0000_0100 -> Nats
+  - 0x0000_0101 -> Ints
+  - 0x0000_0110 -> f32
+  - 0x0000_0111 -> f64
+  - 0x0000_1000 -> u8
+  - 0x0000_1001 -> u16
+  - 0x0000_1010 -> u32
+  - 0x0000_1011 -> u64
+  - 0x0000_1100 -> i8
+  - 0x0000_1101 -> i16
+  - 0x0000_1110 -> i32
+  - 0x0000_1111 -> i64
+  - 0x0001_0000 -> Inner Reference (a varint representing a fixed identifier within the expression).
+  - 0x0001_0001 -> Symbol (Human readable Identifier, renders as :symbol)
+  - 0x0001_0010 -> Pair (the 2-tuple, the unit mapping).
+  - 0x0001_0011 -> List (a literal sequence).
+  - 0x0001_0100 -> Table (a sequence of pairs, represents associations).
+  - 0x0001_0101 -> Text (sequence of unicode code points).
+  - 0x0001_0110 -> f32*
+  - 0x0001_0111 -> f64*
+  - 0x0001_1000 -> u8*
+  - 0x0001_1001 -> u16*
+  - 0x0001_1010 -> u32*
+  - 0x0001_1011 -> u64*
+  - 0x0001_1100 -> i8*
+  - 0x0001_1101 -> i16*
+  - 0x0001_1110 -> i32*
+  - 0x0001_1111 -> i64*
+  - 0x0010_nnnn -> CID (Content Identifier, a hash digest)
+  - 0x0011_nnnn -> CID* (sequence of content identifiers, same type).
+- Then Cyfer is just layered on top. These are all just simple forms of data that should be easy to parse.
+- God I hate tonsil stones...
+
+* July 4th
+- I think we have some clean up to do in the code? Let's start by pulling in my notes from last night:
+  - With persistent syntax, macros are an entirely different thing. They’re simply functions that work with data literals. There’s no such thing as a build system, only macros!
+  - This is because we can easily encode history in a persistent manner.
+  - Because we have persistent data structures for messages, we’re not stuck to the file model of source code. Namely, there’s no reason to have the outermost parentheses, top level forms in Lisp need them because newlines aren’t meaningful and there’s no other way to distinguish them. If newlines were meaningful, you can just drop the leading and trailing parens.
+  - The toplevel parses text into literals. It just calls deserialize* on the input string and wraps the result into a form and evaluates it.
+    - This lets us implement commands directly from the terminal rather than having to drop into a REPL.
+  - The system is a database. You give it commands to create cyfer spaces (Dictionaries)
+  - The dictionary maps words to literals
+  - There’s an implicit parameter at the top level representing the current dictionary
+  - This lets you issue commands like define (to associate a word with a definition).
+  - The first implementation is to simply store serialized forms mapped to a name in SQLite.
+  - The next iteration is to insert a layer of indirection, instead of mapping words to serialized literals, it maps words to indirect literals.
+  - Only then do we implement persistence of cyfer spaces themselves! That’s what will allow us to implement project tracking.
+  - All we need to do to keep a running history is to add an action around the define that saves the state of the world before the command runs.
+  - Next, we simply introduce the language itself. It’s very easy to implement, it’s a lisp after all. We have special objects representing lambdas. By defining words to lambdas, we make them first class. And we can invoke them!
+  - And since we take snapshots of them at each definition, we can slowly build out complex programs.
+  - But what’s really cool is that we can mark things as fexprs too. That means they are evaluated before their arguments. These are macros and they work on data literals!
+    - And they’re effectively the build system. But each time they are invoked, they snapshot the environment.
+    - They’re meta commands
+  - We then just need to fill out the rest of the primitive commands. Things like +, -, cons, etc.
+  - Then we’re more or less implementing an interpreter.
+  - And once there’s an interpreter we can write more and more of the language in itself.
+  - And once we have that big body of content, it makes it really easy to test against.
+  - Like it’ll be a lot of fun to implement one in Ruby for instance.
+- Well one thing we can do is start by calling parse recursively on the input string. And then wrap the result in a %form.
+- It's clear that the tuple types should be called sequence types. And the values are atoms... The thing with literal types is that they ALL have value semantics. What differentiates the sequence types is that they essentially have a type tag (privileged atom) in front to distinguish them. So we must first test that the sequence is of the same type before checking the elements. Otherwise they progress in the same way.
+  - We have two categories atoms and sequences, with some specialized variations.
+  - A value can be a literal if you can serialize and deserialize it and get the exact same value back. I.e. literals have value semantics. This is what enables them to be persistent.
+  - That's typically no issue for atoms, but for sequences, an important property is that they have a consistent order. Like, if you serialize and deserialize a hash table, you're likely to lose the ordering. Not good for source code.
+- Okay! Now we're cooking with gas! We are saving and restoring from SQLite of actual expressions.
+- Just gotta switch it to serialized forms rather than printing.
+- Alright back from my walk. Looks like a big thunderstorm on the way. Weather doesn't say anything about it though. I got spit on when I was out.
+- I should probably instrument this code with tests so that it tries generating random structures to print out, read back in, serialize, deserialize, etc. So I can find if something's wrong quicker.
+- I'm quite happy with where I'm at though. :)
+- Next step is to hash them I guess! Associate names to indirect literals.
+- It should be really easy to compile things. We just need to map from Cyfer literals down to Lisp forms. Then we can just compile them, and associate them with a symbol name in a blank package. Each blank package can essentially represent an active environment. Each time you update a definition, it swaps out the name.
+  - Yea, that should definitely be my next thing. I'm curious how Sly and Slime evaluate functions. Do they literally just call eval?
+  - Looks like it just calls compile-file with a temporary file it creates.
+  - Huh, it calls with-compilation-unit which is in the standard from the looks of it.
+  - Oh, for the REPL, SLY literally calls Read and Eval!
+    - https://github.com/joaotavora/sly/blob/df62abae73bd511885c9c7ec0ea7ea1469a00923/contrib/slynk-mrepl.lisp#L260
+  - Whereas when you compile defuns it uses a different end point that says compile string, which is contextual to the file.
+
+* July 3rd
+- Okie dokes, back at it.
+- Alright, I think everything has been ported to the new literal types and serialization tags listed below.
+- Okay, finally loads. I had to fuck around with eval-when because defconstant was failing with no class named %nil. I guess when a file is compiled, it will invoke the forms for constants, but other forms themselves may not be compiled, so (make-instance '%nil) is not meaningful. The solution was to put the defconstants (for %nil, %false, and %true) under an eval-when (:execute) since we only need them defined once the thing is running.
+- So what now?
+  - Well, I think it's time to figure out the namespaces. Which means building our first few Cyfer specific objects.
+  - Oh, and we should probably fix up tables, since they need to have an even number of elements.
+  - Yea, let's do that first, then start on the Cyfer specific data types (redexes, dicts, etc).
+  - Cool, have checks for even length vectors.
+  - Lol, just realized that #{ literally will read as hash table in this notation. That's actually not a bad idea as a notation for a namespace.
+- So both of these are extensible notations. For the parser, we have extensions in the form of token resolution and dispatch macros. In the case of the serializers we have different tag bytes.
+  - Yea, quite nice actually. We predefine : to mean literal symbols, ' should mean reference to data in the same cyferspace. Then you can use #sha256' to mean the same encoding but under a different hash function.
+- So we should define an interface for writing extensions. And that's actually how we'd interface it with Lisp. We provide a mapping to Lisp functions.
+- An extension just adds to the dispatch table (or removes things).
+- So here are the tag bits for Cyfer Specific things:
+  - 0x0100_0000 -> Form
+  - 0x0100_0001 -> Word
+  - 0x0100_0010 -> FExpr?
+  - 0x0100_0011 -> Lambda?
+  - 0x0101_nnnn -> Quote
+- Alright forms implemented. What next? Probably Identifiers?
+- I think I should make a little lisp interface for these data types, to make interfacing with it a tad easier.
+- Well this is fun, got a tiny little evaluator.
+  - Could do a few things here, I could go ahead and start building an interpreter, or I could look at persisting the environment.
+  - Would actually be really straightforward to build a compiler at this point.
+- I'm kinda at the point where I need a standard library for these types lmao. Need to be able to compare them.
+- At least for now, all bare words are just part of the Cyfer language.
+  - Also, since we finally have a lowercase syntax reader, we can define our own CL functions with lower case and then target them for compilation.
+- Let's walk the dog and think about this a bit. Where should we go from here?
+  - Could just build a nice little CLI for now. Like, you give it commands which are just bare words and they're hard coded in CL. Will also give me an excuse to implement quote, since you'd want to use that.
+  - Make the interface rather like Git! I wonder what its core commands are (especially the first versions).
+  - Obviously we'd be able to replicate that functionality in the language rather quickly. But it's a nice start.
+  - I don't think I want to implement an evaluator for the language quite yet. That should come a bit later.
+- I just had a bunch of really great ideas on the order to follow for building the rest of the application. They're all in Apple Notes, just need to pull them over.
+- Oh, something else I just learned about is web messaging. It's an API that lets webpages communicate with each other. So like, if a page has an IFRAME or it opens a new tab, it can pass itself along to the new page which the page can then decide if it wants to talk or not, and then they can communicate.
+  - And I had a really cool idea! It'd be cool to have a web framework that worked by giving you a language for spawning frames and passing data between them. It'd let you create a base site that acts as an interpreter, and it provides as a message an environment.
+  - Then we'd just need a little language for creating various layouts or rendering types of content (i.e. transpiles to html). We could add little gadgets as native html/js components.
+  - And we can do that rather easily as an interpreter.
+  - This project will let us build out an HTML/JS library, which we'll dogfood to build our own tools.
+  - Eventually, could build out a full cyfer implementation in browser/electron. This would give us a nice front end actually. And we could have electron call out to an underlying implementation in CL for instance.
+  - That would be Cyfer desktop.
+- Ok this is slowly coming together. I have basic word bindings going to the SQL database. I've set up eq, first, and rest. They'll obviously need some work, but it allows us to test at least at the runtime level what they are.
+
+* July 2nd
+- Alright, what are we doing today?
+  - One thing I want to do is try installing Guix on the laptop.
+  - The other is implementing Dictionaries in the language.
+  - I think I need to fix nil/true/false since the parser will now fail on them. Yea probably should start with that.
+  - Ok that's done.
+- Well, let's list out what I'm unsure about.
+  - I'm unsure about how to represent dictionaries. There are many different ways to do this, and you need to balance speed and space.
+  - I'm unsure about tagging things as representing just bytes or as a piece of the structure itself.
+  - I'm unsure about allowing the use of bytes for user specific languages.
+- Ok, so what do we do about them?
+  - One argument is that we should actually worry about the representation of dictionaries just yet. For instance, we just need an in-memory representation at the moment. We should get a feel for how they work without thinking about persistence just yet.
+  - As for the tagging, that's not strictly necessary at the moment either.
+  - And user specific opcodes? Why do we care at the moment? Too far ahead. Figure out what's needed right now, and we can reduce it down. We won't really know what the minimum encoding needs to be until we actually have something to play around with.
+  - I understand that you don't want to get stuck in a format that you can't change later, but until this gets out of the lab, it's a non-issue, and you have as much time as you need to make that happen.
+- We do need some sort of symbol table, and realistically that should be the same as the dictionary. The dictionary is just the root of an environment remember. So let's just play with mutable variants at the moment. Persistence is when you need to serialize it.
+  - So how does CL and Clojure do it? Both of them have a "current package" variable which is what the REPL interacts with. You primarily interact with the namespace/package.
+  - Dictionaries are mappings from words to definitions, or rather data structures.
+  - I think the difference between CL and Clojure is that in CL packages are Sets, whereas in Clojure namespaces are maps. namespaces map symbols (names) to variables. Whereas CL packages contain symbols, and the symbols can live in the packages, but they are distinct?
+- I think the trouble I might be having is that do Dictionaries include the serialized objects in-band or are they out of band (indirect through a hash).
+- Ok, what's the simplest interface here? It's obvious that we need to give words to dict, and then dict returns what exactly? Does it return the current value of a variable? Or does it return the definition? Oh, do the objects have a "dereference" operation or something? Let's just start with returning the definition then.
+  - Let's create a new package and just play around in there.
+  - OK, yea, it's a simple dictionary. It's the matter of what does it contain?
+  - Ah I think it might be a bit about, how does it actually test if something is contained in it? I.e., is it based on the name (i.e. the literal text), or is it based on the identity of the word? I suppose it's both? Like, you have a symbol table that maps text to words, and then those words are used to check the definitions?
+  - Oh, well it's actually text. Just like in CL how you can use symbols or strings for a lot of things. Maybe it's not actually called a dictionary then.
+  - In CL, symbols have values, in Clojure they just point at a var (which is the actual place).
+  - Hmm, I guess dictionaries will always point at definitions then. The "value" of a symbol when evaluated is an indirection. For instance if the symbol maps to a function definition, the "value" will probably be a compiled variant of it. Whereas if you want it to hold a value, the definition will be a variable (such as a dynamic variable) and its initial value, dereferencing it gets you the current value.
+  - So dictionaries map words to definitions, hence why they can be static. A dictionary represents the declarative interpretation of a language. While evaluation/reduction happens on top of it.
+  - This is why words are effectively indirect identifiers. Their meaning comes from somewhere else.
+  - A bare word then is really a symbol without a bound dictionary.
+  - Remember that words will be resolved to bindings on canonicalization.
+- Well, I guess the real way they are supposed to work is with the define word. define takes a word and syntax.
+- Ok, so where do we go with this though?
+- Hmm, Nil is also the 0-tuple. Can that be encoded somehow?
+- Uhhh, think I'm getting stuck in circles again trying to make it aesthetically pure. Need to cut that shit out.
+- Should probably just be atomic and sequences.
+  - Atomics are only for our usage. Sequences or rather compound types are user extensible. Really most uses come down to an identifier associated with the rest of the data which is primitive.
+  - Hmm, a product of voids is clearly Nil.
+  - Text is essentially a sequence of symbols
+- Here's what I'm thinking. I rather like this:
+  - 0x0000_0000 -> Void
+  - 0x0000_0001 -> Symbol
+  - 0x0000_0010 -> False
+  - 0x0000_0011 -> True
+  - 0x0000_0100 -> Nats
+  - 0x0000_0101 -> Ints
+  - 0x0000_0110 -> f32
+  - 0x0000_0111 -> f64
+  - 0x0000_1000 -> u8
+  - 0x0000_1001 -> u16
+  - 0x0000_1010 -> u32
+  - 0x0000_1011 -> u64
+  - 0x0000_1100 -> i8
+  - 0x0000_1101 -> i16
+  - 0x0000_1110 -> i32
+  - 0x0000_1111 -> i64
+  - 0x0001_nnnn -> Hashes
+  - 0x0010_0000 -> Nil
+  - 0x0010_0001 -> Text
+  - 0x0010_0010 -> bit* (Box)
+  - 0x0010_0011 -> UNBOUND
+  - 0x0010_0100 -> List
+  - 0x0010_0101 -> Table
+  - 0x0010_0110 -> f32*
+  - 0x0010_0111 -> f64*
+  - 0x0010_1000 -> u8*
+  - 0x0010_1001 -> u16*
+  - 0x0010_1010 -> u32*
+  - 0x0010_1011 -> u64*
+  - 0x0010_1100 -> i8*
+  - 0x0010_1101 -> i16*
+  - 0x0010_1110 -> i32*
+  - 0x0010_1111 -> i64*
+  - 0x0011_nnnn -> Hash*
+- Notice that everything is either an atom or a sequence, and there is a simple mapping between them. Like all of the u8* through Hash* are simply arrays of the named type, and they share the same lower 5 bits. Then, we have a few special types, and special sequences. Void is the type with no values, so it's just padding. It's sequence type is Nil, i.e. the 0-tuple/tuple with no elements. Symbols names as values, meanwhile Text is essentially a sequence of symbols. False is matched with bit* which is a sequence of booleans, and true is matched with the sparse tuple (a map). The Naturals are matched with the List, i.e. the cardinal data structure. And finally, the Integers are matched with the Table, which is the primitive associative array.
+  - Sparse tuples may not be important for most applications, but they are important for merkle tries!
+  - Another cute thing about this is that the tag for a byte is 0x08 (bytes being 0x28).
+  - I like that Symbols are 0x01 given how important they are for source code.
+- Then, everything from 0x0100_0000 onwards is available. I might reserve those ones for Cyfer specific data structures (like Dicts, etc.) and then have 0x1000_0000 onwards be for record types.
+- All of these are primarily just values and simple data structures that make sense to serialize. 0x0110_0100 is clearly a reducible expression. And 0x0110_0101 is a dict.
+  - Either way, all of these types are just tuples themselves.
+  - And they're composed of the other types. Like a dict will have branch nodes, and leaf nodes.
+  - We'll have a type for variable bindings, lambda, etc.
+- We just need to choose our hash types.
+
+* July 1st
+- First day of the four day long weekend!
+- Annoyingly, had to update my password for my work account. Fuck this fucking IT department. A bunch of fucking bozos who have no idea what they're doing and inflict untold misery on everything they do. Spent like 15min trying to get this to work because these dumb fucks make you change your password every 90 days or some shit, but then they go and make 1Password require sign on with microsoft. Like WTF, so they have a password manager and then make it totally fucking irrelevant by shunting it through SSO and making you keep track of new passwords. Bunch of fucking retards. They also enabled this thing where with 2Factor auth you have to enter a fucking code that shows up. ALL THE FUCKING TIME. It's not enough that I have to unlock my phone, then use Face ID to unlock the authentication app, now I also have to enter a fucking code. Just absolute BS.
+- Had sex last night, no issues!
+- Ok gonna install Pop_OS! on the laptop. I'll need to recreate my keyboard layout but whatever.
+  - Creating a live USB from the laptop itself failed. It'd boot into a Grub rescue... Let's try again but creating it from the Mac.
+  - Well it's installed, but it's not using Wayland... also feels sketchy. Man... Linux just kinda sucks as an environment. But so does Windows... Not sure what to use.
+  - Maybe I should just use EmacsWM or something similar. Maybe StumpWM? And then do an install using Guix? Just don't try and replicate Windows/MacOS.
+  - StumpWM being CL also means that you can connect to it with Sly I guess. Ah, it's also available on Guix. Interesting.
+  - Oh system crafters has a nonguix install disk. Interesting. Looks like it's updated weekly.
+- Ahhh, whatever. Let's figure out what we were doing yesterday.
+- An idea I had last night was to reorganize the tags for numbers so that the low bit means single number or a buffer of that number. The other idea was to use * in the name to represent buffers of that type. For instance, i8 and i8* to mean buffer.
+  - I'm also now leaning towards "word" instead of "symbol", and "symbol" in place of "keyword". So barewords are called words, whereas symbols are :symbols. This inherits the terminology from Ruby.
+  - We can also have bit vectors as the dual of arbitrary length integers (which are signed). Only thing is that bit vectors should have bit lengths, but it feels weird to use bit lengths for integers, since you only get up to 127 bits in the first length byte. That's kinda dumb since the first 64 entries are meaningless (you'd encode using an i64). Ehhh, it'll be weird, but I think it needs to be number of bits for bits and bytes for ints.
+- The other thing is that we should call the printed form CyferSpace Object Notation (CSON) and the binary encoding as CyferSpace Object Encoding (CSOE).
+  - Ah, sadly CSON is CoffeeScript Object Notation. So dumb.
+  - It definitely is an object notation/encoding though. It's better to stick with more mainstream terminology probably. So, who cares about CoffeeScript anymore?
+  - Well, you can pack everything in below 0x20. We have one more free slot, should be either words, or some other data structure.
+  - Gotta update the serializer now (was reorganizing in the deserializer cond).
+- Ok, that feels good. I think the next step is to add support for dispatch macro characters like # and :". We'll use :"symbol with spaces" and #"word with spaces". Makes more obvious sense that a word with whitespace should look weird.
+  - Should probably have some idea of what a constituent character is. That way we can use that for dispatch macros.
+  - Ok, I think that's good.
+- One idea I had was that if a number is entered in hex, it should be treated as an unsigned number. Will need a different notation for bit vectors though.
+- Also need some sort of notation for uniform vectors. Part of this could be done automagically, but I'd prefer it be explicit. Maybe #i32[], yea that'd work. Hmm, give this more thought. Might be worth chatting to Daniel about.
+- Well, we have serialization in place, I'm sure I'll rewrite this, but it'd be fun to do that in Cyfer.
+- Oh, another interesting thought I had yesterday. While I'm writing CL right now, my parser should consume it no problem. So I can actually take my CL, then slowly convert it to CyferScheme. So don't worry too much about writing CL.
+- I guess that means I have to think about persistence and hashing. How should I do this?
+  - Start with hashing. You already have the byte sequences. This is so easy to do, you can do it right now.
+  - Ok yea that's so easy to do it's already done. So I guess persistence is the next thing to do.
+  - Two options for this, SQLite or files.
+  - SQLite is pretty fucking simple actually. Although ran into that stupid issue where the library was like "oh I need a simple-array of unsigned bytes" and it so happened that with-output-to-sequence gave me just a vector. So you have to use fucking subseq to get it. So dumb.
+- Just thought of a potential use for a restart! When you try and retrieve an object from persistence, if it's not available locally, it should ask if you want to search other devices.
+- HEY HEY HEY!!! We have retrieval!
+- What now? Well we should serialize those hashes. And introduce a printed/parsable form for them.
+- Yea, it's really annoying working directly with hashes since they're so fucking long. It's pretty clear that the next thing to build is the dictionaries (which map words to values).
+- Alright, well I should take the dog for a walk. I'm really happy with this so far. I think it's just a matter of figuring out the notation for hash references. It's obvious to me that items that point to syntax should be rendered by a ' followed by retrieving the object and printing it.
+- Ohhhh, the dictionaries are persistent symbol tables. That makes sense.
+- This feels really close. I think the dictionaries will be some form of radix trie.
+- Alright, so on the walk I was thinking that there's really only three cases for user provided types. There's unit types, i.e. values by themselves, there are byte types, which are a number associated with a number of bytes, and there are recursive or record types which call deserialize recursively. If we encode those different cases in the encoder/decoder, then it's possible to create expressions that will read correctly on all systems, but might not be interpretable. That is, we'll always be able to read something as a number, a vector of bytes, or a tuple. To implement a reader then, alternate implementations only need to get the primitive types right. We can also keep a few bytes to represent super common data types that might be more Cyfer specific. But we can let the upper half of the range represent user defined types (or rather language defined).
+  - Because of this, I'm also thinking of having bit vectors be 8 bit aligned. It's not worth complicating the format for something that might not be used very much.
+  - An identifier by itself is an atom, an identifier in a tuple is a record type. I think the identifier vs tuple type is probably fine to keep as just looking at a single bit, but for bytes that probably should be its own thing.
+  - One thing we could do is use the top bit to represent a continuation bit.

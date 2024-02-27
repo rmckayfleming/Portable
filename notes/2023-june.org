@@ -1,0 +1,777 @@
+* June 30th
+- Last day of June, beginning of 4 day weekend!
+- Last night I was reading a bit about the condition system. I think the parser might be a good place to try using them. For instance, when we encounter an ending delimiter, that's either an error (if it's unexpected) or it's correct (in which case it's handled). Additionally, if we actually need to search for additional characters, then the calling function can look for them. I.e. say we have a sequence delimited by #{ and }#, we'd signal an error on the } and then a function up the call stack can say "oh, let me just check if the next character is a #". If it is, then we finish building our sequence and return it, and if it isn't we can return a different error about what we were expecting. This is a rather simple case since we could implement this with exceptions.
+- As I'm approaching the end of the serializer/parser (or the end of the beginning), I was thinking about storage last night and it might make sense to just use SQLite at first. CL-SQLITE has support for BLOBS by just passing in vectors of bytes. And SQLite is designed more as a file format than a full DBMS. It'd be nice to get something implemented quickly so that we can store things and then retrieve them by hash. So let's do that today. Finish off the reader/parser (mostly just copying things over), set up the printer (super simple generic function), and then hook it into the REPL. We'll be in a really good place to start working on hashing and persistence.
+- I was looking online to see if there's been any updates on AMD ROCm being shit. Geohotz gave up on it a month ago, but as of the 16th apparently they are back at it. Lisa Su responded to his tweet about there being lots to come. That gives me hope. AMD has great hardware, and the 7900XTX is a great deal for GPU/Memory but just useless because of software.
+- Taxi service must be going well since mom was asking when Sarah came back because Mark wanted to take me for curry lmao.
+- Gonna read the Errors chapter in PCL.
+  - Yea, pretty simple. Thing is using conditions is probably slower than just peeking the stream before recursively calling parse.
+  - Ok, well we have token reading implemented and sequences too. What's left is providing the functions that cast input to actual values. Let's start with the sequences.
+  - Okie dokes, that's done. Calls out to a function type-for-delimiter which hard codes a conditional, but we can make it a lookup table later. We'll do a similar thing for the parse token.
+  - Alright, I have the parsing for tokens as well. With some simple stuff for keywords. Finally, have to do symbols. And then we can create a printer. One thing the parser doesn't do at the moment is implement any form of symbol table. They should be deduplicated using a hash-table or something.
+- IT LIVES!!! Lol, I can parse an expression, convert it to serialized bytes, deserialize them, then print them back out.
+  - I need to figure out what to do next. On the one hand there's figuring out what to do with symbols (and readable vs unreadable characters).
+  - I think though we should be looking to interface with the CLI. Makes it feel more real. So let's make a little loop that takes a string parses it, and then returns a hex print out of the binary encoding. We'll use different colours for tag bytes, length bytes, and value bytes.
+- Women holy fuck, blah blah blah blah blah. Sarah's still on the phone with the realtor.
+- Just got back from walking the dog. Holy fuck it's hot. Now to go to the grocery store/pick up strawberries.
+
+* June 29th
+- The new neighbours are moving in and now the dog starts randomly howling because she hears them I think. Drives me nuts, not sure how to stop that.
+- Sarah gets home today, should be back this afternoon sometime.
+- I was trying out The Division 2 on the Ally last night (running on the device itself) and it was quite impressive! Funnily enough when I started the game it said that I had below minimum specs, and yet it ran on low at over 60FPS average (into the 70s). That's way better than the deck! The deck hovered around 40 and would dip at times.
+- While walking bubs last night, was thinking about the work I'm doing on Cyfer. Currently the file is called cyfer.types, but really it should be called cyfer.literal-types. Both the textual and binary encodings deal with literal types. That also runs around some of the issues I've been having conceptually with element ordering. Like when Clojure reads a map, it maintains the order, but only up to 8 elements! That's because maps of up to 8 elements are stored in an ArrayMap, but past that they move to hashmaps. Of course, you don't actually want that for source code because ordering matters. The way you get around this is realize that the encoding/printed forms of objects implies an ordering (since they're serializations). So all of the types aren't the actual values, they're literal values. All literal types are either primitives, or tuples. Maps, vectors, lists, all of them are just tuples.
+  - Also, we can call them read/print and serialize/deserialize.
+- One thing I don't like about SLY is that it's a pain in the ass to rename things. Actually, that's true of all of Emacs. I really dislike the search. There just don't seem to be very good refactoring options, or rather I'm not aware of them.
+- Hmm interesting. The Z1 Extreme is on a 4nm process node whereas the 7950x3d is on 5nm even though they're both Zen4.
+- I was reading this HN thread about Building the shortest path or something like that. Anyways, it talks about how you should work on the smallest possible thing to get it going, and that's something beginners are good at, but as you become intermediate at programming, you tend to forget it. You start trying to find the right abstraction, yada yada. In the comments though, people kept going on and on about how "oh, that's a prototype, and yea that's a good approach but management/product will always end up shipping the prototype as the product". It's funny how common this thought process is. There's something about engineers in general where they care a lot about legibility and explicitness. The solution to said problem is to do all of the work you care about doing without telling management or product about it! As the person doing the work, you have a lot of agency in how you actually do it. Management and product don't necessarily understand engineering, and so things that benefit you (or even the organization) in the future aren't legible to them. Talk to them about CI/CD or testing or refactoring and their eyes glaze over. Why would we want to do that? But you can't meaningfully convey to them the importance. It's totally outside of their understanding. Management is almost certainly not going to schedule that work. So don't bother getting it scheduled! Just do it without telling them. My guess is that they feel morally wrong in doing that because it feels like trying to keep a secret. And the other side of this is that you hold all of the power anyways. What are they gonna do? Fire you? That'll mean the project takes even longer to launch.
+  - I've been an engineering manager before, and the reality is I only had so much context of what happened on the code base. And things that might sound like a waste of time to me, had they done it I likely wouldn't have even known.
+  - On the other end, you'll have companies that want to document or prescribe every little bit of a system ahead of time. But the funny thing about technical designs is that the more detailed they are, the more like code they become. At which point it becomes, why are we even doing this?
+- Alright having some fun cleaning shit up. Just had GPT generate a macro for me since it's a super simple pattern to follow.
+- Man, it's so clean! I can see a pretty clear path to a macro that composes these ones letting me define a full literal type system declaratively. And that's probably a good idea because the deserializer can't use generic functions, it dispatches entirely on a byte (which I'm pretty sure you can't define a type specializer on anyways).
+- Sarah's home!
+- Alright, got the deserializer working now too. It's a little bit annoying though. Part of the issue is that when we read buffers of a given type, we have to pass around both the size in bytes but also the CL element type. Which is annoying. I wish there was an easier way to cast an array to a different numeric type... Might be a library for that.
+
+* June 28th
+- It's smokey again. Was smokey last night, and smells like a camp fire today. Should probably close the windows, I'm getting a bit of a headache.
+- 7 days since I did weights, so guess I'm lifting today? It's weird how I don't feel like lifting, even though it's shorter than cardio in terms of time, and it's mostly just sitting around. I also feel good after it. Just... weird response.
+- I got Chik-fil-a yesterday and feeling it this morning. Been on the toilet a few times. Constantly feels like I gotta poop.
+- Huh, The Scheme Programming Language book written by Kent Dybvig is essentially a guide for Chez Scheme since Kent is the creator of Chez.
+- Gotta change my fucking work password again. 🙄
+- I should just start working out after standup. Why am I waiting until 12? Feels like an excuse to just browse the internet.
+- I feel noticeably happier when writing CL than when writing Clojure which is interesting. I wonder what about it makes me feel that way? Especially since in many ways it's just as full of warts as Clojure and there are things about Clojure that I really like. Maybe it's that I just don't like Java land lmao.
+- Kinda wish LispWorks had a nicer editor, I'd love to get more familiar with its tools. I wonder if it makes sense to use it in combination with SLY?
+- Interesting, there's now a 16K context version of GPT-3.5 Turbo. It costs twice as much, but it's 4 times the context length. They also have a mechanism to describe functions to the LLM that it can call.
+- Alright gonna hit the gym. Then I should do my required training...
+- I should download Pop_OS! today and install that on the laptop. I don't think I really have anything on there at the moment (nothing that isn't already on git at least).
+- Tuples are product types with each element potentially having different types (which could be known). Records are tuples with an identifier. Arrays/vectors on the other hand are collections of uniform type (though if the type is Anything they can hold heterogeneous elements).
+- Ok, done the mandatory training. Need to look into things I can do for TREE credit though.
+- Uhhhh, still feel like I need to shit. This is not fun.
+- I don't really want to do anything at the moment... took an aspirin for my headache, and that seemed to help a bit. But I think I'd rather be downstairs. Maybe read a book for a bit. Or take a nap?
+- Oh interesting, the IEEE-FLOATS package relies on DECODE-FLOAT which is in the CL standard.
+- Mark's taxi service launched today and they've had two customers so far. Pretty exciting. Hope it goes well.
+- Alright, time to do a bit of programming. Where was I at?
+  - I was cleaning things up a bit. I think I need to work on lists, etc. So that means modifying the sequence parser a bit. Right now it just returns a list, but we should be wrapping it in a struct. Also means we should be associating different delimiters with different types (i.e. a dispatch table of some sort).
+  - So maybe start with the dispatch table? Could just start with the three delimiters, associations for those. That's easier than the multi-character types.
+  - Alright that was easy. Have lists, vectors, and maps. Now to encode/decode them!
+  - And encoding is done! Super simple. Now to decode.
+  - And decoding is done! What now?
+  - I'm thinking it'd be nice to print them back out. Also could think about unifying the interface between structs and general lisp types.
+  - Other thing I need to do is set up symbols and keywords. That will require symbol tables essentially.
+  - I should probably pull everything into its own package/file now.
+  - Yea lets clean some stuff up a bit.
+- Ok, I've set up the types with a define-type macro. All types just have a value that we unbox when needed. Now I'm writing the encoder. It dispatches on the type and then writes them out. Where I'm at now is that I need some helpers to convert integers to vectors of bytes. We need a function that takes an unsigned number and returns a vector of its bytes (returning either the minimum required or a set number). Then we just need functions that convert signed numbers and floats to unsigned numbers.
+
+* June 27th
+- Some random things I should do:
+  - Ask mom about family photos. I'm sure she has them all digitized, I'd like to have them.
+  - Look at my P4 and Phenom II machines and make sure that they don't have any capacitor issues. Should also make sure nothing important is on the Phenom II's drives.
+  - Open up my OG Xbox and see if it has capacitor issues, since they apparently go bad a LOT.
+- Deck dock works with the Ally at least with video. Except it's only doing 4K 30hz...
+  - Unfortunately the Ally is too chonky on the bottom to sit nicely in the dock though. A bit precarious...
+  - Ok looks like it's a driver issue or something since the Deck itself can drive it at 4K 60.
+- Thinking I should clean the office a bit. It's kinda dusty in here... Also hasn't had a vacuum in some time. First thing's first! Gym!
+  - There! Much better.
+- Ok, what am I up to today? Need to do that stupid privacy course. Want to get back underway with Cyfer. First, swap blanket to the dryer.
+- Right, I was in the middle of encoding uniformly typed buffers.
+- Dope, we have buffers! Not super happy with the code, but whatever.
+- Ok, what next? Could do symbols and keywords, they're super similar to text.
+- Alright, that was simple. I guess we can do arbitrary precision integers next. Shouldn't be too bad.
+  - How does this work? The number of bytes is the integer-length divided by 8, however, since these are signed we need to add one (to account for the sign bit).
+  - Ok, got big integers working too. Rather easy.
+- I think that does it for the primitive types actually. Now on to the compound types. I think we should change the interface a bit though. In reality, it's more a mapping of type tag bytes to some sort of function call.
+  - It's probably time to create these structs.
+- Alright, well I have the structs set up for the primitive types (except for the buffers that is). I've cleaned up the parser a bit, and it now returns structs for the numeric types and text. The parser needs a bit of work to deal with different sequence types, and we need to set those up.
+  - Also, now that we have the structs for those types, we should update the encode and decode as well.
+  - Another thing on my mind is that we likely need two sets of functions really. We need encoding/decoding from Lisp, or from Cyfer structs. Conceptually, everything should run through the structs, and then you map from those types to the actual Lisp types. Likewise, when you encode an arbitrary Lisp expression, you first map it to the Cyfer equivalent. That means we need to set up those mappings.
+  - I might switch to using % as a leader for all Cyfer types. Makes them stand out as such in CL.
+- I think that's good for today.
+- It's interesting comparing the Ally to the Asus Laptop, since it's cross gen. The Ally has a slightly higher single core score, but when you actually look at the individual results, it's kind of all over the place. Like, one test is 200% of the laptop, but then in the browser test the it's 68%. The multi-core is much better on the laptop. Must be TDP related. Since everything else about the system is better. The Ally has twice the L2 cache for instance. Wonder how much of it is clock speed related. The base clock of the laptop is 4.89GHz, where the Ally is 3.30GHz. Not sure what they boosted to though.
+  - Meanwhile the Steam Deck is totally shit lmao. Single core score is half the Ally, which is nuts. GPU isn't terrible though, pretty close to the Ally at the same TDP. When the Ally is in performance mode though, no contest. Laptop is nearly three times the compute of the Ally.
+  - Hmm, looks like Linux results have the boost clock whereas the Windows results have the base clock.
+  - Oh interesting, the Z1 Extreme can boost up to 5.1GHz whereas the 5900HX can boost to 4.6GHz (however, my results show just under 4.9GHz). The base clocks are listed as the same.
+- I'm really happy that this project is coming along so nicely. I'm really close to having something that I can interact with at its own REPL. It's super close. Just a few more primitives to go! Then I can start experimenting with hashes and persistence.
+  - I'll still need to figure out what characters we restrict in the parser for symbols. But we should find that out relatively soon once we start having hashes.
+  - To start with, I'll probably just use files, but we could also store values in LMDB or SQLite. Not sure which yet.
+
+* June 26th
+- Well, back to work. Next week is really short since we get the Monday and Tuesday off for Canada Day. But I should actually do some work this week lmao. Especially with vacation coming up too.
+- But I also really just want to work on my Lisp stuff...
+- Was super dark this morning due to a thunderstorm and now it's starting to get really bright. Says isolated thunderstorms all day from the looks of it.
+- I should set up Moonlight with the ROG and the desktop. I need to enter a pin on the desktop to get it working.
+  - And it's working! Annoyingly you have to switch between desktop and gamepad modes manually. It can't really figure it out. Also was set to 720p at first, now it's 1080 at 120hz. Only using 13W at 120FPS! GPU is clocked at 800Mhz.
+  - LMAO, 230FPS at 1080p. That's with Psycho ray tracing. 160FPS with no DLSS (other than frame generation).
+  - Oh that didn't have path tracing. Let's try that. 90-100FPS.
+  - I'll have to setup PS and Xbox streaming tonight. Not expecting much with them over wifi, but at least with Windows you get native apps for these rather than third-party OSS.
+  - So turns out there were other updates I had to install??? MyASUS had a bunch, but I didn't check Armory Crate apparently, because there are updates listed as of like last week that haven't been installed.
+  - Ok well I thought that over Wifi it looked a little fuzzier than usual, but turns out no. When I run Cyberpunk locally, it looks almost exactly the same. The edges around lines might look a little crisper, but that might be due to different AA settings.
+  - Oh cool, you can rotate the display. Windows just had rotation lock enabled by default.
+  - I'm curious to see if it works with the Steam Deck Docking Station. People online apparently had issues with USB devices, but I'll have to see. Since it'd be nice to be able to dock either of these and use a monitor and keyboard easily when necessary. The dock is nice in the bedroom as a place to rest it, but I could just use the little Asus stand that was provided, and it should work with the switch and deck as well. Then I can sort of rotate the devices there. Only thing would be somehow pinning the cable so it doesn't fall behind.
+- I haven't been interested in masturbating (or porn) over the past few days. Also, I feel like my meds work better during the day as well. Is it the zinc that I've been taking more recently? Likewise, I almost forget to take CBD/THC, and so I've been taking it later in the day.
+  - Could also be because I'm excited about what I'm working on again.
+- I should finish off the training for work. I also have an excuse to do my TREE training since I only have 30min for this quarter. So, I could just add hours this week. I should see if there's anything I'd be interested in technically.
+  - Ok, have one more training to go through on privacy. Did the first one which was 13min plus a quiz. The next one is 23min or something like that. Lammeeee. Time to work on Cyfer 😎
+- So what do we want to do today then? A few options: 1) add buffers for primitive types, 2) compound object types (lists, vectors, maps, etc), 3) unsigned integer support.
+  - Could do the buffers, although won't be fully complete until we also have unsigned ints.
+  - Problem with unsigned ints is that there's no natural Lisp interface for those. We need to identify things as unsigneds in the parser and return structs or something that label them as such (i.e. they have to become boxed).
+  - That also is rather similar to compound objects though.
+  - Other thing is that the parser doesn't have any notion of uniformly typed arrays, so there's no interface for me to interact with them, unless I do strings/symbols. Which, yea, those might be good.
+  - Oh, what I need to do is implement varints, all of those require varints (apart from unsigneds).
+  - Ok, let's do varints, and then maybe strings?
+- Varints. There are a few different ways to do this. But I like the idea of some form of prefix bits. Only problem is endianness.
+  - Big endian is perhaps easier to read, but it feels weird to have varints in big endian when literally everything else is little endian. But little endian is sketchier to encode. For instance, if we care about bit endianness, then little endian should use little endian bits as well. But if you go little endian bits, you have to shift the value even in the common case. Continuation bits are perhaps more ergonomic (and they can go forever), but they are slower to parse. That might not be an issue though since they're mostly going to be used for data structures and so likely less than 127 elements. Buffers might be require more than that though. Hmm, let's try continuation bits then. It won't be so common that it's worth the complexity of another format. And if you really care about performance, you'll want to use a tailored binary encoding anyways.
+  - Could also do SQLite VarInts, theirs are interesting in that they weight the encoding to allow for additional smaller values in a single byte. Might be interesting as an exercise.
+- So a VarInt works by continuation bytes a la unicode. A varint uses only 7 bits of each byte for values. If the byte has an MSB of 1, then the next byte is included in the number. If the MSB is 0, then it is the final byte in the VarInt. You simply mask off the MSBs and merge the lower 7 bits together. The number of bytes required is the number of bits in the number divided by 7 and rounded up.
+  - Ok, well that was really easy to implement. One potential issue with this though is that you could feasibly just keep sending 128 which is essentially a blank continuation bit and end up allocating a huge boundless number. There's something to be said about a varint that's capped at 32 bits or 64 bits.
+  - Oh this is LEB128. VLQ is the same thing but in big endian. Interestingly apparently Git uses VLQ.
+  - This representation is probably good actually. The problem with this encoding is that it's not very predictable for superscalar machines. However, if most of the varints are going to be under 127 anyways (not unreasonable in this case) then it becomes very predictable. So yea, I think that's probably reasonable. This format is supposed to be rather easy to understand and implement and efficient enough for the common case.
+- Okie dokes. Now what? Maybe strings? Since they're already included in the parser.
+  - It's simply the octets I guess.
+  - And done! Encoding and decoding works.
+  - Symbols and keywords will be super straightforward too.
+  - And then we can do uniformly typed arrays.
+
+* June 25th
+- Well, Sarah's in the air. Which means I'm by myself until Thursday.
+- I ended up buying an Ally yesterday. And probably a good idea I did it yesterday rather than today since it takes a long fucking time to set up. You have to install so many fucking updates between Asus and Windows. Like solid hour or two of that before I even started installing games. First impressions are that it's rather nice to hold, and the screen is really nice... but it picks up dirt so fucking easily. Especially since you have to use the on-screen keyboard and it was just finger print after finger print on it. The deck has that problem too I think, but it's far less noticeable for some reason. Might be because Windows defaults to white or near white screens which show the dirt much easier. Haven't gamed on it yet though. It's installing Doom Eternal.
+  - There's also a trade off in that you have full access to Windows games and the other app stores which isn't exactly easy on the deck... but you don't get all of the cool deck plugins and shit. It'll be interesting to see if Valve ever releases SteamOS for other devices. It'd be cool to try out.
+  - Also, I didn't think of this until yesterday, but I wasn't sure if the Ally had gyro support or not. I looked it up and apparently it does, but support is rather hit and miss (understandably).
+  - I want to benchmark it and see how it does with Geekbench at different power profiles (and I should do that with the deck too).
+  - Reason I ended up getting it is that it's essentially the same chip as those little Ryzen mini-PCs that I've been interested in. This is more expensive I think, but you get the portable form factor which I'm interested in. And it's a bit more interesting to play around with than what's in effect a smaller version of the desktop I already don't use very much.
+  - One thing I'll have to look up is to see if it can do Moonlight streaming.
+- So while I was setting up the Ally I was thinking about what I wanted to do for the rest of the day. LMAO. I think I want to do a bit of coding this afternoon. But I still have this feeling at the back of my mind that says I have to constantly keep watch of the dog and I'm not sure how to turn that off. Thing is that during the day she pretty much just sleeps. It's supposed to get hotter later in the day (with chance of thunderstorms), so I might just take her for a walk now and then maybe go get dairy queen??? And come back and do some programming??? Yea that sounds like a good idea.
+  - I'll book her in for daycare on Tuesday and Wednesday to keep her nice and tuckered out.
+- There's not much to eat in the house. I'm running low on both snacks and meals. So should probably go shopping. Especially for lunch options. Not sure if I should do that today or tomorrow...
+- For programming, I think I want to just continue with the parser and encoder/decoder. Make that shit dead simple.
+- Alright, got back from grocery shopping. Should be good for the week. Now to code for a bit!
+- Ok, so where I left off, I had most of a parser implemented. The next thing would be to finish off string parsing probably.
+  - Ok, looks like it's rather easy to create Unicode code points in CL. Just do code-char and pass in the code point.
+- And done! String parsing is largely complete. Now what?
+  - I guess we have to parse numbers. So, token resolution? And dispatch macros like #nil, #true, #false.
+  - And we have to do escaped symbols.
+  - The thing about escaped symbols is that I'm not really sure how they're supposed to interact with things like namespace qualification.
+  - In that case, it's probably not strictly necessary to work on them for now.
+  - Okay, so what do we want to work on? Maybe number parsing? Could also start on the encoder...
+  - Oh, let's do nil, true, false. I think we should just look at the token. So we need some function that resolves a string to an object.
+  - Alright, that's done.
+  - Ummm... numbers I guess. Might want to load PPCRE.
+  - Ok have decimal and hexadecimal integers done. Maybe floats now?
+  - Dope, floats and doubles are parseable. That's all the numberic types I think. only other thing would be octal? Oh this is farther than I got with the clojure one it looks like.
+- I think that's likely enough to go on for now. That's all of the major things done. I think I just need to handle symbols/maps/etc. I.e. create objects.
+- For the encoder/decoder, what we need is a reader/writer for byte streams. It's rather similar actually. The encoder takes an object and a stream and writes the object to the stream. Then we just need a nice wrapper function to call them with buffers/arrays.
+  - Looks like flexi-streams is my guy for this.
+  - Cool, we have signed integers 8-64 and floats encoding. Let's try the decoding.
+- Dope, decoding set up for nil, true, false, integers, and floats.
+- So next easiest thing would probably be the various forms of buffers associated with these numeric types. Also need to figure out variable length integers, how to handle unsigned ints (and small floats for that matter). And realistically, we need to implement our varint encoding.
+  - Yea, VarInt is probably next since all of the compound objects will need it. Then after that, I can start on the compound objects. I'll probably just load them into various structs.
+  - Should also think about hooking this up to the little interface we have.
+- I think that's good for today. Should start on dinner soon. Probably mac and cheese.
+
+* June 24th
+- Going to mom's today to help her out with her website. Gotta figure out how that all works again... But should set it up so that when you make a commit, it deploys directly to Firebase.
+- I was thinking last night about the prompt. I'm actually really excited again. Since I have this little back and forth prompt, I can start adding an interface to the OpenAI APIs. And have a terminal chat interface. Other things to do include persisting data, which will be straightforward, just do it to files with our encoding format. Now that I have this thing set up, it feels like I have the beginnings of a shell and it's super exciting.
+  - Also, I was thinking I'll be able to use the desktop more. I want to be able to connect to remote agents, and send messages over a socket. The desktop will be an external storage system, and since it has a big GPU, I can start doing local LLM stuff on it as well as using it for indexes of embeddings.
+- Maybe I should install PopOS again... people don't like Manjaro, and you know, I don't really want to understand Arch all that much anyways. Would rather use Guix on Pop if possible.
+  - The nice thing with Pop is that it more or less just works. It's Ubuntu based so is generally well supported. I also know its gestures worked well.
+  - Only thing is it's GNOME by default I think.
+- For OpenAI APIs, I'd need to look at HTTP client options. In particular, not sure how streaming responses would work... Might mean needing to learn some threading.
+- The Best Buy in Waterloo has 3 ROG Allys available... hmmmmmmmm...
+  - They close at 7pm today. But maybe tomorrow???
+- I think part of the reason I keep so many tabs open is that it's a weird mix. On the one hand I have things open for reference regarding ongoing projects. I keep them open because it's often a pain in the ass to FIND STUFF AGAIN. I remember the pages visually. On the other hand I have a bunch of stuff open that's interesting and I could see myself reading about later (this is very much what happens on my phone). While I'd like to cut down on the "interesting" tabs because those distract me at the computer, I don't really know what to do with them... I don't want to bookmark them.
+  - This might be a good project actually. When I have a tab that I might be interested in later, I should archive it and index it locally. Create my own version of Stumbleupon.
+  - Would need a browser extension that's a nice button to send to the index.
+- Would be interesting to fine tune a model on all of the CL books I have (and random blogs from the internet).
+
+* June 23rd
+- I've been thinking a lot about C lately. I was even reading K&R a bit this morning and yesterday. My mind had definitely been on low-level concerns a lot lately. At least I feel like I'm understanding things a bit more. At the same time, writing a loop to grab the elements before some delimiter in CL was an adventure yesterday. I feel really rusty...
+- It feels a lot like I'm just spinning around doing useless shit with CL or Scheme or whatever, but the reality is that so long as I have roadblocks to clear, I won't make progress on my actual goals, so clearing roadblocks, no matter how annoying it is, is worth my time.
+- Interesting read: https://jasonfeifer.beehiiv.com/p/the-thing-that-seems-like-a-bad-idea-maybe-try-it
+  - Reminds me that I don't tend to think about asking other people for help, nor do I think about engaging with people more generally.
+  - Not only that, I don't think I really know how? Like it feels like asking into the wind.
+- It's probably a bad idea to have a bunch of tabs open. When I get back to the computer, they have a default "pull" to read and deal with them. Tabs feel like tasks that I can accomplish. But they're just information.
+- I think my frustration around Lisps is that the ideas are deeply aesthetically pleasing, but the environments are decidedly not.
+- Oh need to submit my hours...
+- Otherwise, what do I need to do? I was working on setting up a CLI app. I'm wondering if I should just stick to SBCL rather than dealing with Roswell. I'm not looking at having portable CL as a goal, I'm using SBCL as a host environment/interface.
+  - Although I have a very powerful x86 environment now that could use CCL.
+- It's raining out today. Sure do love the sound and smell of rain.
+- Lol just spent a bunch of time fucking around with the shell. Honestly though, I gave Warp a shot, but I just can't get over how it handles completions. So back to iTerm!
+- Ok, what was I going to do again?
+  - Alright want to rename simple-prompt to cyfer-cli.
+  - Ok, got a prompt working. It looks like to interact with the TTY, you can just access sb-sys:*tty*. That's a bidirectional stream connected to the main TTY of the program.
+  - Alright, so I can clear the screen. What now?
+  - I think I need to start writing a parser?
+- Well I really got into it! Got the basics of a parser implemented. I need to fix string reading (for escape sequences), but otherwise, looking good! Some thoughts:
+  - Add a dynamic variable to keep track of the current character and line numbers, then use those when recording meta-data about the objects being read.
+  - To make that easier, replace read-char and peek-char with our own variants that update the current character position.
+  - We can probably use conditions to unwind the stack in the event of an error, like oh, we encountered this character while reading this thing and we expected something else instead.
+  - Instead of passing the stream around between the various parse functions, we can also use a dynamic var instead. It just gets bound during the call to parse.
+
+* June 22nd
+- Yay! Sprint Retro today! So exciting!
+- Will wants me to review his mortgage calculator thing for smith maneuver. So guess I'll be doing that. Also need to figure out this CRA stuff. And finish off the compulsory training.
+  - Ok, reviewed the model. Not bad, but there are some variables that are just so hard to actually project that I don't really get the point.
+  - CRA stuff dealt with. Apparently Will got a call from the CRA too, but related to amalgamation of Chalk and PowerSchool.
+- Should go do my cardio now! Probably won't have much for lunch, had chips before my muffin this morning since Sarah went for an appointment and came back with Tims a bit later than usual.
+- I was reading through the Guile docs last night and was rather impressed. It's got quite a lot going for it. Has an interactive debugger, live compilation, language tower, etc. It's also easy to interface with C. It might be worth familiarizing myself with it, especially since it's the implementation of choice for Guix.
+  - Oh yea, credit cards have renewed, can buy some more books.
+- Kinda dumb that I'm assigned management training on sexual harrassment which is 120 MINUTES LONG.
+- Just finished reading an interesting paper about C called "Some Were Meant for C". It talks about how many people want to improve C but they approach it from the entirely wrong vantage point. When people talk about a "better C", they typically talk about safety, but the paper talks about how there's nothing in the C language specification that says that it can't be safe, rather much of the unsafety comes from implementation choices rather than specification. For instance, there's nothing stopping a compiler from checking every pointer for validity before dereferencing. Instead, there's an odd culture that wants "performance, performance, performance" at the cost of everything else. Like, compiler writers talk so much about using undefined behaviour for optimizations, but undefined behaviour is exactly that, undefined! Why is accepted that we'll use undefined behaviour in certain ways? Really, they describe error cases which come down to the underlying platform. Like, it's undefined because who knows how the computer will corrupt memory? The other thing is that C is useful because it reifies memory in a way that no other language does, and this is important for communication between systems developed in different languages, but also to the outside world. Like no other language really lets you deal with memory-mapped registers. Instead, most languages take the view that they are the world, and everything outside of their purview must be dealt with with gloves. That's the problem with most FFI, and it makes those unsuitable for systems programming.
+  - It also quotes Torvalds a lot too, and Torvalds complains about compiler writers a lot, because he says the compilers often do crazy shit that's unreasonably hard to debug in the name of minor performance benefits. This is interesting because this is the kernel, there's an expectation of it being performant, but Torvalds sees the compiler writers as causing undue damage.
+  - My thoughts are: C sucks for reasons having nothing to do with safety. C's syntax for pointers is dumb (the paper even mentions this), it also sucks in that it's unparseable without a C compiler due to the preprocessor. It's also not low level enough in that it doesn't give you things like overflow/carry flags.
+  - One thing the paper notes is that people often want to hoist onto a language specification things that would make reasonable things untenable. For instance, malloc is technically required as part of C, but malloc is often written in C. But technically that's not true, since if there's no malloc, it's not C but rather an extension of C without malloc. Lol. But he also talks about how C lets you interface with hardware based on conventions. For instance, SysV Unix defines a memory layout for the environment, which you can interact with from C even though that memory layout isn't actually encoded in the language itself. You're just looking at specific memory via some known convention. Is the code portable? Definitely not, but it's NECESSARY in dealing with systems and managed/safe languages don't allow this.
+  - I guess what I'm getting at is that the nicest thing about C that not enough languages copy is dealing with patterns in memory. Another thing that drives me nuts about managed languages is that they often make using machine types impractical or impossible. Like, I want a u64, why won't Java let me have that? Even CL requires a bunch of verbose type annotations to generate code that works specifically with that type.
+  - The combination of C and a platform ABI is a communication platform using memory as its channels and the ABI for conventions. (Rather than a network streaming model that might use packed bytes and so requires de/serialization.) It just annoys me that this isn't documented particularly well on most platforms.
+- Well, it's 4pm and I should work on some of my own stuff. Where was I at yesterday? I think I had working my own environment additions and have a command to create a new project. So I think what I need is to set up the template for creating these projects. I.e. a simple command line tool template. Another idea I had yesterday was to use sbcl's script feature (or roswell for that matter) to set up a simple build script. Yea, let's do that actually.
+  - Ok, rather easy to set up a script. There's a ros build command that let's you build an executable out of it.
+  - What should it have? I don't think I really need to build an executable yet. Really what I want is a script that sets up a REPL but also the SWANK or SLYNK servers.
+  - Ok, I think I have a solid start now. Should be able to create a new project that invokes a main function rather easily.
+  - I should probably take a different approach come to think of it. I.e. I should be making a CLI app, and then turning it into a template when it is working... Didn't really waste much time on that though. I was doing the work on simple-prompt anyways.
+  - Ok that's a bit nicer.
+
+* June 21st
+- Was thinking a bit last night about who I want to be. I think part of my issue is that I don't really know who I want to be. Reason this came up was from finishing Succession, which deals a lot with that actually. They Roy children really don't know who they are, or what they're supposed to be since they live in their father's shadow. For me, I'm sort of living in my own shadow. Some things that come to mind for me:
+  - We really need to work with other people. Keeps us accountable.
+    - Like, can't masturbate or watch porn at the office.
+  - We're not good at planning projects and executing them at the same time. This sort of happened to us at Chalk with 2.0. When we had a good idea of what to do, things were just a matter of coding. When things were implemented though and we needed to fill out the details, that's when things sort of stopped.
+  - I feel like it's time to get serious about life again. What am I working towards? Why?
+  - Also, I need to interact with people more. How can I ask for help?
+  - It used to be that when I wanted to think through things, I'd write and draw in my notebook. Now I just type in this journal. Except typing limits my thoughts! Don't think I'd really considered that. I should be using my iPad more and drawing notes like I used to with Chalk.
+  - While I tend to work more in the afternoon, that's more because it's free time that I'm used to having free. Mornings are always filled with stuff usually, and so I don't tend to view that time as available. As such, I tend to just surf the net and read things. And yet! The things I read about are the things I'm interested in, namely things related to my project!
+  - I would be far more productive if I had clearly delineated tasks. I'm not good at giving myself those though. Why? This might go back to the issues with assigning time to myself.
+  - I think I need to grab the iPad and plan some shit out.
+- Just replaced the space key with a white instead of a blue. Yea, way quieter than the blue. I think I'll replace the remaining blues with whites. The whites are actually rather quiet, could do the whole thing with whites...
+  - Alright, whites are in place of the rest of the remaining blues except for the red system key. Having that one make more of a clonk is nice.
+  - Also verified that all remaining keys work. I've put the Fn keys on the top row by default now. Although, I'm not sure if it really makes sense to have them there. But I'm not sure what else I'd put there. They really require a lot of reaching compared to nearly every other key.
+- Fuck, I have to figure out what to do with this CRA stuff. AND I JUST DON'T WANT TO.
+- Funny how it's after morning stand up that I lose interest in working. Wonder why that is?
+- I think one of the reasons drawing out plans and writing by hand in a notebook works so well for planning is that it activates a different part of the brain/body. It's a very different set of fine motor skills and by drawing we're engaging the visual part of our brain. Meanwhile, when I write things in a buffer, I'm relying solely on language skills and start tunnel visioning into programming mode. That's a problem when I don't know what problem I'm solving! Engage other parts of ourself!
+  - What I should do is draw in the notebook, think like that, and then only start writing it down in a buffer when I have more clarity on the plan.
+  - I think this also explains why I tend to think about Cyfer while walking and feel really engaged with the topic! I'm using my brain and body differently and so engaging a different thinking mode.
+  - When I'm at the computer, I'm very good at focusing on a SPECIFIC problem to solve. I.e. I find it easy to nerd-snipe myself. The issue is I tend to do it accidentally. Likewise, if the problem isn't actually defined, that's when I find myself browsing the web or doing other things. My brain doesn't know what to do in that state
+  - A corollary of this is that if I'm spinnning my wheels on something, I need to mode switch. Get up and walk around, and if my mind can't transition out of thinking about the problem, I need to try engaging a different part of my brain on it.
+  - This is a shame, because I don't think I've really used my tablet for drawing/writing planning since well before the Chalk acquisition. And that's how I did most of my planning at Chalk!
+- Okay, want to set up a simple prompt. This can be a library package. What's the simplest way to create new packages? Could use cl-project or something like that. Could also create a shell script. The problem is that 1) it's a pain in the ass to create a new project just in terms of setting up the basic files, but also setting up a git repo. Dumb. Make it easy to do this.
+  - Could make a package expressly for this. Create a user package that adds our own extensions to cl-user.
+- Ok, so I made a package for my own utilities. First one I added was a function to create new projects in my Projects folder using CL-PROJECT. Next thing then is to create simple-prompts. One thing that's annoying is that emacs likes to put newlines formats for whatever reason. Probably not worth fixing, going to want to use the terminal anyways.
+  - I think what I need to do is set up some project templates of my own. Ideally just in my user folder...
+  - Alright, I think that's good for today. Didn't really get to setting up a CLI app. But I have a function to create new projects with my default settings. I wish it were easier to use PLISTs in CL. They're kind of annoying.
+
+* June 20th
+- I'm thinking I need to reorganize the modifier keys a bit. Instead of mirroring them on the right hand, I should keep them in the same orientation as the left. That way Control is closer on my right.
+  - Ok, yea that makes structural editing a lot nicer.
+  - I think for the parens I just need to practice with them.
+  - I guess back to typing.io for a bit then lmao.
+- What's the plan for today? Well, I have a 1-1 with my manager today, and a massage! Otherwise, thinking I want to get code in place for a simple line interface. That is, not a full text ui, but just command/response. I can use ANSI escape sequences for colour, but text entry is just by lines.
+  - It's probably worthwhile to put together a build script or something to assemble the executables.
+  - Here's hoping my prescription is fucking renewed today.
+- Cool, got colours working!
+  - Yooo, pretty cool.
+- I think I'm not really wanting to write code right now because I feel so fucking slow with this new keyboard setup... way to go bro.
+- OH YEA! I noticed something last night. I tried masturbating with one of the sleeves last night, and I had the same problem as I do with Sarah! I couldn't get it in! Not only that, it actually felt really tight and uncomfortable. So... I think I need to practice with sleeves for a bit to get used to it again.
+  - At the same time, yesterday I felt like actually horny? Like I felt driven by testosterone.
+- Am I just not that excited by my project? Do I just want to feel like I understand it?
+- Hmm, I'm not sure if having the parens be on their own layer is gonna work out. I keep moving between it and shift and getting fucked up.
+  - I could put them on the symbols layer. Instead of having the symbols be above the numbers, I could just hit shift while hitting the numbers...
+  - Then the arrows layer could have arrows on both hands.
+  - I'm already used to hitting shift and layer for underscores.
+  - Alright let's give this a shot!
+  - That does feel better actually. Only thing is I have to get used to hitting the odd symbols now. But feels more natural already.
+  - Ok I think this works. Still need to play with the arrows though.
+- Just got back from my massage. I also went to the pharmacy, and amazingly my prescription was ready! Odd because I didn't receive a text about it... Anyways. There was also a bunch of mail from the CRA. Something about remittances for Jan-March, and then another one with amended T4s which I guess is a result of the PIER, but I need to confirm that. I'll take a look at that tomorrow (also need to book my vacation in July).
+
+* June 19th
+- Well it's a work day today, but it's a holiday in the US, so... de facto holiday.
+- Sarah went up in a hot air balloon with her mom this morning (got up at like 4:45am), so she'll be out of commission today.
+- Daniel killed our 1-1 today since Chris is back from a long vacation.
+- I need to figure out what's happening with my prescription today. I should call the pharmacy first, and then the Dr.'s Office (not looking forward to that call).
+  - I'll call them around noon or after I work out. Lord knows how long I could be on hold.
+- I was thinking more last night about asking ChatGPT for help on designing a hardware project. That does sound like something fun. In particular, might be fun at some point to do an FPGA CPU design.
+- Random thought I just had. One thing I've noticed is that although I look at the 4K display a fair amount, I almost never look at the full thing. To look at the left side takes a lot of straining of my neck and it's also not angled towards me. So... what if I put it in portrait mode? That would line up better, and it would be good for like long documents. On the other hand, wouldn't be good when connected to the PC.
+  - Another issue is that I'd need to move the receiver somewhere. It's kind of annoying where it is. I wonder if I could put it behind the Pro Display while keeping the Pro Display low. Hmm... I don't think there's enough room for its length...
+  - Speaking of which. I'm thinking I might put the desktop in the entertainment room once we move. That way I can have it plugged into a huge TV or projector for gaming. Otherwise I'll probably use it over the network.
+- It would be a good idea to do something rather like jvns.ca. Just write up about things I've learned. They're things I'd probably come back to and read, but they might help other people too.
+- Of fucking course. Call the Dr.'s office and they say they're closed because god forbid you call during their listed hours... guess I'll call again at 2. I also called the pharmacy and apparently they faxed them again this morning. So fucking useless.
+  - Hmm, the earliest appointment slot is Friday. At least that's not too far if I have to have a fucking appointment. Although it's only 10:40am, so if it gets booked the next earliest is the 27th which is over a week away. Hopefully they can resolve this when I call.
+- Okay, so it turns out that needing to press enter for characters to be readable comes from the TTY. By default, programs start with the TTY in Canonical mode, that is they act more like a proper TTY which is line based. So it's essentially a primitive version of readline I guess. They allow you to hit backspace to delete characters, etc. Only after enter is pressed does it hit the stdin file descriptor. That explains why it's recommended to use read-line in CL as well. Since that's what would actually be transferred over. If you want to do async you need to set something else up.
+  - This explains why the standard repl in SBCL is so limited then. It's just using standard canonical reads rather than something like readline.
+  - Now that I think about it though, at least for some of the simple stuff I want to do, I can probably just stick to read-line anyways. Just a simple console call and return setup. I could use curses later.
+- Ok, I'm currently caller number 4! Waiting to speak to a representative!
+  - Alright, the doctor has the request from Friday and the fax from this morning. She just needs to fulfill it.
+- I think I should try writing a simple parser in CL, and then have it print out encodings with colour. I want to try colour escape sequences. Let's do that first. I'll need to start an SBCL Slynk server.
+  - Hmm, read-line doesn't actually do anything until I interrupt the prompt...
+  - Even if I build it as an executable with the toplevel it doesn't work...
+  - AHHHH, I had to flush the output buffer!
+- Interesting state of mind. Once I figured out the buffer clearing, I immediately stopped wanting to work. I think that's because I gave myself the task: write parser! But that's not actually what I wanted to figure out yet! I want to figure out colours on the terminal.
+- I should buy some magnesium along with multivitamins next time I'm at the pharmacy.
+- I'm feeling kind of weird today. I'm not sure how to explain it. Might be the zinc? I'm feeling oddly calm about things. Maybe just happy to be resolved with this medication problem.
+  - Also, Sarah's on her period as of this morning. And maybe having no more expectation of sex makes me relax somewhat?
+  - Maybe because I've been mostly interacting with myself in a frame of being a child part? I need to interact with myself sexually with an adult part.
+
+* June 18th
+- Feeling kinda weird today. Not sure what I want to do...
+- Hmm, I should try connecting to SLY running on my Linux laptop from my Mac. Oh, actually I should set up tailscale on it.
+- I need a little organizer or container for the MX Blues that are loose now. I wonder if there are some at Michael's? It's a good thing that my other keyboard is also Blues lmao, I have three sets of switches in bulk now.
+  - Hmm, the vitamin container might work actually. I'm almost done with it, so I could move them into a different container for now and clean it and use it for the extras. Actually yea let's do that.
+- I think what I'm very frustrated by generally is that I don't know where to start in understanding the "middle" of systems. Like, I feel like I could write software for the 8086, but on modern systems, there are so many layers of abstraction and not a good way to get answers. Like, how do I know if a call is blocking or not? How do I return control to the OS until I get input? Likewise, it's really frustrating with Common Lisp as it's even less documented in some senses. All input is buffered, but is there a way to tell if the buffer is ready or not?
+  - I'm reading Computer Systems: A Programmer's Perspective right now, and it mentions that when you run an executable from the shell, the shell's context is saved and restored when the executable exits. Now I'm curious, is that shell suspended?
+  - I'm very ignorant about Unix Signals.
+- It's kind of annoying that my keyboard backlight always turns off on the laptop on wake. Why can't it restore to where it was?
+- Ok, tailscale installed on Nebula.
+  - God networking is so fucking confusing. Why can't I connect to Slynk? It just says connection refused...
+  - Oh, looks like it was an issue with Slynk. You need to use (slynk:create-server :port 5555 :dont-close t :interface "0.0.0.0"), I didn't use the :interface option at first, and I guess that keeps it local or something?
+  - Ahhh, that's super cool! I was able to invoke a curses app on Nebula from the mbp!
+  - Cool, even works with tailscale. I was able to connect to "nebula" as the host name and it worked right away!
+- I think I want to go through the cl-charms example blog to get a sense of how they do things. Then I want to figure out what I want from an interface.
+  - A simple program that'd be fun to build would be one for practicing hex sums. I just wait for the key...
+- Ah this book "Computer Systems" has a section on GDB apparently.
+  - It mentions that many people use ddd instead of gdb directly since ddd is a gui.
+- Huh, apparently all top level variables are global in C by default. If you don't want a variable to be accessible you need to mark it static. And if you don't you can end up with linker warnings that result in really subtle bugs that are hard to identify. Fucking C man.
+- Ah yes, so processes are either running, stopped, or terminated. Stopped processes are suspended and won't be scheduled. They resume once a SIGCONT is received.
+
+* June 17th
+- Well, I've swapped out the keys on the board for Kailh Box Blacks. They feel so weird. I'm so used to clicky keys, not sure how I feel about them. Might swap to the whites for the moonlander and use the blacks on the keyboard for the PC (since linears are good for gaming).
+- A video I saw yesterday talked about putting the numbers on the homerow under a layer, and that might not be a bad idea actually. I don't really like the numpad setup I have. Also, if I put the numbers under a layer, I could do the same on the laptop... On the other hand, it'd mean relearning how to use the board again...
+  - Hmm, I could swap the Command key on the left thumb cluster to be a layer. I essentially only ever use it for copy, cut, paste, and undo. I could just map those specific keys to that combination.
+  - I'd also need to figure out what to do about the other math symbols.
+  - One thing I could do then is have the right pad be for arrows instead of numbers when holding down symbol. I don't really use the red thumb buttons for arrows anyways since it's kind of awkward.
+- Okay, I've modified the layout a fair bit. What used to be the symbols layer is now for numbers and above each digit is the corresponding symbol on the standard keyboard. I've replaced the left command with another layer which contains the arrow keys on the right hand, and cut/copy/paste/undo as well as the parens and some other random symbols on the left (like semicolon, question mark, tilde). I've also made all of the keys along the periphery be "none" to force me to learn them. Another thing I realized is that with the arrows now under a layer, I can get rid of the number keys on the bottom row. By doing that, I can now move the modifiers control/option/command inwards and now they're easily reachable by the thumb without moving my other fingers off of the home row. Alright, let's give this a shot.
+- Alright, gonna take some getting used to the new symbols.
+- Last night was asking ChatGPT to describle SLIME/SWANK to me, and it was doing a good job about it. I'm thinking I want to ask it for help on creating a new Emacs major mode for a REPL. What should I ask it?
+  - "Okay, let's say I want to create something similar to SLIME for a new dialect of Lisp I'm working on. Can you walk me through creating a major mode? I'd like to start by building a REPL within Emacs."
+  - Uhhh, not very happy with what it gave me.
+  - And the docs online aren't really great. REPLs are usually implemented as Comint-mode variants. However, the article from Mastering Emacs has a bunch of comments at the bottom talking about how annoying it is to deal with Comint mode... Not great.
+  - I just want to have like, Text UIs, why is this so hard?
+- Still taking awhile to get used to the arrows. Might need to do something about structural editing though. Really awkward to hit control under the arrows. I could try learning to use the right control though.
+- I'm really confused how reading from streams works in Lisp. I'm not sure how to see keyboard input because the input buffer is only ready on <return>. Any keys you press do nothing until you hit enter, then read-char can read a bunch of stuff. I think I'll have to try out curses. Interestinly cl-charms, a libcurses wrapper, has instructions on using it with SLIME (although I'll need to port it to SLY).
+
+* June 16th
+- Put in a request via the Dr's website for a prescription renewal. I guess the costs are supposed to go into effect on July 1st. So hopefully this gets resolved shortly. I have a few days left of the vyvanse, and a lot of the boosters.
+- De facto holiday on Monday due to US holiday lol. I should move my 1-1s.
+- Lol, I can put that portable monitor in the little wire drawer under my desk. It sticks out a bit, but allows me to clear the desk off.
+  - When I move to Calgary, I think I want to repurpose the company cabinet for personal records and stuff instead of just keeping it all on my shelf. Then, just put all of the company records into bank boxes. They're more or less just archives now.
+- Was playing more monster hunter last night and this morning. Sarah told me to put it away last night because of all the clicking... I find that kind of annoying. She'll want me to touch her butt for awhile, during which I can't play games, but then she goes to bed and I... can't play games. Anyways, my thoughts on Monster Hunter so far is that I seem to be getting the hang of it, but one thing I think holding me back from playing it is that I don't know how long quests will take other than maybe 50min! Means I don't want to start anything if I don't know if I have that much time to play it uninterrupted.
+- Man it's weird to think that I'll probably hit $4M in net worth in the next year or two.
+- Also, what am I gonna do with my $200 in Apple credit?
+- No sex this morning, Sarah's feeling sore from yesterday. 😂
+- I should buy some alcohol and q-tips for cleaning the joysticks on the steam deck (and other electronics). I'll make sure to buy that when I go to the pharmacy.
+- Huh, guess today is Evan's last day. Couldn't take it at this shitty company.
+- Oh, my switches are in Ontario now. Probably will get them Monday unless DHL delivers on the weekend. Ah yea, the estimated date is June 19th which is Monday.
+- In writing the docs for the encoder/decoder yesterday, I think I ran into the same thing as earlier where I'm fighting internally between a formal reference and an explanatory guide for beginners. Not sure how to break out of this. Maybe I should read those articles on technical writing... I think part of the issue might be that code is already formal, so why write formally when code is already there? Might be worthwhile to have GPT just explain or annotate code and then fix it up as needed. Then just focus on the informal writing which is more in my own voice anyways.
+- Hmm, when I looked a few weeks ago, the Dell 6K was $3K something whereas now it's $4K. I guess it was a really steep sale. If I want to get one, gotta remember to wait for sales.
+- Oh shit, my switches are out for delivery!
+- Reading this thing about sorting improvements done by DeepMind AI, but the interesting thing is notes about ARM:
+  - https://justine.lol/sorting/
+  - "Arm is all the rage these days, and I imagine the example above serves as evidence of why they've earned their fame. Arm Limited is also one of the most benevolent companies in open source right now. For example, their MbedTLS library is one of the most underrated gems I've seen so far. When I started using it, I originally had this scheme of modifying Arm's code to work better on x86 hardware instead. I wrote all these tricked out assembly optimizations bringing it to the same realm of performance as OpenSSL on x86. MbedTLS is plain, portable, hackable C code, so this is good news for anyone wanting a crypto library that isn't assembly generated by Perl. I told the folks at Arm what I was doing, and instead of finding it subversive they were very kind and encouraging, since that's the kind of people they are. One day I hope to find time to do what DeepMind did, and upstream my modifications. Arm is also prolific for their Optimized Routines library, which is up there with double-conversion in terms of impeccable quality. It's of particular interest to C libraries, since for decades the open source community has subsisted off math functions written by Sun Microsystems back in the early 90's. Arm found a way to improve upon several of them, such as pow(x,y). That's a very high impact thing to do, considering it's a one of the most fundamental operations in math. For example, if you use Arm's solution in pure software to implement pow(x,y) on an x86 machine, then it'll go 5x faster than Intel's native x87 instructions for doing the same thing."
+- Well, there isn't beeping, but there's a droning engine outside. Sigh.
+- Finally worked out. Had a shower and shaved. I feel good, and yet at the same time it ran through my head in the shower that I was wasting my life? Where'd that come from?
+- Uhhhh, I don't want toooooooooooo. Why do I keep thinking about something if I don't ever want to sit down and do the thing itself? What's up with that?
+  - And instead of thinking about this feeling, I just immediately ran to HN instead of sitting in it.
+  - Am I just waiting for something else instead? Like the keyboard?
+  - Might be because I already feel like I've figured a lot of stuff out and I need to just do some work, which some part of me says is boring. Meanwhile the things I don't know yet are driving me a bit nuts.
+  - Or you could you know, just do the thing! You'll be interested in it within like 5mins.
+  - Could be that I've made it feel like work rather than tinkering. I like tinkering. I don't like work.
+  - Is it that I just don't like Clojure? Or even CL for that matter? Just be done with it though, get the language you want bb.
+- Man it makes me really mad that I don't understand how fucking keyboard mapping works in Linux. It's legit the main thing holding me up from using it on the laptop and desktop more regularly. All because I want to swap : and ; and I have no fucking clue how to do it.
+  - Ok, finally got it using xkb which is used by wayland as well. I set up a custom layout based on US. Here's how I did it:
+    - Open /usr/share/X11/xkb/symbols/us, following the example of the last entry at the end of the file, create a new xkb_symbols "colon_swap" and include us(basic). Search the file for colon, and you'll find the standard mapping. You just need to swap the order. Save that.
+    - Now, open /usr/share/X11/xkb/rules/evdev.xml, this is the file that the desktop managers look at to populate their keyboard layout settings. You'll want to add a new variant. Search layoutList, under that should be us as the first option. Scroll down to the variantList, and add your new one to the bottom. The name node should be the exact same as the name you used for xkb_symbols, and description can be whatever. Save that.
+  - Now you should be able to select it from the KDE settings. Although it didn't really work for me at first, I needed to restart the machine and it was fine after that.
+  - Cool! With that out of the way, I can start thinking about layers for the keyboard using kmonad or that other one.
+- Well, I have a custom layout setup for macOS as well. Honestly kind of annoying in its own right. Apparently you can't have a custom layout enabled without also having a default one. So Canadian is also listed right now, and I hate having it in the menubar, so I don't really know if it's enabled or not? And I have no idea if it'll actually stick around as the default. I suppose I could move it behind hidden bar... Now Karabiner no longer needs to have that weird key combo to swap colon and semicolon.
+- Oh interesting, this just came up on HN and I'd actually been thinking of something sort of similar for rendering the binary encoding: https://github.com/sharkdp/hexyl
+  - Of course I'd need to do something different though since I'd want to colour things based on if they are a type, a length, or a value. Would be interesting to have a UI where when you select a byte, it sets a background colour for things contained within that same element.
+  - I think it'd be fun to build something like this, but the problem is... how? Like you could use curses, or web, but both are kind of annoying.
+- So blinkenlights has a real mode encoding listing which is pretty easy to read: https://justine.lol/blinkenlights/8086.html
+  - Interesting. So blink is the virtual machine underpinning blinkenlights. It's designed to work like qemu-x86_64, but portable?
+  - Might be interesting to study as a TUI since it supports mouse scrolling.
+
+* June 15th
+- Told Sarah about my masturbation habits last night. Then I told her "there's a way we can fix this! let's have sex in the morning". So we had sex this morning lmao. We'll see if I still masturbate this afternoon at all.
+- I did play some monster hunter last night too. Although later than I'd intended to. Rise seems like a good intro to the series and the traversal mechanics of the dog and the grapple bug things has been good to make it faster paced. I did another two quests that were really easy, and now I have to do an "Urgent" quest, which I think will be my first big monster.
+- Otherwise, what should I do with my day?
+  - Maybe look at org-mode reference? Try it out on laptop?
+  - I keep thinking about building an assembler/disassembler, could play around with that.
+  - Could also finish up my binary encoding and use that to store assembly programs. Yea, I think I should "finish" that off.
+  - Do I want to do x86 first? Or do I do ARM? Or 6502? Or RISC-V?
+  - Learning how to use org-mode might be good in that it'd allow me to start writing Cyfer code when I feel like it. I can have it make Cyfer render as Clojure for the time being.
+- Hmm, a Cyfer expression encoding is essentially a matter of "is this a recursive call? or do we just consume bytes and turn them into something?" The first bit is essentially, is this recursive or no? The other bits of the encoding are just there to handle some common cases and encodings.
+  - That bisects the space. There are atoms and there are sequences.
+- Man, maybe just fuck org-mode. Do I really want to invest in learning that (apart from this for the time being)?
+- Interesting, so in XML, attributes are considered primarily as metadata, while children are the content. So an XML element without any children is an atom, an element with children is a sequence, and any attributes are metadata. XML's problem is more that attributes can only be strings and children can also be text.
+- I need to hit the gym.
+- Ok, I've started writing out the encoding again. Which I've worked on for a few hours now and I feel like I'm losing steam.
+- I think I'm getting hung up on the stuff with namespaces, and forms, and cyfer stores. I think it might make sense to just leave those be for the time being. I don't need them for what I want to do at the moment, and they don't have direct analogs to Cyfer Expressions as written down either. One thing I'm not sure about though is how to deal with encodings of things like combining namespaces with symbols. And local lexical identifiers, etc. Because of this, I should probably just stick to simple, if a bit wasteful encodings. I won't really know what to reduce in size until the system more broadly comes together. In fact, this is probably what's holding me up generally. I'm not sure how to resolve this, and I just don't have enough information to make a decision anyways. So I have to gather more information, and that means actually using the basic data structures in anger.
+  - I guess it just feels weird to leave some stuff undefined.
+- Okay, well time to masturbate lmao. At least I'm not expecting to have sex later, so I can cum when I want.
+- Sarah got a letter from the doctor the other day that apparently they aren't taking refills from the pharmacy anymore? I didn't get a letter, but maybe they have my address wrong. And I haven't heard about my prescription yet, so...
+- There was an interesting thread about ADHD on Twitter this morning. Essentially it talks about how completing tasks is rewarding to NTs, but because of how dopamine works for NDs, they don't feel rewards after accomplishing things. Instead, NDs feel reward based on interest. Hence why ADHDers have a hard time completing projects. Once you hit 80% of the way, interest fades because you understand the thing now. In the thread people were talking about what to do about it. One thing you could do is try to be curious about the feeling of completing a project, but once you've done that once, you likely won't find it interesting to do so again lmao. So other people were talking about how you have to find things to be interested about in your tasks.
+  - This is from the dude's site: https://coda.io/@mykola-bilokonsky/public-neurodiversity-support-center/on-emotional-processing-18
+  - Really interesting. Emotions are senses that are internally focused.
+  - "Joy is pleasant and important to appreciate. We have to process our joy like any other emotion because it’s a strong signal as to how to live our best life. ... Ask yourself: “What need was met that I’m appreciating so much?” and then build systems in your life to make sure that need stays met."
+- Great question. What needs am I meeting when I feel so good during masturbation?
+  - Is it that I feel like I'm relearning how to connect with my body? That's what feels good about masturbating, and it's what feels good about cannabis too.
+  - Also, when I do it, I feel like a child. Maybe this is why I have been having sex issues?
+  - For instance, sex becomes good once I become embodied during it. But I've been having a really hard time doing that lately. It's like I have to relearn it...
+- One thing Sarah and I talked about last night was that when I wear no clothes around the house all the time, it becomes less eventful seeing me naked. And that makes sense. So I'm gonna start being clothed downstairs. And I'll stick to being naked in my office or the bedroom.
+- Easy to forget that things that work for neurotypicals won't necessarily work for me. Maybe I just can't be ON every single day. Why beat myself up about it then? Somedays you're on, somedays you're off.
+- I always had a sort of want to be able to just have lots of sex and cum lots and lots. Maybe I'm just living that fantasy out for once?
+- Do I feel ashamed of being horny?
+
+* June 14th
+- You know, was thinking last night at the theatre that "I'm a rich guy! What would a rich guy do?" Or rather "what did I always want to do as a kid if I had money, that I haven't done yet?". It's like I haven't integrated being rich yet. This thought came about because Fast X has lots of old cars and I thought, "hey, I should have a project car!" Which I'd considered before and never did. I guess this is somewhat related to the list I have of "things I want". I should fill that out some more.
+  - Along the same lines, I was thinking, why am I putting off ordering old macs? There's no reason I can't order them here. Everything is gonna get shipped out west anyways and it won't be me moving them. I could die tomorrow! I can just do things.
+  - Another thing that ran through my mind was that I should do these other projects to get out of the state of mind I'm in with Cyfer. I think it's become the number one thing on my mind, and so there are too many eggs in that basket. I should seek to do more things that I would enjoy, I can always come back to things.
+- The problem I think is that I haven't really sat down and thought about what I want now. I've spent 20 some years wanting something, and I got it!
+- Ok, things have gone on the list. Probably missed some.
+- I should really get Alicecomics back up online. I think ChatGPT would be really helpful here.
+  - Hmmm, I can't seem to duplicate the folder to make a backup. I also can't seem to find the original file of backups. I think I should check my Intel MBP again.
+- Well I got a $200 gift card for Apple from Kazoo or whatever the fuck it's called now. I wonder what I should buy. 🤔
+- I think I need to start taking fibre supplements again. It's really annoying needing to shit like 3 times.
+- I think what I least like about programming, and the thing that stops me from starting, is that there's a really good chance I'll run into some stupid problem with tooling or a library that will take most of the time to deal with. When programming is good, it's fun! When you get stupid problems, it's not good. It's one thing to write your own stupid bug. It's another trying to fix other people's stupid bugs.
+- I really want to talk to a therapist, but I really do want someone who can talk in person and that means I'd need to find a new one in Calgary, which would be annoying.
+- Oh, I should book a massage.
+  - Done, booked.
+- You know, I seem to beat myself up for not doing things, but when I do do things I just feel like "ok, it's done." So I don't have any internal sense of reward for completing the thing. It's just, move on to the next thing.
+  - Is this what gifted kids run into? Cool done, here's another thing for you to do right now. Keep doing that homie.
+  - Am I not good at rewarding myself? Some tasks are intrinsically rewarding, but others are just things that need to be done. How can I feel good about doing those things?
+- Ok riddle me this! Why do I have such an aversion to setting up routines when I clearly love routines? Is this because I don't feel like I can control myself? Or that I don't want to control myself?
+  - I have converted an aversion to other people controlling me into an aversion to controlling myself. I am uncontrollable!
+  - And yet, I am a total sub. I am turned on by being held down and pleasured against my will.
+  - "You are going to program and you're going to like it." "No, no, not that, anything but that!"
+- I think I associate schedules with school or work. I.e. they are about someone else telling me what to do. So I don't want to impose a schedule on myself because it feels like putting myself in school. Additionally I did have my own schedule at one point during high school, but then I burnt myself out. I probably took away that that was a bad idea, when really it was that I should take it easy.
+  - That negative emotion is probably why personal schedules don't work for me. If I'm the only one on the calendar event, I'm only accountable to myself, and so I ignore the calendar notification.
+  - "I DON'T WANT TO DO WHAT YOU TELL ME."
+  - I see schedules as hostile when they are all about personal freedom and self-control.
+- You know. Maybe I should just start scheduling when I masturbate and watch porn... Start with the thing that is super rewarding.
+  - I DECLARE THAT THIS AFTERNOON IS ABOUT MASTURBATION.
+  - That way, when I do it, it's because I gave myself permission to do so.
+  - Ok, let's do that.
+  - Fuck yea. Gonna touch myself ALL DAY.
+  - What am I going to do until Gym? I suppose I should finish off that ticket.
+  - You know, if I have the whole afternoon scheduled for masturbation and then I do anything else instead, it's kind of a win.
+- I think I associate schedules with school, and school was a prison, so I associate schedules with tyrrany. Meanwhile, I'm naturally predisposed to liking schedules and routine.
+  - The difference is in framing. Does the calendar control me? Or do I control the calendar?
+  - What makes this difficult to work through is that the part of me that hates the schedule is still a child, and so he doesn't understand that schedules are good if we're the ones calling the shots.
+  - He's used to a schedule being something that is full of things he doesn't like or doesn't like to do. This is why we just need to fill it up with things we want to do!
+  - Lol, it totally is downstream of school. It's like how I distinctly remember being told how to use an agenda and shit like that, and how I just straight up didn't do it because it was mostly a reminder of shit I didn't like or want to care about.
+  - Something else I just realized is that I tend to think of calendar events as things that you have to follow to the minute! Since that's what school teaches you. Meanwhile, I have the gym blocked off on my calendar, and I do it pretty much every day, but never exactly when it tells me to! A schedule is a rough sketch of what you want to do in the day!
+  - I think what I should do is put my lived schedule on the calendar. That is, what is my routine right now? Do that before trying to make any drastic changes.
+  - The key is to focus on solving this problem about control. Make the schedule be about fun and relaxing things first. Then only later focus on projects or things that take thinking/effort. We need to address the negative feelings first.
+- One thing I do want to do more of and am not sure how to get myself to do is to stand up and walk around more. I'm on my ass most of the day, and that's not good for my health. Getting up and moving is good to effect changes in thought too.
+- I'm feeling almost like butterflies in my stomach right now. I'm not sure what it is. What is this feeling? Excitement?
+  - Yea. I think I'm actually really excited about being able to just touch myself all afternoon as the thing I INTEND TO DO.
+- Worked out. Feeling good!
+- It occurs to me that ChatGPT might have been really helpful for the breadboard/hardware stuff I was doing. Like, "what slot type were Nubus slots? How would I find new parts for those? How do I design a plug in slot?" Like I got rid of my breadboards, but in some sense I lost interest in it because it was just so much wiring work. I'm still interested in that stuff though, so maybe I should move on to PCB designs! I have the money to make mistakes lmao. And I could design more interesting things that way.
+  - Like I'd love to learn about FPGAs.
+- No beeping today! Just some hammering. I hope they're done with the beeping. I think they were moving dirt around. I saw a skidsteer earlier. Kinda hard to see through the trees from my office.
+- Started watching this series on a guy building a 286 machine from scratch. He'd previously done the ben eater CPU and 6502 builds, and then designed his own 6502 and 65816 machines, and his own 16-bit CPU.
+  - He uses something called EasyEDA for schematics.
+- Oh interesting, apparently the 5150 Technical Reference has the fully documented BIOS in code? Interesting, yea turns out that was something that was common at the time. Even Apple and Atari did it. https://retrocomputing.stackexchange.com/questions/12018/why-did-ibm-make-the-pc-bios-source-code-public
+- Another thing about schedules is that typically kids would love recess as a scheduled fun time, but I didn't because I had a hard time with friends.
+- Can you imagine if they taught you how to masturbate in sex ed?
+- Maybe I have to take my inner child back to school, but like only things he finds interesting.
+- "Among those with autism and intellectual disability, having ADHD increases the risk of addiction fourfold; among those with an IQ in the typical range or above, ADHD increases the risk eightfold."
+  - Jesus christ...
+- Ok this is wild: https://en.wikipedia.org/wiki/Motor_cognition
+  - Apparently, people who did motor training for a year were better at mental rotation of objects. Most people recruit visual process when presented with spatial problems such as mental rotation, but motor experts favour motor processes to perform the same task, and they have higher overall performance. Similar thing for working memory. It's like, let your body do more of the processing. And would probably be better for me too since I have issues with propreoception to begin with.
+- I FEEL SO GOOOOOODDDD. I'm a happy boy.
+- It's really cool that I have so much control over my ability to ejaculate now that I can cum a little bit if I want without losing my arousal.
+- Perhaps I should just learn the keybindings for org-mode by default. I think a lot of things are designed around them.
+- Ordering Indian for dinner. Aww yeaaaaa
+
+* June 13th
+- Looks like another day of incessant beeping... 😠
+- Should be able to finish off this ticket though.
+- Ooo, LTT screwdriver out for delivery! Keychron order shipped as well (from Guangzhou). Masters of Doom should go out for delivery today as well.
+- Uhhhhhh, beeeppiiingggg. I hate this. I hate this. I hate this. I hate this.
+  - Even with the windows closed it consumes my thoughts.
+  - Windows closed plus AirPods Pro almost cuts it out. I wonder if I can open the window with the Pros. Pros seem to isolate a bit better than Max and are easier to wear for longer periods.
+  - No. Open window plus Pros isn't good enough.
+- I need to finish my work before Gym today.
+- I find the smell of my penis deeply calming.
+- I feel like this beeping is probably causing more problems for me than I'd thought.
+  - Poor little autistic boy. 🥺
+- Ok, I worked out. Eating lunch. Then do some work!
+- Ok got it working for Desktop finally. Now on to mobile (which I think is more a matter of making sure things aren't clipped).
+- Watching a video about bouncing between addictions by Dr. K.
+  - People use drugs/video games/porn/whatever to deal with negative emotions. They essentially are used to calm you down to some baseline.
+  - The reason people jump between drugs is that when you quit a drug, you're getting rid of some coping mechanism, but the underlying issue is still there. So they find some other coping mechanism.
+  - And the coping mechanism could be worse! For instance, people who self-harm are doing it as a coping mechanism, just a super destructive one.
+  - You need to do the deep emotional work.
+  - What are you feeling? What is the feeling of you off of the drug of your choice? What are we running from?
+  - Then, where did those feelings come from? When did they start?
+- I feel like I have no control over my life.
+  - This is a LONG RUNNING ONE. ADHD/ASD, both executive function disorders.
+  - It feels like I use drugs/porn/masturbation/whatever because if I don't have any control over my life, may as well feel good being out of control.
+  - And in many ways I don't have control over my life. I have a disorder or two that mean that I have more trouble than a typical person. By default I have a hard time with this.
+  - That's true of things like work and demand avoidance.
+  - But I have the added challenge of sensory overwhelm. I absolutely get more distressed with the beeping for instance.
+  - Oh, that's interesting. I've had this for literally ever. Think about it. I've long hated school, work, whatever because I wasn't in control.
+  - I've always wanted financial freedom because I wanted CONTROL! I wanted fuck you money so that I could be in control.
+  - Now I'm distressed because I'm NOT EVEN IN CONTROL OF MYSELF! So the thing that I thought would address my problems once and for all (fuck you money), didn't! And that's causing distress.
+  - And this is why the erectile issues I've been having have been causing me distress too. I DON'T FEEL LIKE I'M IN CONTROL AND THAT'S WHAT'S DISTRESSING.
+  - So what can I do about this?
+  - For 1, I think it's probably worth grieving being autistic/adhd. They've clearly caused me problems over the years and it's okay to be sad about that.
+- I think what has been making me feel better is just indulging my special interests. And actually acting more autistic. I find that's been quite meaningful actually. If I'm different, I shouldn't feel embarrassed about it. Follow your bliss.
+- Screwdriver's here!
+- Do I feel allowed to have fun?
+- Let go! Surrender yourself.
+- Masturbating makes me feel in control of my feelings, but at the same time not in control.
+- Do I still feel neglected by the time dad didn't pay attention when I was showing him a program I was working on? Did I take away that it wasn't good to do that stuff for myself? Is this why I have trouble programming for fun now? In high school I did a lot of programming for myself, fuck all of school was projects that I gave myself to work on.
+  - Lol, is this part of the reason why I can't seem to work on anything if I expect to be doing something else shortly after? That I learned it wasn't good to work on things before I had to go to school?
+- "If you have responsibilities that require a facade, this can be harder to do. Make time when you don't have these responsibilities, and schedule a lot of time doing nothing at first. (Autistic people often need that time to even process information, so you may find that doing nothing a good deal of the time helps you think better and rely less on facades.) Or find something repetitive but non-facade-requiring to do, if sitting around isn't your thing. The critical thing there is to do something apart from the responsibilities that require an NT-facade, and start noticing the difference between the facade and the rest of the time."
+- Ok time to take the dog for a walk. Chilly again today. Let's see if I can do shorts, since I sweat right through my pants yesterday.
+
+* June 12th
+- I started reading the Wolfenstein book yesterday, and it makes me want to do some low-level programming again. I spends the first part of the book talking about the hardware of the 386. The problems of Real Mode. How to set up VGA all that jazz. And it reminds me of that brief little stint with turbo pascal back when I was on co-op.
+  - The book also has a number of references to older books which are interesting. One of them is Microprocessors: A Programmer's View which documents the 386 and 68030 in great detail. It's aimed at operating system developers I think. I downloaded a PDF, but might order a hard copy since you can get one from Abe Books for like $7 + shipping.
+- Just ordered a bunch of Kailh switches from Keychron. Went for a set of Box Whites (clicky) and Box Blacks (linear). I also ordered a Gateron Tester (35 switches) and a Kailh Tester (35 switches) to try out random switches.
+  - I can't remember if my Keychron C2 was a hot-swappable board or not.
+  - It is! I'll have so many extra keys, I could make a franken-board with a mix of blacks and whites and blues.
+  - I think it'd be fun to have a mix of keys for things like modifier keys. Keep Blues on the Red Thumb keys for instance.
+- Gotta remember to send my money to Andrew for keeping in a money market account, and tell him what my RRSP contribution max is. Also need to send $4000 to Mark.
+- Thinking that today I should lift weights.
+- Love that there's no beeping today. Just the soft sound of rain. ☺️
+- Reading through the Microprocessors book a bit, and it's talking about problems with C, and a big part of pointer problems seems to stem from alignment, which I hadn't really considered before. For instance, consider a pointer to a char. By convention, chars are byte aligned, but CPUs might not allow for accesses that aren't word aligned. That means that dereferencing a char pointer requires shifts and shit. I guess there are rules about how pointers can be cast in K&R that aren't even followed by malloc (which itself is part of the standard in a way). Fucking C man.
+- Good Dr. K. video, he says "don't play a meta deck, play a fun deck." Stop optimizing for success, start optimizing for fun. In everything you do. I'm optimizing too much for success with Cyfer instead of optimizing for having fun.
+- Alright transfers made to Mark and DS.
+- Man I really need to actually do a bit of work today. BUT I JUST DON'T WANT TO.
+- Oh, I have to call the pharmacist to have them renew my prescription. My pick up date was March 16, and 90 days after that is Wednesday June 14th. So if I call them today or tomorrow that would be good. Maybe today to get ahead of things.
+- OH, I wonder if masturbation being so pleasing to me is a propreoception related thing. Like I'm not particularly aware of what my body is doing, and masturbation (along with working out) is a really intense exercise in propreoception.
+- I think it'd be really fun to build an x86 assembler/disassembler and be able to write software for a Real Mode PC, then try protected mode, etc. Instead of trying to build an OS from scratch for today's hardware, start with old hardware instead. This is a bit more interesting to me in that it's somewhat more like embedded programming which I rather enjoy. It'll also help me get familiar with assembly, and a particularly baroque architecture at that. By comparison ARM is much easier. Could also try 6502 and build a breadboard PC.
+  - It's a good first project using my own Lisp! Since I'd be using symbols and lists to represent the assembly language.
+  - OH! This would be a good exercise in that it'd help me clarify an API for both types (signed and unsigned numbers), byte structures/patterns (a la structs and unions in C), and bit twiddling stuff.
+  - It's also a fun target, because you can essentially program for DOS with a framebuffer which is really simple and pretty fun.
+  - By using this as my project, my "work" becomes stuff to fulfil that goal.
+  - It also gives me an opportunity to implement an emulator, as well as Lisp systems in assembly.
+  - Getting more familiar with assembly is a useful skill too.
+- Oh you know what. Duh. I clearly want to work on low-level stuff as I'm super into it, but by trying to be serious with Cyfer, I was kind of putting that goal off into the indefinite future. Whereas if that's my intended first project, then I have a clear personal reason for getting Cyfer into place that's for FUN. Whereas before I think I saw Cyfer as something I needed to do, with fun as an after thought. It became IMPORTANT.
+- Likewise I think I stopped working on the editor because I just don't find front end all that fun anymore. More annoying than fun, and it wasn't MY language. Too far off. I need to retry with the approach that LEM used.
+- Could also try my hand at Chip-8 or some other 8-bit emulated instruction set.
+- Okay, submitted my prescription renewal requests with the pharmacy.
+- I should really do a bit of work.
+  - Ok, I've reverted my changes. Gonna try this over again. Per Scott's comment, I'll ignore Mobile.
+- Eh, that's good enough for today.
+- Well, it's 4:15 and the dog was barking. Might be worth just going for my walk now. It's also only 15c outside right now and kind of windy. Will need pants and boots, and maybe a thicker shirt (might not be cold enough to warrant a sweater).
+- The key to getting an erection is to surrender yourself to your penis. Your penis is the most important part of your body and your job is to SERVE it. It'll tell you what it wants, and you give it. No thinking.
+- "What's the smallest, stupidest, step you can take right now?" - Question to ask when you need to be agentic.
+- Why do you have a problem getting an erection around Sarah? What are you afraid of now that you weren't before? What are you hiding? Is it that you masturbate a lot? Is it that she'll think you're high? Is it that you don't actually want to have sex?
+  - Bro, she ADORES you.
+  - You should jack off and fuck all around the house. You're THE MAN.
+- What's the simplest, stupid thing to work on this assembler? Well, we need to get a listing of the mnemonics and opcodes. We need to understand how the instructions are encoded, then we just need to convert one mnemonic to binary. Then just do the rest.
+
+* June 11th
+- Was playing Monster Hunter Rise this morning. I bought it on Steam the other day. They seem like a type of game I'd be interested in learning, they just seem very impenetrable at times. Rise is apparently easier to get going with. The other thing is you have a dog that you can ride, so getting around the map is a lot more fluid than in World. The big thing is figuring out which weapon to use since there are so many. The combat is also interesting to get used to, because your character has a lot of weight. Where you're looking isn't exactly where they'll attack for instance. So you have to line your character up to make the attack. I'm using Dual Blades for now, since I prefer something fast. We'll see how it goes.
+  - Something kind of annoying was that I wanted to add Gyro aiming, but when I enabled it, the horizontal movement was too much, while the vertical was too little, and configuring it in Steam is so fucking confusing!
+- Had a bath last night. That was nice and relaxing. First time we've done that in awhile.
+- Game Engine Black Book: Doom should be delivered today. Hasn't been marked as out for delivery yet though.
+- I should do some cardio today. I also haven't done any weights this week. Should do that tomorrow.
+- Sarah's going shopping with Alex this afternoon. House to myself.
+- Masturbation is only a problem if it gets in the way of other things you want to do. The only thing wrong with it is that it isn't socially acceptable. People watch TV for hours on end, or play video games. Touch yourself though? "Addict"
+- Even then, people only become addicted to things when they don't have some greater future to imagine. Let's be real. That's definitely a problem for me. I'm essentially the dog that caught the car. I was a millionaire by 30. Now I have a real problem. What do I want to do with the rest of my life? And to me the clear next step is to build a family and have kids. I fundamentally know that that will focus my life. But until then, I'm kinda just living day to day. And as for my creative passions, I'm not sure what's in store there either. It seems rather more abstract.
+  - And let's be real. Much harder to masturbate for hours on end with kids.
+- Odd, articles online say that edging HELPS to treat ED, because it conditions you to having an erection for long periods.
+- If anything, I think I need to learn how to RELAX my pelvic floor. I know this is a problem because I often have a hard time urinating.
+- Do I love myself? Do I remember to love myself enough?
+- Little autistic boy, stimming himself.
+- I LOVE BEING ALIVE. WHY AM I SO HARD ON MYSELF???
+- Dude, you're already on sabbatical.
+- I’m clearly just in a sex as a special interest phase at the moment. We clearly are interested in it going back to middle school. Just remember that it’ll pass like all special interests tend to. Remember there was a time we were programming every day. Just indulge in the special interest, don’t fight it if it’s meaningful.
+- Build for me. Build for my friends. No one else matters.
+- I keep ruminating about this guy who was eaten alive by sharks. I didn't watch the video (I know it'd be really distressing), but it keeps coming to mind.
+- It's raining out! Love the sound and smell of it all. Especially as it's been so dry.
+
+* June 10th
+- Went for breakfast at Stacks at the mall. Bought a Nerf gun, pretty cool. It's motorized which I haven't had before. Annoyingly you can't seem to buy the magazines anywhere anymore. So even though it has a space for an extra clip, can't really use it.
+- I think I've narrowed down to buying Kailh Box Reds and Box Whites. Box Whites are clicky, but less so than MX Blues. And if they are still too loud for recording, then I can use the Reds, which are just more of a thud. It's interesting that I seem to like the feel of the Kailhs more than actual MX switches (other than blues that is). I do not like the silent reds though. They feel like membrane keys.
+- One thing I'd like to figure out is whether or not you can get books printed like Stripe Press does. Their hard cover books are really nice. I'm sure it's expensive, but it'd be really cool to have physical copies of the Cyfer Reference Manual printed out.
+- It's really annoying how often I cut myself. I think I nicked my finger on my shorts this morning, and it stings...
+- I've got a bit of headache around the back of my neck. Maybe should take some Tylenol.
+- I was thinking last night that I should just start programming in Cyfer. If I want to write a technical manual, or user guide, I can just do so. I could try using Org-mode or honestly even just Markdown and write it out. I can always feed it in to the interpreter or compiler later. And actually having example code in it would encourage me to get a working interpreter for it.
+  - This is a cool resource (which I've looked at before). It's a collection of old technical manuals for the IBM PC and other machines. You can also find Amiga manuals online too (on archive.org): https://www.pcjs.org/documents/manuals/ibm/
+- I think I can just get started on this. I already have some stuff in the repo. My problem is typically that I start writing something that's more like reference material than it is introductory material, and then I get bored. I should just write though. I can always organize later. In fact, could have GPT-4 do it for me...
+- I think I should invest in learning Org-mode. I think System Crafters has a whole series on it. Would probably be a worthwhile endeavour. Honestly, could stand to learn more about Emacs overall. But it's just so... impenetrable at times.
+- Oh interesting, the game engine black books for doom and wolfenstein were written with LaTeX. Will be interesting to look at for how he creates diagrams. Hmm, looks like they are TeX files, but the notes mention Inkscape, I guess it can export to Tex?
+- Hmm, every time I start writing about Cyfer I feel compelled to explain what it is. Maybe I'm still trying to figure that out myself? I guess I should just keep writing about it.
+  - I don't think I know who my audience is. I keep switching intended audiences and that's where I'm getting held up. Am I writing for a person completely new to programming? Or someone who already knows how to program? Who am I targetting?
+  - Maybe I should just write for Daniel. Write for Daniel because he's technically minded, but not super familiar with Lisps.
+  - Come to think of it, when I go on my walk with the dog I should role-play explaining Cyfer to Daniel. I always seem to think about Cyfer anyways, but tend to think about the encodings.
+- I don't HAVE a penis, I AM a penis. This is dope.
+  - Oh, is the child like personality my sexuality? My penis personified?
+  - OF COURSE! It's the endless fountain of joy.
+  - I love being a penis. Fucking great.
+- You know, maybe I've been masking during sex without realizing it, and I can't keep the mask now because of burnout?
+- I thought of a good word for when you're not flaccid, but not fully erect. Which I find really pleasing to be in. "Relaxed erection".
+
+* June 9th
+- Last night decided that I can masturbate as much as I want, I just can't do it at the computer. I have to go to the bedroom. Computer is for work.
+- I wonder why the indentation of BEGIN_SRC below looks so fucking weird. If I figure that out, I can use Org-mode for my work. I was thinking that I can start writing Cyfer code all I want in the main document, since I could later parse the documents and use them as tests.
+- I think I have a strong aversion to planning for some reason. Maybe it's because it feels authoritarian? Like, why would I follow someone's plan, even mine?
+- I really like the contoured key feel of the Black keycaps, feels a lot nicer actually.
+- Page 100 of Introspect says "Managing your psychology is basically THE HARD PROBLEM IN LIFE." "But how do you keep going when you don't feel like it?" "To keep going you have to know your motivations. you have to know your WHY. WHY are you doing this? What is it all for?"
+  - I think this is relevant to Cyfer. I feel compelled to think about this, but I might not really be sure WHY I'm doing it. Actually that makes sense, I'm not sure WHY I'm doing any one thing rather than another. I.e. why work on a Reader vs any other thing that's a part of it. It's ungrounded. What do I want from this project?
+- What do I like about programming?
+  - I like when you write something, and it does exactly what you expected.
+  - I like editing the code so that it reads easily and is clear and concise.
+  - I like when the code matches my visualization of the problem.
+- What don't I like about programming?
+  - I don't like debugging. Most of the time it feels stupid.
+  - I don't like fighting with tooling. If everything seems right, but it just won't load something properly, I lose my mind.
+  - I hate fucking around with CSS.
+  - I hate organizing code. Conforming to style guides. That shit.
+- What do I find hard about programming?
+  - Starting.
+  - Writing shitty code. I want it to be elegant right away.
+  - Keeping track of things. I get lost really easily between files and locations within files.
+  - I'm not good at confining tasks to individual commitable steps.
+  - I'm not good at leaving things for myself to do later.
+- What do I find easy about programming?
+  - Refactoring usually.
+  - Reading code isn't that difficult for me. And I tend to understand my code when I come back to it. Readability is important to me.
+- God I hate this FUCKING BEEPING.
+  - Even when the window is closed it just keeps going through my fucking skull.
+- I fucking hate TICKETS. Itemized development is evil.
+  - I hate this job. I hate this job. I hate this job. I can't work in software like this. I hate this. I hate this. I hate this.
+  - I can't understand anything the indian people say. I have a hard enough time processing speech as it is, let alone with a really thick accent.
+- I think both of these things are why I keep masturbating. I'm overwhelmed by negative stimulus CONSTANTLY during the morning, and then I spend the rest of the day recouperating from that. Between sitting on this fucking standup, and the beeping outside, and the vacuuming of the cleaner... it's just too much.
+  - Ah, it's like being at school again. Just a hostile sensory environment. People talking about things I don't care about, but I can't help but listen to what they're saying.
+  - And I could use noise cancelling headphones, but they get fatiguing over time.
+- I feel like such a child. I can't do a simple fucking job, or the smallest of socialization requirements of working on a team.
+- Jesus, it's wild that it's this that sets it off. I was feeling perfectly fine before that standup.
+- Am I burnt out?
+  - Might explain why I have such an aversion to doing most things these days. Like grocery shopping, or planning trips, or working on my projects...
+  - "When a person is experiencing autistic burnout, however, they may not feel sadness at all and may lose abilities that they once had (e.g. may lose the ability to speak). It is not a loss of motivation to do things, but rather a loss of ability."
+  - I could actually have been burnt out by the sale, and then after that was finished, I was dropped right into a corporate job that I wasn't really prepared for, and historically I wasn't suited for either. I don't think I really had time to recover from that. I've been feeling guilt about what to do, and then trying to find a role that fits, but none of it works for me because it doesn't address the underlying issues. I've been trying to fix the wrong problems. I'm not motivated at all about work, so everything about it just hurts me.
+  - "What can cause Autistic Burnout?"
+    - "Unexpected or rapid changes in one's environment."
+    - "Unrealistic expectations in work, social, or personal situations."
+    - "Social interactions that happen too frequently."
+    - "Sensory processing differences (e.g. sensory sensitivity, overload, etc.)"
+    - "When one or more of these triggers occur too often over a short period of time, a manage-able situation can quickly escalate to a crisis."
+  - At least I have been feeling better about some things. Like building my computer, and my laptop. I really like things. But I also feel like I shouldn't like things? WTF, why do I feel bad about doing things that actually make me feel happy? Masturbating, playing with my computers, etc. Is it because they aren't socially acceptable?
+  - I've noticed that my back has been really tense lately. Not sure if that's due to workouts, or if it's stress.
+  - Do I feel like I'm not allowed to be happy? Or enjoy things?
+  - Interesting: "‘Ruminating’ (thinking excessively about a difficult experience), perseverating (repeating a thought, action, or phrase after a stressful event), and rigid thinking (desiring predictability and having difficulty with unmet expectations) can be core characteristics of autism" I definitely experience the first two.
+  - "Many autistic people who have experienced burnout describe feeling overwhelmed with keeping up with expectations placed on them both by others and themselves[1]. It can be frustrating to see their neurotypical peers navigate personal and professional spaces with relative ease. Some autistic people have said that they feel like they ‘should’ be able to do the same, and when it gets to be too much, they feel like they have failed. Prolonged periods of not meeting one’s own or others’ expectations, can lead to hopelessness and may result in autistic burnout."
+    - Yea, I put a lot of expectations on myself. I'm moralizing my own coping mechanisms.
+  - Hmm, something that just came to mind is that time I sent Suraj and Will an email about being depressed (I think?). That was probably burnout. Living in that apartment was hell.
+  - "How can you tell that it is Autistic Burnout?"
+    - Below are some questions to ask yourself:
+      - Do any of the possible reasons for autistic burnout described above sound familiar? Do you think any of these are happening for you right now? Yes.
+      - Are you noticing any increases in traits commonly associated with autism? For instance, are you doing more repetitive or self-soothing behaviours than is typical (e.g., rocking back and forth)? Yes.
+      - Are you experiencing increased sensitivity to things in your sensory environment? Yes.
+      - Do you feel tired most of the time? No.
+      - Are you having trouble focusing on tasks at work or in school? Yes.
+      - Have you felt a loss in self-esteem? Do you feel like you are ‘not good enough’? Yes.
+      - Are you experiencing a loss of executive functioning skills (e.g., ability to plan, set goals, organize, etc.)? Yes.
+      - Are you shutting down and isolating yourself from others? Yes.
+      - Have you lost interest in activities that used to bring you joy or were soothing? Yes.
+      - Have you lost abilities that you once had (e.g. loss of speech)? Maybe.
+  - "Decision making may be more difficult than usual and you might find yourself avoiding making decisions by procrastinating or letting other people choose"
+  - "You may find that you seek out certain foods more or that you settle into a pattern of eating that feels the most comforting to you.  This might mean you eat the same foods each day,  or have a small range of foods on rotation."
+  - Fuck guess I'm burnt out then.
+  - "When I'm burnt out, I try to give myself a break, and do more "me" things specifically designed to bring me pleasure, which serves to improve my overall motivation, my ability to focus and complete tasks, and my resilience to fight through frustrations." I clearly need a LOT of pleasure right now. That's what I'm seeking.
+- The noise cancelling headphones can only do so much. The beeping still comes through.
+- Sometimes I feel like I'm not worthy of sympathy.
+- Perhaps I've been compelled to masturbate because my body knows I need to love myself more.
+- I don't read as much as I used to. I clearly like reading.
+- I think part of what I want to do with Cyfer is write code as if I'm writing a book. Like in the style of PAIP or even the books about Doom and Wolfenstein.
+- I'm definitely using masturbation as a way to deal with the beeping. I use it to drown out the pain I feel from the noise. I enjoy the masturbation more when the beeping is gone.
+- It's really interesting watch people have sex, and the little differences between people.
+  - Like dudes who don't thrust very deeply. Seems so weird to me. What are they feeling?
+  - It's also weird seeing balls hanging low during sex, mine always go right up.
+  - And how with most guys, it's really hard to tell if they're ejaculating. You might see some pulses, but hard to see at times (very subtle). Many guys are also really quiet.
+  - I also don't understand why guys pull out to cum, then push it back in. Feels so much better to unload inside!
+  - Something I've noticed with circumsized guys is that they have a sort of two-tone dick that looks really cool. Reminds me of horses.
+- You're a high value, wealthy man. Of course you should be spending time fucking and feeling pleasure. King shit. When times are good, indulge!
+- I think I'm afraid of having sex earlier in the day since I won't be able to touch myself later (at least that's a thought that runs through my head).
+- Weed's coming tonight. Estimated at 5:45. I should go for a walk before 5 (dog is at daycare today).
+- A different framing of masturbating: my natural state of being is that I don't get pleasure from a lot of things that bring pleasure to most people (socialization), and I'm low excitement. I'm therefore masturbating in search of pleasure that I naturally am lacking in compared to others.
+  - I really like that it has a tendency to bring out a child-like version of myself.
+
+* June 8th
+- Got my keycaps today. The contoured keys do feel nicer actually. Feels like I can type a bit faster too. The switches are coming in a different shipment though. I also ordered an LTT screwdriver this morning.
+- I'm setting up Anki flash cards to practice Hex to Binary (and reverse), as well as hex arithmetic. Anki supports LaTeX too, so should get nice looking summations. Need to generate all of them though...
+  - Here's the final code:
+    #+BEGIN_SRC emacs-lisp
+      (defun generate-hex-cards ()
+      "Generate flash cards for hexadecimal addition."
+      (let ((hex-digits '("0" "1" "2" "3" "4" "5" "6" "7"
+                          "8" "9" "A" "B" "C" "D" "E" "F"))
+            (output-file (expand-file-name "~/hex-cards.csv")))
+        (with-temp-file output-file
+          (dolist (digit1 hex-digits)
+            (dolist (digit2 hex-digits)
+              (let* ((sum (+ (string-to-number digit1 16)
+                             (string-to-number digit2 16)))
+                     (front (format "[latex]$$\\begin{array}{cc}\n & %s \\\\\n+ & %s \\\\\n\\hline\n & ? \\\\\n\\end{array}$$[/latex]" digit1 digit2))
+                     (back (format "[latex]$$\\begin{array}{cc}\n & %s \\\\\n+ & %s \\\\\n\\hline\n & %X \\\\\n\\end{array}$$[/latex]" digit1 digit2 sum)))
+                (insert (format "\"%s\",\"%s\"\n" front back))))))))
+                #+END_SRC
+- Well, there's more configuration that could be done in Anki itself, but should be fun to practice with eventually.
+- Time for gym. Although today would generally be a weights day, think I'm gonna just do cardio since I didn't do it yesterday. Air quality is alright, and should be fine in the basement.
+- Sigh, I think I have to do some work today... Nooooooo. I also should do some of my own stuff.
+- Fuck this shit. I hate shitty CSS and I hate shitty utility libraries. I'm supposed to use this fucking util that doesn't even work. All of this is so fucking crappy. And I don't have any reason to improve it. I'm done fucking with this for today.
+- I'm feeling really sad and overwhelmed right now. I feel really bad that I can't seem to work through something stupid at work. I hate this stupid job, but I also hate that I can't seem to do any job. It feels like I'm back on co-op. How can people just sit down and fucking work for hours on end? I don't get it. I don't want to talk to anyone or get to know them. I don't see any advancement. I don't know what I'm doing here other than to just earn money to pay the fucking rent. At the same time, what would I do with my life otherwise? Sit at the computer and masturbate all day? I'm also mad that I haven't been able to have sex in weeks and not understanding why I haven't been able to.
+  - And I get excited by the prospect of some job, but once I get into it, all that excitement goes away.
+- And now that I'm sad, I'm masturbating again even though I started today with the intention not to. But I don't know what else to do.
+- I keep feeling like I want to cry.
+- Am I burnt out?
+- There's this constant stress that I'm about to be "found out".
+- I can't stand all of this fucking beeping either.
+- Maybe I need a computer job that I'd actually like doing. I don't think I actually like doing web dev (especially front end).
+- How do I make masturbation feel productive?
+- OMG, I love the quiet so much. Closing the window means no beeping. But higher CO2...
+- I think I sit at the computer all day because I feel like I'm expected to. I'm here either supposed to be working, but then I don't work, so I feel like I should be doing something productive by myself. But then I don't do that either.
+  - But why do I feel compelled to do this so much? Why so much internal pressure to do this? I can do literally anything I want, I have the means to do so. I'm so fortunate, why am I pressuring myself so much?
+- Am I just playing the role of a "proper adult", even though I don't want to be a proper adult?
+- Evidently I shouldn't be working on work, I should be working on myself. I should do the exercises in Existential Kink, and Introspect.
+- Another view is that you've been tyrannized by a structure since you were a child that doesn't work for you.
+- Do I feel unlovable?
+- Honestly, part of the problem is that it feels deeply embarrassing? Like, it's not something I really feel is appropriate to talk with people about. Or that I'll be negatively judged for it.
+- I might enjoy this so much because I'm not used to feeling good in my body.
+- What if I'm doing this because I feel othered by people? I never liked school. Was I mistreated there?
+  - Oh, I feel like I'm expected to be the good one. I'm expected to be a good boy. And good boys don't: ...
+- You know maybe I should just write out everything I possibly want to build into this system. What's the rough sketch of it? It's obviously going to change. The value in a plan isn't the plan, it's the planning.
+- Likewise for this proposal. What do I want to do?
+- I should be asking Daniel to review my code and ideas. Write for Daniel.
+- I think I'm unreasably afraid of death grip, but it works to get an erection, and I always go for a looser grip once I have a hard on anyways.
+  - Thing is it does seem to work really well. Not so much a grip as it is massaging near the head. It feels really good. And I love the sort of almost ridged feeling beneath the foreskin.
+  - I think I need to practice this on the couch.
+- It could also be that I've been masturbating so much to prove that I can get an erection whenever to prove to myself that my ED before sex is not related.
+  - Oh, you know this is probably the biggest thing bothering me right now if I'm really honest with myself.
+
+* June 7th
+- Going to mom's tonight for her birthday. Got her a Lululemon yoga mat that she was looking at during the shopping spree but didn't ask to buy. So that should be nice. Otherwise, new keyboard keycaps are out for delivery (and some switches to test), so hope they arrive soon so I can play with them. I also have a haircut today at 1pm.
+- Should think about what I want to do otherwise today. Probably test that code rearrangement I did.
+- Should I buy another Pro Display XDR? Or a Dell 6k? My final payment on the Pro Display is coming up shortly. Oh yep, just checked. The second to last payment must have gone through yesterday, the final payment is July 6th.
+- Finally printed off and signed the loan agreement with Mark.
+- I think I need to take a break from masturbating so much if only to be able to see if it resolves my issues around getting an erection for sex.
+
+* June 6th
+- Yesterday was WWDC, Apple announced a new Mac Pro, 15" MacBook Air (interesting), and their new headset. The headset is $3500 US! It also doesn't come out until early next year, and is apparently going to be available in the US only? Seems odd. Not sure if I'll get one or wait for the second gen. On the other hand, that price makes the Quest Pro more compelling, started thinking about if it'd be worth ordering one or not. Would be interesting to tie software from a headset to a system somewhere else. Oh, the Mac Pro is also fucking expensive. Like starts at $8,999, and to max out the RAM and GPU you're looking at $12,249. Those are like Mac II prices. Don't think I'll get one (not that I was really considering it). It's also just in the same case as the 2019 one. They clearly just did a bump to get it to Apple Silicon ASAP, rather than re-envisioning what a workstation should look like with SOCs.
+- God there's so much fucking beeping outside. I thought we were done with this shit, but apparently they need heavy machinery again, so every time they back up BEEP BEEP BEEP
+- Interesting, was taking a look at the LEM codebase (LEM is a CL text editor) and it has an electron frontend in addition to an ncurses, and SDL2 frontend, all of them being different apps. I'm curious to see what the protocol between them looks like. Additionally, the electron front end uses WebComponents from the looks of it, all in a single file. Might be interesting to study.
+  - Also just learned about StumpWM (rather re-learned about it). It's a window manager written in CL and hackable while running. It looks like it's updated regularly too. Might be worth fucking around with. Also, Nyxt 3 came out about 3 weeks ago, so you get a hackable browser to boot.
+- Honestly, I should just hit the gym immediately after stand up. Not like I do much in the time between since standup never takes a consistent amount of time and so I can't exactly plan around it.
+- Was thinking during my workout that I don't usually have a plan for my day and so I end up just bumming around. I don't have a plan because I don't really know what I want to do.
+- I have a 1-1 with my manager at 1:35. Then dunno what I want to do. Should maybe do some work? I also need to bounce a bit early, going to see a movie at 5:30, so need to walk the dog a bit early.
+- Let's think. What was I working on last? I think I had varint decoding/encoding working. Then I was thinking about making the encoding stick to signed numbers only unless they appear in an array of fixed-size type. I think the next step then is to start integrating the reader and encoder/decoder. I.e. develop some test cases that take a string of input and return a binary encoded version. Once we have those, we have the beginnings of an interface. The next step then is some sort of persistence layer, which requires support for hashing buffers of bytes.
+  - Yea, I think the reader to encoded version is the right next step. Then I can figure out what I want to do after that.
+  - I guess once the reader/encoder/decoder is "done", I can start work on a REPL essentially. Need to figure out how that would work. Reading stuff from the console isn't exactly straightforward. You'd need something like readline I think. I don't really want to be working in escaped string literals, such a pain.
+  - Wait, I think there's an entry in the Clojure Cookbook about CLI tools. Maybe check it first?
+- Well, Jonathan says that Brian and Brent say good things about me. So I guess I'm meeting expectations!
+- Kind of annoying that if I hit enter in an indented list item, it doesn't just outdent, it clears the whole thing. I think I technically "wrote" this function (or rather copied it), so maybe I can fix it?
+  - I think I've got it!
+- There's a special air quality statement right now due to the forest fires everywhere. And yea, I have the window fully open and it smells like a fire.
+- Well, one nice thing I just learned about Org-mode is that it has a standardized parser, so we can probably convert text to other formats just using emacs lisp.
+- Ah yea there's a recipe in the Clojure cookbook for getting individual keystrokes from the CLI using JLine which is similar to readline. They also recommend using clojure-lanterna, it doesn't seem to have been updated in a number of years, but maybe it's fine. Oh that's why. Lanterna is a Java library, so makes sense that it hasn't been updated in awhile.
+- There cleaned up the code a bit by moving some stuff into proper namespaces. The stream protocol is in its own ns now. That namespace also has code to load little endian bytes as a long.
+- Yea, I think I should be working towards essentially a shell. Lisp is the ultimate shell, Cyfer is intended to be a continuation of that idea. The difference being that we'll be built from the ground up for content addressability. There isn't a file system, there's a persistent object system. The important data structure being a set. The set consists of a bunch of hashes to binary pages/serialized objects.
+
+* June 5th
+- Alright first note in Org-mode! Let's try using this in anger! 🤬
+- Okay, well first problem, my/org-return isn't being loaded.
+- Finally got that working jesus. I misunderstood use-package. So I had to use use-package org (not use-package org-mode like I'd tried earlier). Then, I set that up, but my keybindings were applying everywhere! Turns out, need to provide a :map org-mode-map before them so that they only apply on that mode map. So that's done. Now I have return to insert a new item, and shift-return to enter a new line. Next up is getting line wrapping since I'm currently well off the page right now.
+  - So I just needed to enable org-indent-mode and visual-line-mode and that seems to have worked out nicely
+  - Ok, I think that's working now. Man, I hate emacs configuration, it's so unintuitive...
+- Well, internet is back. Out for over an hour... I guess I should probably do some work today.

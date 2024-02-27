@@ -1,0 +1,386 @@
+* February 27th, 2024
+- 1-1 with Daniel this morning. Have a haircut at 11am. Doubt I'll take the dog for a walk (it's -21c today).
+- Hey hey, got a response back from PS. They're adding $44K in additional comp on their original offer. Not bad, not bad.
+- No tims this morning. Don't want that awful taste in my mouth. Though I'm missing having a little pastry for breakfast...
+
+* February 26th, 2024
+- Installed the 1TB drive in the Ally and now it's going through the recovery process... well, now it's installing updates actually. Anyways, once that's done I'll need to configure the buttons again, and install games from Steam (making sure to wake Hyperion so that it can download from it).
+- Checked the hot tub and it's still high pH. I'm not sure what's going on. Added more, and took out the zorbie to see if that does it. It's very odd.
+- Was thinking that I should go through Crafting Interpreters, but do it in Lisp.
+- Time to work out.
+  - Done! Feels good.
+- Okay, seems like I have most things ready on the Ally. Finally starting to install games, and it's successfully pulling them from Hyperion.
+  - Interestingly, I've downloaded Handheld Companion, which is an open source alternative to Armoury Crate. It apparently makes Gyro work better with Steam, and it looks like you can rebind the special ROG buttons. So I can use one for the quick menu (although the Handheld Companion version), and the other for Xbox.
+  - I still wish I could run SteamOS on this bad boy. It's just so much nicer.
+- This is a really neat site that I saw on a YouTube video: https://32by32.com/read-me/ Its themed using modern CSS to look like original Macintosh System Software (importantly font rendering).
+- Kind of miss working in my office lol. I was doing the drive install of the Ally at Hyperion. Lots of desk space. Could put a textbook down and read it. Nice.
+- Was really turned on yesterday by the idea of "feeding" through my penis. Like a proboscis.
+
+* February 25th, 2024
+- Made pancakes for breakfast. Probably won't be hungry for awhile. I also ate 8 english muffin pizzas last night (felt so fucking good, they also taste amazing).
+- Just got back from walking the dog. Was thinking a bit before hand and more on the walk that my next project should be writing an assembler and emulator for an ISA. It'll lead rather naturally into developing an OS, and it's also a pretty straightforward project actually. I think I've been avoiding it because x86 is a nightmare, but accessible. ARM isn't as bad, but isn't as accessible. So the thought I had was to start with 6502 or Z80. Something nice about that would be that I could build a breadboard computer which would be fun (I do miss that stuff), using a 6502 or Z80 is far fewer chips and wires than the 8 bit CPU build. 6502 is pretty ubiquitous, but Z80 might be good for the simple reason that it's related to x86. As I recall, Z80 is mostly compatible with the Intel 8080, and the Intel 8080 is source, but not binary, compatible with the 8086. Then, I could incrementally work my way up to more modern ISAs.
+  - Also, an emulator holds CPU state, which is something you'd use in an OS (representing the state of user code during a context switch). So sharing.
+  - It's also not exactly hard, it's mostly transcribing information into Lisp. It's all about keeping the details straight.
+  - The only thing I'd like is to have some example code to run to make sure things work. That's a bit hard because things can be hardware specific... But, at least with the 8-bit and 16-bit machines, you're more likely to find source listings (including that book on 80386 assembly programming that I bought in north bay). Z80 was a popular architecture, so should be able to find examples.
+
+* February 24th, 2024
+- Took the rocking chair out of the huge fucking box and brought it upstairs. There are so many fucking boxes in this house right now. Sarah's going to break them down this afternoon so I can take them to the recycling bins.
+- Took bubs to the groomer, she smells so good now!
+- Far Cry 5 is so fucking annoying sometimes. Might switch it to easy mode because I die for the stupidest shit so often. Like I'm just trying to raid a prepper stash, why am I being attacked by a fucking army with airplanes and shit.
+- Interesting, was looking to see if people are playing Far Cry 6 on the Ally, and people are playing it on high and getting 60FPS. In the notes, someone said that they'd have issues with certain games with the 4GB VRAM setting which is default, but things are better when you set it to Auto for 8GB or something like that. I'll have to try that out! I wasn't setting more settings to high on Far Cry 5 because it would cap out the VRAM.
+
+* February 23rd, 2024
+- Today is furniture day. Building the crib right now, then the Snoo I think.
+  - Also need to do the chemicals for the hot tub.
+  - Juni is at daycare today, so walking with myself.
+- Not sure if I actually want to bolt everything to the wall or not. But I should move the AP over. The laptop shows 2 bars when Wifi is enabled.
+- Also, have a massage today at 3!
+- Sarah has an Article delivery today, one part is the rug, but I can't for the life of me remember what the other thing is, and I asked her this morning! I think it's baby room?
+- Oh interesting, Ubiquiti has new "Pro Max" switches that have 8 2.5GBE and 16 1GBE ethernet ports for $600.
+- Hmm, Ubiquiti hard drives aren't that expensive. I guess they're a special type of hard drive for video surveillance. The alternative is a WD Purple, and an 8TB WD drive is only like $6 cheaper.
+- WTF a Pro Max 24 switch is cheaper than an Enterprise 8 and has the same number of 2.5GBE ports and more 1GB ones... also has 2 10G SFP+ ports...
+  - So... just buy one of those and don't rack mount it?
+- Oh, didn't know that the Mac Studio has 10Gb ethernet!
+- Building furniture is one task which always seems to take longer than I expect. But the crib is now done! Just need to do the Snoo. Also need to do cat litter, been awhile. Then, can probably check chemicals in the hot tub, before heading out to the massage.
+  - Alright, took out the green bin, the cat crap, and put together the Snoo (really interesting packaging).
+- Checked the chemicals in the hot tub, everything looks good apart from pH which was pretty high. So added some easy acid! That should do the trick. When I get back, I'll take another look at it and if it's in line, then we add Chlorine and we're done! The water looks so much better though.
+  - Also checked the water softener, and it's fine, doesn't need topping up.
+  - And replaced the furnace filter finally. The one in there was dirty obviously, but not as bad as I expected.
+- Ahhhh, massage received.
+  - I'm beginning to really appreciate the hot stones that Brittany uses. At first I wasn't sure if I cared for them or not, but now... now it seems to really highlight how tense I am. Like at first I was like "damn, is she pressing down my bones?", but I realize now that it's muscle tension.
+  - Also, it's really funny. Everytime I receive a massage I end up thinking about computing. Something about massages and walking that makes me think about it.
+- Here's what I was thinking about during the massage:
+  - A Cyfer System is a system of Agents. That is, it's a little microcosm of distinct systems running concurrently, sending messages back and forth.
+  - A Hardware Abstraction Layer wraps different physical devices up into Agents. That includes Sound Cards, Networking Cards, etc., but also compute in the form of Workers.
+  - The Supervisor is the Agent that's responsible for managing them all.
+    - It has a bunch of various Jobs, such as scheduling work to Workers, shuffling messages between devices, etc.
+  - A Secretary is an agent representing a User.
+  - CyferScript is a notation for communicating messages to Agents.
+  - CyferScheme is a language for expressing procedures/instructions.
+  - Agents are an isolation mechanism.
+- The user manual can progress from how to use the CLI/interface, to programming language introduction, to operating system implementation.
+  - By which I mean, a lot of programming texts try and teach you CS fundamentals, but it doesn't have to be that way! We can teach a DSL that is generally useful first. Like, instead of teaching how to add numbers and define functions, and shit like that, reframe it as "create documents", "store data", "search for data", then teach how to create your own "commands" (sequences of commands). Then, how it is all implemented comes later. It's like an inverted Lisp book. Start with how to use a final product, and then talk about how to implement it.
+
+* February 22nd, 2024
+- Hot tub cleaning day! Gonna get a call from the therapist shortly, then need to take out filters, put in tub rinse and run the jets twice and let it sit for an hour. Then I can start the sump pump draining procedure. Need to check if I have vinegar for cleaning the shell.
+- Alright, first session booked for next Friday at 9:30.
+- Now to start cleaning the hot tub! Looks like I take the filters out, pour in half the bottle of rinse then run the jets (make sure to turn the air intakes off for the jets, and open the waterfall). When that's going, I'll clean out the filters in the tub, ideally start the jets for a second time, then I can walk bubby (coming back into the garage to get the rest of the stuff!).
+  - No vinegar, so gotta go to the grocery store after walking bubs. Sarah says to buy toilet paper too.
+  - Brought the microfibre cloths down, specifically the old bag that got a bit wet, so they smell a bit musky, but whatever.
+  - Oh, also realized that I should put some vinegar in the waterpik, been awhile since I cleaned it. My teeth too.
+- Alright, second round of the jets going. That should go until 10:45ish, an hour after that is 11:45-12 which is when I can start draining. In the meantime, time to walk bubs and hit up the grocery store!
+- God dammit. Found out that the Sump Pump needed a special hose so went back to home depot to get it. Also, the power cord was too short, so needed an extension. Then, when I went to try the shop vac, found out I needed a special filter for liquids... did not decide to go back out again. I'm sure it'll be helpful next time. Sump pump worked a treat though, emptied the tub faster than the hose is currently filling it. Water is pretty fucking cold. Will take awhile to heat up.
+- Well, nearly full. Takes about an hour to fill I guess.
+- While I was waiting, decided to shower and also futz around with Steam Remote Play. Firstly, really annoying that you can't agree to UAC prompts from remote, and Ubisoft connect throws up a bunch of them. Secondly, you can't change the resolution in game and have it work properly. That's the same issue I was having with Spiderman, I'd set it to 1280x800 and it'd just look really fucking weird. Turns out I needed to enable the setting "Change resolution on host to client resolution" or something like that under advanced settings. Now it works! Steam Deck had a really terrible connection in my office with that AP disabled. Oddly, iPhone still shows full bars. I'll have to try later with the Deck in the bonus room.
+- Tub filled! Water is 45F lol. The hot tub says "possible freezing condition". I added "Secure" per the instructions, the rest of the chemicals need to be checked once heated up, starting with pH/Alkalinity before finally adding Shock/Sanitize. Water is so fucking clear tho.
+- MSI Claw comes out March or April... hmmmmm. It's an Intel Core Ultra 7 155H and it has 6 Performance Cores, 8 Efficiency Cores, and 2 Low Power Efficiency Cores. Interesting.
+- Found a cool site! https://www.nextcomputers.org/NeXTfiles/ A bunch of documents and stuff about NeXT. Old brochures, datasheets, service manuals, etc.
+  - Reminds me, found out about this through YouTube the other day: https://www.ardent-tool.com/docs/pdfs.html Similar stuff for IBM PS/2 systems and micro channel architecture.
+- Oh interesting. Just learned that I should keep the refresh rate as 120Hz on the Ally because that enables Variable Refresh Rate, so even if you don't hit 120, it'll look better.
+- Didn't realize Space Black replaces Space Gray in the MBP lineup.
+
+* February 21st, 2024
+- Installed Far Cry 5 on the Ally last night and started playing it. First of all, it hit 300Mbps download while in the bedroom. I don't know why it seems to peak at less than 100 in the bonus room. I wonder if it makes sense to just disable the AP in my office until I figure out what's going on with the connection there. Otherwise, I'm playing it on Medium and getting 40-50FPS depending on what's happening. It's pretty crazy to me still that it's essentially a handheld XB1/PS4. Crazy.
+- Today is errands day. Need to go to World of Spas in addition to picking up the cat food and cat litter (hopefully flats of diet coke too), and also get a shop vac.
+  - Alright done! Also went for a walk and now it's 2:30. It occurred to me in the car that I tend to overestimate how long things take because with software they always go long, but errands and shit typically seem to take less time than I expect. Especially considering this was the BIG THING I needed to do today and now I'm free for the rest of the day.
+- Something else occurred to me while I was out! I haven't been using my desktop because I haven't been streaming games from it! That's when I used it the most often, but with the random issues I had with Sunshine earlier and stuff around resolution I sort of... stopped. I think some games get confused by the ultrawide even though they should be streaming 1080. And it resulted in weird things like Spiderman being kind of squished. I'm also unsure how well it will handle streaming with the random internet issues I've been having in the room. I haven't used it enough to notice if it's fine or if it's just the devices behind the second switch that are having issues. Maybe I should move the AP to the big desk instead of behind the shelf? That way it'd be on the main switch there... could do that when I do all of the furniture for the baby's room.
+- CyferScript is a notation for data structures. CyferScheme is a programming language encoded with CyferScript. CyferScript is commonly used as a notation for messages sent between agents/services. These are said to implement CyferScript Languages.
+  - A restricted language sent over the wire is called a Protocol. Messages are checked for conformance to specific patterns.
+  - CyferScheme in a way is an unrestricted language. That is, it encodes general computation, whereas protocols are intended to be static.
+- Static data structure is a better term than immutable. It's so much cleaner. Contrasts with dynamic data structures which are mutable.
+  - Likewise, the difference between Symbols and Words is that Symbols are static (represent themselves) while Words are dynamic (represent something else).
+  - To freeze an object is to make it static. To thaw an object is to make it dynamic.
+  - Numbers are static (stand for themselves), numeric identifiers are dynamic (stand for something else).
+- Hmm, a better word might be "marshall" and "unmarshall".
+  - Fuck, could just be "read" and "write". Their parameters are an encoding scheme (JSON, CyferScript), and source/destination (agent, channel, port). So you can install a grammar that handles reading/writing some serialized data format.
+
+* February 20th, 2024
+- Didn't take vyvanse yesterday, and just took cannabis oil. Had a good day overall. Watched Blazing Saddles (which was 1080, but finally figured out how to get the AI upscaling working on the Shield TV, had to turn off automatic resolution switching, which makes sense I guess). Downloaded the Division 2 on the Ally and started playing that again. Still blows my mind that it's essentially a portable PS4/XB1. I have the settings on Medium now (with resolution scaling of 75% and that gets me essentially 60FPS most times dipping to about 50 occassionally, so super playable and looks fucking great).
+- Daniel had to cancel 1-1 again. :(
+  - He sent me a screenshot of his new EPYC server's IPMI interface. Pretty cool. BIOS over the network lol.
+- Things I need to do this week:
+  - Build the crib and mount the furniture to the walls.
+  - Go to World of Spas to buy some chemicals but also see if they have sump pumps (or recommendations for them), and how to clean the shell. Might do that tomorrow, since Thursday or Friday might be better days for the actual draining and cleaning (high of 7c, only 4c tomorrow).
+  - Bring the weed down to the basement so it's there instead of in the office. Need to separate these in my mind.
+  - Look into IFS therapists and book one. Dan isn't a practitioner of IFS.
+  - Read the manual for the garburator, I feel like that needs to be emptied (and it will fucking STINK). Also probably need to top up the softener salt and replace the furnace filter and humidifier filter.
+  - Also need to get more cat litter from Real Canadian Superstore.
+- Lol, so the VAS/VMS Internals and Data Structures book came in the mail, but still no Smalltalk Green Book. Need to note never to buy books from that seller again, it's literally been over a month now...
+  - VAX book is fucking huge actually. 1400+ pages!
+- One way to keep all of my clothes on is to keep the windows open in the office. Nice light and I can't just whip out my dong lol.
+- There's clearly some sort of blocker when it comes to computing and especially programming. Like, I keep wanting to buy computers and do stuff with them, then I don't! Like I have an expensive machine kitted out for AI, and then I haven't really used it for that! Likewise, I have this kick ass desktop behind me and I've barely turned it on! Why is that? There's clearly some desire that's driving me to buy these systems with the intention to use them, but then I don't. And I also feel sort of bad about not using them because I feel like I'm neglecting them.
+- It'd be a good idea to have like an "office hours" meeting again with the guys. I'd like to just have some company while doing things.
+- A part of me feels ashamed by the hobbies I have...
+- Okay, reached out to one IFS psychologist. We'll see if she responds.
+- On the weekend was reading a bit of Visa's tweets on deviance. Like, deviance is overwhelmingly punished by society, until it's recognized as positive (this is literally the story of rudolph the red nose reindeer). But also, deviance is correlated. Like if you're deviant in one domain, you're probably deviant in others as well. And that's good and bad. For instance, Newton was a genius physicist, but also studied alchemy. And there are lots of instances of that, nobel prize winners who study quackery. But that's the thing, you can't be deviant in only positive domains, it doesn't work that way.
+  - It's also rather hard to accept that you're a deviant person. You very much get rewarded for being normal most of the time.
+  - And I'm clearly a deviant person, and a part of me likes that, but other parts very clearly don't want that to be the case (or are afraid of the consequences that is).
+  - What does it mean to live a good life if you're deviant?
+- WTF, scanner isn't scanning? It seems to be scanning from the bed even though I said the feeder. I'll try restarting my computer to see if that fixes it...
+  - So apparently this model doesn't support duplex scanning! WTF, the fucking Xerox did... that's really annoying.
+- Well, did a workout. Had to take a TUMS before starting since I was feeling a little acid reflux. I assume from the supplements I took (and back to back Diet Cokes).
+- Sarah is off to an OBGYN appointment and I was able to convince her not to take me to pick up cat food (which is all the way downtown) since I'm intending to go out and run errands tomorrow anyways.
+- Brought the cannabis oil down to the basement too.
+- I want to build a computer company. That's always been my dream and I think I've been put off of it for various reasons, but there's no reason not to have fun! Just do it for shits and giggles bro. Hell, people are building new 8-bit machines for fun. Why can't I do that?
+  - But what exactly does that mean? Well, I want to have my own operating system, programming language, and software. And I want to have my own models of machine.
+  - Things getting in the way of that are 1) hardware is often opaque, so it's hard to port stuff. As such, I'll never be cutting edge. But that's fine. Computers are super fucking fast anyways, and I'm always going to be a niche player anyways.
+  - I'm kind of put off by the lack of video drivers more than anything. It'd be really difficult to program for a GPU since everything is so opaque.
+    - Make me curious, what mode is Serenity using?
+  - I can ignore a lot of that stuff anyways since I can just write it for a virtual machine interface.
+  - I think my primary goal is something that I can understand top to bottom. That is, you can read the documentation/source code and understand fully what's going on.
+  - The intention isn't "most powerful, most performant, best in class" and more "best in understanding", more educational than anything.
+  - I also don't even need to "build" computers, I could design models using off the shelf components and just make sure that the system boots on those specific ones. Then you can put together build guides essentially.
+  - I get the sense that a lot of trepidation comes from "how do you intend to make money? what's the business model?", but I don't need to make a business. And also there's a lot about running a business that I do NOT like.
+- Where I seem to get most caught up is in the interface. Really, I should be exploring lots of options there, but for some reason I'm not. Probably for a number of reasons (first one being that I tend to focus on the browser and... it's not that fun).
+  - It's also probably because there are so MANY different things, I don't know where to start.
+  - If I'm approaching the problem with the intent of building the "ideal environment", of course I'm gonna look at other attempts as worthless. But it should be more about exploration.
+  - The ideal is rather that which makes it easy to experiment then. And that which makes it easy to learn how it works.
+  - It could also be that computing lets you create interface metaphors, and because they're in a sense "made up" it's hard to be like "yes, this is the way I want it to work!"
+  - So start with talking about what you like!
+  - I'm also probably focusing too much on compatibility with existing systems which makes the attack surface far larger and puts odd constraints on me. Better to ignore them.
+    - Like, focus on the text interface! That is, essentially the programming language aspect. Since text can be used essentially everywhere. You'll want to use different interfaces for graphics/touch/mouse anyways. And, text doesn't need anything special.
+  - You have no obligation to make something that's a "success".
+- Occurs to me that a lot of the things I want to build in Cyfer I've been looking at from a programming language standpoint rather than a system standpoint. That is, I've been thinking about storing tuples, so just build that! Call it the tuple store or something. Likewise with content-addressable storage of blocks and shit. It's more like you're creating a disk operating system than a programming language. And that's exactly what Smalltalk is! The language is already "done" in our mind, just needs to be used.
+
+* February 18th, 2024
+- Well, went to the theatre last night and wow... it sucked. Our home setup is far better. Literally the only upside to the theatre was how big the screen is (namely going wall to wall), but otherwise not only is our sound better, the picture is way better! I never really noticed how blurry the theatres are. I understand now why people used to complain about the lack of projectionists in theatres now, it looks like shit!
+  - That and the movie sucked. Saw Argylle, and it was alright for the first half, but it just went off the rails in the second half. Way too many twists and gratuitous use of CGI.
+- Will's birthday today. So chilling for the next two hours until I go. First sauna, then dinner at his place I think (hot pot).
+- Was thinking last night that I really need to separate my use of cannabis and vyvanse. There's no good reason for me to take both. It just reduces the effectiveness of vyvanse over time. I should take them separately, and I can take cannabis earlier in the day (better for my sleep anyways). I think one reason I like taking vyvanse every day is to make my shits run on time lol. In fact, I took vyvanse today for that reason (I had some gas, and it smelled bad, and was like, I need to guarantee a shit before going to the sauna). Will abstain from cannabis today (plus figure there'll be a bit of alcohol with dinner).
+  - Along those lines, it should help to make days more about productivity and others about relaxation. Which I need both of! In particular, I have this kick ass theatre and all of these movies I want to watch so... why don't I just get high and watch movies all day? Eventually I'll get bored of that and want to work...
+  - To address the shits, I can also make sure to take fibre supplements daily.
+- Was thinking more this morning about an M3 Mac Studio with a Dell 6K monitor. Would be so dope. Only thing is then I'd want a black MBP... Alas.
+  - This laptop is just so good to type on... and it runs so cool... and its battery lasts for fucking ever...
+- I think the plan is, no vyvanse tomorrow and for the next few days actually! Just focus on relaxing and watching movies. Make sure to take fibre supplements. Figure out which movies you want to watch (Ran for sure, Wolf of Wall Street, etc).
+
+* February 17th, 2024
+- Finally opened the boy butter (lol), and yea, this is some good shit. Wonder if it's safe for toys?
+- Was thinking a bit yesterday that masturbating as a hobby isn't bad, it's just socially frowned upon. Which sucks, because it's so enjoyable. I had an unbelievable non-ejaculatory orgasm yesterday, and it all stems from actively loving myself and believing that I deserve to experience such pleasure. What's wild is that, yea, I'm far happier with myself than I would be on a yacht? Fuck, if I was on a yacht, I'd probably lock myself in a bedroom and jack off.
+- Hmm, maybe I don't want a MacBook Air and would rather have a Mac Studio for the office? Then I could just use this baby downstairs? With a desktop, I'd also be able to get another Pro Display (or Dell equivalent?).
+- I do wish I had more reason to use my desktop as well. I avoid it due to Windows, but I could install a Linux distro on it (maybe Guix?). I have so many fucking SSDs, I could put it on a 2TB and still have 5TB for Windows free.
+- Just got back from Indigo. Bought two books on IFS by the same author (one mentions the other in the stuff on the back). Should be interesting!
+- Was thinking on the drive that it's probably a good idea to use #1,..., #999 as numeric identifiers that are replaced directly with another object on load. It also means you can view memory addresses as numeric identifiers if the memory space is viewed as a message. Then words are symbolic identifiers. Actually, that's not a half bad idea since it means that numbers (values) are to numeric identifiers as symbols (values) are to words. It's like, one form is a value, the other is a key. The nice thing is that a binary encoding could probably employ a one byte encoding for most uses meaning you can compress ASTs considerably by replacing common symbols with given bytes.
+- Oh, something I noticed before going out was that when I masturbate with my left hand, I seem to experience more self-criticism! That is, I noticed I was looking at my body more critically, and experiencing more thoughts of "what am I doing". As I kept at it, the thoughts slowly melted away, but it might be why I've avoided using my left hand as much (plus lack of experience).
+
+* February 16th, 2024
+- Gonna make pepper steak tonight. Need to take out the steak, and then pick up some peppers and stuff at the grocery store.
+- Reading about CRDTs on HN and found a link to this: https://www.dolthub.com/blog/2022-06-27-prolly-chunker/ A merkle index!
+  - From the original article: https://interjectedfuture.com/crdts-turned-inside-out/
+- Forgot it was a long weekend this weekend. Sarah also forgot that she has yoga and brunch tomorrow. Also doing Sauna with Will for his birthday on Sunday.
+- I really just want a system where I can synchronize files between systems without having to go through the whole rigamarol of git. It's why I haven't been using the intel MBP or Nebula... they don't have the files that this system does.
+- Gotta admit, I just really enjoy reading about computers.
+- I mean, there's nothing stopping me from just using Prophet in the basement. Just that it was a tad annoying to plug back in. But it runs so cool I can use it with blankets which cannot be said for the other two machines...
+- Much like how pretending to smile can make you smile, pretending to make a product can turn into an actual product.
+  - I was thinking that I can just make up a pretend computer company, and by imagining its parts, they might just come into existence! Play IRL make believe.
+- In reading wikipedia, I'm learning how to present a history of a product.
+
+* February 15th, 2024
+- Baby class tonight.
+- Gotta look over the letter from the lawyers.
+- Might be a good idea to prepare my shelves for all of the new books I've gotten.
+- Also, was thinking that I should use the hot tub in the afternoon. Lately I haven't been using it because around 9pm I'm just not interested in going up and changing and doing all that shit. But I'd like to use my hot tub! Also, need to check chemicals/add shock.
+- Went to check the mail because the guy came but there was nothing in there. But, that guy had a red van and the deliveries are usually a white van. I think I'm just realizing that one guy checks the mail and another one delivers it. Explains why he was so fast too.
+- I've been thinking a lot about Agents as an abstraction for isolation. That is, an Agent can be understood to exist "somewhere else" and I think it's a better term than "process" because it covers both local and remote things. The interface being message passing. It also neatly contains I/O! That is, Agents receive input from other Agents and can hold references to other Agents which it can send messages to. So there isn't a "standard output" port or file or stream etc., you would hold a reference to a logging Agent or Client, etc.
+  - Of course, Abelson and Steele's paper on Scheme showed that Actors have the same implementation as Lambdas, but that does seem obvious in retrospect. That is, lambdas and actors are identical if processed synchronously. But of course they're different if lambdas are synchronous and actors are asynchronous, the difference is in the isolation!
+- Oh! I have a massage today! Lol, I forgot. Most of them were booked for Fridays. 12:30, so gotta leave around 12:20 lol.
+- Oh, I don't think I need to actually move much on the shelves. I have a bunch of free space on the last one, so I just need to move some books around.
+  - Books moved! More space for bios and more space for more computer books. I should probably mount these shelves to the wall though...
+- I think part of my problem with Cyfer is that a part of me has been trying to unify a bunch of otherwise separate systems into one. When rather Cyfer is a collection of services (agents) that can reasonably be used separately. For instance, I've wanted to use the browser for editing and viewing things, but then I jump to "this should have an interpreter in it", but that need not be the case! A language interpreter is different from a documentation browser! And while it would be really cool to have it written in CyferScheme, that's a long way off!
+  - Likewise, you can have "cyfer agents" written in other languages. In fact, that's a good thing since it opens up the world for other contributions. The defining characteristic is that they communicate using cyferscript for serialized data.
+  - When I've been thinking about writing an operating system, what that really is is a supervisor. But a supervisor doesn't need to manage hardware, could be virtualized (i.e. hosted). An "operating system" is a supervisor that has agents that control devices/resources. There are many gradations along that line.
+- Something else on my mind is that I'm a tad embarrassed by how much I've been masturbating. Like I haven't been doing other things. But! I also have a ton of movies I want to watch that Sarah probably won't want to watch, and I should just watch them! I can touch myself while watching. It's fine.
+  - Really though, I just wish I had a better way to write while lying down. I have these thoughts come to me all the time, and it's annoying to have to transition to a laptop or something.
+  - I think I also avoid using my intel laptop because 1) the keyboard sucks, and 2) it gets hot. Maybe I should bring Nebula down instead. It also gets hot, but at least the keyboard is more enjoyable to use...
+- With my interest in actors recently, maybe I should buy some books on Erlang... I used to have one. But someone might have taken it?
+- I bought some argan oil and "boy butter" from Amazon for delivery tomorrow. But I think I'll stop at shoppers on the way home from the massage and buy some aveeno moisturizer. I forgot that the argan oil moisturizer sort of dries out my dick lol.
+- Ahhh, good massage. Been too long.
+- Interesting. Reading about OpenDoc and how it's essentially a way for different programs to share documents as links. Imagine that, but with CRDTs for live replication!
+- So what we want to build is a Document browsing interface. Documents being interned CyferScript blocks.
+
+* February 14th, 2024
+- Dog has the pukes.
+- No books in the mail, but I got a speeding ticket... yay. I guess those vehicles with the "drive safely" written all over them are photo radar. Stupid fucking spot too. It's by the airport on a road with a 6O limit but it's clearly designed for an 80.
+- Was supposed to game with Devin today, but his cat is also sick. So not today.
+- Not sure what I want to do...
+- Should go out and buy some more snacks. I have *nothing*. Also some lunches I guess. I have dinners.
+- I should book some massages every week while I still have benefits lol.
+- Went out to get snacks, lunches, and lunch.
+- Gonna start reading one of the new parent books then head down to the basement.
+
+* February 13th, 2024
+- Was thinking last night that I've probably been masturbating to avoid planning out cyfer, even the writing that I wanted to do. It all just seems so vague right now.
+- Got the retainer payment request this morning, gotta pay that. Should also check my finances to make sure I'm good for the next little bit. Also should try using my Amex points again.
+- Holy moly, man, I have a lot of expenses... I've probably been buying too much stuff. Though when I update my finances... I'm fine. Though that'll be ending without the stuff from PS.
+  - I can probably get rid of Backblaze. It's like $14 per month right now, and I'm backing up to the NAS. Just need to set up back ups from the NAS to Daniel's NAS for better replication.
+  - Also need to figure out how to switch my TELUS TV to more bandwidth. If I'm locked in for that pricing, may as well be something I'll actually use.
+- Alrighty, worked out (squats, deadlifts, ab roller) and am just waiting to be picked up by Mercedes now.
+- Hmm, out of Maca. Pretty sure I just got that at Shoppers though. I think I might need to get vegetable/canola oil for the pancakes tonight though as well. So worth a stop. I also don't have any sweet snacks like candy or ice cream.
+- Okay, they're 10min out. So I should have the car around 2 and be back about 2:30? 20min to get there/back.
+- I ordered the art of computer programming box set this morning. I keep meaning to do it, but stop because it's like $300, but hey, I'm rich and it ain't going out of date. Was available as 1-Day delivery, but who knows if it'll actually show today. Also, need to check the mail, wonder if I got any books.
+- Got my car back, was going to check the mail and the driver was there when I opened the door. Checked the mail when I got back and... no books. Sad.
+
+* February 12th, 2024
+- Just met with Taylor from the lawyers. I'll be getting a retainer agreement and then they'll be putting together a letter for my approval to send to Sarah Nash. Hopefully should get a few more weeks of pay out of this.
+- Holy shit. Had "sex" yesterday, but was more like mutual masturbation. Sarah asked if I wanted to cum on her, and I'm like sure, why not? Unleashed a fucking HUGE load. Then masturbated later in the evening and came again. That was like a week's worth of build up. She enjoyed the show lmao.
+- Today is pretty busy what with the lawyer, Sarah has a massage and yoga this evening, and we have the cleaner here and I'm also expecting to get my car back at some point. I've gotta pick up the dog too.
+  - Cleaner here means can't really jack off, which... fair.
+- Holy canoli though. Being able to have non-ejaculatory orgasms is a gift that keeps on giving. Not only are they super enjoyable on their own (they last a long time and are full body experiences), when you finally do have an ejaculatory orgasm, it's fucking incredible.
+- Interesting, I'm reading the introduction to the Project Oberon system, and it talks about how they designed the system in late 1985 and only started programming it in 1986.
+- Damn, updated nebula and it downloaded super fast. Must've been that weird switch issue before.
+- Well, nothing in the mail. Wonder when the Smalltalk Green book will get here, ordered it weeks ago it feels like.
+- It seems notable that the biggest software systems are either operating systems, databases, and compilers/languages.
+
+* February 10th, 2024
+- Fucking stupid fucking tires. Hit a pot hole yesterday and now the car is at the dealer... again. Third time within 12 months. Fucking insane.
+- Vacuumed the basement and upstairs, now just chilling. Going to KBBQ with Will at 4.
+- I think I need to pick up my prescription. It said it'd be available by Friday (yesterday), but it never told me when it was actually available. Might be able to check online though, if so, I'll go and pick it up before seeing Will maybe?
+  - Ah, okay so they are available, but it didn't request the refill on the boosters, so I've submitted that request for pickup tomorrow afternoon.
+- I'm definitely feeling more relaxed recently. Like a lot of the time my mind seemingly shuts off. It feels really good just being in my body. Enjoying my breath. Enjoying urination. Enjoying smells. Enjoying the feelings from my skin.
+  - That anxiety that I need to be doing things still comes up, but less frequently, and I usually just take a breath or so and relax and it goes away.
+  - I think it was yesterday... yea yesterday, I had some incredible orgasms which seemed to keep going and going and going. The key is to relax and focus on enjoying them. I think there's like a subconscious part of me that's been denying myself the opportunity to feel good, and so I hold back a bit. It's almost as if it feels TOO good. Like that's a bad thing. But it turns out I can cross that threshold by being compassionate with myself. And I had to work with that part a bit. Like no, it's not TOO good, if you feel that way, it'll feel even better if you surrender yourself to it. And yea, it does!
+  - I think what's been really working for me is that it feels like loving-kindness. Sometimes I feel like I'm just cranking it because I'm striving for something. When I recognize that's happening, I stop, and just enjoy being there for a bit, naturally I'll start pleasuring myself again, but it'll feel better. I know I'm having a good time when my thoughts more or less stop and I feel more like an animal.
+  - But it's also interesting in that the way to feel really good involves two aspects working in tandem. The first is that my hands and limbs should move with the intention of responding to what feels good, if it doesn't feel good, do something different, if it does feel good, keep doing exactly that. The other is to *feel* how my body is responding. It's like I need to both give and receive.
+  - And it's very much about affection. Feeling cute and affectionate towards myself, and finding how my body responds cute.
+  - The cannabis definitely helps, but I have no problem achieving similar such feelings without it. It just seems to relax me more.
+- Oh, I've been sleeping much more recently too! Like I've been hitting the bed around 10 and then waking up aroun 7 or 8. So I'm getting close to 10hrs of sleep most days, and I wake up feeling so fucking good. Everything just feels so good.
+- Something that's worked for me is 1) telling myself that I'm a good boy, and 2) telling myself that I need some love. Sort of like with the dog lol. Like "do you need some love???" And yea, I need some love ya know.
+- Oh, the boosters are ready for pickup. Alright, I'll go to shoppers before hand... oh, should buy some Diet Coke too.
+
+* February 9th, 2024
+- Just did wrap up (and took the dog to daycare). Also, wrote in my journal a bit this morning about what I want to do today. Big thing is making english muffin pizzas, I'll probably do that in the afternoon. I need to go out and get more english muffins, and may as well pick up a wireless headset for the Xbox that is more comfortable to use.
+- Otherwise, I'm now sitting at the computer back in the office as the painting was finished yesterday. I'm gonna bring the intel mbp down to the basement instead. Might be a good time to try out Obsidian to sync docs between the two.
+- I also want to work out today (pullups and pushups mostly), and take a walk.
+- Oh yea, and search for and buy a book on babies for new dads, since this would make Sarah feel better.
+- Alright, gonna toss the cat turds, go for a walk, then probably go out to Best Buy/Save-on-foods.
+
+* February 8th, 2024
+- Spent a few hours gaming with Devin yesterday. Painters/wallpaper people are here today. They say they'll probably finish it today (I guess the quote was for two days, but that'd be one person doing it).
+- I need to send off the docs to the lawyers and call them with my credit card.
+- Something else I need to do soon is move my will over to Alberta, set up a cohab agreement, and make sure all of my insurance is in order (umbrella and life).
+- Just got back from a walk (no dog today), and was thinking about a lot of things.
+  - One is that I have a lot of tension around work due to boundaries. Specifically, I don't like having things forced on me, my reaction is to flinch. It's why I hated school, it was all meaningless assignments by people who had control over me and my time. Because of that, I've developed a reaction to "work" items. Even ones assigned to myself. But additionally, I have problems with boundaries with people close to me. Like I have an extraordinarily hard time saying no to family. So when Sarah tells me to do random things and random times, I flinch because I feel obligated to do them. Then after I've processed it, I'm usually happy to help. But I think that comes from times as a kid where I couldn't say no or had no recourse when something went wrong. So I felt gyped on the news paper route because it felt like I did far more work for half the proceeds, and I also felt pretty betrayed when I spent the money on Reid for his birthday and he didn't really reciprocate. Or dishes. Actually yea some of this is directed at Reid. But also Dad, like sleeping on the floor when family was over but Reid got a bed and shit like that.
+  - So there's a part of me that's really been pushy on me to make me do things and then I feel bad about it. Then another part of me rebels and makes me do drugs and shit.
+  - But clearly there are things I want to do other than drugs and shit.
+  - And that got me thinking about how setting expectations on myself about my projects is what kills them. It turns them into work! Like there's definitely some part of me that's like "we're doing this because it will make me feel relevant". And man, that's a really hard thing to bear. Why are you putting such high expectations on yourself? You're just a little guy. Ease up a little man.
+  - And really, the reason I think about these projects is because they interest me! But I've been sucking the interest out of them.
+  - And then there's the side where when I DO work on them, I feel an intense need to code because "coding is real work", but that's a weird thing to think. Like, Steve Jobs clearly had a huge industry impact because he genuinely cared about making objet d'arts. Apple is not the same without Steve because of that. But Steve wasn't an engineer or a programmer. So how did he work? By communicating and expressing clear opinions about what he liked and didn't like about things. That's why Apple is so lovable, because while they do have things that I disagree with, you can't but love the charm.
+  - So I was thinking about how I need to focus on *writing* for now on. You're on your PG essay writing arc, and the point of that arc is to clarify and express our thoughts on what we like and want to see more of.
+  - I'd been thinking about how computing feels so dull and uninspired these days and how despite constraits, old computers had a charm that's missing these days. Why is that?
+    - Good topic for an essay!
+  - And these are things we think about a lot, they're fun to think about, and if I share them with the world, I'll find people who are more like me and think about the things that I think about.
+  - And, I've been writing a lot lately! It's easy.
+- Another thing that crossed my mind on the walk was that I should start my mornings by sitting down with a journal and asking myself what I want to do that day. It's a practice I keep intending to do, but don't for some reason...
+
+* February 7th, 2024
+- Got a call from the lawyers office to schedule the meeting. Gotta call them back with my CC number, and then respond to the email with my docs. Meeting is for Monday, so I have time.
+- Gaming with Devin... sometime today. He has chores to do, so will only play for a few hours. That's fine by me.
+
+* February 6th, 2024
+- Had a chat with Daniel. Was nice catching up. He's apparently thinking about building a home theatre in his basement at some point, so I gave him some resources.
+- I should play around with Obsidian some more. I was in the basement yesterday and was having some thoughts that I wanted to write down and so I just put them in Apple Notes, but it'd be nice to have everything in one place. Obsidian has an iOS app, and a syncing service I think.
+- Here are my notes from yesterday:
+  - when i get overwhelmed with medical speak, that’s a really high reaction focused on my gut. so, i probably suppress the feelings in my gut most of the time. which, interesting thing to think about
+  - but following from that, i tried focusing on my gut and it changed my thoughts immediately. like it made me feel like a kid again. and while stroking myself, all of those sensations were very intense. just keep drawing your attention to the gut and what it wants
+  - i think there’s a metaphor there. i don’t trust my gut because i suppress it? what’s it telling me?
+  - another thought. i’ve been trying to suppress my criticizing parts instead of getting to know them and show them compassion. that’s why they keep piping up.
+- Yea, that's something I need to do more: get to know the parts that are criticizing. I've definitely been good at letting the parts that may have been hurt in the past speak up and present themselves, but there are still parts trying to protect them, and us more generally.
+- The lawyer's receptionist responded. They want my phone number... yay... I should respond. But first, let's sort some of these clothes for Sarah.
+- Hmm, was thinking "how can I be interested in my parts when i'm not interested in other people" and that turned into "wait, why aren't i interested in other people?" which lead to "because being interested in other people only brings let down" and that "me being interested in other people doesn't get reciprocated".
+- When I'm not working, I often don't even know WHY. I don't know what's stopping me. It's a non-verbal part I think... Because I can be sitting there thinking about the work positively, but nothing comes out of it.
+- I'm afraid of becoming too invested in my work. I've done this before, where it captures my attention so powerfully it's like the rest of the world disappears and I can't break out of it. Like, people will be talking to me and the only thing I can think about is the work. The other thing is that attention is often directed at something frustrating or unclear, so it's intense and kind of negative, and I don't want to hurt others when I'm in that frame of reference. In particular, I'm afraid of becoming deeply invested in something just as I'm about to have a child. I've had the thought about how I don't want to start something that I'll abandon due to the child, but the other side is that I'm afraid of becoming so invested that I shirk my duties to the child/Sarah.
+  - I think I'm afraid of the problem solving mode because it's kind of domineering and I don't like the way it makes me feel and I feel out of control.
+  - Ah it could also be sort of being afraid of my shadow. Like how I haven't felt "horny" in awhile. It's that I'm suppressing parts that have an aggressive undertone.
+- Should work out then take the rest of the day off lol.
+- Hmm, so the shower heads don't have a threaded end behind the wall that I can see. It's just the end where it connects to the rainfall head. While I could get a showerhead for it, I wonder if it just makes sense to get a nicer setup in there by getting a plumber/contractor...
+- I'll bring the computer down with me to the basement. I don't have to sit here to work. In fact, I probably did more creative work on the couch with the intel laptop in Kitchener. Makes me kind of want an Air... and then have like a Mac Studio up here lmao. But then I'd need a second display. Wonder if I have any other USB-C charging cables... or if they're all being used by the UGREEN. WTF, I bought 4 of them? Where'd I put the other 2? I'm... really confused. I don't see them plugged in to anything. Are they in the basement?
+  - Lol, found them in with all of my other cables. It's just I had never opened those two, so they were still in their original bags.
+
+* February 5th, 2024
+- Alright, washing the new blanket. First impression is that it's thinner than the big red one, it's also a bit rougher feeling on the top. Hopefully the wash softens and fluffs it up a bit. It's like it's in between my bedsure ones and the burgundy one.
+- Just got back from walking the dog. Did a slightly longer walk than usual because of people in front of me on the path. It's cold out, but warmer than I was expecting, ended up taking my gloves off and opening my jacket a bit. Good thing I didn't take the big green one.
+- Thinking on the walk about interpreters, and compilers and how compilers are really two things: 1) translators, and 2) optimizers. It's kinda funny how we got stuck with "compile" as the word when a compilation is a collection things put together into a single work (which is what a linker is!). But it also suggests the development path. Start with interpreter (operationally execute code), then make a translator (convert code to another language, probably Lisp), then an optimizer, and do that recursively.
+- Had a good weekend. Quite busy all things considered. The wings were really good! The gochujang sauce was super fucking tasty, I kept some extra and will use it to dip chicken tenders in. Just eating it with chips was fucking delicious.
+- Oh, the Klipsch speakers are on sale again. Though should sort out my finances before buying anything. Also, haven't heard back from the lawyer yet. If I don't by tomorrow, I'll try following up and then maybe reaching out to another lawyer (eww, Gowlings).
+- Oh, Reid reached out to me asking about creating their own website for their comic. He says he hates using Wordpress (yea), and that they want something more modern except they don't want to deal with Webtoon's content policy, which fair. So I guess Ursula is designing something, and I figure I'll borrow the work from Alice to build that. It'd be good to have two comics running, it'd be easier for me to manage and make sure they're up if I'm also responsible for Reid & Ursula's stuff.
+- Damn, electricity bill this month is like $300, just for electricity. I'm thinking solar panels would be a good idea for us. Gas was $130, which is the most it has been, but makes sense, we had that deep freeze so we needed to burn more. Still so cheap compared to electricity. I have a feeling a good chunk of the electricity was the NAS and the hot tub. They both went in around the same time after all. Home theatre probably added a bit too.
+- Need to take the Xbox to the basement and make sure it's ready for Wednesday gaming with Devin.
+- That UGREEN galium nitride charger is pretty dope. It's in the bonus room now and I can charge everything we have there. I even have a lightning cable set up for Sarah to charge her phone. I'm literally charging her laptop, the Ally, and the Deck all at once. It might be worth getting another one for the basement.
+- And the Xbox is good to go! Controller kept disconnecting though. Not sure if it was just low on battery or what.
+- I don't know what to do with my day... I really just want this blanket to finish drying so that I can give it a test run.
+- Lol, PS hasn't paid the App Store danegeld and it was associated with my Chalk account. Meanwhile, you seemingly can't change the account holder when the membership hasn't been paid? It didn't even give me that option. At least it's associated with ryan@chalk.com and not my personal. So I just hopped on a call with Daniel and changed the 2Fac phone number and password so that he has control over it.
+- New blanket definitely isn't the same as the burgundy. I also can tell that it'll start pilling up the same way the bedsure ones do and will get rougher feeling over time. Sad. So still need to look for replacements. One thing that's nice is that it's a kind and it's HUGE.
+- Had fun with my blanket. Want to go back after this. But noticed feelings of shame creeping up again. I think that's a really good characterization for what I'm feeling. It's a feeling of "I shouldn't be doing this" followed by a number of "reasons": "I should be doing something productive" "This is weird and others would look badly on me for engaging in it."
+  - I probably take drugs to turn that OFF. To shut out the criticism. And yet doing drugs also makes me feel shame!
+  - Hmm, from the article in Integral Guide on Shame it took me to criticizing (a technique of Parts to keep us safe), and a lot of the things resonate (trailheads):
+    - "a loud, critical inner-voice"
+    - "self-critical thoughts, perfectionism, or other unrealistically high expectations that inevitably lead to disappointment or burnout"
+    - "feeling small or diminished"
+    - "a drive for self-improvement"
+    - "controlling your performance so you don't get rejected"
+    - "constantly worrying about how your appearance or how you're coming across so you don't get rejected"
+    - "never allowing you to be vulnerable out of fear of rejection or judgement"
+    - "keeping you humble or invisible, never letting you feel good about yourself, so you don't feel good about yourself or strive for any kind of goal. this way you don't get hurt and stay under the radar"
+
+* February 4th, 2024
+- Ahhh, nice morning. I moved the big blanket into the bedroom and slept in that last night. So fucking comfy. I also set up schedules for the thermastats in the house so that they cool down at night to 19c. Definitely felt it, nice to have cool air in the bedroom at night. Only thing is that there are two different thermastats with entirely different interfaces and it's a pain to do both. I wonder if you can get a Nest or something that will handle both. Would be nice to have an app or something to set things up rather than standing at a wall for like 10min.
+- Took out the cat shit and walked the dog. Also prepared the wings for tonight, so they're sitting in the fridge drying out. Just need to bake them and make the sauces. The honey garlic was a marinade, so it's really thin. I'll need to boil it for a bit to thicken it up.
+- Not sure what I want to do with the rest of the day.
+- I should order and pick up the CBN:CBD since I'm out and I don't want to take something with a tonne of CBD in it.
+- Sad. My new blanket is coming tomorrow instead of today...
+- Oh! The blanket is now out for delivery! 4:15-7:15. Should put the sheets on the bed in the basement.
+- Played some Mario Wonder. It's pretty good so far! But it's been interesting going between it and Spongebob. I've been having fun with Spongebob and will pick up the other one when it next goes on sale. Ah it was $20 during the last sale. So hopefully goes up again soon.
+- My headache is coming back, though I'd say it's not exactly a headache since it's localized to my neck. Thinking of doing some pull-ups and pushups in the basement for a bit.
+- Did my workout! Headache is gone, although might also be due to the tylenol I took earlier. Spent a bunch of time afterwards listening to music on the hifi. God I love having big fucking speakers. Put on Til I Collapse and was like "I need to host a rager". lol.
+- Need to take a shower and rinse, my armpits are still sweaty from my workout. I think around 5 we'll be going to pick up more baby clothes, then when we get back I'll start on the wings.
+
+* February 3rd, 2024
+- Went to Walmart this morning. Bought some more TFal frying pans as well as an InstantPot. Although, the whole reason to go was to get a pan with a wire rack for wings and then we forgot to buy one lol.
+- Then went for lunch with Will, nice to catch up. He helped me bring the bed down from the baby's room into the basement. After I dropped him off, went back to Walmart to get the pan/rack and also picked up the wings for tomorrow.
+- Bought more cannabis oil. Though I fucked up. I thought I bought the same CBD:CBN mix, but it was CBN:THC. So I'll have to get the other one. I took 1ml of it last night and it was really nice and relaxing.
+- Got home and then walked the dog (who is now VERY dirty), and then put the bed back together. Thankfully the rug that was in that room fits underneath the bed, so it's a bit out of sight out of mind.
+- Busy day! Time to relax and unwind.
+- Oh yea, ordered another Sherpa blanket! Was really hard finding one that's really thick like the burgundy one I have. That one came from Bed Bath and Beyond, so not exactly easy to find anymore and the tag has faded so I'm not even sure of the brand. I found one on Amazon that looks decent, people say it's nice and heavy almost like a weighted blanket. Ordered it in black. Most other sherpas are like the ones I have for bed, which are much thinner.
+- There's clearly a part of me that I think I characterize as more effeminate/autistic and I think I do a lot to suppress that due to stuff from school and elsewhere. But it feels so good letting that come out. :/
+- Also occurs to me that I have a tendency to say to myself that I don't actually have that much trauma, and I recognize that by saying that I might be denying the pain that I've experienced. Just because other people have it worse doesn't mean I'm not worthy of compassion (re: this is probably a form of people pleasing).
+- Most of yesterday I had a really bad tension headache at the back/bottom of my neck. It went away in the hot tub, but then came back with avengeance afterwards.
+- I've probably been avoiding meditation not because I don't want to do meditation but because I don't want to do mindfulness meditation. But there are many other types. And it'd probably be really helpful for me to do metta meditation.
+- Oh something interesting at lunch with Will is that I asked him about shisha and he said he hasn't been doing it because he's had a swollen tonsil! He went to the doctor and the doctor was like "probably nothing" (similar to mine), but also "if you really care about it, I can refer you to a specialist" and so he went and they stuck some thing up his nose (which feels a lot like a covid test, i.e. weird), and the specialist was like "I don't see anything wrong, which suggests it could be mono". And huh, hadn't thought of that! I guess, because you share shisha, you could get mono from someone else passing it around. And yea, that'd suck. I wonder what other symptoms there are...
+- It's not fair to characterize myself as effeminate as a derogative frame. I'm a boy. A good boy. And a cute boy. And I want and deserve friends that love me for who I am. Yea.
+  - I think I use weed to turn off the self-critical parts temporarily. It's this other side of me trying to get out. And it's the side that feels most in tune with my body. That isn't self-critical of it.
+  - So why is it being suppressed? It doesn't believe us to be capable of protecting and standing up for ourself? So it hides it?
+- I'm SO excited for this new blanket. :D I love big fluffy blankets so much.
+  - This is such a plus to being hypersensitive. If most of the world is a little too much at times, we owe it to ourselves to indulge in the good parts.
+  - Ahhhhh!!!!! Love this. :D
+- I need a tums, feeling some acid reflux.
+
+* February 2nd, 2024
+- A few things to do: need to reach out to employment lawyer, box up the PS laptop and send it, vacuum the ceiling a bit and then put all of the boxes back in there. Maybe move some stuff around so that dad's stuff is away from that wall.
+  - I also need to make sure my finances are in order for paying off the credit cards. Should use points on the Amex.
+  - Huh, there's an error with the Amex and I can't use the points... I guess I'll have to call in or something.
+  - Moved some cash over from the LOC to cover the cost of the credit card payment. It'll actually go back to normal after the next payroll cycle, it's just a bit early. Figure I'll pay both of the LOCs off with the lump sum from PS.
+- Okay, sent an email to Melanie. Need to assemble the documents in preparation. I have the exit package and release forms downloaded as well as my employment contract. I'll also need to get stuff from the sale (in particular the stuff about non-competes). Question is... where did I keep that?
+- Well, I have SPA from Will (thanks Suraj for emailing about it earlier!). The non-compete is part of that, and by my reckoning, it's in force until 2027.
+- Now to box up the laptop, then should move the boxes in here around.
+- Alrighty, that's most of what I wanted to get done. I moved the big desk closer to the closet door which gave some room for dad's art/boxes. The rest of the boxes are now back in the closet. Still need to clean up the desks a tad, but much better. Also nice that there's no more PS laptop just sitting on the desk.
+- Sarah's home, she intends to take down the garland and move stuff out of the baby's room. We'll see how much of that she actually does... and I expect she'll probably ask me to do stuff.
+- I was reading more of the IFS/Integral Guide to Well-Being on the flight and one of the things it talks about is that you can spend time procrastinating on the IFS work by reading about IFS. Lol. Lmao. So I think I should plan on doing that stuff.
+  - While listening to music on the flight "Rise Above This" came on and I started feeling really sad. And thoughts about being abandoned came up. Clearly triggered something in some part.
+  - Something else occurred to me too: I repress my desire for sex because I think I feel ashamed of desiring it. Also, despite me telling Sarah when I'm gonna masturbate, I still feel weird about it and I don't like announcing that I will. There's also an element of joking about it and poking fun at me doing it that I'm not sure is good. Like I say I'm gonna diddle myself. I really don't like that framing.
+  - It's funny, being back home triggered the thoughts about "you need to be working, get to work after walking the dog". I didn't really listen to them though and enjoyed just walking the dog and taking in the fresh air.
+  - Another article I think I saw on the Integral Guide was about deep non-sleep rest, and I think that's kind of what I do when I cover myself in blankets and just chill.
+  - I was also thinking on the walk about how hard it is being a highly sensitive man. I'm clearly really sensitive to certain things, like light and sound, but also empathizing intensely with other's pain. Last night during the birthing class I started feeling light headed again. Actually, it's not quite light headed, it's more that I feel really uncomfortable in my gut. But I don't want to make a scene, so I don't say I'm having a problem because I'm embarrassed about it.
+  - Oh, another thing I was thinking while on the trip was that I can work out whenever I want. If I'm dreading doing the workouts in the evening, I can just do them in the morning or at lunch or whatever. They can also be as long or as short as I want them to be. In particular, I need to focus on my upper body some more, push ups and pull ups in particular. There's something to be said about getting them out of the way first thing.
+    - Well, I was just thinking, "why not do them right now?" But I've got a tension headache in the back of my neck and I don't know if that would be a good idea at the moment.
+- I think I should take down the christmas lights in my office. I haven't plugged them in in awhile. Okay, let's do that then take a shower (and shave my chest).
+- Okay, wings have been ordered for tomorrow.
+- I need to get some groceries, for things like snacks and lunches, pizzas, what have you. I'll go and get kimchi and maybe fish cakes from T&T tomorrow. Actually, that would be awful in terms of crowds... maybe should just go do that today.
+- I kind of want to get a new rice cooker. Ours is kinda shit and falling apart. Just use it for the dog.
+- Need to make sure we have a wire rack for use with the baking sheets.
+- Alright got most of the stuff. Save On Foods didn't have any brown sugar though... odd.
+- This tension headache is getting worse I think...
+- I wish I knew what was going on with this constant congestion in my right nostril. That and the tonsil stones mostly occurring on the right and said tonsil being red and sort of inflamed all the time makes me think something is up. But not sure what...
+- I've done a lot today. Need to rest and relax.
+- I took some CBN/CBD, I'm wondering if it'll help with the headache. Now considering whether or not to take some THC. I've been off for a week now, so not a lot.
+  - The guide talks about how we have to recognize the harm caused by an addiction to understand it as an addiction. And I only vaguely understand what the harm is. Thinking about how it makes me congested has definitely put me off using it especially in large doses, but otherwise I'm not so sure.
+  - That's what's confusing to me too. Because when I don't take it I don't feel withdrawal really, not even close to the way I do with Vyvanse. And I don't need to up the dose either, upping the dose tends to make the experience more negative than positive anyways. I've been keeping a consistent dose for some time now.
+- I wish I had a better term for what I do with the blankets. It's the first time I've ever had an experience where the lack of a word to describe it makes it difficult to convey what exactly I'm getting out of it to others, and so that's probably why I don't even tell Sarah when I'm doing it, because I don't even know what to call it. Maybe ChatGPT can give me a word? Or make one up?

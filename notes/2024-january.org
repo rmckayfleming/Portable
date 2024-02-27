@@ -1,0 +1,837 @@
+* January 31st, 2024
+- Saw Mom yesterday and felt kinda bad because we didn't exactly talk much. Was thinking on the way back about how to change that, because every time I go there it's essentially the same thing: complaining about the state of the world. And so I just start tuning everything out and go on twitter, since at least that's a bit more interesting. But still, it's not ideal. In the car back, I was thinking about what could be different and I realized a lot of the problem is that 1) due to the environment, there's not much else TO do. That is, you're all just sitting on couches facing each other and there's no room to do anything else. Ideally, you'd want to do some sort of activity or something, and that got me thinking about how few activities people DO in households anymore. And while on twitter there was a thread about Aella's dance hell event at vibecamp, which got me thinking about dancing and singing and stuff. Dancing and singing aren't something people do much now, and I think it's because we tend to look at things as performances, that is, it's not worth doing something unless you're entertaining someone else and therefore you have to be good at it. But that view robs you of the joy of doing those things! And it further goes to make us fell disconnected from our bodies. The thread on dance had me thinking about how people often don't dance because they feel like they don't know how, so I thought about having "bad dance parties", that is, the purpose is to be bad at dancing! If it feels wrong, it's right kind of deal. And the point of that is to just have fun dancing by giving people permission to dance badly. Of course, can't really dance in the car while driving, but just thinking about it had me bopping along to the music more and I turned the radio up and started singing as well, for the same reason! You can sing badly, nothing's stopping you from having fun! So that got me in a really good mood after having felt kind of disconnected and bored at the house. Once we got home I started dancing and had some fun with Sarah doing that, and felt an entirely different side of myself. Similar to how when you get really into drawing, how you start to look at things differently, it put me in a very different state of mind, and I felt really free after that to just be stupid and weird. You have permission to have fun and be weird and do stupid things!
+- Later in the evening we went to Sole to have dinner with a bunch of the Chalk guys and it was so much fun seeing everyone. We ended up staying for like 2 and half hours and were the only people left in the restaurant (in fact, they were closed but didn't ask us to leave).
+- I think I was also thinking about this stuff due to finding the Integral Guide to Well-Being the other night (from twitter of course): https://integralguide.com/About It's really interesting, talks a lot about self-help stuff and IFS in particular. I was reading a few pages on it and will probably read more. What I found particularly interesting was stuff about People Pleasing as a Protector behaviour (Protector being an IFS term), and realized that yea, I do a lot of People-Pleasing. Not all of the forms obviously, but a lot of them. And it's about making people feel safe and comfortable to the exclusion of your own comfort. I think a lot of that probably stems from issues in childhood around safety. Especially things like emotional safety. Feeling like I'm responsible for other people's emotions (in particular Mom's). Something that stood out was essentially how I don't think I'd ever break up with someone for fear of hurting them. That their needs are more important than mine.
+  - I don't think I have any really deep seated traumas (I feel like they would have come out in therapy by now), but it'd be interesting to see an IFS practitioner. But barring that, there are guides and resources in the integral guide that I think are worth checking out, in particular journaling guides.
+  - Oh, I also just downloaded Obsidian since the guide is built in Obsidian which is interesting. I think it'll be interesting to see how it works, at least for inspiration for my own tools at some point.
+- Perfectionism is also something that is in the guide. I think I need to give myself permission to be bad at things because I was rewarded for being good and perfect at stuff like school, but it's holding me back now that my goals are self-directed.
+- When I first opened Obsidian, oddly the browser inspector was open on the side. I don't know if I've used it on this laptop before and I had it open or if that's just a default behaviour?
+- Something I don't do enough is reflecting on myself as if I'm viewing my behaviour and problems as a friend would. My problems might have obvious solutions if I took the frame of an outsider. Like, if I keep doing the same thing and failing, obviously I'd say "try something different".
+  - For instance, I keep getting caught in the weeds while programming. Why? Well, if I keep doing the same thing and running into the same problem, I should do something else. I was reading a bit of Introspect about how most problems are project management problems and how project management is really about enabling collaboration. And that was actually a really helpful reframing. Because I have this weird problem where I have a strong distaste for project management and avoid it (often because of team stuff), but it applies personally too. Anything that happens over a time period longer than a day is a project which means you need to collaborate with your future self. So how do you do that? And I think with Cyfer for instance, I have all of these ideas in my head about what functions there should be and what not and it all feels so daunting, but the first step is to just get things out. The problem I had was that I'd try and start implementing them in Lisp, and that felt weird. So instead, I started writing everything out in an org doc as headings. Right now there's nothing under them about what they are or what they mean, but I'll get there, the first step is to just get the ideas out of my head. And then it's a matter of just filling in the blanks! And the thing about filling in the blanks is that that's project management! I can easily put that list together and have Daniel start implementing it for instance (or chatGPT). Maybe I'll find some things that I don't want anymore, and that's fine, I can always delete them. But once they're out of my head, I can stop ruminating on them because the rumination is really about trying to remember things. When they're on a page, I don't have to remember them anymore.
+- Had the meeting with Andrew this morning. My annualized return last year was 15%. So on 2.5M that's 375K. Holy fuck.
+- A reocurring problem for me lately is the inability to relax in large part because of judgement about "doing nothing". A part of me doesn't allow me to just "do nothing". I think there's a value judgement there that I picked up from mom, and people online. The idea that your self-worth comes from doing work. So it's funny that another part deeply resents the need to work, and so doesn't do it or views it as beneath me. Lol that's funny now that I write it out. I do nothing because I don't want to do some specific thing, then I judge myself for not doing anything. Or worse, I push myself to do a thing I do like so much that I begin to hate it. WTF bro.
+  - The desire to use ADHD medication and stimulants is driven by the part that wants us to be productive for social approval.
+  - The desire to use THC is driven by the part that wants us to rebel against authority and just "do nothing".
+  - The productivity part tends to be more dominant which is why the other part needs to do something drastic (weed) to get its needs met.
+  - But we could probably satisfy a lot of the same desires by doing more things. That is, part of the reason I don't like "doing nothing" is that I don't think I actually enjoy a lot of the things I usually do when I'm "doing nothing". They aren't satisfying. And I could be far more productive by entertaining different interests rather than putting all of my eggs in a single basket/project, which duh, you need diversity.
+  - And I've probably avoided doing a lot of different things out of fear of judgement from others for being bad at them. So that's why I feel much better after allowing myself to just do something and be bad at it.
+  - Lol, just thought "what would it look like to be bad at being an addict???" "oh nooo, I forgot to take my drugs!"
+  - I also think I've been avoiding doing things for fear that Sarah will feel abandoned by me doing things outside of the house for instance.
+    - Ah this is people pleasing.
+  - News flash, it's not like you're financially unable to do things. You're free to do pretty much anything really. Most of the limitations are artificial walls we've built.
+- Was thinking the other day that we should be going for more drives in the country. We haven't really explored Alberta and we really enjoy driving around listening to music.
+  - Fuck like, we should be driving to Banff. What's the worst that could happen? We destroy another tire? We have CAA for like 200km.
+- Something else to do: cooking! Specifically, wings for Sarah.
+
+* January 27th, 2024
+- Had a good time at the wedding yesterday. Well, kinda. Went on a little longer than it should have. But, I was the best dressed person there (lol), and probably the most attractive too (lol).
+- Went to Bulk Barn this morning to buy candy for the baby shower, then went to Best Buy. Bought the new Mario + Rabbids game, was effectively $6 because I had a $50 gift card.
+- Got home, took a huge shit. Then spent like 30min wiping my ass. Miss my bidet.
+- Going to Ingersoll this afternoon to spend a bit of time with Mom before heading to London to visit with the Howards.
+- I'm sitting here thinking "oh, maybe I should do some programming", but then I don't. Why?
+  - Is it because I don't know what to do?
+  - Is it because of perfectionism?
+  - Is it because I'm overwhelmed?
+  - Is it because I don't think I should be doing that right now?
+- I should start talking to ChatGPT more. Practice explaining my problems to other people. It's using it as a sounding board.
+- I think part of my issue with Cyfer is that I'm trying to develop a language without a problem looking to be solved. So I keep thinking about it, but I don't have anything to apply it to. And then I end up bikeshedding with myself on it. But on the toilet I just had a thought that, oh, I can just start writing in the language I want (which is clearly just a Lisp), and then by doing so I'll be driven to implement it.
+  - Like, if I write them in files, I can load them with the reader that I've developed. So I'll naturally have a bunch of test input.
+  - Lol, so I go to create a Cyfer directory to store said code and... I don't know what to create first! Once again, dashed by not knowing what I actually want.
+  - Could be that I don't want to start "something else" because part of me knows that I'll end up spending time on implementing the language instead of the "something else".
+  - Or it could also be that I don't want to start "something else" because it feels like I'm ABANDONING Cyfer!
+    - Oh, that actually could be it. I feel like I abandon things too readily and so I've never completed a project on my own!
+    - Hmm, I think this goes way back actually. I've been struggling with this forever. Think all of the aborted wiki attempts I've had over the years. I'm clearly intrigued by the idea, but I keep having aborted starts. Why?
+    - My successes have come from having partners where I can mentally and emotionally let go because it's something bigger than me.
+  - I also have too many ideas. So if I focus on one, I feel like I'm abandoning another, or I'll forget about it or something.
+- It's like I need to learn how to be a product manager lmao. Or at least separate and tease these things apart. Like how Visa says everything comes down to project management and personal emotional management.
+  - I've always pushed back on process and project management, it bores me to death for whatever reason. I just zone out completely. Why? Might have something to do with school. It also feels oppressive.
+  - There are a variety of things that come up here.
+    - I dislike project management in team settings. It's awful.
+    - A lot of project management techniques don't work for me (I intrinsically push back against them), notably deadlines.
+  - WTF, I hate it so much, that I don't work well on teams. It feels so stifling. And because I don't like it, I don't believe it'll work for me personally, and I don't like enforcing it on others either...
+  - It's supposed to be a tool that helps me, so why do I throw it out immediately?
+  - I saw a tweet somewhat recently to the effect of seeing things as extensions/parts of your mind rather than external to your mind. Like writing or calendars or shit.
+    - Like how when you're driving a car, you feel like you ARE the car, or rather the car IS you. I might be seeing digital tools as separate things rather than integral parts of me.
+  - I think what needs to happen is a reframing. And if there's a part of me that's rebellious, I need an outlet for that.
+  - I really don't like being told what to do. So much so that I hate telling other people what to do, especially myself.
+
+* January 25th, 2024
+- Interesting, Porter has free in-flight wifi. Figure I'll bring the Mac instead of the iPad.
+- On the plane. Took an oddly long time to open emacs for some reason. Wonder if it was waiting on the network or something.
+- Had the thought last night that (the ...) would be a good function name for essentially memoized values. That is, it works like funcall, calling a function with arguments and it retains the value by equality testing everything passed to it. So you could say (the Symbol "abc") such that it always returns the same object.
+- I was very interested in programming while driving to the airport, but now... I am not. Probably because it's a tad cramped.
+
+* January 24th, 2024
+- Have the ultrasound today at 2:15, but more like 1:45. Sarah has a OBGYN appointment before that that I won't be attending, and depending on how long that takes she'll either pick me up, or I'll have to go by myself. Other than that, no other obligations.
+  - Oh, I have to check in to our flight. Though that's more chill considering we picked our spots already.
+- Was playing Avatar last night and it was really choppy. Went into the settings and it was set to favor quality again. Which is odd, since I don't remember switching it back. The game is opening up more now that I've finished a few quests.
+  - I switched from guided to exploration though since the game gave me a quest with 7 mins to get to some location that I'd never heard of and didn't show up on the map. It said "follow the smoke" but I didn't see any fucking smoke. Eh.
+- Was thinking last night while falling asleep that I should use # as quote essentially. That is, # means "persistent". #n, #f, #t are always those values for instance. But having those open allows me to have #(), #[], and #{}. #(abc def) should always be #(abc def), that is it contains words. #(...) essentially gives us compound identifiers. #[] is essentially code, and #{} is a cyfer space (a mapping from values to values). The idea is that #() acts indirectly, it could be lazily loaded for instance. So #(#()) is different from #(()). Which is to say, #[], #(), and #{} can be replaced by a #sha256 content identifier. Whereas (), [], and {} are encoded directly in the body.
+  - This also addresses the "issue" I was having identifying between hashes denoting blocks of bytes and hashes denoting encoded values. That is, we have 4 such types now. Bytes (no literal encoding), tuples, lists, and tables. Another thing is that because their bodies aren't reduced in any fashion, order doesn't matter in the same way as it does for the other compound types. So #{} can have keys and values in any order, which makes sense since the actual encoding might be sparse.
+  - The # collections are all immutable, it's an error to modify them, you always have to create a new one, whereas the others could go either way.
+  - Only thing is... what do we do with words? They don't really belong to a lexicon in this system. They'd be bare words.
+  - Only persistent collections can be "interned", that is stored.
+  - Maybe words are just instances of symbols? Symbols are always deduplicated, words aren't (they're "instances" of symbols).
+    - Symbols are always is?, words are not. But words are =.
+  - (), [], and {} are meant to be interpreted, #(), #[], and #{} are not.
+  - Atomic objects are ones that can be encoded literally. That is, they are primitive.
+- Gonna have to implement =, maybe worth looking at generic-cl now.
+  - Freeze takes an object and returns a persistent version of it. Intern takes a frozen object and stores it giving you a token to retrieve it.
+  - Frozen objects are essentially a promise for a data structure.
+  - Backquote can be for creating frozen objects, as essentially a template.
+  - Could use #"" as the syntax for bytes, it's just encoded using text? Like, that's the syntax for plain text files lol.
+  - Alternatively, #[] is the encoding for bytes (every element must be a number from 0-255), and we use `' for lists denoting messages. Though that leaves open the possiblity of #`'... Hmm, well that would actually be a frozen message.
+  - Words are just holes in data structures.
+  - It is kind of good though to have #, because it essentially means "delay this". So they can represent links.
+  - Should I just ignore words for now?
+- Freeze and thaw seems like a good idea. But it's unclear to me how it should work exactly. Like, what objects are reasonable to freeze?
+  - Freezing an object and immediately thawing it should be the equivalent of a deep copy.
+  - What happens if you freeze an already frozen object?
+  - They denote symbolic data.
+  - Atomic makes sense for symbols and numbers and shit like that, but it's odd to call lists, tuples, and tables atomic, but they kind of are?
+  - They're just called primitive data types. Why am I avoiding calling them that?
+  - All of these are primitive data types, specifically primitive atoms and primitive sequences. Everything else is composite.
+  - Hmm, seems a lot like quote! And freeze is quotify.
+- I'm pretty sure that words are just symbols associated with an environment. So the printed representation is always just short hand for (@ :...). When you use name qualification then, you're just specifying it differently.
+  - Actually, a bare word could be understood as a tuple containing solely that symbol. That is, it's a box with a symbol in it. Unbox it to find its name. Qualified words are pairs (or greater). In fact, maybe that's their type. Box(Symbol).
+  - Well, pretty much everything can be viewed as a tuple of things. That's how most things are implemented after all.
+  - Ah, so maybe what we need is the idea of an identifier? Which is the generalization of a word.
+    - Our gensym equivalent is a word qualified by some environment.
+- God, don't know what to do about words. Was thinking in the car about how they can probably be replaced with a lookup syntax, but still, annoying to have to design.
+  - Maybe the reader calls a function or signals a condition passing it the symbol? Then you can do whatever you want with it.
+  - It's a question of when do they get resolved? Is it something the reader does? Or something the interpreter does?
+  - Words meaning "within the current context" are fine. It's when you get into things like "I want this relative to the global environment" that are weird. Especially because you likely want to sandbox those.
+  - Words are probably just words (still pointing to a symbol). Qualified words are probably short hand for something else.
+- Alright, checked in for the flight. Time to listen to music or play Avatar or something.
+
+* January 23rd, 2024
+- Accidentally took my booster instead of my vyvanse, but still took my vyvanse. So now I'm AMPED. lol
+- Spoke with Daniel, nice to catch up. Mostly talked about specing out his Rembrandt server build. Threadripper? Threadripper Pro? EPYC? Lots of trade offs. EPYC is the most versatile in terms of memory and available CPU SKUs, but EPYC motherboards are all weird (either server form factor, or weird choices). Threadripper is more limited in memory bandwidth, but has normal motherboards. Threadripper Pro is more expensive and hard to find. One idea we had near the end was get a TRX50 board and a base model Threadripper Pro CPU. That way, if you need more memory, you can just get a new board (one of the WRX90 Pro boards) since the TRX50 supports Threadripper Pro CPUs as well, but if you find you need more CPU you can just upgrade it. TRX50 boards are available right now, but not WRX90 boards. But it might be hard to find a Threadripper Pro CPU available for purchase.
+- Have a haircut today at 12:30. Gotta pick up milk for bubs too.
+- Didn't sleep all that well last night. Couldn't fall asleep, and even when I did I kept waking up tossing and turning. That's one nice thing about cannabis, it really does "turn off my meds" so to speak.
+- Well, I should walk the dog now, and then I'll have time to do some work before I need to head out for my haircut.
+- Oh, also booked the car for Ontario. Went for a "small SUV" since it was the same price as a compact car and gives us more room for shit.
+- While I'm walking the dog, should think about what I need to work on with Cyfer next. I think it was mostly making PUT work since I have it reading from the stream now (which took awhile to figure out), just need to actually save it (since right now I'm just echoing the result back).
+- Hot tub testing kit was in the mail. It's one with liquids instead of strips, so might be easier to read.
+- Okay so for PUT, I can parse the body now, but I need to actually intern it into the Cyfer Space. The path is looked up in the current Cyfer Space, so it resolves current words, but for unknown words it adds them to a new cyfer space. So I need to transfer those over. Except... that Cyfer Space is gone after the router is done with it. So may as well wrap the whole request in it? Then have some sort of function that merges a cyfer space with its parent?
+  - I think it makes sense to add middleware then.
+  - Alright! Got bindings working, and collapsing cyfer spaces into their parents.
+  - Also cleaned up the middleware a bit in the server code. Instead of using the builder DSL, I'm essentially doing it myself. The build is a macro, so it's a tad annoying to build things dynamically. But I essentially took the logic out and do it on the fly now. Mine doesn't lookup Lack middleware, so you have to do that yourself, but whatever.
+- Something odd that's happening is that when CURL receives a 406 or something, it just seems to hang? Is it because there's no body? Hmm, if I set the body to the empty string it terminates. That's odd. Am I supposed to have a body for 406?
+  - Ah, MDN says the following for 406 "If a server returns such an error status, the body of the message should contain the list of the available representations of the resources, allowing the user to choose among them." So return a list of mimetypes I guess?
+- Alright, so I have bindings working, and it fails on numbers, which I suppose makes sense.
+  - Really, I wonder if path should look at everything as a word? Like, wikipedia has entries for numbers. But it treats them as words.
+  - Maybe it doesn't really make sense to convert things at all.
+  - Well, things to think about while getting my haircut. Gotta head out for that in a few minutes. Really, it's a matter of what do I do next? Since I finished off my last task.
+  - I suppose I should make it work in the browser instead of just via CURL lol. Shouldn't be very hard to implement, most of it is there already.
+  - Nice thing about separating cyfer spaces into essentially layers is that you can easily get an index of words that are only defined at a specific level. So if you inherit from Cyfer, you don't necessarily see `define' or `let' or shit like that.
+    - In fact, it might not even be relevant to have words as a data type in and of themselves internally, they can always be denoted by (@ "word"), that is, a generalized variable denoting the place of the word in the cyfer space storage.
+- Feeling fresh. While I was out it looks like Sarah Nash sent through the latest terms. Let's see if they reduced anything.
+  - Hmm, they didn't change the termination date, but increased the severance to 31 weeks. Odd. Well, guess I should reach out to a lawyer.
+- It's weird how much more focused I am having accidentally taken the booster. I guess my brain was expecting just the normal amount. I should shake things up like this more often. Confuse my brain.
+- We have an ultrasound tomorrow. Completely forgot about that.
+- What do I want to do with the rest of my day?
+  - I think I'd like to take some THC/CBD tonight. I think I need a good sleep. Do I take another booster? Probably not worth it.
+  - Might want to play some video games actually. Avatar perhaps.
+- Oh, recently I was thinking that the speakers sounded different, like they weren't as punchy. Turns out the subwoofer config went back to being LFE instead of LFE+main, so music wasn't using them. Really odd why that happened. But they sound good again. Odd.
+- Something that's run through my head a lot recently is that Cyfer should actually be really simple, and in fact it for the most part is, programming languages are in many aspects a solved problem. So why do I seemingly take a lot of time to get this down? It should be a matter of just writing shit down. But instead I spend a lot of time hemming and hawing over aspects that are probably super unimportant. It's like, maybe I'm making it take long because it feels like it should take long? Like I think it's a big project, so I make it into a big project?
+- This thread about a post on Ruby Syntax Sugar has some really interesting discussion on module systems: https://news.ycombinator.com/item?id=39098803
+  - Someone mentions Modula/Oberon as an interesting system for handling this stuff.
+  - What stands out to me though is that a lot of "issues" people have with modules comes down to the interface between the interpreter and the file system. Like, does a file conform to a module? Or are modules distinct from files? When it's rather clear to me that trying to map files to program state isn't worthwhile as a goal. The filesystem is a namespace system after all.
+- Focus on the data, not the code.
+  - CyferSpace might not be the name I'm looking for. When you read a message, you do so in context of some language.
+  - Maybe we need to introduce the concept of a lexicon. Which is essentially a symbol table. A lexicon consists of words. And so "reading" a message involves a lexicon. How a message is "interpreted" comes down to a grammar essentially.
+    - That is, replacing words with what they denote is the task of interpretation.
+  - So... does a reader return a lexicon then? Or do the words belong to a lexicon?
+    - Or should the reader take a lexicon? Sort of like how EDN requires a dict for resolving tagged literals.
+  - Hmm, what if we rename keywords to symbols, and words are actually instances of symbols? That is, a word's parent is the symbol, and it points at the lexicon it belongs to?
+    - Then, a word can be created by looking up a symbol in a lexicon. It's a two way street.
+    - Symbols are interned strings, so you can lookup a word in a lexicon by string or by symbol.
+    - It's notable that objects tend to have a behavioural parent (the prototype), but they also tend to have a lexical parent (where they were introduced).
+- Holy fuck. Just coughed up a huge tonsil stone. I've kinda felt it for awhile... Maybe I should irrigate my tonsils regularly now. They're hard to get out once they've gotten big. Although, imagine the dry air and congestion contributed a great deal to their development.
+- Alright, so I renamed keywords to symbols. Introduced the idea of a lexicon, and words are the combination of a symbol and a lexicon. So it's a two way street dealio. A lexicon has a mapping from symbols to words, and the words point to their symbol and their lexicon. Symbols are deduplicated globally using a big hash table mapping strings to symbols, and the values are held weakly. That is, if nothing holds a reference to the symbol, it can be released from the symbol table.
+  - Wonder if lexicons should have parents? Or rather, maybe you'd want to freeze lexicons so that words aren't added automatically.
+  - An idea for CyferSpaces would be a lexicon and a dictionary. That is a CyferSpace maps words to meaning.
+  - A message is typically read with a bare lexicon. You might not even want the lexicon actually. That is, if you read data, you just care that it is deduplicated and that you get words. Since the words point to the lexicon, you can grab it if you need it!
+- Okay, I think I like where this is going. We might need to distinguish words when printing/encoding. But really you should be printing/encoding a message in which case, it should be a matter of just looking at "is this word I'm about to print in the current lexicon? No? I'll need to distinguish it."
+  - A lexicon in some respects is the interface for a package/cyferspace. It's like the exported symbols.
+  - Hmm, that sort of implies that lambdas create anonymous lexicons.
+  - Lexicons aren't really first class. There's no representation for them. Well, maybe at some point?
+  - I think it's time to play some vidya.
+
+* January 22nd, 2024
+- Just walked the dog. Gotta book a rental car today, and book a haircut.
+  - Haircut booked for tommorrow at 12:30.
+  - For car, should probably book something close to Sarah's mom's place. I'd need to pick it up in the morning though.
+  - Oh, cars are a lot cheaper than I was expecting. Go figure, the last few times I've booked cars it's been like the most expensive time of year (stampede), or I booked for weeks on end.
+  - Hmm, no difference in price between dropping off first thing on Thursday or at close on Wednesday. So may as well book until Thursday, can always return it on Wednesday evening.
+  - Okay, confirmed times with Sarah. I'll book that shortly.
+- I was thinking yesterday that I should reintroduce the concept of tuples. I think that solves the issue with phrases more nicely. The reasoning being that our encoding/printing should be a data format, and having elements that represent code explicitly are a bit odd. In Cyfer the language, tuples of course will be interpreted as phrases (that is, that is their procedural understanding). But having them called tuples is more generally useful I'd think. For instance, it allows you to encode structs over the wire. Like I'd been thinking about awhile back, the difference between a tuple and a list is in type. Tuples are product types, lists are parameterized types (that is the type of their elements is uniform, so their type would be the union of all types in the collection).
+  - Tuples are a good way to encode compound identifiers for instance: (User 123) => the user with id 123.
+  - This gives () for tuples, [] for lists, {} for tables. Then we can also have #{} for hash tables (a table where the order of key-values is not meaningful once read), and #() for sets. Then we have #[] available for some other structure which I'm not sure of yet.
+  - Words still get deduplicated, as do keywords. Then, we can start using this as an encoding for interacting with the wiki.
+  - Also gets back to what we were thinking about earlier with cons as the allocation primitive for tuples.
+  - And we could say that a relation is a tuple with a distinguishing atom in the first slot. Essentially, a struct. A record would be a relation that responds to keywords for element access rather than integers. They are all just primitive forms of object, that is objects with a specific restriction on their structure.
+  - "Focus on the data"
+  - One nice thing about tuples is that they can be used as compound identifiers. So the top level is really just a big mapping, from words to values, but also from tuples to values. Like macros and functions are essentially just patterns.
+- Think I want Thai Express for lunch. :)
+  - Order placed. Gonna pick that up, watch some youtube then implement tuples again lmao.
+- Wonder if I should try out the generic-cl library to clean up some of the annoying things with CL.
+- Okie dokie, got Tuple implemented. Super straightforward.
+  - And now I don't know what to do next lmao. I think I need to work on the interface.
+  - Okay, I think I need to rewrite cyfer/pages to use the cyfer/script types.
+  - The web interface then uses / to denote a tuple of words. The root then is a big index of all objects in the data base.
+    - Actually, a path is always a tuple. It's just often it'll be a one tuple (also known as a box).
+- Alright, so we have a dynamic variable *cyfer-space* now which holds the current cyfer space. A Cyfer Space has words and keywords and potentially a parent. Looking up words in a cyfer space happens by looking it up recursively on it or its ancestors. Then we have as-word and as-keyword which take text and return a word/keyword from the current cyfer space or its parents inserting a new one in when it can't find one. So when you read a message, you typically just extend the current cyfer space to collect new words/keywords without modifying the current one.
+  - I've also broken the reader/printing out into cyfer/script and the cyfer space stuff and the base classes are now in cyfer/types.
+- Now that we've abstracted out the current cyfer space to a class and a dynamic var, we can change the implementation whenever (such as for persistence).
+- Next thing is loading things from the cyfer space. We're given a tuple denoting some sort of relation.
+  - The empty path should be an index page of some sort.
+  - A path with one element should render the current binding of that word in the cyfer space (a tuple with one element doesn't actually denote anything meaningful).
+  - A path with multiple elements looks it up as a relation. I think this one makes sense to look into later.
+- Do we call them bindings? Or what?
+  - They really are just a mapping from tuples to objects I think.
+  - Right. So when you call `define', it takes a tuple or a word and associates it with some value.
+  - Okay, then that means ignore general objects for the time being. Just do it as a straightforward mapping. If it's a primitive type, it'll just print it or something (start with the special cases).
+  - Just use curl for now I guess.
+  - And we're getting cyfer script responses! Just need to set up actual values now. Cool, really easy to set up new environments using optional args:
+    - (defun lookup-path (path &optional (*cyfer-space* (make-cyfer-space *cyfer-space*))) ...) extends the current cyfer space, so unknown words aren't automatically added for instance.
+  - Word lookup should be super easy (just use a hash table with eql, words will already have been deduped). Tuples will require some care. Probably just recursive hash tables.
+    - Although, what are we really looking to do with tuples? I think those should be more like patterns to be looked at or something. I think we should just ignore them for now.
+- Ah, good wank.
+- Do I want to do more work on Cyfer now? Not sure.
+- Post clearly just sets the value of a tuple/word to whatever its contents are. Hmm, maybe PUT actually. POST might be reserved for invoking behaviour.
+- Well, we can start it off with just assigning values. So we should parse the body of PUT requests with read-next and set it to that. Very simple key value store effectively, but with cooler types.
+- Basic binding loading from Cyfer Space. Need to implement PUT which requires, among other things, parsing the request body, setting the binding, and also figuring out how to have a request body in curl
+- OMG that was fucking annoying. Lesson learned, if you want to read text from a binary stream, make sure to wrap it in a flexistream... I had to do this with circular streams from the request body.
+- I think I should work out. Wasn't expecting to take so much fucking time on those stupid streams.
+
+* January 21st, 2024
+- Got back from the Mall. Bought the Rivendell set and the Star Wars clone gunship (and some random clone trooper packs). Also went to Tommy Bahama, but forgot my promocard things so gotta go back. Gonna get some nice sweatshirts instead of short sleeve button downs.
+- Played games yesterday. Also ate way too much food. Woke up feeling full lmao.
+- Man, was feeling really shitty on Friday evening. Had to take Sarah to Barre and then pick up the dog, got McDs and it took so long that I just went right back to pick up Sarah. I kept thinking about the syntax for literal words and started feeling incapable and getting really sad about it. I think it was because I hadn't really eaten that day, and between picking up the dog and Sarah and all that I kept getting more hungry. Not to mention I was wearing the huge army coat, and sitting in that tiny little car for that long was making me uncomfortable. Once I was at home and lying down for awhile I started perking up.
+  - Also, eventually sort of figured out what the issue was. See, the problem was I wasn't sure how to describe literal words in the syntax. Quoted forms, much like 3Lisp, I thought should evaluate to themselves. Likewise, keywords evaluate to themselves. But then the issue is, how do you describe a word literally? In Lisp, you use quote because when evaluating quote, it evaluates to the quote's contents. So (eq symbol 'word), 'word returns word which is what we want. But if quoted forms are self-evaluating, how do you get the word? Keywords self-evaluate, but words aren't supposed to. But it occured to me that you don't necessarily need a syntax for literal words because a literal word is really reflective. So if you want a reference to a word, you can use a lookup function of some kind. Especially because words might need to be resolved in some context. Not to mention, using words literally shouldn't be a very common task in the way it is in Lisp. So making it a tad annoying is probably fine. So I was getting upset over nothing.
+- Played a few games yesterday. Started with Kena and the spirit world or whatever, pretty neat little game. Really pretty. Then tried out Bugsnax which is pretty funny, Sarah was enjoying watching it. And later started playing Spongebob battle for bikini bottom on the Ally. I'd played a bit of that earlier on the Playstation but got stuck or something, but had a much nicer time this time around. It's a nice looking game on the Ally.
+  - Playing games yesterday it occured to me again that you don't have to sit down and play one game. If you're not feeling it, try something else. Eventually something will click and you'll get into it.
+- Eh, should just go to the mall and get those shirts and be done with it.
+- Alright, got the shirts. $400 something dollars, but $130 off. Got 4 different colours.
+- Was thinking on the drive a bit about messages and syntax and shit. Like, words are really understood as binding lookups. We could replace them all with (@ :word). But you'd need to do it during the read. And sometimes you want to replace the word with a constant/persistent value, which is essentially what canonicalization is.
+  - In particular I was thinking about how words are kind of meaningless by themselves. You want to replace them with something else. So maybe you invoke some sort of function/restart to figure out their value, and if you're expecting just data, then it's of course an error in that context.
+  - So I wonder if I should read more and experiment with the condition/restart system in CL.
+  - I kind of get now why Clojure uses vector/list/map for things. List can just mean list if you want it to. Whereas phrase implies only code. Though that may be what we want.
+  - Even if word turns into a lookup, we'd still need it implemented in the binary format. So maybe it really means variable or something like that. Although, we can just have words be words without evaluating them. You just transform them post-hoc.
+  - I think this came up because I was thinking about the wiki and how objects can be represented as key-value pairs where the keys are keywords. So if that's the case, why would you want to have a literal form of word? It's double duty. What if words are really just a shorthand?
+  - If I'm finding this stuff a bit confusing, I should focus on lists/tables/keywords/numbers, that is data as objects. We'll build the wiki out of them anyways, then we'll build the language up from there. That is, we start with a database, and move on.
+- I should go through the conditions book again. Good examples in it. One thing I noticed immediately is that it uses signal in conjunction with error. I'm so used to using just error, but signal doesn't unwind the stack. So you can signal things and if no one is watching it just continues. Almost like providing advice.
+- Even EDN has symbols, I guess for most people they'd just be errors or something.
+- I think I'm just level crossing and not realizing it. Like symbols having a "value" is entirely an interpretation of a message. They don't actually have values. Nor do phrases/lists/tables.
+  - I guess the use case for a protocol would be, you provide word mappings, and it returns those instead of a new word. Could be a use for signal actually.
+  - So the requirement of using quote to get a literal symbol/word is really about the semantics of how to evaluate a message. And we can always add our own special form that essentially means "box this up". Actually come to think of it, if you have a special syntax for quoted words, then it allows you to check for exactly that.
+  - Yea, we should really just ignore this until we actually find a time when we'll need it. Another way you can get a word literally is by creating a message and getting its first value. Message is like a generalized quote. Remember, quote in Lisp was always a hack.
+  - In any case, I'm probably overthinking this right now because I'm not sure what else to do.
+  - Keywords vs words is more around convention. That is, words are intended to have multiple meanings which are determined in context, whereas keywords are intended to always mean exactly the same thing. Hence, keywords are always supposed to be the same under is?, while words are not. They typically are though because they are resolved to the same object by a dictionary. Words that aren't in the dictionary are typically an error. Also, that means that `define's job is in some sense to take a word that may not already be in the dictionary and add it to the dictionary.
+    - Actually that also sort of fits with how word disambiguation should work. The reader uses ns/name to mean: "look up name in the ns dictionary". It's a convenience.
+  - A nice thing about how CL handles keywords is that they're literally the symbol with that name, they just happen to be in the keyword package which sets their symbol-value to themselves.
+- I had a thought yesterday or so that I should be using ChatGPT to help me with planning things. That's something I find really annoying. A good example would be: "help me plan a dinner party". So use it for help with social things.
+- Was also thinking on the drive that I think about computing while on vyvanse in part because that's always what I think about, but that's not always been the case. I think it's a case of habituation. Like, it comes up and the parts of my brain that think about computing start firing cause that's what usually happens. And I've just explained to myself that that's what I need to do. But it doesn't need to be that way!
+- Oh another thing I was thinking about yesterday is that I should go out to eat more often. I used to do that like every day, but it stopped because 1) COVID, and 2) moving in with Sarah. So that routine was just not possible, and then I started to think that eating out required Sarah. But that's not the case. I can go out and eat during lunch, and I'm gonna do that. For instance, Smitty's test kitchen has beef dip sandwiches! Gonna get me some of that shit.
+- To go on EI, I have to regularly be applying for jobs and I need to give status updates... uh. Works out to a little under $3000 per month. Worth it?
+- I'm just confused at what to do next. And I'm not sure why.
+  - Just focus on building a wiki bro. You were most of the way there.
+  - Think about what would be cool to demo to Daniel.
+  - Maybe I'm not sure why I'm doing this.
+  - Really, I guess more than anything I want to replace emacs. Recall, it's supposed to be a personal computing environment. So start there. Needs to be a database of data for yourself. What can you keep track of there? Maybe aim to keep this journal there. Yea, that might be interesting.
+    - I think it'll be more interesting to grow a language out of a database than designing a language and trying to make it work as a database.
+    - Like, start with the use case. What's the killer app for this language? A language in and of itself isn't particularly interesting, especially to new users. Languages become popular because they have some reason to be used. You have code mirror for simple plain text editing, start there, you can always replace it later. But it'll give you the basics of an emacs style environment.
+    - Make it a big dictionary essentially. You have words, and words map to objects with properties. We can render them as tables for now in the syntax, that might not be how you keep them forever and that's fine. It's all just a mapping/transformation away.
+    - With words we'll want a little search tool to lookup words. We use an HTTP path to represent a word, and we can use PATCH to update specific properties of a word.
+    - Want to change the render function for an object? Send it a message containing new code to run.
+    - HTTP methods can get you most of the way there, you can add in a prompt later.
+    - The first version is just to render the object as a table. But there are other ways you can render things.
+    - Remember, we're building the reflective version of the system.
+- Words could also be instances of the word. That way a message containing `word' is an instance of it. That's like a reverse lookup of that word. Where does it appear?
+
+* January 19th, 2024
+- Had a great time with Will last night. Helpful reminder that I need to seek out spending more time with people. I'm too passive about friendships in that I wait for them to invite me rather than doing the inviting myself. Or, I'll say "you should do this" when I should be more like "is this something you'd like to do? okay when? let's book it" which is what Will's really good at.
+  - He also talked about how I was so free and uninhibited during his bachelor party. Like I was in a foreign land and didn't care about appearances in the way I usually do.
+    - My mindset during the whole thing was just "go with the flow", very much living in the moment.
+- Think I'm gonna go to the basement and put up the new curtain rods. If I put the curtains on the rod and sort of bunch them up in the middle, it should be easy enough to put them up.
+  - I wonder if I should move the mounting brackets lower. The windows are fine, but the door lets in a lot of light at the bottom.
+- I keep thinking about playing video games, but I don't. Not sure why exactly. Could be because I sort of see it as a waste of time. Or that I'm not getting anything out of it. Or that I don't know what I want to play. But there are ways around that last one.
+  - Actually, that kind of reminds me that people say one benefit from gaming is that it can teach you about how sometimes things don't work out. It's like why people really like playing souls games. I've never really understood it, but I saw some people on twitter say that it helped them realize that sometimes you just gotta grind to figure something out. Which has parallels to other life tasks.
+  - I find the idea of those games frustrating, but it's because I see that as a waste of time. But it might actually be a helpful thing for me to learn. Spending time on games isn't a waste of time because games teach you meta-skills that can be used in other outlets of life, they just might not be immediately evident.
+  - I might also be avoiding them because I sometimes play games and think "oh I gotta do this thing after I'm done playing" which leads to "why don't I just do that thing anyways".
+  - Perhaps it's worth asking what I get out of playing video games. What draws me to them? When I've played games in the past, what kept me coming back?
+    - Part of it is a quick feeling of accomplishment. It feels good to just knock tasks off a list. That's actually kind of what I enjoy about open world games.
+    - I played them more while I was working at Chalk than I did at PS. I thought part of it was the schedule, but I think really it's that I had this underlying sense that I should be working, so I didn't play them in the morning the way I used to. I think I'm still shaking that off now.
+    - And playing games isn't different in terms of time commitment than watching YouTube like I tend to do now. That's what I do in the morning. I can easily replace that time spent.
+- I should tell Sarah that we should just get picked up by her mom, especially if we're just staying with her anyways. Doesn't really make sense for my parents to pick us up and drop us off in Cambridge.
+- Oh interesting, this post I found on HN about Rebol has a comment about using CLOS and MOP to create custom funcallable instances: https://news.ycombinator.com/item?id=11587952
+  - Might be worth looking at.
+- Well, put the blinds up again. Much better.
+- Watched an episode of Kids in the Hall then logged on to the PS5 and... didn't play anything. I felt like I should do it later. Maybe I just would prefer playing games in the evening instead.
+- What I should do is some beat saber. Haven't done that in awhile.
+- Man, I'm really not sure what to do about literal words. Can't really use keywords, since they have to appear in source always. But like, how do you represent words as values? In particular, my concern is with the dictionary, which maps words to objects.
+  - Wait. Aren't they sort of persistent strings? Then we could just use #"" for a literal word. Whereas @"" is just the syntax for a word that might have illegal characters.
+  - Maybe I should be thinking about how you build messages. Why would you need a literal word anyways?
+  - The thing is, maybe keywords should just be literal words? They are words as values. It's just odd how they'd be serialized.
+  - A message is a sequence of values. A phrase is also a sequence of values, the difference being that it happens to be in the context of a message.
+    - So how do you build phrases?
+    - Lists, tables, numbers, keywords, all have a simple mapping. That is, reading them and printing them should be one to one.
+    - Are phrases, words, and messages really all that different?
+- Maybe phrases should be represented as pairs? That is, they have a subject, and an object (a list).
+- Messages should be persistent no? So maybe we use #?
+- Hmm, think about how messages are evaluated. A message is technically a value type. So maybe the difference is between whether or not something is treated as data or treated as a stand in. The difference between a list and a phrase is that a list is a value, a phrase is reducible.
+  - Tables, lists, numbers, keywords are value types.
+  - Literal data is also value type.
+- Maybe we just need quote bro.
+  - Backtick ending in quote could be short hand for '(), which is a literal message. That actually might be good because `abc is just 'abc, so you mostly use it for building syntax in lisp anyways. A message is just a root level phrase.
+  - Hmm problem is we can't use ` ending in ' and also use '.
+  - Again though, what else would you use quote for other than with literal symbols? Unless we use something like ^? ^abc is the literal symbol abc.
+  - Quoting is super similar to lambda abstraction though. I like that ^ kind of implies "hold the next thing indirectly".
+- You know, I guess phrases are really compound identifiers, or compound words rather. They generalize what words do.
+- Well, we could just use ^ in place of quote. That means "hold the next object literally". Then messages would be ^(). Which notably is essentially a lambda where every variable is free.
+- The thing is I think it's pretty uncommon to use quote. Quoted lists in Lisp are really useless for the most part, and you only really use it with symbols. We could probably use #:abc or #"abc" to represent literal words if we want. We just need a syntax for within message templates if you want to insert a literal symbol like that.
+  - The thing I like about #"abc" or #:abc is that it's reminiscent of how I expect to use # for persistent values. And it's sort of like words being persistent strings, which they are.
+- I think I need to stop thinking so much about syntax and think more about interaction patterns.
+  - A phrase is really a compound word, that is it denotes something else.
+
+* January 18th, 2024
+- Got high last night, was fun, but this morning felt a bit lethargic. I'm definitely a bit more aware of the negative effects lately.
+- Going for Izakaya tonight with Will. Good shit.
+- Got the severance package. 26 weeks of severance as a lump sum payment ($60K), 10 weeks notice as a working notice, and $14K EPIC bonus paid out at the usual time. That's 52 weeks! Zamal still says to get an employment laywer. That lump sum (and the other smaller lump sum in April) is super helpful right now actually.
+- Zamal says to got an employment lawyer because the common law will be interesting in my case given my time of employment at chalk and my previous exectuive level.
+- With a big lump sum payment coming, and my salary secured for a year (and probably more after I retain an employment lawyer), I should reward myself! Thinking of getting some new speakers for my office. Though, should do that when I'm back in town.
+  - Yea, the Klipschs aren't in stock anywhere, and the Polks are regular price. Wonder when they typically go on sale.
+  - Oh, could get a new amp too. Maybe the RN2000A... which I think has a USB DAC built in. I'd just sell my existing amp. Would want to get another sub too. Oh yea, then I could use that sub with the theatre upstairs, though I think I might need a different receiver for dual subs on that one.
+  - Ooo, the RN2000A has a silver case, but it has black accents on it. I think it'd look really nice with my Apple gear. The lower end silver amps don't seem to look as nice for whatever reason.
+  - And an SVS SB1000Pro sub. Dope.
+  - Alternatively, I could use these speakers and amp with the desktop. Which currently needs headphones.
+- Man, good things really do just happen to me eh?
+- I'll wait for the next package from PS before reaching out to the lawyer.
+- Saw an interesting comment on HN that JSON is somewhat related to REBOL because Douglas Crockford was interested in it. Gonna read some more about it.
+- Ooo, other candidate celebratory gifts include the art of computer programming box set, and some Clojure books (which I think would be a nice addition to the Lisp collection).
+- I kind of want a new colour scheme for emacs. A light variant like Nano.
+- A thought I had on the walk was that maybe I should use @"this is a word with spaces" for words with spaces. That follows the convention I kind of want for @ to mean "the current environment". I'd have @ by itself mean the current environment, @1 to be the next environment up, and so on and so worth. I also have it reserved as a character already.
+  - I could then use @ for other things like @() @{} @[], @testing, etc. And I still have #(), #{}, and #[] for other shit.
+  - I still don't really have a way to represent a literal word though if I have messages be a list of things. Since `this is a word' is actually 4 words. You'd need to call `word' first to get it. But at the same time we have keywords, so why not transmute between those?
+    - But maybe that's not really a problem. Why would you want a literal word anyways? If you want dynamic lookup, you can use a keyword (which is itself a word), and if you're building a message you should be creating the words anyways.
+- Huzzah! Switched the theme in emacs. Forgot that I installed Doom Themes, so was just a matter of finding a new one. Also addressed that stupid compile warning on emacs startup.
+- Eh, we can probably just call them macro characters.
+  - Yea, that's nicer. Should be easy to start adding the other types of sequences and things now. I do like @"this is a literal word" much better.
+- Oh, I ordered the other two smalltalk books. Lord knows when they'll get here. One of them should arrive within a weekish.
+- Interesting, so Rebol calls everything a block, there are sub-blocks denoted by square brackets, then parens using normal parens, strings with double quote or curly brackets, and other data types. But what is interesting is that 1) it uses "word" in the same sense as I have been using, and it refines them further as words, set words, get words, and lit words. Set words are suffixed with a colon, get words are prefixed by a colon, and lit words are prefixed by a quote. Interesting.
+  - It also has the idea of dialects being different ways of operating on the core data types.
+  - Only thing I'm not so fond of is that it seems highly inspired by Forth in that it's prefix notated, but you have to know what the words do to make sense of how the message is consumed.
+- I keep forgetting that I can use `load' as a name. I've probably avoided it because it's reserved in CL.
+
+* January 17th, 2024
+- WTF, there's a "Confidential R&D Org Changes - Attendance Required" meeting at 10:35. Doesn't show any other invitees, but I think it must be a mass invite. Ah yea, it's a webinar. Curious what's up. Oh maybe layoffs???
+- I threw out my iPad's case (it's disintegrating), but it's been interesting using the iPad without it. It's so thin and light! I've been using the iPad more because of it too lol. This new case is much more minimalist, so hopefully it stays relatively light. Only annoying thing is the pencil has a propensity to fall off even more without the case, and I don't think the new one will hold it any better. Not like I use the pencil much.
+- I'm being laid off! LMAO. Well, I should get 5 months or so of severance.
+  - The Mac is locked now. Wonder if they'll actually get it back or if I'll be stuck with it forever like Evan.
+- I'm so relieved. No more guilt.
+- Also, they actually owe me something approaching 8 months of pay. 5 months is just the notice! Then I get about half that as severance, plus any accrued vacation.
+  - This is actually really helpful because they'll probably pay me out in a lump sum. I'm looking at about $80K, call it $40K after tax withheld. This'll solve my short term cash problems. Then I can apply for EI lmao.
+- Should take the dog for a walk.
+- Just got an email from Sarah Nash saying that I'm being given notice until the 27th of March, which seems to be 10 weeks. More details to come.
+- Reading the Courage to be Disliked again and it talks about how self-acceptance is a key part of happiness. It talks about how happiness is really about having a sense of contribution to others. When you do things for others out of love, that's what happiness is.
+  - It makes a distinction between trust and confidence. Trust is conditional (we lend you this money because you have collateral), but confidence is unconditional (I give you this money because I have confidence that you'll give it back). You open yourself up to being hurt, or taken advantage of, but that's not your task.
+  - Of course there's no reason to keep ties with people who take advantage of you, but to have deep relationships with people you have to have confidence in them. If you expect them to do things out of fairness or whatever, that's when you build resentment. Like, if you think your partner is cheating on you, you're gonna find reasons to believe that. But if you don't think about that, you won't.
+  - It also talks about how focusing too much on work is an example of putting too much emphasis on one aspect of your life and is mostly about trying to receive recognition for something.
+    - It's focusing on one thing out of belief that it's the most important thing to make people like you, because you don't really like yourself.
+  - Accepting yourself allows you to contribute to others which gives you community feeling which makes you accept yourself. Virtuous cycle that starts by contributing to others without expecting recognition. Just knowing that you're contributing and doing good.
+  - "You want to be special because you equate normalcy with inadequacy."
+    - This is why people can do really bad things, because they want to be special. If doing everything "right" doesn't work for them, they try things that are bad to stand out, because they don't want to be normal.
+    - Gifted child paradox.
+  - The greatest life-lie is to not live in the current moment. The past and future don't exist.
+    - The problem with Freudian pyschology is that it sees a life as a line, with a start and an end. Except, life is a series of moments. If you're living for the future, you're not enjoying life as it is right now.
+    - The problem with living your life as if it were a story is that you narrow your view of life considerably. You view things as a distraction from your "path". Except that's stupid because when you die, you don't take the story with you. Who cares what's written in your biography, it's not the reality of your life.
+    - So when you're dancing, enjoy dancing. When you're studying, enjoy studying. When you're washing dishes, enjoy washing dishes.
+  - Okay finished. This is a book I should probably re-read at a later time.
+- My main takeaway is that I'm too self-interested. I focus so much on my self to the exclusion of others in an effort to be special, when 1) I need to remember that I am normal, 2) I need to live life in the moment, and 3) I need to do things for others. By focusing so much on myself, I'm denying myself the ability to be happy through doing things for others.
+  - This is probably why I have such a hard time working for large companies. The reasoning behind the work is so abstract that I don't really understand why I'm doing it. And it's especially hard in remote work because I don't even really see the people as people.
+    - This is still a bit of a cope though. I can just enjoy the work as is.
+    - But really, I should aim to do the things I enjoy such that I can bring joy to others anyways.
+- The Inner Game of Tennis arrived. Next book to read lmao.
+  - Should also read Friendly Ambitious Nerd.
+- Interesting thing that came up on HN today and is similar to what I've been thinking about with Cyfer: https://willowprotocol.org/
+  - Problem with a lot of these protocols though is that they don't really have a UI. So this talks about wikis and blogs and shit, but I'm assuming one needs to build all of that shit on top. So why even start using this?
+- I need to think some more about what to do with Cyfer next. I have a basic reader implemented, and I had a bit of a front end in place. Ideally something I can show off.
+  - I had content being rendered, but I want to be able to send it to the server to store it really.
+- Why do I clam up when people ask me what's wrong? Why do I hate explaining myself so much? Why don't I like talking?
+- The desire to be special probably causes my work to suffer. Just rip off and duplicate bro. Good artists copy, great artists steal.
+- Started going through that baby name app thingy. Figure if I should be doing things for people, I should start with things for Sarah.
+  - I stopped after like 10min, started seeing repeats. We also had a few matches so... probably good.
+  - Something else she wants me to do is figure out the baby monitor situation.
+  - And also... booking a car. Should do that tomorrow or so. Also need to confirm with mom that AAA can pick us up at the airport.
+- Man, wanna get high again. At least, if I do tonight, I definitely won't tomorrow since I'll be going for dinner with Will.
+- I think I should put away the trains.
+  - Not really sure where they'll go. One of the closets. At least they can be boxed up.
+- I also think I need to do more drawing and sketching of what I want with Cyfer, like I used to do with Chalk.
+- Realistically, I think I should take a bit of a break from Cyfer stuff and focus on personal things. Or at least, narrow it down to a smaller part of my day.
+
+* January 16th, 2024
+- Yea... so everything is thawing and I'm hearing drips from the attic. I just checked the bathroom and there's so much water on the toilet... gotta keep those fans running. On the other hand, the windows are more or less cleared up (just a bit of ice on the corners). Seems like everything likes to condense on this side of the house though. And I still haven't seen any stains anywhere else on the ceiling other than my office. There's also no water dripping in the office.
+- Spoke with Daniel, nice to catch up since he was out sick last week.
+- Time to walk the dog methinks. Messaged Jonathan about not having anything to chat about. Hopefully don't need to talk to him.
+- Lol, I can't close the window in my office right now. The water there melted and then refroze, so there's a chunk of ice blocking me from closing it.
+- Think I'll follow Ruby conventions with respect to iteration and streams. I find it a tad annoying that streams in CL are essentially just byte or character iterators. Iteration in Ruby follows the use of Enumerators. That is if you call .each on something, it returns an Enumerator which can be provided a block for internal iteration, or you can call next/peek/etc for external iteration. Same shit applies to IO then. Ruby allows you to create new Enumerable types by including the Enumerable mixin which requires you to implement .each which is supposed to yield a value each time.
+  - That's how Ruby allows you to implement chaining.
+  - That also allows us to use Stream to denote lazy sequences a la Scheme.
+- I think I need to change word and keyword to have "text" as a property rather than "display-name" since that's more accurate.
+- Interesting, CL says any token consisting entirely of periods is an error.
+- I should reserve period, comma, @, ~, $, %, ^, :, ;, /, \, |, and # for now (unless they appear in a literal).
+- Ok, let's think this through. Gonna do a simple reader.
+  - read-message needs to parse the whole contents. It does this by calling read-next until we run out of input.
+  - Let's ignore position for now.
+  - Reading-next involves looking at the next character. If it's a whitespace, consume it.
+  - I think using comma for whitespace is a good idea.
+- Alrighty, that seems to work. Just need to do keyword and word resolution and we're good! Time for some lunch tho.
+- Probably worth dropping support for characters outside of ascii for the time being, not like I'm gonna use them.
+- I'm thinking tables should be represented as assocation lists. That is, they should require an even number of elements.
+  - How they're actually implemented isn't super important only that they should be sequential key value pairs.
+  - For things like #{} (hash table) and #[] (set?), those should really be shorthand that expand to (table ...) and (set ...). That is, maybe they should turn into phrases.
+- If we want to keep track of line and position, we'd use trivial gray streams, which means needing to use stream-read-char rather than read-char (as it's generic), then we'd just implement stream-read-char in a way that it keeps track of that while it reads.
+- Cool, have keyword and word resolution.
+- Honestly, this is a good place to jump from. I think I'm happy enough with this.
+- There are still a bunch of things to figure out with respect to the syntax, but they're things we'll want to come back to later. Namely, qualified names, message templates, other data structure literals, lambdas/blocks, etc. But I think we should move back to the wiki side of things for a bit.
+  - We'll also need to write the reader in JS as well.
+- Man... I keep thinking about getting high tonight... maybe I need a different rule for myself.
+  - No, you can follow the rule you already set out.
+  - What turned me off of it just now was remembering how stuffed up it makes me and how dry it makes my eyes and throat especially with how actually dry it is right now in the house.
+
+* January 15th, 2024
+- Should clean up my desk today and dust.
+- Alright, paid flexiti. Really need to send Mark the updated credit statements...
+- I'm not sure what to do right now. It's weird. Feeling the same sort of indecisiveness as I was yesterday.
+- Why does everything seem so much clearer when I'm high? It's really weird.
+- Stop trying to optimize this so much. You're gonna rewrite it later anyways.
+- Okay well printing works. That's a lot nicer actually.
+- Still need to handle nil, true, and false though.
+- Hmm, when you scan for "1-", you get an integer and a word. It probably makes more sense to split on delimiters then... Double quotes being the exception.
+  - Looks like that's relatively similar to Lisp actually. They have terminating and non-terminating macro characters. A terminating macro character acts as a delimiter, a non-terminating macro character does not.
+  - Guess that's similar to what I was thinking about token resolution.
+  - That way, token resolution would resolve to checking the contents with start and end anchors in effect.
+  - If we did it that way, then we'd just split the input into ranges of whitespace, delimiters, quoted-text, and tokens. Tokens being unresolved. Like, #no shouldn't be #n followed by o.
+  - So a message is a sequence of delimiters, whitespace, tokens, and literal text. (Literal text being quoted).
+  - Am I seriously thinking about doing this again?
+- The Lisp reader is just a scanner with simple parsing rules.
+- OK, but how do we resolve things like #(? That might end up being a # token followed by a ( and it would mean something entirely different from # (. Unless we do something like # consumes everything until the next whitespace? or opening delimiter? #n( would be one thing?
+  - Why am I trying to fit this into a grammar. It's clearly just a normal reader...
+- ... I'm going around in circles again. This always seems to happen with this fucking parsing. Think I should just write a reader... No more of this turning shit into lists.
+
+* January 14th, 2024
+- Well, crisis in process of being averted. The patch on the ceiling has now frozen. The humidity in the house is slowly making its way down (27% last I looked, was at 33% this morning). So as the temperature comes up over the next few days, gotta keep getting the moisture out. Followed up with Mitchell at 2020 with an update (figure he hasn't checked his email since it's a weekend) clarifying that my question is now: "Who do I talk to about assessing the damage to the ceiling?".
+- Put away the christmas tree and cleaned up the living room a bit in anticipation of the cleaner tomorrow. So many fucking hair tumbleweeds. Broke down the Lego boxes (the ones we're definitely keeping, i.e. the christmas sets). The other boxes are now where the christmas set boxes were: under the christmas set display lol.
+- I've been getting high too much I think. Need to reinstate the rule that I can use my meds or my THC, but not on the same day. I think I dropped that rule after I got agmantine to see if that worked, and it does. But I think it's important to have tolerance breaks for each of them. Also, the THC just becomes a habit. I think part of why I take it is that it helps me sleep on days I've taken my meds, but the expense is that I get congested with it, and with the weather as it is, my nasal passages are being fucked by the combination of that and the dry air. Need to give them a break.
+  - The rule is also more important now that I have a prescription for my meds. I took my meds yesterday and today. But when I first moved out here, my supply wasn't guaranteed so I needed to take time off of them on the weekends anyways. And when I did do that, I found I was less interested in THC anyways. When I follow the rule, I'm less inclined to use THC. It really is a habit forming thing.
+- It makes sense that my office is the most affected by the humidity, gets the least direct sun so it's the coldest part of the house, and then I'm in the office for most of the day with my door closed, so it'll be humid in here. At least when it's not absolutely frigid I tend to crack the window.
+- Just cleared out a bunch of tabs. Had a bunch of stuff from Rembrandt, and emacs for that as well. All closed!
+- Before doing all of that cleaning I was interested in doing more programming, or reading about programming, but now... I'm not sure what I want to do.
+- Also, now that I have the windows opened, I clearly have a LOT of dust on my desk. Should give that a big clean...
+- I'm bored. Or rather, I don't really want to do anything right now.
+
+* January 13th, 2024
+- Was thinking last night about messages and how they could be described as a series of expressions, or statements, or what have you. The benefit to that is that it sorts out the fact that most messages will have multiple expressions (why would you send a message containing a single name? especially over the wire?), and it essentially turns messages into the equivalent of a do block, that is, a message is a program. The only thing with this is that ' gets a bit iffy, since what is 'word if a message is a list?
+  - Actually, just ocurred to me that we can terminate messages with another '. So there is no 'word, it's 'word' and that allows for 'word another bunch of words'.
+  - I always found 'symbol' to look kinda weird anyways.
+  - I'm still a bit confused by the difference between symbols and keywords. Like keywords are just symbols that denote themselves, but how is that different than 'word'? Now I suppose it makes sense. 'word' is a message containing the word #"word".
+  - Was reading the Self handbook a bit and it talks about how most objects have "extensional" names, that is, the name of the object containing traits for a list is 'list traits'. Hmm, that actually means that messages act as compound identifiers...
+  - My issue has been, when do word names get resolved? What do they get resolved to? Can you hold references to them?
+    - Maybe? Sort of like how Self uses selector for the value and selector: for the setter.
+  - Another thing I thought of was that table is a sequence of assocations. I.e. it's a literal form for assocation lists rather than a bunch of dotted pairs (similar to how lists in Lisp have a convenient notation without the dot).
+  - Is the recipient of a message responsible for determining what the words mean? Or is the reader? Reader would be convenient.
+    - Could also have some way to check if the message is complete or not (that is, does it contain phrases and bare words? or only literal data types?).
+    - Like, the reader is responsible for creating objects, it's just not clear whether it should intern objects or not.
+    - Maybe you need to provide an environment to the reader for a message. It resolves words it knows to the object itself (words essentially being like symbols in CL, having their own properties), and if it doesn't know that word, it's just a word that isn't maintained globally.
+    - And we can maintain the words in a Dictionary, that's what the reader takes.
+    - Okay, so the reader turns text into a message.
+- I was reading more about Self and mirrors and it's notable that mirrors are essentially the equivalent of the "name" operation in 3Lisp, that is it's a handle for an object.
+  - Ah, getting the name of an object is equivalent to returning the message that identifies it.
+- I also notice that over the past few days I've been conflating the Lisp implementation with how I want to talk about the language within itself, and that's confusing me. Funny how it's weed that simplifies this for me...
+- I guess keywords are just words with special display properties and behaviour. They evaluate to themselves, and they have a special syntax. The leading or following colon is omitted from the display name (it's a syntactic thing).
+- Words and keywords are first and foremost interned strings.
+- Messages contain expressions, as do phrases. Phrases are essentially inline messages.
+- Hmm, problem with using quote to start and end messages is that it makes nesting them ambiguous... Need some other form of terminal character.
+  - We could combine quote and backquote... maybe. Since backquote without any splices is equivalent to quoting.
+  - Backquote to start, quote to finish?
+  - If we run into issues with that, we could just use $ as a leader to ` to denote a template since that would be useful for text templates too. Yea, let's do that. Also, this convention sort of already exists in emacs for referencing symbols in documentation. `symbol'.
+- The reader is responsible for resolving the words. Specifically, it deduplicates them.
+  - We could also have a "read-with-dictionary" method that resolves them directly.
+  - Not sure exactly what it should do when it encounters a literal message though. Probably shouldn't resolve those the same way.
+  - Oh right, they are separate actions, reading a message is the act of resolving it to data. So literal messages aren't really resolved.
+- We could pack the words into the message itself. Then you can ask, what words are in this message? A literal message denotes a new lexical context.
+  - A language or protocol then is just a way to read a message such that it resolves words to existing ones we know about. Keywords always resolve to the ones we know about, and they're always deduplicated in a context.
+- We could use unnested single quotes to denote words instead of #"". Has the desired effect of distinguishing between use and mention. They'd also be more clearly examples of interned strings.
+- Oh, something else one of the Self papers mentions is how nebulous the idea of printing is because it straddles the line between meta and object level. Like if an object prints itself with its class name, it has to know the class, but that's reflective.
+- Hmm, maybe it's not really necessary to have words with spaces in them. It's not really meaningful in that since messages are first class, you can use them as compound words. That is, we could still have single quote to start a message (just it can't include other messages).
+- I think we'd layer protocols and grammars on top of messages.
+- Really though, I think we have a good base in place now. As I reminded myself last night, don't spend too much time in the Lisp implementation, I should start working on the web server portion again. I think that's something I should focus on this week. In particular, since we have a parser (and reader for that matter), we just need to actually use messages to create objects in the system.
+- Reading a bit about scannerless parsing, and honestly we can probably go that route. What I think we can do is call the method "parse" which returns a message of expressions. And if we want full context, we can pass a keyword argument or introduce another function like "full-parse" or something like that which returns a concrete syntax tree.
+  - Wikipedia notes that a concrete parse tree (typically called just parse trees) includes everything, but an abstract syntax tree doesn't have things like grouping parentheses or whitespace since they aren't meaningful.
+  - We could call the different parens and whitespace tokens as "delimiters" and the rest as "literals".
+  - Hmm, reading returns a message in that a message is more than a list of objects, it keeps track of the words used.
+  - It probably makes sense to just use read and then generate a full parse when something goes wrong. Syntactic information isn't meaningful if the message is well formed.
+- For the Marantz Receiver, go into Setup, then go to HDMI output settings, make sure that's set to 8K enhanced mode. On the projector look at colour space and make sure it's set to 4:2:2. Then power cycle everything so that they handshake properly.
+- Something I seem to be going back and forth on is whether to handle messages as fully formed things or to treat them as streams. Streams are neat, but probably less useful at this stage. Also they're a tad annoying in that we might need to backtrack. In which case, maybe we should just have a method scan that turns some source text into a list of tokens. Then we can just operate on it as a list. We can also don't need to store the source-text in the tokens themselves. Tokens are just a type with a character range. When you have the full source text you can just grab the subseq using those.
+- Well, apparently we've been running the humidifier too much. My ceiling in the office closet is falling apart. I have the window open now, turned off the humidifier and am running all of the bathroom fans to get rid of the excess moisture.
+  - I understand now why opening the door to a bunch of fog is a bad thing. Too much humidity.
+  - I guess because I'm on the cold side of the house, I'm seeing the ice build up on the windows there but not the other windows in the house.
+  - Hopefully the ceiling is just staining and we can repaint it or something.
+  - Luckily nothing's been damaged. Except I guess two of my old keyboards which have some paint chips in them now. I'll let them dry off and then blow them with compressed air.
+
+* January 12th, 2024
+- We have a doctor! Good meet and greet, doctor must be close to our age. He wrote me a prescription for vyvanse and dexedrine no problem "you seem like reasonable people, and if it works for you, I'm not gonna say no". So gotta take that to shoppers I guess.
+- Reading more of the Courage to be Disliked and it's now talking about how once you focus on separating your tasks you can start thinking about community. As I kind of understand it, it's about treating everyone as equals in the sense that everyone is people. Try and build horizontal relationships, that is, don't put yourself above or below other people, and part of that comes down to not praising others or rebuking them either. What you do is you provide gratitude. And it makes me think about how I feel really good about doing things for people. Giving meaningful gifts.
+  - It talks about how, people need courage to handle their life tasks, and so the way we help people is by providing encouragement.
+  - And in the context of my own projects, it makes me realize that I need the courage to talk about my projects not because I'm looking to get anything out of it, but instead because I'm looking to *give* it to people. Telling people about what I'm working on is a way to help people.
+  - Right, and it talks about how people have a sense of worth when they're part of a community. But if a community isn't working for you, the world is full of communities, you just gotta put in the work to build them. I think this is similar in spirit to "people are happy when they have responsibility".
+    - Responsibility isn't something forced on you, it's something you take on yourself. And so long as what you do isn't putting yourself above or below other people (manipulative), then it'll be an endless source of happiness and contentedness.
+- Side note, it's fucking COLD today. Pretty sure it'll be the coldest day of the year (or pretty close). Woke up this morning and it was -37C. Lmao. Was worried about the car at the doctor's office, but it was fine (engine was still relatively warm).
+  - It's really weird. When we open the door, the air from inside turns into fog like the house is breathing.
+  - The steering also became a little sluggish over time, err, maybe not sluggish so much as stiff. The power steering hydraulics must be getting viscous.
+- I've noticed over the past few days that my interest in masturbating has decreased, as per usual. Started out doing it in the afternoon, then again in the evening, but I've kind of stopped in the afternoon, and my evening sessions are getting shorter. Might even take a break from it, just been interested in coding! Reminder that I shouldn't worry so much about what I do, the body gets what the body wants, and when it's satisfied it stops.
+- Thinking I'll read some more of the Smalltalk book before coding today. I found that yesterday I was going in proverbial circles.
+  - Eh, didn't really inspire me much.
+- Time for some lunch methinks.
+- Should probably take my prescription to Shoppers.
+  - Alright, need to pick it up at 5. Figure I'll get some groceries then too.
+- Reading a bit about 3-Lisp again, and as some comment on Lobsters notes, it's almost a bit of an expressive tarpit. It's so expressive that it's hard to tell heads or tails of where you are, and I think that tracks with a lot of reflective capabilities similar to what I've found in the paper about mirrors. The thing with reflection is that if it's core to the language it gets hard to reason about when you can eliminate it for performance purposes. So Mirrors make sense to me in that reflection should rather be inspection of something, rather than self-reflective in that the object knows about its own composition.
+  - Ah, I get why they're called mirrors now! It's because mirrors are reified reflections lol. As in, they're an object that provides reflection.
+  - One thing I do like about 3Lisp though which I think was prescient was that it separates functions and lists. Functions are pairs, and then it has rails to denote sequences. Likewise, a "handle" is a quoted form and designates an S-Expression. So it's syntax quote.
+  - And in reading the code I noticed that it talks about S-Expressions as forms, and I think that maps to what I've been calling a Message. A message is one of a literal form. And quotes are literal messages.
+  - In 3Lisp forms can be in normal form or not. Numbers, booleans, and literal messages are all in normal form, that is they have no other possible interpretation. Rails, and pairs are in normal form in some circumstances. For instance, rails are in normal form if all of their elements are in normal form (i.e. a list of numbers), but are not if they include any non-normal form (i.e. a list including some word). Pairs are in normal form when they are closures (so lambdas I guess). Which makes sense.
+  - They also note that pairs and rails are pseudo-composite and everything else is atomic.
+  - To this we then add some other things. First is that we call rails lists (as in designating some sequence) and pairs are called phrases. We also have symbols being self-designating objects. They designate themselves.
+  - Hmm, the article about S-Expressions notes that Godel, Escher, Bach note Lisp's use of quote as a form of self-reference.
+    - Huh yea, checked the index and LISP shows up throughout the book. Looks like later chapters talk more about computing other than just math. I should keep reading more of it.
+- So looking at what I have, I think I need to implement something rather like "normalize". Well, maybe not.
+  - I think I'm having trouble determining the difference between parsing and reading. Parsing returns metadata, that is, it returns data (syntax tree) about data (the source text). The difference being that the reader will return a list of [:atom :atom :atom] with each :atom being the same object under `is?`, but parse returns three different "literal atoms" each designating the same underlying object. So maybe we say "designates"? We could just say value though. The value of a literal is the data type.
+  - Something I'm also a bit unsure about is that textual representations have a start and end and source-text, but binary encoded objects do not, rather they would be identified by a path within the tree. So while parsing and decoding would have intermediate objects reprenting parts of a message, they aren't the same type of object. I guess they'd be binary literals?
+- Well, literals could be understood to be delegate objects. That is, when "evaluated" they return their value.
+- I think my issue is rather, what do we do with words and phrases? When do they get evaluated?
+- Cleaned up the parsing a bit. Now we have a token stream and the parser returns the tokens and some things grouped into expressions.
+  - Hmm, parsing is sort of like getting boxed objects instead of objects themselves.
+
+* January 11th, 2024
+- Thinking about the boundary between messages (externalization of concepts) and objects as internal representations of objects. Like, when you recieve a CyferScript message, you want to understand it. Parsing it returns data about the message (what are its constituent parts), but that's not the meaning of the message. The meaning of a message is its denotation. So in our Lisp code, we could ask `denotes` on the message to get what it means in Lisp. Like the literal numeral 6 denotes the number 6. Likewise, literal text denotes a string of text (notably without escape characters). Properties denote the properties themselves. Lists denote a list of objects (that is an ordered sequence), but the denotation of a word, phrase, or even a table is more complicated. That is, the earlier ones denote mathematical objects (values), whereas the other ones are by some sort of convention (that is according to some agreed upon protocol).
+  - I was struggling though to figure out the opposite function. What does it mean to take some internal representation and make it external? I asked ChatGPT and it suggested `symbolize` and I think that's great. Symbolize takes an object and returns literals. What constitutes a primitive data type then is something for which there is a one to one mapping between its symbolic form and its denotation.
+  - So I have to change parses a bit I think. It always returns symbolic data, not a message. Then, we ask (denotes ...) to get the "value".
+  - A quote then is an indirect literal.
+  - Or rather, "message" is the name we give to a symbolic form.
+- Fucking stupid, feels like I'm getting caught up in naming things again. Need to do something else.
+- Maybe we say it's a literal when it's a symbolic representation of a specific data type. Hence why we have literal messages, which are literal encodings of CyferScript.
+- Maybe we should just say "read" a message. "parse" a message would return annotated data.
+  - Right, so parse returns a literal message (since it's syntax, you want the whole thing). Whereas "read" "reads" the message returning data (which is what you want in the common case).
+  - So we still need data types for all of the literals. Literals just have more information on them. Like, metadata.
+  - Right, read just gives you primitive data, and you'll always know what types it can be.
+  - So like, we can implement read without going through the parser if we don't need that information.
+  - Likewise, encoding things really involves converting an object to a literal type and then printing it. But we can skip the step often.
+  - A protocol is a restricted form of message.
+  - Right, and for value types, there might only be one object, but there can be many literals pointing to that object. And you might want to distinguish them.
+
+* January 10th, 2024
+- Reading more of the courage to be disliked and this section was mostly about exactly that: being disliked. I talks about how if life problems are all interpersonal relation problems, then freedom is the courage to be disliked. That is, to do whatever it is you want without worrying about how it affects those relationships. And that's the case since while it's impossible to live without interpersonal relations, that doesn't mean you need to maintain all social relationships. In fact, to try and be liked by everybody implies a paradox of sorts in that if you want two people who are enemies to both like you, they might like you less because of your relationship with the other.
+  - And it talks about this in the context of tasks. That is, a lot of where people get caught up is in trying to take responsibility for other people's tasks. Like, overbearing parents don't let their kids learn by doing everything for them. They're taking on all of the child's tasks. But it works the opposite way too in that doing something because someone says so is fulfilling their task of making you do that thing. When the philosophy of the book is that "you can lead a horse to water but you can't make it drink". We take those tasks on, but we don't even really know if it'll satisfy the task. We can't make anyone do anything. "Not my circus, not my monkeys."
+  - Looking for the approval of others is fraught because you can't make people approve of you. They may or they may not.
+  - It talks about how people pick this up from school. It's reward training. We learn to expect a reward for doing things that other people want us to do (their tasks), and then apply that generally and are disappointed when we don't get a reward for it. Even if we're not conscious about it, such as with approval. Like giving gifts for instance, if you expect a reciprocation at some point, you're not really giving a gift are you.
+  - You are free when you focus on your tasks and not those of others.
+  - I'd almost rephrase it as about maintaining boundaries.
+  - It also reminds me of the bull case for free markets, we're better off as a group because we look out for our own self interests.
+  - Likewise, it talks about earlier that there are different spheres of relationships, work, friends, and love, and for me I put very little weight on the opinion of strangers (work), but I do seek the approval of those close to me such as friends and love. And it's those relationships that I have a hard time establishing boundaries with. I always feel the need to get their approval. It's why I had a hard time saying no to Rembrandt (didn't want to lose Will as a friend), or why I'd have a hard time breaking up with someone. Or doing things that my parents would look down on.
+- It's a pity that Self doesn't run on any modern 64-bit machine... would be interesting to play with.
+- What do I need to do next for Cyfer? Should probably implement property parsing.
+  - Alright, have floating point and properties being parsed properly.
+  - Side note, now that I have an understanding of the syntax tree grammar for PPCRE, I'm having a much better time writing regexes. Much cleaner.
+  - Now that that's done though, not sure what exactly to do next. Probably mapping literals to actual data, that is "deserialization".
+- Converting to Lisp data then is probably a matter of calling "value" on each element in turn? Or maybe lisp-value. lisp-value on a number is the number itself. lisp-value on a property is the property (deduplicated).
+  - Oh, probably looking at this wrong. We don't so much deal with the literals themselves as we deal with the message. A message is "read", that is we map it to internal data representations.
+  - Maybe makes more sense to deserialize it.
+  - Okay we have name for property and words now, and we convert quoted text into text.
+  - What do we have left to implement?
+    - Unicode sequences in text.
+    - Nil, false, true.
+    - Also literal messages.
+  - After that, then I think we can start sending stuff to Lisp.
+  - Literal messages work now. Still need to determine if a property/word is printable without quotes.
+- Time for a dip in the hot tub!
+
+* January 9th, 2024
+- So reading more of The Courage to be Disliked and it starts talking about superiority complexes and how those are just another expression of inferiority complexes. You feel inferior in some way, and so you take it out by bragging about something else. Like people who are really good at things don't need to constantly talk about it, they just do the thing. It's why people often identify intensely with specific brands, it's about going with an authority figure that says something is good and righteous.
+  - The other thing it talks about is how there are three main life tasks to deal with: work, friendship, and love. Work doesn't so much mean actual jobs as it does anything transactional. Like school, what have you.
+  - It also mentions how people don't find faults in others which make them dislike the person, they dislike the person and then find faults to rationalize it.
+  - A big part of "work" for me is that I feel above it, and I avoid developing relationships with colleagues because if I see them as people, then I feel more reason to do said work. If I look down on them, then I feel like I can avoid the work.
+- Worked out last night for the first time in three weeks and oof my shoulders. It's funny that I feel the shoulders even though it was leg day. I'm sure my legs will start feeling sore soon though. I was actually doing lego last night and noticing that my shoulders felt really stiff and was like "maybe I'm sitting wrong" but it was the workout...
+- Been enjoying reading the Smalltalk book. I think it's good seeing another interactive system's full design since it gets me out of a Lisp monoculture. It's also interesting seeing things and recognizing them from Ruby.
+- Parsing coming along. But getting kind of bored...
+  - Probably bored because I've done this a few times now.
+- Well spent a lot of the afternoon with my dick in my hand. It's funny that I used to be worried about doing it too much because while I can do it for awhile, inevitably I get bored at some point.
+- Reminds me. Woke up this morning kind of groggy from being high, and I think it's because I took it sort of late in the day (and probably a slightly larger dose than usual).
+- Curious to see if the Blue Book has the implementation for reading in data.
+- Okay, parsing is coming together. Might want to rename things a bit, and we still need properties, but we have the core types. And! Printing out the resulting message works.
+  - Might be fun to do literal messages next. Also need to do true, false, and nil.
+
+* January 8th, 2024
+- Sarah reminded me that she has a 90 day prescription for 20mg of Vyvanse that she got, and then found out she couldn't use due to the pregnancy. So that gives me an additional 45 days of medication. But we'll see how things go on Friday anyways.
+- So I'm reading this book called "The Courage to be Disliked" which I think Visa showed pictures of on twitter (I ordered it Friday night I think). Anyways, it's pretty interesting.
+  - First thing I found really funny was that when I showed Sarah the book, she said "since when do you care about what other people think of you? I've literally seen you lift your leg and fart in line at the grocery store." Which, true lmao.
+  - But the book is written as a dialogue between a teacher and youth. The teacher is a proponent of Adlerian psychology which I'd never heard of before, but apparently Adler was one of Freud's colleagues, but he diverged on his thinking from Freud. In essence, it denies the existence of trauma since trauma implies that there can be no change. That is, if everything we do is driven by trauma, then our lives our inherently deterministic and so no one can change. Adler instead says that everything we do is driven by our goals, including all of our emotions. For instance, if you're a shut in and experience anxiety at the thought of socializing, it's not the anxiety that's stopping you from socializing, the anxiety is an emotional excuse that's created to satisfy the goal of being a shut in.
+  - I guess the root idea then is that we use trauma as a story we tell ourselves about the life we're currently living.
+  - What stops people from changing isn't circumstances, it's that they must like the life they're living, or rather that the current life they're leading is predictable and easy. Even if your life is shit, that it is shit is comforting because you know what to expect. To change your lifestyle then is an act of courage, because you're facing an unknown.
+  - And it goes on to say that most of our problems are interpersonal. For instance, loneliness isn't about being alone, it's about feeling like an outsider while surrounded by others. That is, loneliness is a social problem.
+  - When you don't like yourself, you're giving yourself an excuse not to engage with other people. You're afraid of being rejected, so you give yourself a narrative as to why you'll be rejected. I'm afraid that people won't like me so I'll just not like myself! Now I don't need to find out because I know all of the reasons why!
+  - So people aren't happy because they don't want to be.
+  - It reminds me of existential kink, you get exactly what you want.
+- It also mentions that Adler thinks that a lot of self-identity is "cemented" around age 10, that is, we make a narrative for ourselves around then and for the most part we never choose another narrative. But you can just do that! And that's probably where my malaise comes from recently. Probably no coincidence that I set a life story for myself as a child that "I'm gonna be rich, I'm gonna own a company, etc." and then I went and did that and now that that story came to a conclusion (the narrative was fulfilled), I'm lost. But also, it kind of explains how while I feel really risk averse, none of the things I did along the way felt particularly courageous? Like dropping out of school is something a lot of people would be like "woah, how'd you do that?" but for me it was something in the script! Dropping out wasn't an act of courage because I was just following the narrative structure I'd set for myself earlier in life.
+- Something else in the book that stood out was that wanting to be like someone else is in part a way of saying that you're not good enough and don't deserve to be happy. Like, you're not Elon Musk, why would you beat yourself up for not being like him, you're not him!
+- So, what don't we like about ourselves and why? What are we getting from doing that?
+  - I think a lot of my focus on my appearance was related to dating. Though it's weird that I keep focussed on that.
+  - My gait. General use of my body. Pretty sure I know why now. I'm avoiding comments on my appearance.
+    - Some encouragement around this recently is that I've been opening up and expressing myself with my body more and Sarah regularly comments on me being cute. Such as playing with my lego airplane lol.
+  - I'm probably avoiding putting my work out there for fear of rejection. Notably, I don't think I actually care about negative comments so much as being entirely ignored. So if I don't share things, I get the same result lmao.
+  - One thing I still don't understand though is why I dislike conversations so much. It's probably the primary reason why I avoid making friends at all. Traditionally elitism probably played a part in giving me an excuse not to talk to people "oh I don't find them interesting", but that feels convenient. So what am I getting by avoiding talking to people?
+    - I think this might be something worth talking to my therapist about.
+    - Hmm could be about connecting with people? Like, I don't have as much trouble talking to people when it feels transactional.
+- Something I need to do today: my quarterly review lmao.
+  - And done. I should probably ask Anant what to do next seeing as how he's finally back.
+- I found out that there's a used lego store in town, with two locations. This weekend we went and they had the larger 007 DB5, so I bought it. Super cool, though it was missing 6 pieces (odd ones at that), but I went back last night and they gave me replacements. :)
+- Washing my blankets. Small white one done. Big red one now in the dryer, doing it in 30min increments since it's so big. Sarah is going for a massage, so I think I'll vacuum in here a bit since the cat and dog like standing by the window. Also, can vacuum the corner where I keep the blanket.
+  - Okay, the red blanket isn't as wet as the last time I did it. Just turned it around in the dryer after 30min and it's already decently dry. I doubt it'll take too many cycles.
+- I think what I wanted to work on next was the syntax for interacting with Cyfer, especially after realising that I can call it CyferScript.
+  - Okay, I have the beginnings of the printer, and while I don't have the parser, I more or less have it implemented from my earlier attempts.
+  - I'm really liking this direction though. CyferScript is encoded into Messages, and the contents of a Message are all Literals. There are Symbol literals (numbers, properties, and words/names/variables), and there are Sequence literals (phrases, lists, and tables). Then, you can also have Literal Messages (which are quotes), and Literal Text (representing text).
+- Where I'm still a bit uncertain:
+  - What to call symbols. Words? Names? Variables?
+  - I still need to add #t and #f and #n.
+  - Text is also weird. Is it a sequence or a symbol?
+  - And properties unlike numbers/words have an extra character. Should that be in the "text" portion, or somewhere else?
+    - Actually, I dropped text from literal and moved it to literal-symbol, so maybe text should be renamed to name or something like that.
+  - Also, should we operate on strings or streams or both?
+
+* January 5th, 2024
+- Bought more lego yesterday. FML. Got three star wars sets: a tie bomber, a pirate snub nose fighter (from mando), and the venator class attack cruiser. $900 something bucks, though I used $70 worth of points. Won't be able to start on the venator until Sarah is done with the castle (no room on the table), but she only has one bag left.
+- Interesting, the Art of Computer Programming box set was updated in 2022 to include Volume 4B. It's $260 for the set. I think I should get it...
+- I keep thinking that the left side of an expression denotes the subject and the right side denotes the objects, but I wasn't sure how that works with verbs because they can kind of appear on either side. But then I found this: https://en.wikipedia.org/wiki/Subject_and_object_(philosophy)
+  - And that maps to how I've been thinking about it. That is, subjects are agentic and objects are experienced by the subject. That is, the subject looks at things as objects, which in another scenario could themselves be subjects.
+- Also, sort of forgot that "thunk" is a term for a bit of code without arguments. That is, it's essentially a block of instructions.
+- Also interesting (from the wikipedia page about symbols): "A symbol is a mark, sign, or word that indicates, signifies, or is understood as representing an idea, object, or relationship." So, we could say that symbols are the things returned by a parser, and we resolve symbols to numbers, properties, or other objects. Then stick to quote denoting a literal symbol, otherwise we lookup what it means.
+- Just got back from my walk. Thinking it'll be a good idea to create a <cyfer-view> tag similar in function to Rails's turbo-frames. That is, they have a src property which is a name to an object, and on mount it does a GET for that object with a default media type of HTML, and replaces its contents with the response. We can add other attributes to it such as format to ask the server for some other form of data or something like that. Essentially the query parameters to the render function. Since it's a custom element, we can have it maintain a lookup table of all of its instances. Then, if it receives a response indicating that something changed, it can update other cyfer-views with the same parameters with that content. Can be extended later such that it asks the server for a bunch of different response types so it can update all of them when the underlying object changes.
+  - Later we could set up websockets such that the server knows which objects the client is watching and with which parameters and so it can preemptively send it data as needed.
+  - We might also want an attribute saying "hey this object is being edited, don't update my contents!"
+  - As per my thoughts yesterday, I think I need to set up custom tag support in my HTML library first so that I can generate them, then it's mostly JS.
+- Read a bit more of the blue book and finished part 1, in particular subclassing and metaclasses. Once again reminded that metaclasses are really fucking confusing, in part because even Class is of type Object. Self really did clean that up a lot. Like, it's not that people really interact with metaclasses anyways, the common case is to use classes and be willfully ignorant of metaclasses, but it's notable that prototypal inheritance grounds things in a much nicer way. In part because I think that Nil, that is the only value of the unit type, is the base of everything. Nil is an object with no properties, and because it has no properties, it can only have one instance.
+  - Part II of the book goes into essentially the basic standard library of classes: numbers, collections, kernel objects, etc. Should be interesting. It notes in the prelude to the section that it's presented in an encyclopedic fashion.
+- On a different topic, I think that applying Cerave cleanser to my armpits while dry and then rinsing off after awhile worked. They smell fine today. I did it again after my walk. It starts to sting a bit after a while, which means it's working lol. Can probably just use that approach if they flair up.
+- Alright, let's get back to a bit of Cyfer work. Thinking I'll create the custom element. Initially said cyfer-view, but probably makes sense to call it cyfer-object instead.
+  - So first thing's first, allow for the creation of custom elements in Lisp. Done.
+  - Now, the interface should be that I return a cyfer-object as the body, and we'll fill in the contents in another request.
+- Okay! The element is making the request and getting a response. At first I wasn't sure how to specify that the response should be partial HTML, use a special header? Query params? Instead I set the Accept header to be :text/vnd.cyfer-object.html based on what Turbo does. Then, ran into an issue in that the response failed and it's because the response object on the server was Nil. I forgot to specialize format-as with :text/vnd.cyfer-object.html. I think what I should do is have it so that any call to render with HTML should just set the content-type of the response to HTML.
+  - Okay yea, didn't actually need to specialize on the media type for HTML. So long as we get media type that we know about we're good.
+- Now we just need to add in support for params on the object.
+- Alright, got it working! Although need to think about how to dispatch the request a bit because when we change the attributes, we get a bunch of them in turn, so we have to somehow wait for them all to finish before dispatching. Wonder what turbo does...
+  - Also, setting innerHTML with the response works, but the script tag doesn't seem to fire. We'll probably want to do something else anyways.
+  - In order to make it atomic, I think the params need to be in the src itself. I don't think there's a good way to discern them otherwise. Although, I do need to adjust this code anyways since the attribute change callback is fired on mount, so I'm getting double requests at the moment.
+  - It's also not a bad thing to have them in the query string since we'd do the same thing for full page renders. We just pass it right in to the element src.
+  - That also simplifies response deduplication I think. Since multiple cyfer-object elements with the same src should be updated in tandem (unless a specific one is expressly ignored).
+  - Dope. That works.
+- I think that's good for today.
+- Had a great idea in the car. Use CyferScript to mean the written notation for Cyfer. Cyfer is more than a programming language after all, it's a dynamic system. CyferScript is just a notation for communication between Cyfer systems and end users. We'd also have Binary CyferScript being the simpler encoding.
+  - Doing it this way, CyferScript has a few different types. There are numbers, symbols, properties, and then the collections lists [], property lists {}, and phrases (). Ooo, we could also say that quoted forms are Messages! So when you say "send a message", you're implicitly saying, send some Cyfer Script.
+
+* January 4th, 2024
+- Hey hey, the Blue Book is here!
+  - Read the first 3 chapters and intro, about 55 pages. Pretty nice so far! Much easier reading it physically than as a scan.
+  - Notably, one of the few hard cover books I have.
+  - It's interesting that it starts with a discussion of the primitives and the syntax. And it talks about this, since as an interactive system it's typical to talk through using the UI, but they note that since everything is implemented in terms of the smaller things, it makes more sense to start there. And yea, makes sense. Start essentially with a text UI.
+  - There are two other books that are mentioned in the text and on the back. One is "Bits of History, Words of Advice", the other is "The Interactive Programming Environment". Both are pretty cheap on Abebooks, may as well order them.
+- Took bubs for a walk before this (the maillady was delivering stuff as we got back, so I took out some cardboard and waited until she left). Was thinking about what to do next.
+  - One thing I could do is add a query method "format" which renders it as pretty printed syntax. Start with just pre tags and then add codemirror. That's not a bad idea. After that we'd want to be able to edit it.
+- I've been spending a lot of time masturbating in the evening. I think we should do it mid-day instead so that we can spend the evening with Sarah either watching movies or doing whatever. I find I probably keep going at it longer than I should (that is, my legs start getting sore, or the sensation becomes a bit more muted).
+- Will be interesting to try out ES modules in the browser. All of the tech I've used was designed before that was widely available, so it's a different way to look at things.
+- Coolio, printing of the objects works.
+- Hmm, codemirror has something called Compartments now, which I think must be a renaming of an existing concept.
+- Huzzah! We have codemirror working. Set it up in a web component so it grabs the text content of the node and replaces it with a codemirror instance. I guess we just need to enable editing then.
+  - Alright, good start to the editing. We submit it with media type application/cyfer and we tell it to redirect. So at this point, we just need to parse it.
+  - After that, it'd probably be a good idea to clean the repo up a bit. Things have started ending up in odd positions. Like, once we have parsing, and printing in place, we'll want to separate the web specific concerns from the system itself.
+  - I'd also like to use parenscript instead of JS for most of the code. Having codemirror in its own little world and registering it as a custom element is a good approach I think.
+  - I also think that the path should be converted directly to a "word" and then we just resolve the word in the current environment.
+  - One thing I'll need to do is allow for the creation of new custom html elements using the same API as the other elements.
+- Something interesting about query params is that since they're in the path, they have an implicit ordering, which means we can treat them as named parameters a la Smalltalk.
+- Might be interesting to encapsulate things into web components. So the top level is just a bunch of custom elements with shadow doms for styling.
+  - Then you can kind of view them like function calls.
+- I'm considering trying out Soylent. While I like eating, there are a lot of times when I'd rather not think about it.
+- My armpits stink again. This is so annoying. Just tried Cerave cleanser, but instead of doing it in the shower, I've applied it dry, and I'll let it sit for a bit before rinsing off.
+
+* January 3rd, 2024
+- Wonder if the book came! It was listed as at a facility yesterday (had to check USPS rather than the original DHL).
+  - No book. :( Maybe tomorrow.
+- Feeling good today. Was also feeling really good yesterday after my realization. It's hard work undoing the shame and just letting me act naturally. What's interesting is that I took some THC last night too, and had a rather different sort of high than usual. I noticed while building Lego that I was more consciously using both hands to do things. Like it felt as if I was less right hand dominant. Another thing was I started talking to Sarah a lot. And was interested in what she was saying. We were randomly talking about plastic surgery and she asked if I'd ever considered getting anything done and I said not really, because often I don't know what exactly is possible. And I mentioned that I'd probably permanently get rid of my back hair and hair on my shoulders and she was like "you can do that with laser you know"... and yea. I'd never considered that before! And a full regime at the place she went to in Ontario would only cost about $1800. And now I'm like huh, maybe I should do that!
+  - It was really odd, I felt naturally more interested in what she was saying, but also talking felt really natural. And I also learned something that I wouldn't have considered myself. Very clear benefit to conversation...
+  - More generally, I'd describe it as feeling more right brained than left. Like the feeling of being intently watching while drawing something.
+- I don't understand why, but lately when I come back to Prophet it switches the audio to the Jabra. Like WTF, I haven't even used it for audio on calls!
+- Was watching Andres Kling implement a screenshot utility in Serenity and it's interesting watching him work because he more or less just talks through the happy path and translates it to C++ on the fly.
+- I really need to quit this job. I've probably been avoiding it due to some bit of fear and I'm probably just waiting for someone to tell me it's okay.
+- There's a new SBCL version: 2.4.0! I think they do once a month releases and then each year they increment the minor number.
+- Lol, got a message from Brent that I need to help some woman on #neon who had a problem yesterday with something to do with focus-trap (uh). So I pull up the laptop to look at it and it seems like Scott answered and addressed her question! Good shit.
+- Ooo, Fleshlight Universal launch available for purchase again. Hmmmm.
+- So I'm thinking about Cyfer again. Or rather getting a thought that "Ooo, I should work on that today!" but I'm not sure what to work on?
+  - This is a recurring problem I have. It's not that I have a problem with getting started, it's that I have a problem knowing WHERE to start. I'm not good at leaving myself something to continue with. But that's also because I tend to *stop* when I don't know where to go anymore.
+  - Hmm, let's go through my last notes. I'd finished cleaning up the code a bit. And mentioned doing some Javascript to create object properties. Well, it's probably either that or coming up with a parser for form arguments to have them work like in Rails...
+    - That might be fun actually. I'd need an abstraction for generating them as well...
+    - Rails just uses [] to mean array and hash. But I guess if they appear at the same "level" they kind of need to be the same. This is probably overcomplicated for what I need to do right now. I doubt I'll use this again in the future, so it's looking like JS is a better bet.
+- Okay then, I guess I'll use JS (or more likely Parenscript).
+  - So I need to render a little component representing a property, and its value. We can start with just one. It'll need a button to submit.
+  - Actually, come to think of it, if we're just gonna start with one, may as well just use the form submission anyways.
+  - Dope, that works.
+  - Now we can redirect to the edit view via a link.
+  - And now we want JavaScript!
+- Should maybe go on a walk, or do some beat saber. Need to movvveeee. Yea let's go for a walk. I also think I need to draw a bit.
+- Okay had some thoughts. One thing I think makes sense to build is a "format-as" generic method. For things like HTML-node, we want to just render that as HTML out. That is, HTML-node represents HTML literally. However, if we call render with an object that is not itself a format type, we should instead defer to format-as. Format-as takes two arguments, the first is the object to be rendered (so we specialize on the class of the object to render), and the second is the content-type to render as. The format-as will need to look up methods based on the precedence order in Accepts-Content header (and then some defaults). I'll need to see if I can lookup methods exactly.
+- Oh good tip from the cookbook! If you define your methods within defgeneric, when you execute that it'll remove methods no longer defined there. So no need to lookup the method and remove it manually from the REPL/SLY.
+- Alright, looking good! I can now render different responses based on the Accepts header! render is now just a function rather than generic method since the specialization happens on the format-as.
+- I think that's good for today. Time to get in touch with myself.
+- God it's so good to be alive!
+  - I think the next thing to do with Cyfer will be adding codemirror for text editing/display. I doubt I'll use it "in production", but it'll be nice to have something better than a textarea.
+  - Should also think about putting in place some basic styles. Having unstyled forms is wonky.
+  - Might also be worthwhile to make things editable by default.
+    - Though, there's something to be said about having explicit save buttons when you edit something. It means that the save is the equivalent of a "Cmd-Enter".
+- Cleaned up the code a bit by using lack.response instead of just lists. So now redirect-to, respond-with, and render are supposed to return response structs. Likewise, when you return something other than a call to those functions from the http-<method>s, it'll throw an error saying that it got something other than a response and that something is wrong.
+- Oh man that was weird. I had to recompile respond-with because SBCL had previously inferred that `response` returned cons and so it through an error when it didn't receive that. The error was that it was due to the functions type declaration, but I never declared the function to have that type! I've never encountered that before.
+
+* January 2nd, 2024
+- Perfect, CAD:USD range inching up again.
+- Ah first stand up of the year... yawn. I really need to do that fucking ticket.
+- Great couple of tweets from Nickcammarata on twitter today. He quote tweeted a tweet with a video of a beaver in a foster home building a dam out of toys. https://twitter.com/nickcammarata/status/1742104676575985917
+  - "most of my favourite people are like this beaver. they are built to do a thing and they end up doing that thing in some form no matter where they go"
+  - "they tend to fall apart when they try to pretend they're not built to do that thing and resist it, which doesn't really work anyway. they tend to thrive when they're just like okay i'm built to do x i should setup my environment so i can do it well"
+  - "it's also easier to unconditionally love/appreciate them, because whatever conditions you set wouldn't work anyways, a beaver is not going to be an orangutan no matter what you do, it's a beaver, you can appreciate it if you want, but there's not a lot of room for negotiation"
+  - Makes me think, what am I a beaver of???
+- Seems like the Klipsch RP600miis and the Polk R200s are very comparable.
+- Alright, just chatted with Daniel, nice to catch up. Was talking about HTML and HTTP and shit lol.
+- Have a 1-1 with Jonathan at 11:35, but might just ask to skip it since like... what happened? Although, might be good to just be like "hey, I had a great time off, hbu???"
+- Just got back from walking the dog. Went at like 10:15 instead of around 11 since I needed to make sure I'd get back before the 1-1. Now it's 10:50 and I think I'll just work on the ticket I have since 1) I haven't done shit on it in over a month, and 2) I'll just be killing time until that meeting anyways. Uhhh.
+- Lmaoooo, I'm not sure entirely, but I think Bryan might have addressed the issue I was supposed to fix? I pulled the latest code and the tests pass now... Lol. Also spoke with Jonathan and he was like "things are good, just remember to attend stand up".
+- Okay, time to send funds to RBC and request an exchange.
+  - Okay, got back $35947, 1.3314, decent.
+- Ooo, I just looked at the tracking info for the Smalltalk blue book, it was in Canada as of the 31st, with delivery via USPS, so I wonder if it's in the mailbox?
+  - Hmm, nothing in there, not even flyers, but I don't know if I actually saw the mailman come by... I just saw some girl pick up a package from the box, but that could've been there for awhile.
+- Emotions 101 https://www.youtube.com/watch?v=XMQEYWBg4Gg 
+  - "Sadness is what happens when your body believes you need help and can't resolve it itself. This is why confidence and sadness are indirectly correlated, if you're confident, you feel like you don't need help!"
+  - "Sadness is high sensitivity and low energy. Sadness reduces cortisol and activates the parasympathetic nervous system making you slow down. If you are feeling sadness and don't seek help, you're short circuting this system. So if you don't ask for help you'll become more and more sad, and it's painful because your body is like 'hey fucker, ask for help'."
+  - "Shame is designed to motivate correct behaviour. We become hypersensitive to the opinion of others. It's a sympathetic nervous system response. We feel a panic to make people happy. It's high energy (panic) and high sensitivity. We go to great lengths to correct or cover the shame. This is where we get tripped up. Because since we're highly attuned to others, we cover up shame because it's easy vs addressing it which is hard. Let people judge you, live in the light."
+  - "In the east living the truth gives you spiritual power." "Living the truth means living a life without shame." "If you feel shame, ask yourself, what do I have to do about how I'm living so that I don't feel that way, and the answer is always to live truthfully."
+  - "Guilt is inducing internal corrective behaviour. It's the standard that you set for yourself."
+    - Guilt is low energy and low sensitivity. "We're not thinking about other people, we're thinking about ourselves." It's the parasympathetic nervous system, so it slows us down.
+    - Often goes hand in hand with shame, but they are distinct.
+  - "Talking about your emotions doesn't fix them. Talking about them and letting them *rise up* is what allows you to fix them."
+  - "Let's talk about male emotions, since they're named differently."
+    - "Frustration, anger, shame, hopelessness, powerlessness. If you have a problem and you can't resolve it, then you feel powerless and hopeless."
+    - "Dispensable/Replaceable - low self-worth, low self esteem, shame, guilt"
+    - "Out of control - anxiety"
+    - "In control"
+    - "Pressure. Holding up the weight of the world. Cracking."
+    - "Inferior"
+    - "Vibing. Chilling."
+    - "Crazy love (bad love)."
+    - "Stable love. Acceptance."
+    - "Righteousness - anger"
+    - "Justice - anger"
+    - "Why are we as men supposed to know the words on the right and not use the words on the left?"
+  - "So how do we fix them?"
+    - "1) Name them. Research shows that trauma is when our left and right brain (proverbally) aren't communicating. It's why we feel numb."
+      - "As a man when the world does something bad to me I feel shame, and then I have to do something to the world to make the shame go away." "Something we've learned is that talking about vengeance is enough to resolve the emotion. Freud found that language can be a substitute for action."
+    - "2) Through our body. I'll teach a couple of practices to get in tune with our body to metabolize emotions."
+      - "Metabolism is the process of taking something that isn't part of us and turning it into part of us."
+      - "Take a deep breath in with our navel, pushing your belly out. Then think about a particular emotion, then push that emotion out through your nose very very quickly (sharp exhalations). Do this practice for 3-5mins. You'll start to feel light headed, as you do, slow down. Naturally, your mind will start to calm down."
+      - "Next thing we can do is a more physical practice, it's about getting in touch with your body. Raise your arms above your head, and as you exhale you whip your arms down. Do 10 rounds, 12 rounds, don't push yourself. Vigorous. A lot of our emotions are held in our shoulders as tension."
+    - "The next thing that we're gonna talk about are a few conceptual things. In general, if you're feeling a bit emotional unwell, that is you feel a bit unsure about life or like a pinball in a pinball machine, one thing you MUST do is get comfortable with your body. Your body needs to be a place that feels good to. Look at yourself in the mirror and the first thing you see in the mirror is not actually your body, it's conceptions and feelings that come up. (Body dysmorphia happens with body builders for instance, even though they are *specimens*)."
+      - "When we hate ourselves, we punish the body. You have to get in touch with your body."
+      - "Something I see is that 90% of the men who have problems with their emotions do not like to dance. They find it very hard. You can't dance unless you're connected to your body. You should feel good about your body. When do not manage your emotions, they express themselves in the body."
+      - "The more psychologically unaware we are, the more damage goes to the body."
+      - "If you don't know what emotion you're feeling, you can look at your body and it'll tell you. Where do you feel bad? If you feel bad in your stomach, your throat, your chest, it's a different type of bad."
+    - "Avoid emotion focussed coping. It's correlated with bad outcomes in life. They're things that make us feel better without resolving the emotion. We're simply making them go away. Look at the things that make the emotions feel better without fixing the problem. Substances, technology, etc. We feel confused about life, but we spend all day using emotion focussed coping mechanisms instead of actually addressing them."
+      - "The purpose of emotion is to induce action. The emotion is designed to change your behaviour. But if you make the emotion go away, we never make the changes that are necessary to improve our lives. The emotion is the thing that's supposed to help you! Imagine if you used something that'd supress your hunger and thirst, you'd literally die! You're disarming the very thing that's designed to help you implement change."
+  - "One way to find out what you're feeling is to literally write out your life story (you can't do this in your head), and come back a day later and then ask 'what is this person feeling?'"
+  - "Anger is an umbrella emotion. Is my territory being violated? If I wanted other people to see me differently, that's shame. If I want to be different, that's guilt."
+  - "Ego is designed to protect you. When you have guilt and shame, ego will turn that into anger, that is turning your problems into problems with other people."
+  - "Effective communication is about managing your internal emotional state and managing someone else's emotional state." Wow, seems topical! That's scheduled for tomorrow!
+  - I'm definitely avoiding interacting with Sarah for a lot of things and I'm not sure why exactly. Like, why do I avoid talking about things like flights? Not even big issues, rather innocuous ones.
+  - Lol, funny thought occured to me. What if I masturbate to cover up the feeling of shame that comes from masturbating a lot? I think it gets in the way of enjoying it that's for sure.
+    - I mean I do feel ashamed about it. I mostly do it in intense secret! Because I feel like I'll be judged for doing it so much! And people on the internet are very judgy about it!
+    - So if you resolve shame by living truthfully, just own it?
+- Oh shit, maillady is here!
+  - Nope, not there. Just some flyers.
+- WTF, I think most of my neuroses about how I act stem from middle school... fucking child prison. Why am I concerned about what middle schoolers think of me???
+- Something I'm curious about is how the Lisp debugger displays stack frames. Since you can replace the debugger that must mean that there's a semi-standard way to do so?
+- I think the communication 101 live stream is something I should watch. I definitely have communication problems lmao.
+- I'd probably benefit from a schedule for myself, but I avoid it. And I was just thinking, why? And I think it's because I see schedules as a reminder of failures. That is, I fail to follow the schedule, so why put myself through that. But you don't HAVE to stick to a schedule you set silly billy!
+  - I think this also stems from school, because if you don't follow the schedule, you're punished for it!
+  - Instead, treat your schedule like the schedule of a conference. That is, here are some sessions you could be attending, which do you want to attend?
+  - This thought actually bubbled up this morning on the drive to Tim's in a different context. I was thinking about how much contempt I have for school and the arbitrariness of the schedule with respect to my kids. Like, sure my kids will probably go to school, but I intend to take them out of school as much as possible, because time spent with me is far more valuable to them than anything they'll learn there. In fact, the only reason to really go to school is to make friends. That's it. I don't care about academic achievement. Lol lmao even.
+  - It's like, life is a smorgasboard of activities to partake in. You're rich, do whatever you want bro.
+- We're cleared to fly! We need to get to KW for the 25th since the 26th is the wedding, otherwise we come back whenever the following week.
+- OMG, I just realized that I feel ashamed of being happy and joyful. That is, I've internalized the idea that a lot of the things that bring me tremendous joy are considered "weird". This happened because of multiple instances of me sharing something with someone and learning that the thing was "weird" by my peers and so I either stopped doing it, kept it a secret, or told myself that I should be doing something else. And relatedly, I've learned to stop expressing positive emotion as a defense mechanism. Be that excitement, joy, hell even contentedness.
+  - It literally occured to me while wrapping myself up in blankets and just like... rolling around. It feels SO GOOD. But naturally, I do it alone because I've never heard of anyone else doing this.
+  - But similar things happened with like... programming. I distinctly remember people making fun of things I said that were about it ("header file" -> "pedophile"). And so I've learned never to express my interest in these things because I'll be mocked for it.
+  - I'm deeply afraid of dancing or moving in public because people have commented on it.
+  - It's also probably why I use weed so much. Think about it. It turns off the feelings of shame associated with the things I tend to do on it. I use weed to turn off the shame of expressing myself freely.
+  - It's why I'm so closed off about my inner state.
+  - Similar thing for sex and relationships too. "Ooo, who's your girlfriend!??".
+- You can do whatever you want man, so long as you're not intentionally hurting people, and that's not even something we ever consider. You're a good, loving, and sensitive person.
+  - Follow your bliss. If you don't feel like doing something right now, don't do it.
+- Okay so flights to Toronto are about $2900 round.
+  - No flights to Kitchener on Thursdays from the looks of it, otherwise we'd save a fair bit of money... sad.
+  - Hmm, Porter is a fair bit cheaper. Didn't realize they fly to YYZ, thought it was only Toronto Island.
+    - Ah only includes a carry on, no checked bag. Also, is this the right premium economy?
+    - Okay, I think that's probably a good option actually. Probably not worth the "full refund". $1930 total price. People say good things about them.
+- Well, I'll let Sarah know about that. Figure I'll book tomorrow.
+- Should put together those chairs.
+
+* January 1st, 2024
+- First day of the new year! Just got back from walking the dog and doing a bit of cleanup.
+- Just before I left, Sarah was like "I need you to help clean up a bunch of stuff" and I left the door kind of angry. Anger being your boundaries being stepped on. I think the issue was that I'd wanted to spend the day working on Cyfer and then to be thrown a grenade of "no, I need you to clean instead" pissed me off. In particular because the last two days were wide open and scheduled for cleaning! Anyways, it's probably not all that much work, and I can do some of it this afternoon, but still.
+  - I thought about it while on the walk, and recognized that I didn't tell her what my plan was, so how was she supposed to know? (This is a recurring theme for me to be honest). But as I thought on it more, the reason I don't talk to her about these things or come up with a plan for how to tackle shit is that 1) I don't enjoy telling people what I'm planning on doing, in part because I find it really annoying to be interrupted while doing so, but also 2) half the time if we agree on a plan and we get to the time to do it she'll be all "uhhhh, I don't want to do ittttt..." too.
+  - I also understand why people work outside the house. Physical space is a clear boundary.
+    - Makes me wonder if it makes sense to like... get an office somewhere to work instead.
+- An unrelated thing on my mind on the walk was "you should probably fuck up your life some more". I think I saw a tweet to that effect, and phrased a bit differently, it's something worth considering. Like, "what risks am I taking right now?" It's odd, I'm a pretty risk averse person generally, especially when it comes to interpersonal relationships. But it applies to career too (staying at PS is very low risk). And the thing about risk is that there is also reward. What risks could I be taking to make my life better? (Seems like a question JBP would ask).
+- I was off my meds on the weekend, saturday was a bit slow (per usual on the first day off), but Sunday was good. It's interesting seeing how my thought patterns change after the first day. In particular, I was watching videos about Dubai and Barbados, and shit like that and was thinking "fuck, I need more money". Like, I'm comfortable with a few million obviously, but what am I doing now?
+  - And I'm obviously drawn to wealth from the prospect of doing big projects, and watching things like people building amusement parks or big real estate developments makes me realize that a couple mill is chump change.
+  - You need to be empire building! That's what you're here for!
+  - If I'm interested in that stuff, there's nothing wrong in pursuing it. I think I've done a disservice to myself by avoiding going after "more money", but it's not really about the money, and it's not even really about the status. Like, I think it'd be super fucking cool to have a yacht. Do I want The Biggest Yacht in the world? No, obviously not. I don't care about that. But to me a yacht is about freedom. Like, I can go on vacations and shit. But there's something to be said about the privacy of a yacht. Same thing goes for a private jet. It's available when you need it, there's no waiting. There's no being stuck in a seat with a crying baby. You have the whole fucking plane! Much better.
+  - And, I've been unsure of what to do next because I think I've been looking for something that'd be "big", but also something that'd keep my interest. But as PG says, big things often look like toys. Even Wikipedia, which is a non-profit does something like $100M/year in revenue.
+    - Yea, Jesus Christ, $154M in 2022. (With $146M in expenses lol).
+  - The other thing I think I've noticed from watching those videos, especially about Disney, and all these other random theme parks is that they're all just PASSION PROJECTS. Likewise for doing all of this Lego recently. People need things to do. Trying to focus on things that seem immediately useful or productive is so limiting when the human experience is just that, an experience. What do you want to experience.
+- My biggest limiting factor is around people. I'm not sure what to do about that. Probably worth talking to the therapist about.
+- Tomorrow need to reach out to RBC to transfer money. Need $26K by Jan 10th for the RBC Visa and $10800 on the 3rd for the Amex. I've got $13700 in the checking right now, so Amex should be fine.
+  - It's just annoying because the dollar has been appreciating in the lead up to the new year. I think that's just a seasonal thing though.
+  - Okay, looks like I should be fine. Even after paying off the ring. Should book our flights soon.
+- I'd like to buy some new speakers for the office. I'm thinking it'd be nice to get the Polk R200s and the Klipsch RP600Miis. Both about $950-1000 regularly, but on sale for $750.
+  - Polks look best in black, but Klipsch could go either walnut or black tbh. Hmm, I think Walnut. It's a nice subtle brown.
+  - Might want to get another stereo amp at some point. The one I have is the AS301 and its bigger brother is the AS801 which has a USB DAC built-in. Interestingly, the 1000 series amps do not.
+- Interesting, wikimedia uses query params for editing. When you go to edit a page it takes you to w/index.php?title=<page title>&action=edit. Ah interesting, and history is action=history. So they are using query params to clarify what sort of view they want. It's odd that it's w/index.php and not the page itself though.
+- It occurs to me that Cyfer's first version then is just a wiki where the syntax is S-Expressions instead of markdown(ish).
+- So where was I at? I'd imported the structs and wrapped them in a dynamic var.
+- Well, can I get this form working and have it create an object?
+- Alright, so have object creation working, now setting up property creation and ran into the thing that Rails does where a form can only have GET or POST for method, PATCH doesn't work. So Rails addresses this by using a hidden property to route it differently.
+  - So I can either address that by 1) doing what Rails does and changing how the routing happens as middleware, or 2) doing it in JS.
+- Think it's time for a snack.
+- Hmm, not sure if I want to implement method override or not.
+  - Cool, it works!
+- At this point, I'm running into another issue that Rails addresses lol. Dealing with param names for forms. The patch method should take a body params and add those params and values to the object, however, the param and the value are separate keys since we want the user to add the name and value separately. Rails uses that weird encoding for names where it breaks the key up along "[]" representing nested objects.
+- I wonder if it's time to move to some JS though...
+  - Might not be a bad idea tbh. Since I'll then need to implement mime-type dispatching on the server, which I've kinda been putting off.
+  - And I think the next step from there will be including codemirror for editing "plain text" so that I can enter code. Not only would that give me a way to edit objects with text, it'd let me start implementing a prompt.
+  - Actually, one thing I should really figure out is what's going on with backtrace not fucking working properly... I think I need to update my dependencies, but I forget how...
+- Okay, updated dependencies, and also made sure that the asd loads from scratch. Let's see if that fixes backtraces.
+  - Well, after some digging I've learned that the backtraces aren't working because of something to do with Lack, but even if I use my own, it doesn't actually really do what I expected. Like, it'll print the backtrace to standard error, and I can return a page saying "Internal Server Error" but it doesn't actually print the backtrace out to HTML. I'd need to do that myself, and I'm not familiar enough with how those work to do it nicely.
+  - Also, the trie implementation is starting to annoy me. Should probably rewrite it myself.
+- I think I want to do a bit of cleanup in the codebase. Going to call them Cyfer Space Objects.
+  - Alright, cleaned it up a bit. Now have a difference between identifiers and actual objects.
+  - Thinking I'd like a method to turn an identifier into a path.
+    - Ah, much nicer!
+- Alright, that's probably good for today. Next up, I need to think about inserting and editing properties. Pretty sure that'll need some JS.
+- A cool idea I have is that an object can be given a property "renderable" which allows you to give a custom render function for an object (otherwise it'll use the default function).
+- Compound identifiers are essentially the same as package:symbol, but generalized. It's like a recursive lookup.
+  - Need to figure out what to do with # since that's reserved in URLs. Also, what about literal /?
+- Browsers seem to support spaces perfectly fine nowadays (they just encode them properly). In which case, do I actually really want / to mean something?

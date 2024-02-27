@@ -1,0 +1,919 @@
+* August 29th
+- Alright time to email RBC and tell them to send the money...
+  - Emailed! I'm expecting a phone call shortly.
+  - Alright, and they called me about it.
+- Ok, as for the rest of today, Sarah will need me to help reposition the cars (i.e. bring her to her mom's so that she has access to her mom's car, while our cars are here).
+- List of remaining tasks:
+  - Take all of the electronics to be recycled
+    - Call Best Buy to see what they can and cannot take.
+    - Also need to take batteries.
+  - Figure out where to take the butane canisters
+  - Vacuum the living room and kitchen a bit to get rid of the tumble weeds.
+  - Go through sex toys and clear out what I'm not bringing and put the rest in a tin.
+  - Remove the bidets. Especially the main bathroom one since its tank needs to empty.
+  - Go through the car and take the mailbox key out, and any trash. Also need to unmount the phone caddy.
+  - Remove the GPU from Hyperion
+    - Although, I'll do that after checking what's on those drives.
+  - Pack up all of the stuff I need to bring with me:
+    - Passport/birth certificate/letter from dad/SIN/etc.
+- I guess I'll have to go to the region to get rid of the butane tanks?
+  - Fucking useless. Call the waterloo waste management phone number and it just takes me to the region and then it has one of those stupid AI ones that just tells me to use the waste whiz app. WHICH IS WHERE I GOT THE NUMBER. I guess I'll just go there and see what's what.
+  - Oh, actually, I need to blow out all of those computers full of dust, and then I can also get rid of the compressed air canisters as well.
+- Right, we need to return the Rogers modem... Sarah will have to do that this week I guess.
+- Receipt of wire confirmed. And Gowlings also reached out about confirming my wire details, they say within a week, so we'll see.
+- Removed the main bidet, will need to do the other one tomorrow or so, but I'm not bringing it with us, so no need to pack it up.
+- Still need to do the computer, the car, and all of my personal items.
+- And need to take apart the baby gates.
+- Car should go through the wash, and gas needs to be topped up a bit.
+- Still need to book a rental for next week. I can do that tomorrow or Thursday.
+- Car is ready. Didn't take out the little phone mount, but whatever.
+- Mostly just my office now I think. Oh, and baby gates.
+- Ok, time to close up shop here. Actually, that's a good idea. If I do the monitor right now, then I'll have room to fuck with the desktop.
+
+* August 28th
+- Just got back from breakfast with Zamal, talked for almost 2 hours. Nice to catch up with him.
+- Have the signing for the house in 40min. Big day!
+  - Once that's done, I don't think I have much left to do. Probably sending info to private banking.
+  - But otherwise, today I should pack up the consoles downstairs, I need to replace the lights, and I'm thinking I should take the garbage away. Need to figure out what to do with the butane canisters.
+- Are you fucking kidding me. I had to print out documents for the lawyers, but we didn't get an email about it, and I gave the printer away yesterday...
+- I think I need to take apart all of the entertainment unit stuff tomorrow. Like, unplugging all of the TVs, and the stereo, etc. Make it easy to pack.
+- Alright, signed off! Need to send the funds for arrival on Thursday, so I'll send the email to RBC tomorrow.
+- Let's see, what was I thinking of last night... I think I wanted to add a variable for my org directory, then create a function to add a new note.
+  - Coolio, fixed a little issue with the config (the open config.org file command was wrong, and I also fixed it constantly asking me if I really wanted to open it).
+  - Now to configure org!
+  - I think I want to write a nice little function to automatically create Journal entries for myself.
+  - Ok, that was straightforward, just create the file name and find-file goes right to it!
+  - Now, I need to jump to the correct heading.
+
+* August 27th
+- Daniel and Devin are both supposed to pick some stuff up today, and I need to take apart the rack. Otherwise, not much to do on this beautiful Sunday.
+- I was watching a video of Dr. K.'s this morning about motivational styles, and it had me thinking about mine some more. Like, I look back fondly on going out to pick up furniture for the office. I like having variety during my day, and as much as I tend to stick to routines, I don't exactly thrive in them. The problem is how do I ensure variety? Perhaps it's a matter of not having enough projects underway. If I only have Cyfer as my main "productive" project, anything else I do doesn't feel right. I need multiple projects to work on so that I can jump between them. Sort of like what I did with the breadboard computer, I'd do some work on the software, but other times I'd sit down and do some wiring, either way they all contributed to the same project.
+- Something I was thinking about a bit last night was: how do I handle file/project templates in emacs? Like, do I just copy files? Or do I use S-Expressions instead? With files you have the issue of escaping things properly, S-Expressions not so much. With S-Expressions though, they might not print out how you'd like them to.
+  - Makes me wonder, what resources/research exists about code formatting? And how relevant is it to Lisp?
+- I think today I want to play around a bit with Org Babel as my primary init.el.
+- Watching another video of Dr. K.'s right now on unlocking motivation, and he mentions that too many desires locks motivation and you get task paralysis where you have so much to do, you can't do any of it. And I wonder if I've done that to myself lol. I have too many interests.
+  - "When your unconscious mind is full of tasks that it has to keep track of, it can't support you in actually moving forward and completing tasks."
+  - Interesting. Motivation is blocked by too much stuff going on under the surface.
+  - Ah, that might make sense to me. He gives the example of alcoholics anonymous. People who go to AA have highly motivated conscious minds, they're literally going somewhere because they think "I have to stop drinking, I have to stop drinking,...". Like they clearly are motivated not to, but they still do. Why? Their conscious mind is highly motivated, their unconscious mind paralyzes them from actually doing that.
+  - One of the steps they use is making amends. Think about every person you've wronged, and try and make amends to them. Doing this stuff often causes them to relapse. The step isn't something you "succeed at", you "work the steps", even if you relapse, you still do it. As they make amends, they start to have more control over their addiction. People with alcohol problems tend to have a lot of pent up stuff floating around in their unconscious. So their unconscious mind is really burdened. The more that they settle those karmic burdens, the more they become unbound and can start doing things.
+  - It's not about finding motivation, it's about unblocking motivation.
+  - This all makes sense to me.
+  - But what karmic debts do I need to settle?
+  - What am I left unsettled? What am I leaving unsaid?
+  - Hmm, that reminds me of dealing with Dad's death. There was so much I wish I would have talked to him about. I feel like I'm probably doing the same thing with Mom and Reid.
+  - Ah, you know I probably don't do that with them in part because I'm never alone with them? Like I think about being a kid and having Reid suck my toe. I want to apologize for that, but that's not something I'd bring up in a group setting.
+    - With Reid I also want to spend more time with him, could be online playing games, whatever, but he's important to me in that he'll be a part of my life for a long time. And more importantly I'd like him to have a close relationship with my kids the way we do with Colleen.
+  - And for Mom, I want to talk to her about how I often feel like I'm not heard? Or that she's not paying attention, and that that's why I have a hard time telling her things. Or that she won't know how to respond to me and change the subject.
+  - I suppose I should just take them aside and ask to speak in private while I'm there.
+  - I also want to talk to mom about her parents.
+- I'm unsure of what to do right now. I keep thinking about masturbating. But I don't want to do that in the office anymore, and I doubt Sarah wants to have sex since she's so sore from all of the moving shit she did yesterday.
+- Making amends seems like a good idea. Mom and Reid are the most important off the top of my head. I'll probably have things to talk about with Sarah once we're on the other side of the move.
+- Hmm, I've moved all of my initialization to an init.org file, but for some reason when it creates the init.el from it, it puts it into the dotfiles directory instead of just the root .config tree...
+  - I guess somewhere in the tangle code it's expanding the file to its real file name?
+  - Ohhh, it's because the org directory in the emacs config folder was a symbolic link. So it was putting it in .config/emacs/org, but that went directly to the .dotfiles folder. I had to manually create the directory in the .config.
+  - Hmm. That's not necessarily a good thing then. It means I'd have to create that directory on each system that uses these dotfiles.
+  - Might mean just putting the file directly in the root of the emacs config and just leaving it as an org file. Will need to figure out a different name for it though.
+  - Ok, I moved it to the root emacs config directory and just called it config.org instead. That's fine for now I guess.
+- Instead of having a bunch of things about turning things off in emacs, I should create a reset.el for like sane defaults to build a config on top of. Sort of like how people have reset.css files.
+- I think I understand why people like modal editing so much. Org is kind of annoying in that if you hit return on a collapsed heading, sometimes it'll look like nothing happened, but what it's doing is actually inserting a new line, but because it's collapsed, it's adding a new line and immediately hiding it.
+
+* August 26th
+- Went through my closets! Most things are coming with me actually. I guess I already got rid of a lot of stuff.
+- The stuff I did end up getting rid of is mostly boxes that I hadn't really gone through yet. But most of the boxes are dad's stuff (Alice, notebooks, etc), or stuff from when I was a kid. There are a bunch of nick nacks I'm keeping, but not sure where to put them for now.
+- I got rid of grandpas watch. The band on it was all mouldy, so no point in keeping it because I'd have to replace essentially the whole thing anyways.
+- I'm also getting rid of the old computers. They're both essentially falling apart. The big one is such a pain to move, and the fans are literally falling off of it. Meanwhile, I could have swore I had a 7800GS in the P4 machine, but actually it was a 7600GT... not only that, the fan on the GPU had separated from the die, so it's not even useful anymore. Oh well.
+  - I've pulled the drives from the big machine, I'll need to plug them into Hyperion and see if there's anything on them. Otherwise, I've pulled the wireless card from it, and GPU. Who knows if I might use them again, but much easier than keeping the machine itself.
+  - Honestly, opening them up made me realize that they're essentially write offs anyways. And I don't have the connection to them the way I did with the old macs.
+  - Also gonna get rid of the NES and Xbox. They're really dirty and I just can't be bothered to clean them and make sure they're good.
+- Well, I have to get rid of those desktops, and I guess Best Buy takes them. Best Buy takes batteries too.
+- Not sure about the butane cannisters and this leather cleaner I have...
+  - Also not sure about the champagne that we keep forgetting to drink. I could bring it with me on the flight, but that'd take up most of my room in my bag if I checked it lmao. I guess we can send it on the truck?
+- Now that I've gone through the closets I'm feeling a lot better generally. Taking apart the rack is probably the biggest "task" apart from taking stuff to value village/best buy/etc.
+- I brought the boxes for the consoles down so I can put those away. I'll do the One X upstairs last (since oddly I use it more than the Series X lmao).
+- Actually, one "big" thing I have to do is go through like all of this stupid paperwork that seemingly keeps piling up.
+- Just got back from walking the dog. Sarah's gone to Alex's, they're doing a pottery/make a mug thing tonight, so I doubt I'll see her until late.
+- I had that thing happen again last night where it was super clear what I should be working on and all of these ideas to explore with emacs/cyfer and... now I forget them. This is actually such a common thing that I'm wondering whether or not I should start working on my own stuff in the evening and then just chilling/dicking around during the day. It seems similar to that conversation I had with Will and Suraj all those years ago about how it was weird to them that I went home at 5pm. It was just my routine. But I think the only reason I go to bed is that it feels like I should? Hell, I end up playing games in bed when I could be playing them on an actual TV... Perhaps this is a habit I should look to break?
+  - Like, a benefit of working at night is that it makes more sense once I have kids. Kids will be in bed, and I can spend the day with them (and nap when they do).
+  - I'm also wondering how much of that is down stream of cannabis usage in the evening making me creative?
+  - Or, is it the vyvanse making me narrowly focused in the day, and then once it's worn down a bit my awareness opens up?
+  - Could also be due to food? Like I eat way more in the evening, and then maybe I have energy from the food?
+  - That's an interesting thought. Like, I usually avoid eating in the morning because I feel sort of bloated afterwards/or low energy as I start to digest. But that might be true for like an hour, maybe I'm more productive after?
+  - Another thing is that if I want to play video games, of course I'll do it downstairs in the basement with the projector. It'd actually be better in the evening anyways since it'll be dark.
+  - And my office will be on the other side of the house from the bedroom (not to mention if I do use the upstairs one, it'll be insulated from noise).
+  - Not to mention Sarah tends to finish work at 5 and that's usually when she propositions me for sex. I should just spend that time through dinner on being with her.
+  - I can also just sleep in if I want...
+  - Although, I wonder how much my schedule will change based on the time change. Will says his days changed a lot, but then again he works east coast hours due to the markets...
+- My main insight last night was that I should put off fucking around too much with Guix for now. It works. I can learn to manage packages more deeply later once I want to tie it together with Cyfer. So focus on the front end so to speak.
+- The other is that I should just use Org mode for as much as possible for now. In particular babel mode with sessions. That way I can essentially work by recording my thoughts directly.
+- Now that I record most of my thoughts in emacs, I find I have a mental hurdle now when all I have is my phone. Like it occurs to me to record something, but then I realize that means recording it in notes, and... I don't because it feels like I'll forget to pull it over later.
+  - So it'd be nice to have like a little phone client to interface with my other devices.
+  - Could be a webserver? Then connect via tailscale? Oh, I wonder if there's a phone client for that.
+  - Oh cool there is.
+- Now I wonder, what could I do during the day that's fucking around???
+  - Playing video games
+  - Fucking around with devices (BIOS updates, performance testing, etc).
+  - Research?!
+    - Actually, reclassifying research and reading as "fucking around" but making that an intentional decision is a great idea.
+    - Although I should keep journaling when doing so. What am I thinking while reading things?
+  - Reading books (haven't done that enough lately)
+  - Programming, but like from a book. I actually miss doing that...
+  - I'm fine doing things that require focus during the day as well, for an hour or two.
+    - Like working on Rembrandt stuff
+    - Leet code!
+- Recording my interactions and thoughts while working on a project has a number of downstream consequences. The first is that it allows me to externalize my working memory. Helps me from getting lost too often. Second is that I can share it, and if I get stuck on something, I can post that. In fact, that's the best possible way for me to get help from people. My entire interaction history is written down!
+  - Something else that occurs to me is that if I do that, I also can essentially fine tune an LLM on my interaction history. Have it predict the next steps.
+  - And if people tell me something better to do, I can record their responses in the history (then have an LLM play the part of "internet commenter").
+  - It also gets me in the swing of interactive development, like sitting at a REPL. Which is a big part of how I think interaction should work with Cyfer.
+- I do probably eat too much due to weed lately. Although, I really need to be lifting heavy on a daily basis.
+  - I should make lunch my main meal of the day again. Just like the old days. I can make steaks, veggies, whatever. And make it for Sarah's lunch too.
+- Oh interesting. Dr. K. says that weed enhances the enjoyment of low dopamanergic activities disproportionately more. So like it might take a video game from a 7 to a 9 in terms of enjoyment, but it'll take staring at grass from a 2 to a 9. Problem is that then you reach for weed to alleviate boredom.
+  - I don't think I'm using it to alleviate boredom though. I'm quite fine being "bored".
+  - "I've been doing a lot of reading on male mental health recently. There's a reason the majority of people who struggle with marijuana addiction are men." Although is that not true for most drugs?
+  - "When you're growing up you're not allowed to express negative emotion, you're not allowed to process negative emotion. People manipulate you, and you don't even know how to advocate for yourself. And so then what happens is, when you lose control of your emotions, the world punishes you for it. And so then you develop a fear of emotion, a negative thing to avoid at all costs. And then you find yourself in a situation that is inducing a negative emotion, but your whole life you've been told to fear emotion. You're told to man up and handle it, you have to learn it (but we won't teach you it by the way). And so I think that men have more issues with substance abuse than women do because a lot of it is the inability to deal with negative emotions."
+  - I think that's a really good summary and I can see that being a huge problem for people, but I still find myself thinking that it doesn't resonate at all for me.
+    - Like, I literally use cannabis to feel all emotions. Like, I fairly regularly get sad while high, and yet I do it knowing that that'll sometimes be the outcome, and I enjoy feeling sad sometimes...
+    - And it seems to help me with work and doing things I already like. I don't really have issues with boredom, not since I was a kid. If I'm by myself I'm thinking about computing lol.
+    - It's like I do it for literally the exact opposite reasons others do.
+- This is a really interesting article that came up on HN today (Lisp stuff always seems to hit on weekends, funny how that is): https://gist.github.com/digikar99/b76964faf17b3a86739c001dc1b14a39
+  - Ostensibly about introducing coalton to common lisp, it goes into the history of subtying vs inheritance and why an ML type system is a good way to address some of the issues with it.
+- Another one of the thoughts I had last night was that emacs is essentially a super powered text user interface library. What I mean by that is that instead of treating it just as an editor to be configured, I can use it as a target for application development. That is, it'd be nice to invoke emacs from StumpWM with an expression to evaluate. Something along the lines of, "(open-cyfer-space ...)". Then, that function would create a new frame, load a specific buffer into the window, etc.
+  - Another target would be a web browser, you can invoke it with a page that has javascript instead (such as a page with frames, and codemirror for the editor).
+  - While a browser is portable in that everything has a browser these days, emacs is portable as a text ui over SSH for instance.
+- And I was also thinking last night that if we're going to mostly just be dog fooding Rembrandt for the first little while, then we can treat emacs as our UI! Like, it'd be really cool as part of onboarding to like, clone a repository, then pass emacs an org mode file that sets up an entire self-contained environment (including SLY, etc). The org mode files themselves would be the documentation. Like you could read it to set up and use the environment. And since it's all org-mode and executable, our on-boarding materials would themselves be tests.
+  - Hell, Will is already used to text like interfaces in finance. Looks like bloomberg.
+  - Oh, and it should make development faster in that you can just send S-Expressions back and forth between emacs and the CL backend.
+
+* August 25th
+- Woke up this morning actually feeling like "oh shit, move is happening, I have so much shit to doooo!!!"
+- So today I need to finish off whatever needs done at work, and make sure to mark my calendar and email as OoO. Also need to submit my hours for the month.
+- I need to figure out utilities and water. Need to go through the list and see what else needs done as far as possession goes.
+- Also need to talk to Will about staying with him, and booking a car.
+- Thing is, most of what I need to do with regards to packing is going through my closets (getting rid of boxes and stuff I don't need), taking batteries and butane canisters away, and a lot of stuff I can just take to goodwill or value village (like my guitar).
+- I think I should take the GPU out of Hyperion, just put it in the GPU box, should help reduce stress in transit.
+- So people recommend floating for gas and fixed for electric. The city bills water through ENMAX, so might be good to have them all together.
+- I'm feeling overwhelmed right now, but not really sure why... I think I want to program, but now I feel like I need to be focussing on the move.
+  - Oh apparently there's a referral program with Enmax lmao. I'll talk to Will about this.
+- Things to talk to Will about:
+  - Staying with him
+  - Booking a car/truck
+  - Enmax
+- I think once I move in, I need to make my office "cleaner". I'm noticing that the clutter is making me feel stressed and scattered.
+- The new office will be bigger, I might want to have multiple desks. My bookshelves are going to be moved out of the office (I'll want to keep one or two for programming books).
+- This is interesting, another wayland compositor written in common lisp. The guy who created it also wrote wrappers for libinput, libwayland, libxkb, etc. https://github.com/malcolmstill/ulubis
+  - Interestingly, he provides two backends: drm/gbm (which is the actual backend for wayland, using kernel primitives) and sdl2 (which can be used to emulate the compositor from within X).
+- Alright, signed up for enmax (via referral, dope), and signing up for them automatically signs me up for the city stuff as well. Will's bill was like $500/month which seems nuts, but maybe he uses an insane amount of electricity. If ours is like that, it's gonna be like $1000 just on property taxes and utilities let alone internet.
+  - Will also recommended enterprise for car, via one of the downtown locations. I'd agree it's probably better than airport, and he offered to pick me up (it's a holiday afterall).
+- I think I should eat, but I don't think I have anything to eat. Maybe mac and cheese? Depends on if there's milk/butter. Lemme check.
+- I'm thinking I should set up a ~/org directory on Nebula and move the notes there. And then, set up some sort of automatic syncing. Perhaps using Super-S as the command.
+  - Would be nice to have a branch labelled by the hostname. Or actually that might not be an issue, we'd just have each host as a remote.
+  - Using a directory for org would make it easier to just start recording all of my stuff. Treat it as a framework to build on. So I can take notes on what I'm doing, then eventually convert them to blog posts.
+  - Right now the task of "making a blog" is really hairy and involved since I need to worry about hosting, and styling, and keeping track of my posts and all of that annoying stupid stuff. Easiest way to start a blog is by just... blogging. Then, I can worry about styling separately, and hosting as a final thing.
+  - Nice thing about org is that it has a parser built in with support for defining exports. That way I can just use it and eventually transform it into Cyfer expressions.
+  - It'd also be kind of cool to create threads for projects. That is, instead of creating a blog post with a title, start a project, and then record my interactions and thoughts almost as tweets. Timestamps of different things. Like stream of conscious, but stream of *notes*.
+- One thing that's odd about emacs on the mac, at least as far as my setup goes, is that the bold font doesn't work...
+  - It's really weird. If I set the font to Berkeley Mono Variable, the default font is bold, and then the bold isn't...
+  - Apparently the font code on mac is kinda fubar? This guy has a patch: https://github.com/yaglo/emacs-mac-patches/blob/main/fix_weights_and_widths.diff
+  - I wonder how you can apply this patch to the *homebrew* code...
+  - Ok, switched back to the non-variable font and set bold for nano-face-strong. Now it works. /abc/
+  - Well, looks kind of like shit... but it'll do.
+- It's really odd that I can't find much on putting shell commands in org docs.
+- Ok this is a really annoying thing I've run into with Guix. When I pass a file with a package definition, it doesn't always seem to rebuild even if the contents have changed. Like there should be a new derivation but it's not doing anything...
+- It'd be really cool to have the org files set up a guix container with a pure environment, and then run the commands within that environment.
+
+* August 24th
+- Spent the day in Kincardine
+
+* August 23rd
+- I need to deal with the utilities... I don't know what to choose though.
+- Looks like there's an issue with the focus trap code. QA apparently found a reproducible way to have the error thrown about no tabbable items.
+- For emacs, I think my next course of study will be creating a buffer with no content, then adding content to it.
+- I need to fix the window management in stump. It's really fucking weird having windows on top of windows when they're transparent.
+- Ooo, new BIOS available for Hyperion.
+- My ego came back with a vengeance last night. Haven't encountered him in awhile.
+  - A different way to frame my issues with work is that I actually do in fact get off on PS paying me to fuck around and do nothing. Like they should be honoured to pay me for doing nothing. And in fact, I won't respect them until they fire me.
+- As for my own projects, it's definitely a case of not knowing what to do exactly. Doing random coding projects is something I could do, but I really want to work on something I "own". Although... Have I really thought about what I want to do? And why?
+  - It could actually be a matter of feeling really daunted by the things I want to improve with the system. Or that I'll go down some sort of rabbit hole that leads nowhere, and part of me wants to understand the whole thing from the top down.
+- Here are some things I want to explore:
+  - Booting directly to a guile REPL. That's an option in the InitRD.
+  - How stump renders the menus. They are pretty fucking ugly
+  - How stump positions windows.
+  - Creating a blog. This is very open ended.
+- One of my biggest blockers when it comes to working with software is that I get lost really easily. What I want is essentially a breadcrumb trail of where I've visited. On the mac, I can use github to look at the source, but github is essentially symbol by symbol. On the other hand, emacs is quite nice for moving around a code base, but window management is hairy so I can only really look at one thing at a time there too. Sure I can go back, but it's a pain to look at multiple things together.
+  - Obviously, emacs is tailorable to address these issues, but window management is like the most confusing part of the system.
+  - I have too many ideas. And so I don't know which ones to tackle first. Because I don't know the dependency chain.
+- I don't HAVE to be at the computer all day. In fact I should be walking around and doing things. I need MOTION.
+  - You know what I should do actually. I should do my work task, then start going through my closets.
+  - Lol, I think part of the reason I sit at the computer all day is because I have an expectation of doing so. I.e. I'm so used to having to be in one place from school and work that I've kept that going.
+- Because I'm used to feeling bad about being told what to do, I don't like telling other people what to do. That's why I'm too hands off as a manager.
+  - But that's dumb. People should feel privileged to work with someone so smart and creative.
+- I realized last night that trying to convince myself I deserve praise and admiration doesn't really work. What's wrong is that I've suppressed the side of me that knows that it deserves it. I feel bad about being aggressive and assertive. But that's not always been true.
+- Lol, do I feel bad about telling the computer what to do???
+- You know, maybe we should stop trying to program. We can just LET IT GO. If you don't feel like it, don't do it bro.
+- Of course I find it hard to sit down and program when I DON'T KNOW WHAT TO WORK ON. Like no shit. Programming is about converting some idea into a clear set of instructions that a computer can follow. If you don't know what you're building, how can you possibly come up with the instructions? That's why I can work out of books no problem. And it's the kind of thing that my team always found annoying when working with me. I actually need to spend time improving on fleshing out designs and clarifying what I want.
+  - I think I have had a tendency to want to jump directly to code because just writing text feels like a useless endeavour, but I shouldn't. Iterative refinement starts by sketching things out and filling out details progressively.
+  - Keep sketching things out until it makes sense to turn them into code. Then the coding becomes trivial.
+  - Plus, I feel really comfortable writing things down now (at least to myself, look at how much shit I have here).
+  - With this perspective it's clear that my issues with not working on my own stuff are completely different than those for PS.
+  - I'm actually putting too MUCH weight on code and not enough on design/specifications.
+- I should be ejaculating more often. I think I was afraid of not being able to have sex later in the day, but like, I can get hard after ejaculating these days. I should be cum maxxing. Ok, new project.
+- You know, I could be spending all of this time masturbating because the main "project" I have ahead is having kids, and I just don't think I'll be able to do this once I have kids. So I'm indulging in it now.
+- Alright, so just came. And once I do I'm immediately ready to do stuff. Maybe instead of putting orgasms off until the evening, I should just... cum early. If that's what I desire more than anything else right now, just satisfy that desire first and foremost.
+- Alright focus trap addressed. Just ended up catching the error and continuing.
+- RIP, I did a git pull so now geiser is building everything again. Guess I'll just go down and eat while this is going...
+
+* August 22nd
+- Respond to Telus guy. Email Mariangela.
+- Was curious about defining aliases for symbols, and apparently serapeum has a defalias macro for that. Essentially it just does (setf (fdefinition ALIAS) DEF), but with some things to make documentation carry over, and shut up the compiler for certain things: https://github.com/ruricolist/serapeum/blob/c1b3ac54203c5ea4d04822fc4746b53d72550733/definitions.lisp#L103
+  - Was curious how fdefinition is different from function, and essentially function is a special form while fdefinition is a function. So (function car) returns the same thing as (fdefinition 'car). So fdefinition can be given a symbol in a variable for instance.
+- I still need to set up utilities as well.
+- Okay, provided insurance docs to Passgo. Responded to Telus, just gotta email Mariangela now. Done.
+- Something I was thinking about yesterday was that I could design a REPL in emacs using atomic windows. Instead of having one window that has a prompt at the bottom, and then having to somehow make the stuff before the prompt read-only, I could have one window for the history of commands, and a second window for the prompt. By making them atomic, emacs keeps them together. If you make the height be adjustable, then you can have the prompt take very little space (or even expandable space).
+- Am I afraid of praise???
+  - Hear me out. I don't like working, I spend a lot of time actively not working. Despite this, I feel like I should be working.
+  - At the same time, I'm self-effacing about the things I do, things that people look on as hard I say were either obvious or easy to do.
+  - There are a lot of things I'm good at, but I don't NOTICE that I'm good at them.
+  - This follows somewhat from the train of thought yesterday where I don't feel a sense of accomplishment, only relief.
+  - I'm not even really afraid of criticism, only praise. I don't want to be the centre of attention.
+  - I do the bare minimum to get by such that I'm NOT the centre of attention.
+  - I don't like being in the spot light. Part of me feels like I don't deserve it.
+  - Why do I downplay my accomplishments so much?
+  - Is this internalized tall poppy syndrome? Like, am I afraid of success because I was punished for it?
+  - Wait, is this also why I was so afraid of dating? It felt like being in the spotlight.
+- Hmm, I've been really good about writing down my thoughts, but I'm very hesitant about letting others see them.
+- Maybe I don't want anyone to understand me. I like people seeing me as complex. And if I make myself visible through work or creation, I'll be opening myself up to being understood, or worse misunderstood.
+- I feel incapable of defending myself. Like opening myself up is only opening myself up to harm, not good things.
+- Fuck, this even happened when I was grieving dad. I put other people before me, grandma, reid, everyone. As if my loss wasn't as important as theirs.
+- I keep thinking about reading the letter from dad again, but I keep not doing it because I'm afraid of crying and making a scene.
+- This seems connected to my feelings about getting engaged, and buying a house, it feels like I'm doing it for Sarah and not myself. Because part of me feels like I don't deserve it. And maybe that's why I feel unappreciated. That's exactly what part of me wants.
+- This is also why I don't like talking.
+- The irony is that I've been super successful despite this. I have so much about me that is admirable that both mom and Sarah think I should write a book.
+- If I were to start crying right now, what would happen? Sarah would come and comfort me. She won't leave me. She won't think I'm a burden.
+- Lol, that's probably why I fell off playing the guitar. People will literally ask you to step into the spotlight and play.
+- Perhaps it's that when you enter the spotlight, you can't predict how people are going to react. Or rather, there's a part of me that can't predict how it will go and that's scary. What's scary to me isn't that I'll be criticized for doing something, it's that I do something well and I'm criticized or that I get praised for doing something where I expect criticism.
+- I don't feel worthy of praise, so I don't do work at all. Easier to deal with being admonished for not doing something than doing something and being praised for it.
+- Am I looking for validation that I'm not worthy of praise, and then just... not getting that validation?
+- This seems similar to my feelings: https://sashachapin.substack.com/p/stranded-on-the-space-mountains-of
+  - "And, really, I thought I did love myself, or at least like myself. That’s what I thought it was when I puffed myself up by rapidly reviewing all of my credentials, pretty sentences I’d produced, muscle tissue I’d accumulated, impressive people who liked me, attractive people I’d seduced. I thought nothing of the desperate character of this process, which less resembled a luxurious spa treatment, and more resembled a hummingbird flitting between food sources but finding none nourishing."
+  - "I didn’t think I was feeling self-loathing, because I thought that self-loathing was a kind of intermittent physical pain. It didn’t feel like an injury, it just felt like an essential part of who I was, as if I’d become convinced my over-tight boots were a part of my body. It felt like a permanent chore, just my full-time part-time job."
+- I keep trying to convince myself that I'm worthy of love and joy, and yet I keep coming back to feeling like I'm not. It's like I'm trying to prove that to myself. "Look, let me show you."
+- Perhaps it's that I have parts of me that feel unloved because I've burried them. This is a masking thing. A lot of the things I do that feel very joyful I've suppressed so thoroughly I've forgotten about them. And I'm left with only a few things that bring me a modicum of joy, but are specifically things that don't put me in the spotlight.
+  - Such as reading things and absorbing information. I find this very enjoyable, and it's entirely safe.
+- Do I feel like I'm not allowed to enjoy work???
+  - Especially because I'm smart and make it look easy.
+  - I'm reminded of the time I went to solve some problem in calculus and then went back to the class to tell the teacher I'd solved it, and like the entire class's eyes were on me, and mr. what's his face sort of saw it as amusing I guess?
+- Hmm, I wonder if not feeling like I deserve praise is part of why I'm not very good at giving it either. It doesn't seem meaningful to me, so I don't return it to others because I project that same feeling onto them.
+- I think my mind tends to weight negative reinforcement far more highly than positive reinforcement. I remember situations when something "bad" happened, and then cycle on it trying to understand why and how to avoid it.
+- Well just reread the letter, and no wonder I've been avoiding it, dad literally says all of the things I don't believe I deserve.
+- I need to figure out what to do with both the batteries and the butane canisters. Batteries I think have to go to staples, but butane might need to go to waste management.
+- Interesting, so Dired actually operates by running ls synchronously and then modifies the output.
+- Hmm interesting, so sly creates an inferior lisp process for sly, but then Sly mrepl is itself a process. I wonder how that works.
+- One thing I'm unsure about is how emacs interacts with socket files, which I think are unix domain sockets. So like interacting with a daemon?
+- Ah I was wondering why when I created a temp buffer and then called princ, it just showed the output without putting it into a buffer. That's because the example that had that behaviour actually used with-help-window which wraps with-temp-buffer-window, and with-temp-buffer-window ensures that output goes to the buffer instead.
+- Interesting, so text in emacs has text properties, and when you kill text with properties, it actually brings those properties along with it. There's a similar concept called overlays though. They also mark up text, but they are more out of bounds. That is, overlays aren't copied on kill the way text properties are.
+- Oh interesting, there's a chapter on packaging. Seems to talk about autoload and shit.
+- Ok, so to evaluate elisp and put the result in the buffer directly, you call it with the universal prefix argument. So C-u C-x C-e.
+- Ok, so it looks like the sly-mrepl connection is a pipe. It returned t for #'process-contact which means pipe. Wait no, that could also mean an ordinary process.
+  - Process is real... They also don't have pids.
+  - Oh interesting, so sly-mrepl-new calls #'start-process with sly-pty-<num>-<num> for the name. It provides a new buffer it creates, and then it provides nil as the program. According to the emacs lisp docs, that essentially tells emacs to spawn a new pseudo-terminal without creating a subprocess.
+  - Hmm, it seems to define these things called channels.
+- Interesting, so it looks like emacs starts sbcl with some commands to evaluate, that seems to tell sbcl to set up a slynk server with a random socket file.
+- So apparently the mrepl just sets a text property 'read-only to text after it has been sent.
+- And then it just uses comint to send the input. But how does sbcl find the pseudo terminal?
+- So emacs can treat markers, buffers, strings, and functions as streams.
+- I guess if I wanted to just display things, I could just use with-output-to-temp-buffer, or rather with-temp-buffer-window. Having it in help mode isn't the worst thing at first.
+- After dinner I need to collapse boxes for dispersal tomorrow.
+- Why do I hold myself to an unreasonably high standard?
+- Trying to make sense of things is work. You just don't call it that.
+- I should write leetcode daily in my language, keep writing implementations of data structures and algorithms. Synthesize it into a book (the Cyfer Space Compendium).
+- Man, seeking validation and being all UwU, I'm sad helpless little boy is pretty subby behaviour bro.
+  - Men take what they want. Just do it bro.
+  - I need to start playing games as big fat jerk. Why am I a goody two shoes in games???
+- What if you're never a dick because you're afraid you might LOVE it.
+- I'm a fucking GOD
+
+* August 21st
+- Today:
+  - Book flights!
+  - Check on email, what else needs to be done?
+  - Put time off in Ultipro
+- Saw a tweet that said something like "to feel different things you have to do different things". So true.
+  - I've noticed I've felt really good lately when I move around and act autistic.
+  - And singing along to and really getting into music.
+- "For me, fundamentally the fear of social interactions comes from the fear I'm going to do something wrong, that person will react badly, and I'll feel bad about myself. I've realised this entire calculus is broken, because you feel good or bad based on people's reactions which is something you cannot control."
+  - So true.
+- Jesus, the chapter on Windows in emacs is sooo looonnnngggg. I don't know how anyone could reasonably understand how it all works.
+- Ah, so emacs uses 1-indexing for text. The point is from 1 to buffer-size + 1. And 1 means the point is before the first character in the text. Looks kind of weird with a bar cursor, but if you have a box cursor it makes sense (the box will appear over the first character).
+- Ok flight booked. Went for a premium seat. This feels so indulgent to me. But it'll be a long day, and you'll get off the plane like immediately. Plus I'm saving so much money just going to Calgary in the first place.
+- I'm not sure what to do about booking a car though. Since it's not clear when my car will be there, so who knows how long I need to book it for...
+- If people find me weird, that's their problem. Lmao.
+- Ok, gonna take the dog for a walk, then think I want to do a bit more reading on emacs. In particular, I'd like to read the chapter about processes, and operating system interface. How do you send data back and forth between emacs and an inferior process?
+- Need to email Mariangela about my flight to book the walkthrough.
+- Page 930 has a section on creating clickable text (i.e. links).
+- I don't know how to reconcile the fact that I feel really lazy, but I've somehow found myself in a position where I've been awarded significant capital.
+  - I feel like I don't deserve it because it feels like I didn't work for it.
+  - Ah, I feel guilty about being rich because it feels like I didn't do anything, but clearly I did _something_. Millions of dollars don't generally just fall into your lap.
+  - And clearly Will valued what I do, because he's the kind of guy to get rid of things that aren't performing (or at least make me know about it).
+- Actually, come to think of it, perhaps my greatest contribution to Chalk was that I didn't have much in the way of emotional connection to my work. i.e. if we needed to pivot.
+  - hmm, just noticed something about myself: i don't ever feel a tangible sense of accomplishment with work, only relief
+  - this makes it impossible to undertake projects myself, because i can get the same feeling of relief by just abandoning projects...
+  - and that goes for my feelings on the exit from the company too. i don't feel like i did anything and so i don't feel a sense of accomplishment. but instead of a feeling of relief, instead i feel guilty because i walked away with a lot of cash
+  - on the other hand, perhaps my greatest trait as an entrepreneur was that i had no problem killing projects that weren't working. sunk costs be damned
+  - of course when i did that, it'd piss off the employees working on those projects, because people get attached to their work!
+  - and i'm just noticing now that these are the same thing. not having an emotional connection to my work makes it hard to do,
+- But feeling a sense of accomplishment is a good thing? So how do I start feeling that way about the stuff I do?
+  - Why don't I feel a sense of accomplishment?
+  - In part, it's because I don't think what I do is worthy of praise. Or that it won't meet my expectations. Which is hilarious because I have really high standards.
+  - That's perhaps really good as a manager, but I don't really like managing people lol.
+
+* August 20th
+- Juniper has the shits... yay.
+- Played the new mario kart levels finally. I think it's kind of lazy that they keep adding the mario kart tour levels in, they're mostly annoying. At least the three in this pack weren't all that bad.
+- I don't know why Sarah talking about the move bothers me so much. I think it's because she keeps going on and on and on about it. And sure they're things we need to think about, but they're all things that we'll just end up handling as we go through it.
+- It's funny, yesterday while picking up groceries, I was telling mom about how I'm thinking of taking a sabbatical and she said I should write a book about myself. And while she was texting me that Sarah was telling me literally the exact same thing. I thought that might be kind of a weird thing to do at 30, but mom said it would help to get all of that down while it was still fresh on my mind. Which makes sense.
+- Interesting read: https://jeanhsu.substack.com/p/ask-vs-guess-culture
+  - "For guess-culture people, thinking about what it is you want can feel absolutely foreign, and for me, it’s been a years-long practice to continue to tap into and understand what I want, before I then try to take others’ needs into account."
+    - I'm not used to getting what I want, so I've kind of turned off the part of me that wants things?
+  - It feels like my family tends to operate in a guess culture fashion, whether they mean to or not. This is frustrating.
+  - It reminds me of talking with grandma when I was up north a few weeks back. She said something like "do you want this now or do you want it when I die" and my response to that was "it's up to you". Then auntie was like "no, you want it now". I guess grandma was making a joke?
+- Lol, was reading a list of symptoms for auditory processing disorder, and yes, that's me to a T. It's why I can't pay attention to something if there's other noise, or if people are talking I can't do anything else, and probably why I hate people giving me verbal instructions. Also why I don't like Sarah taking forever to tell me something because I literally can't do anything else.
+- It's hot today. 26c in the office right now.
+- Interesting, so one of the reasons you need to mark certain major modes as special has to do with what happens when you create a new buffer. By default, if you create a new buffer, the major mode of that buffer will inherit from the currently active major mode. So if you create a new buffer while you're in a lisp file, the new buffer will also be lisp. That's why things like help or dired, etc need to be marked as special, since they're major modes that aren't for text editing, so it doesn't make sense for a new buffer to take their major mode.
+- Oh, I just noticed that preview uses (almost) the same shortcut as emacs for going back to where you came from. Cmd+[
+- Hmm interesting. So to create a help buffer there's a macro with-help-window. That takes a buffer, or a name for a buffer (could also be a function call that returns a buffer), and then within the body, all output goes to that buffer. So generating content for a buffer is essentially like treating it as a stream.
+- Emacs makes an important distinction between files and buffers. You don't edit files, you edit buffers. To load a file, you visit it. That takes a file and pulls the contents into a buffer, when you make changes to the buffer, you have to commit them separately.
+- Wow, emacs is very comprehensive in its file system API. Which makes sense for a text editor I suppose.
+- It's kind of interesting how something's flipped in my head recently where I went from seeing Emacs as something to get away from to something I should look at understanding. Probably because I switched to seeing it as just another Lisp implementation instead of as a weird text editor.
+- Why am I seeking the approval of people who don't even know me (or even know that I exist at all).
+
+* August 19th
+- So I'm at home. Was supposed to go to the cottage today at 12, but there's a wasp nest or something right by the deck so we've decided not to bring the dog. As such, I'm at home with the dog until around 3:30 or so. Just got back from walking her.
+- Just gonna spend the rest of my time relaxing.
+- I wish I could more readily connect with people and enjoy their company. But it's really hard.
+- You know, maybe we just need to work part time. Perhaps some of my guilt with work is that I'm putting in part time hours with full time expectations.
+- Lol, why do I feel bad about not doing a job when I've known I don't want a job since literally forever.
+- Oh, interesting thought. One of the reasons I probably don't talk to people about things is because I have no idea how to predict how they will respond. Specifically anything that's emotional to me or I think might make them emotional. Those experiences I don't have a script for and so I subconsciously avoid them.
+  - https://www.reddit.com/r/AutisticAdults/comments/15f29ia/im_not_an_empath_why_do_other_peoples_emotions/
+- People have weird hang ups with respect to drugs now that I think about it. Especially when it comes to something like cannabis. Like, because it has a noticeable effect on our mind, we put it in this weird category. But food is just as much of a drug. People are deeply affected by what they eat, perhaps untirely unconsciously.
+  - Everything we consume has an effect on us, whether we know the mechanism or not.
+  - You can get hung up on the effects of cannabis just as you can the effects of red meat for instance.
+  - Just be aware of how you're using the environment to self-regulate.
+  - Consuming a plant for its effect on your mind is no different than consuming something for the effect on your body. The difference is that we put a lot more moral weight on the effects things have on our minds than we do the effects they have on our bodies.
+  - Recall, the big reason you consume cannabis is how it makes you aware of your body.
+- Likewise you masturbate to self-regulate.
+- Literally why I'm planning on touching myself for the rest of the afternoon is because I know this evening is going to be a sensory overload.
+
+* August 18th
+- Think I should play around with GPTel. Integrate it into my workflow. For instance:
+  - Send a function body to GPT and ask it to explain it to me. Tell it that it can ask clarifying questions, or ask for the definitions of linked functions.
+- This came up on HN this morning: http://dpk.io/r7rswtf
+  - And someone linked to this other page on the same blog: http://dpk.io/moderncomputers
+  - I put this here because I like it as inspiration for my own blog.
+- Interesting. I'm reading the emacs lisp reference, and I think this is how I should have been learning emacs in the first place...
+  - For instance, so in Common Lisp there are lexical variables and special variables (dynamic). Emacs lisp has the same thing, but it also adds buffer local variables, which have a binding per current buffer. This is how you store things for major modes essentially. Anyways, I always wondered what the setq-default was, and it has to do with that. There are two ways to create buffer local variables, the first is to call make-local-variable, that takes a symbol and turns it into a buffer local variable. It works just like any other special variable, just bindings are only affected in the buffer. In other buffers, the value is the global value of the symbol. That is, make-local-variable only makes the variable buffer local in ONE buffer. To make it buffer local everywhere, you call make-variable-buffer-local, that makes the variable a buffer local variable EVERYWHERE. That has the effect of making it essentially impossible to change the global value anymore since there's always a buffer in effect, so if you change it, it only affects that buffer. So to change the global value, you need to use setq-default.
+  - One side effect of buffer local variables is that if you change the value in a let, and then change buffer within the let, the binding of the let changes. Which, makes sense. Just might be confusing. It's as if you switch thread in the middle of a procedure, so obviously the thread will continue with its thread local bindings.
+- Should be getting a call from insurance in the next few minutes. Otherwise I should probably work on the ticket for PS today.
+  - Alright, done and done. Rest of the afternoon is mine!
+- Hmm interesting. There's a global variable named features that contains all of the symbols that can be used with require. Interestingly use-package uses those symbols too and expressly calls them features.
+- Oh, by default emacs just shows errors in the modeline, you can enable the debugger by setting debug-on-error to a non-nil value.
+- I'd really like to get rid of C-g and replace it with ESC everywhere. The only reason to use ESC instead I think has to do with using emacs at the terminal, and lol, I have yet to do that. If I were using emacs at the terminal, I'd probably be using it for different reasons entirely.
+- Time to go for a walk. Going to be interesting since it's windy and chilly.
+- OH, I just realized why assigning keyboard-quit to ESC on the top level map doesn't always work to quit. It's because a lot of the times I've wanted to quit, it's in the minibuffer which has its own entriely different command loop.
+- Hmm, I wonder if Tetris uses its own command loop then...
+- It mentions in Recursive Editing that you can add a call to debug in a function which has the effect of starting a recursive editing command loop. That way you can use it as essentially a type of break point.
+- I knew this, but it's interesting to read about the fact that emacs uses ESC in place of Meta sometimes. Interestingly, the docs don't really explain the reasoning behind it, but they mention that "Keymaps do not directly record bindings for the meta characters. Instead, meta characters are regarded for purposes of key lookup as sequences of two characters, the first of which is ESC (or whatever is currently the value of meta-prefix-char). Thus, the key M-a is internally represented as ESC a, and its global binding is found at the slot for a in esc-map"
+  - So there's an entirely different map for ESC.
+  - Also it notes that "This conversion applies only to characters, not to function keys or other input events; thus, M-end has nothing to do with ESC end."
+  - Also interesting to learn that keymaps are just lists with 'keymap in the car.
+  - Oh cool, menus in the topbar come from the keymap...
+
+* August 17th
+- Things to do:
+  - email Andrew
+  - Look into utilities.
+  - What's needed from the lawyers next?
+  - What's left for the insurance?
+  - Anything that Catia needs?
+  - Book flights.
+  - Get rid of guitar. Could give it to Mark to sell, or Sarah's mom.
+- I'm feeling lonely.
+  - I feel like I'm not doing enough for people. And that I'm running away from problems.
+  - I feel like an outsider looking in.
+- Interesting read: https://guzey.com/2022-lessons/#get-minimum-possible-sustainable-amount-of-sleep---get-enough-sleep-to-have-maximum-energy-during-the-day
+  - feelings diagrams
+    - be specific. what does “i feel bad” actually mean?
+    - don’t judge feelings
+    - keep asking why
+    - if feel stuck/weird - close eyes and ask yourself what’s going on
+    - some things will make sense, some won’t - it’s ok! some you don’t even believe and they are what a 15 year old you believes
+- I think once I move to Calgary, I want to give the 4K monitor to Sarah, get a Dell 6K and use it solely for the PC. I realize that I essentially only use two monitors anyways, and I barely use the internal display on the Mac. So, I should orient the desk such that the 6Ks are side by side.
+- The reason I don't tell Sarah my problems I have with her is that it feels like I'm attacking her and therefore not warranted.
+- Remember that we need to return the key to the mailbox.
+- I feel like my opinions or thoughts on things don't matter, because when I was growing up I felt like my mom never listened to me.
+- This is interesting: https://evanjconrad.com/posts/how-to-feel-good
+  - I feel like I'm not doing enough with the move. But, I think that's coming from Sarah, who is anxious about fucking everything. When I know, from history, that most things aren't that important to get done on time, it's okay to be patient. It'll all work itself out in the end, we can't know how everything will go ahead of time.
+  - You don't have to do everything right now. Doing things later isn't bad.
+  - Most tasks take far less time than you think they will anyways.
+  - It's important to figure out actual deadlines, some things are time dependent. But figure those out and get them on a calendar.
+- You're not addicted to cannabis. You've just developed a routine. You don't need to stop routines, you can make new ones. Maybe what you're feeling is a lack of spontaneity in your life. You used to do a lot of spontaneous stuff. Why have you stopped?
+- Your mind is just an agent that gets messages from random subsystems in your brain. You're the interpreter for the messages. If they're garbage you can just throw an error lmao.
+- The reason I want to take a sabbatical is because I don't want to have any expectations to meet.
+  - I want that feeling of having an endless summer to just do what I want. I haven't had that since high school and I miss it.
+  - In high school working on my games was probably the last time I really drove a project myself.
+- Ah, the reason I hate standup is that it makes me feel bad about doing nothing.
+- Listening to people speak is hard for me.
+  - I find it difficult tot speak as well. That's why I find it really frustrating when people speak over me. I can't even hear my own thoughts!
+- You only hate coding when you make it a job. Stop making it a job. It's an act of creation.
+- I think what tends to drive me nuts about Sarah talking about the move is that she springs big things on me. I don't like unexpected work or conversations, and need time to adjust to it happening. That's why it's easier if we plan those things out. I also wish she'd write things out instead of saying them, because she tends to go on tangents or add unneccessary detail which makes me feel frustrated.
+- I think I need a ritual for my cannabis consumption.
+- There are many reasons I've probably stopped having as much sex (which I've written down before), but an underacknowledged one is that I haven't found it particularly fun as of late, it's mostly stressful.
+- I think I need to get rid of those computers in the closet. I haven't looked at them in forever, they're in various states of disrepair, and honestly I doubt I'll ever use them again. The one with the huge case is also really annoying to deal with. There are parts I think I'd like to salvage (namely the video cards, hard drives, maybe the motherboards, but nothing else).
+- Ok, responded to Hansens with VINs. While I have them, should renew mine.
+  - Huh, apparently mine don't need to be renewed yet... I must have chosen 2 years last year.
+- Alright, followed up with insurance. I think I just need to accept the quotes?
+- Ok, followed up with lawyers, and emailed Andrew.
+- And followed up with Catia.
+- Reading the wikipedia article on cognitive distortions (linked from the earlier article on how to feel good). This stood out to me: "Example 2: Kevin assumes that because he sits alone at lunch, everyone else must think he is a loser. (This can encourage self-fulfilling prophecy; Kevin may not initiate social contact because of his fear that those around him already perceive him negatively)."
+  - My thoughts are, is this something I do with people? Not exactly this, but I generally find people not interesting? Or rather, I doubt they'll find what I have to say interesting, so I just don't talk because I assume they won't because why bother?
+- Honestly, while I like Twitter, there's a lot about it that I don't understand. For instance, I've stayed at more or less the same number of followers since I started the account back in September. Why hasn't that increased? Is it that I'm not interesting? Am I not using it the way other people do? Am I being down-weighted by the algorithm?
+  - I wonder if this would change at all if I subscribed to blue.
+- Apart from stuff around legal, moving funds, what have you, I'm not super concerned about the move at this point. We still have a full two weeks essentially. I should probably take off the last week of August and first week of September. Even the few days before the 30th when everything gets packed is more than enough time to go through everything I need to, and that's not even counting the weekend.
+- Hmm, this was also linked by the article above and feels super relatable: https://www.facebook.com/Xuenay/posts/10153513535798662
+  - "I'm starting to suspect that I may have MASSIVELY underestimated the negative motivational impact of not having a clear sense of one's next action in a project. A general goal like "I should work on my thesis some more" is way too abstract to feel yummy on an emotional, and I now think that on many previous occasions when I thought I didn't have the motivation to work on something, my "lack of motivation" was actually a lack of a clear understanding of what I could do next. Similarly, I also notice that in any activity which has felt motivating, there has also been a clear sense of the next action on every step."
+  - "I'm now installing in myself a Trigger-Action Plan, "when I notice myself being reluctant to do something, check if that reluctance isn't me being uncertain of what my next action should be". But while noticing this is a necessary first step, it still doesn't indicate what one should do next. One might think that the logical next action would then be "figure out my what my next action in this project should be"... but "figure out my what my next action in this project should be" is also a vague goal without an obvious way to implement it! If I'm working on something big, sitting down and taking a while to figure out what I should do next also feels like a big, unpleasant and effortful thing to do."
+  - "The first thing that comes to mind is "Stop trying to motivate yourself to work on the thing: instead just keep the project in mind and play around thinking about the different aspects of it. Focus on questions like 'what could I do about this next' and 'what parts of this feel interesting', but don't try to force any answers: just approach those questions with genuine curiosity until something interesting pops up." This seems like a somewhat promising approach that might allow one to find the next action without it feeling terribly effortful, but there are probably even better ones."
+  - I've gone through these exact feelings with Cyfer. I'm like interested in a lot of different threads, but never know what to do exactly. And sitting down to figure out what to do is a big hairy thing itself.
+  - The thought that first crossed my mind after reading that was "stop worrying about what to do and focus on PLAYing with it, when you're in uncharted territory, you should be exploring, which is different than working".
+- I think what I want to play with next in emacs is just creating fundamental buffers and fucking around with the point.
+- Hmm, the emacs manuals aren't in my info... I ran into this same problem before, and I suspect it's because I updated emacs recently.
+  - Ok found it: https://github.com/railwaycat/homebrew-emacsmacport/pull/316
+- The foreskin is a blanket for the glans. The glans needs to be nice and cozy after all. It deserves it.
+
+* August 16th
+- So I guess if you want a menu to show up over the content in emacs you use something called a child frame. And it looks like that's what nano uses to show the minibuffer. Which also explains why sometimes the minibuffer will appear beside the window on the mac. It's actually a separate window without any window decorations essentially.
+  - Makes me curious how they'd work with StumpWM. Only one way to find out I guess.
+- Hmm, maybe I should write the basic emacs commands myself. Learn the underlying functions.
+  - Would be nice to have my own menu to show my own functions instead of M-x.
+- Ok, well I have mini-frame installed now and it works pretty well on Nebula.
+- I think I need to fuck around with the window tiling behaviours. Instead of using tab-groups, it'd be nice to just have different frames.
+- I feel like I'm generally more inspired to do things in the evening... don't want to do anything right now.
+- What's bothering me? What internal conflict do I have?
+  - I don't want to work at PowerSchool anymore.
+  - But I'm attached to having the cash flow.
+  - That's probably scarcity thinking. My first thought is, will I still feel this way after the move is done? Probably.
+  - Additionally, I don't know what I want to do otherwise. If I quit my job, what would I do?
+  - Am I just doing stuff at the computer because I feel like I need to be at the computer?
+  - If I go downstairs, I feel like I might be obligated to explain what I'm doing (Sarah will ask). I don't like explaining myself.
+- I wish emacs was like common lisp where we could continue from errors. It sort of just... dies. Maybe I should just try using Lem.
+- Tetris.el is only 700 odd lines. I should go through it step by step to build it out.
+- It occurs to me that I can interact with Nebula from this machine. So if I want to fuck around with StumpWM, I can literally do it remotely. Saves me from accidentally breaking things...
+  - Need to figure out groups too.
+- I was curious so I was looking into how the indentation works for common lisp, and essentially it connects into the same system as emacs lisp, it's just that Sly does some shit to define indentation styles. It looks like you can do the exact same thing as emacs lisp where you set a symbol property in emacs, and it just uses that. But there's also a way for it to plugin to Slime so that the CL system can provide that info, but I'm not sure how that works. Maybe SLIME has some information on this that Sly inherits (the Sly code talks about Slime).
+  - Hmm, it's not really all that well documented. I'm not sure how it's supposed to interface with it. And it doesn't even resolve packages all that well from the looks of it.
+- It occurred to me on my walk that I could create commands in StumpWM that invoke emacs with expressions to evaluate. This could be used to create a new frame with a specific set of windows loaded. I'd just need to define the functions in Emacs.
+- Oh interesting, I just stumbled on a reddit thread where the guy was having the same issue I was yesterday where the modeline didn't have a WM class: https://www.reddit.com/r/stumpwm/comments/12zes3j/how_can_i_find_property_of_message_box_and/
+  - Looks like he figured out what to do.
+  - Ok dope that worked!
+- Let's get a nicer terminal theme.
+  - Ok, got Berkeley Mono working.
+- I guess I should set up a keyboard shortcut to open a terminal.
+- I should go take the pictures of the monitors, cat tree, and printer.
+- Took bubs for another walk and it occurred to me that I could probably build a stripped-down emacs using the C functions. I'm curious to see what those are.
+- I need to take a sabbatical. I was thinking about this before the walk. I've literally been saying I need to do this forever. But it was always someday. The only thing holding me back is me. I'm afraid to take the jump. But it occurs to me that it doesn't need to be all or nothing. I can literally ask Jonathan about it. Worse case he says no.
+  - I feel guilty when I'm not doing work, and why am I imposing that on myself?
+  - And then I just need to do what I feel like I need to do. Follow my bliss.
+  - Realistically, if I take a sabbatical, I know I'm not going to go back. But you never know.
+  - I need to tell Sarah about how I'm feeling unappreciated.
+
+* August 15th
+- So today I think I need to fill out the forms from the lawyer. Should probably ask Andrew about liquidating part of the portfolio.
+- I think I should install Kitty on Nebula and try out picom.
+- It'd be cool to have Guix integration from within CL so I could do stuff like (guix:install package) for a CL package.
+- Hmm, apparently the ROG Strix G15 Advantage Edition can take 64GB of RAM. Asus says the max is 32, but lots of people are running 64. Maybe should upgrade it for shits and giggles while you can still find DDR4.
+  - $80 for a 32GB Corsair Vengeance SODIMM 3200Mhz. So $160 all in.
+  - Oh damn the 7940HX3D is a 16-core chip. Boosts to 5.4Ghz.
+- Remember: 1-1 with Jonathan at 1:35.
+- Hmm interesting. I asked ChatGPT about the difference between C-x and C-c in emacs since it seems commands seem to go in one or other. I guess the convention is that C-x is typically used for high level emacs commands (think window management, buffer management, etc), whereas C-c is for mode specific actions (like committing something in magit, compiling in Sly). So similar to how I wanted to break out Hyper to the window manager and Super for the user.
+- Alright, picom and kitty installed. Picom has like no documentation on how to use it...
+- Ok cool we have gaps working. Not sure if the compositing is working though.
+- Huh, stump doesn't handle the desktop background, you use a different utility for that. Someone recommended feh, but that was like 9 years ago.
+- Emacs seems to have this white border around it, but it looks like it's actually something behind it since firefox seemed to show up underneath. No idea why.
+  - Ah, some random config thing.
+- Ok, now I have transparency working with emacs and kitty. Only thing is that it shows any window underneath emacs lmao. Need to figure out my window placement rules.
+  - Also need to figure out how to turn off shadows for the modeline (and ideally make it transparent too).
+  - Hmm, because the mode line is owned by the window manager, it's not listed as a client window so I can't seem to turn off shadows for it.
+  - Ok, you can select it by querying for the window at location x = 0 and y = 0, but that's kinda sketch. I wonder how you add window classes to windows? Then I could make the change directly in Stump.
+  - Need to set up Kitty config (specifically font and theme).
+  - Should also think about adding time to the modeline.
+  - I definitely understand now why having a separate compositor isn't exactly ideal. It's really quite sketchy. I'm especially wondering how this would all work out with trying to implement gestures and shit like that. Makes me think wlroots is in my future.
+- I think it might be worthwhile to see if Sway works on Guix. It'd encourage me to really understand WLRoots and Wayland.
+- Ok, met with Jonathan, his concern was me getting me TREE hours and speaking up more and doing some code review, lmao.
+- Ok, I need to do the forms for the lawyers, fill out the rest of TIPP, and probably respond to Telus guy. Oh, and deal with the code review from Brian.
+  - Hmm, need to take pictures of ID. Maybe I'll start with the code review first, get it out of the way.
+- I really need to get the screen protector for the Ally, it picks up dirt like crazy.
+- Alright, filled out intake form, and code review. Now TIPP and Telus.
+- Remember, need to cancel our Rogers, Gas, Electricity, and Water Softener rental.
+- Hmm, that's odd. The system didn't wake from sleep properly and rebooted.
+- Cool just learned about how emacs lisp decides to indent functions/macros. For every symbol there's a lisp-indent-function property on the symbol plist. This is in the documentation for Macros, but it works on functions too:
+  - https://www.gnu.org/software/emacs/manual/html_node/elisp/Indenting-Macros.html
+  - Just call (put SYMBOL 'lisp-indent-function 'defun) for instance to make the indentation like a defun.
+  - This is how it works for emacs lisp modes, not sure about for CL or Scheme though.
+
+* August 14th
+- Follow up with Insurance, Car transport, and renew my stickers (for like less than a month, good thing it doesn't cost anything now).
+  - Also, book flights!
+- Just got back from the Dr. She made a note to the pharmacy to allow a full refill to be renewed on Sept 1st instead of the 18th. So at least I'll get three month's worth. She didn't know any doctors in Calgary though. Cest la vie. I also bought some magnesium at Shoppers on the way back. Good chance I'm deficient again, I haven't had it in so long. Just took some, might take some more this afternoon. I really need to do all of the stuff listed above today.
+- Ok, put in a request for TIPP (for property taxes). This is the service request number: Service Request Number: 23-00607815
+- Need to figure out flights. Will ask Sarah to confirm with Mariangela when I should be there. Then I can book a hotel/car/flight, etc.
+- Still need to figure out utilities and internet (just use Telus for now via Will's intro).
+- Ok, followed up with insurance, cars, lawyers, and the city for tax. Still need to do flights.
+  - Also, need to take pictures of the printer, cat tree, and monitors for the Chalk boys.
+  - Otherwise, big task pre move is going through the closests. I should do that sometime this week. Most of it is just boxes, but there's personal stuff I need to go through and decide whether or not to keep it or toss it.
+  - I also need to get rid of stuff like batteries, and butane canisters.
+- I should do leg day today.
+- Oh good, flights are cheap. Should be about $300 for a direct anytime of day from the looks of it.
+- Alright, back from working out. I'm feeling really good right now. Wonder if that's magnesium or placebo.
+- It occurred to me that a lot of my internal conflict boils down to not valuing the stuff I enjoy doing. I feel an intense need to do things that are valuable. Only problem is that a lot of the stuff I do could be construed as "waste of time". For instance, spending all this time configuring Guix, or working on open source code generally. Why do that when I could be working on Rembrandt, or PS work? I think that's also part of my dissonance stemming from working at PowerSchool. On the one hand, you work jobs ostensibly to produce value, but none of that work feels valuable, so I don't want to do it. Then I feel bad because they're paying me to produce value, but I'm not producing value.
+  - I think this comes from a few places. First is that it's been ingrained in my head to have a job from mom since I became able to hold a job. Second, is that silicon valley/UW hustle culture runs DEEP.
+  - There are two aspects to this. I don't see stuff I like as valuable, and the reason I don't see it as valuable is because it's stuff that is either socially unacceptable or people just straight up don't understand.
+- What I like about cannabis:
+  - Makes me feel good. Specifically, it makes me feel connected to my body in a way that I'm generally not used to. My default state is to feel disconnected or dissociated from my body. Not sure where that comes from exactly, worth discussing with a therapist.
+  - It definitely makes me feel creative. I enjoy programming while high.
+- What I don't like about cannabis:
+  - I'm worried about addiction, and it being socially unacceptable.
+  - I'm worried about increasing my use over time.
+  - I'm worried about health effects, especially as relates to my heart.
+- I think I want to reduce my intake of amphetamines. Specifically cutting out the booster, or just down to one for now. I also want to reduce my caffeine intake. I think I'm taking too many stimulants, in addition to cannabis.
+- YOU'RE ALLOWED TO HAVE FUN!
+- I should honestly start writing out all of my thoughts as I program, or even record everything in a screen capture. And per the Dr. K video I watched, I should be reflecting on things after I've done them. How do I feel about them?
+- Oh, something I wanted to look at was AltGr and how that works. I figure I should understand how international keyboards work to compose characters before implementing anything like a keyboard mapper.
+  - Hmm, looks like it acts essentially as a second, but distinct shift key (and can be used in combination with it).
+  - That makes sense, but there are also Compose keys, which are sometimes invoked by a AltGr key combination. Compose keys act like keychords from the looks of it. You press compose, then a character then another character. That must be similar to the ISO entry system that I encountered in Emacs.
+- One reason why I'm masturbating right now is almost entirely due to programming being rather unsatisfying generally. Most of the time is spent diagnosing things you don't understand and that's obviously frustrating. Means I need to learn more about the systems so that I get better at diagnosing problems.
+- I actually can't think of any reason why I shouldn't masturbate as much as I do. The alternative is that I'd be surfing twitter. Actually. The main reasons not to are that it feels socially unacceptable
+  - And I say this because looking back on all the times I've done it? No regrets. At all.
+  - What can I say. I ADORE holding and stroking my cock.
+- Perhaps my problem with Cyfer is that my frame of mind is all wrong. I'm trying to impose order on a project that is actually exploratory.
+  - Come to think of it, when I was a kid, I spent most of my time on the computer just exploring software. That's the primary way I interacted with it. Software from a position of play.
+  - That's sort of the fun thing about GUIs is that they encourage exploring. Whereas text interfaces are more likely to be sort of hit and miss.
+  - Scratch that, the original macOS encouraged exploring. It was a very playful environment.
+  - Unix feels not playful.
+  - How do we make playful text interfaces?
+  - My guess is that you turn them into books. I really like the way the random Lisp textbooks encourage a narrative approach to programs. That's one way to encourage play.
+- I'm gonna go walk the dog. Then think I'm gonna fuck around with org-mode a bit on Nebula. It'd be interesting to start recording stuff there instead of on the Mac.
+- How does Geiser index things? How can I introspect on the codebase? For instance, if I want my own interface to search for packages instead of packages.guix.gnu.org which can be kind of slow.
+- Ok cool, LMDB is up on Guix and cl-lmdb as well.
+  - Hmm, was curious so I looked up FAISS (for vector similarity search), and while it's there it's rather out of date. 1.5.0 which was released in late 2018, the latest version is like 1.7.4.
+  - Huh, looks like Guix has the latest rocm runtime...
+- Ah no wonder I'm into Lisp, it encourages an exploratory approach to programming. I'm just still learning to drop the habits I've picked up with other systems.
+- Ok, back from my walk. I put CBD oil on glans before leaving, and now it's nice a loose.
+- This might be because of stress due to the upcoming move and this is just how I'm trying to deal with it?
+- “People with insecure attachment styles, anxious or avoidant, are more likely to be involved on either side of a coercive sexual relationship. People with avoidant attachment start having sex later in life, have sex less often, with fewer noncoital behaviors. They have more positive attitudes toward sex outside committed relationships, have more one-night stands, and are more likely to have sex just to fit into a social expectation rather than because they really want to. Avoidant attachers experience sex as less connected with their lives and their relationships.”
+  - Huh, interesting. Avoidant attachment people have sex later in life... increasingly sounds like me.
+- I Love Me! I Love My Life! I Love My Sex!
+- It's so good when I pay complete attention to how I'm touching myself. It brings out such joy, no comparison to anything else. Just unbelievably good.
+- I just had the most incredible orgasm. I was thinking about how to have an orgasm is to feel as god felt when he created the universe. Sex is the closest thing we can experience to the divine act of creation. I imagined the power of god coursing through my genitals and up through my body as if it were electricity. The feeling of pleasure was overwhelming. Who are you to fight the power of god?
+
+* August 13th
+- Birthday!
+- Had sex this morning! Going to Lone Star tonight. Played a bit of Diablo IV. Good shit.
+- Just got off the phone with Will. Was nice chatting.
+- Was watching a system crafters stream last night about creating GUIs with Guile and GTK. I guess there's a wrapper that allows it to read XML and turn it into Scheme code.
+- I guess I should try my hand at Comint mode.
+- Oh, actually I should customize StumpWM a bit. I want to make splitting and moving frames a bit easier.
+- I noticed the other day that Sway is in Guix. I wonder if it works... because if so that implies that we can make a window manager with WL-Roots work (seeing as it's a part of Sway).
+- I think the problem with this system is that there are so many things I want to do, that I'm not sure which order to do them in, or if I'm gonna hit something that needs something else worked on. I think I should also focus on making it look decent. That'd make me want to use it. Right now it's not particularly... fun.
+- Cleaned up my home config a bit. Moved a bunch of emacs packages to guix management. Oh, and set my EDITOR to emacs.
+
+* August 12th
+- Bought Diablo IV this morning and installed it on the Ally. Pretty fun so far. Typical Diablo.
+- Huge thunderstorm this morning. Sarah took the dog out just in time. Got a proper downpour at timmies.
+  - It's sunny now, but it says rain all afternoon...
+- What do I want to do today?
+  - Maybe try building Guix on the mac? Setting up a VM, then applying the same configuration. Would be a good way to see if all of my settings are good to move over.
+- Yea fuck it. Let's install qemu and try out Linux on the mac.
+- Alright, well updated emacs to 29.1 on the mac. That was an adventure. Everything seems to be working though.
+- Ok just restarted the system. Libvirt doesn't like the XML definition for ubuntu. And it doesn't really tell me anything why.
+- I don't know... it's so annoying trying to use software that breaks and gives no indication of why.
+  - Well I could always just use UTM. It seems to work.
+- Well, I'm kinda turned off from doing any more on this for now. Not exactly a fun time... Not sure what I want to do otherwise though.
+- Hmm, there's a nixos module for asusctl. Could use that as a reference.
+- Oh, GNOME works now. I wonder if it was related to my Guix home config shit.
+- I should set up a keyboard macro to load my emacs config. And then bind them to super.
+- Alright doing some configuration of my emacs. Setting up my shortcuts.
+- Ok, lets do a keyboard macro.
+  - Decided to just write the emacs lisp myself...
+- Lol wtf. My fan has been going for awhile now and I'm not sure why. Turns out Guile is still doing something in the background. Looks like it's building everything from scratch again. But now guix and nonguix.
+- Well this is interesting: https://archive.ph/saE0M#selection-783.0-783.490
+  - "Masking can take the form of always striving to appear cheerful and agreeable (lest the Autistic person be branded antisocial and ‘awkward’), or it can take the form of becoming very deeply inhibited or withdrawn (because it’s harder to commit an egregious social faux pas if you just never say or do anything). Masking helps Autistic people disappear into the social wallpaper, which is very convenient for the people around us; it’s also an endless source of psychological torment for us."
+  - The part about "being very deeply inhibited or withdrawn because it's harder to commit an egregious social faux pas if you just never say or do anything" feels super true about me.
+- Honestly, the voices in my head that are saying I should be ashamed of this can shut up. The reason I'm concerned about this are: 1) I'm masturbating instead of having sex, 2) it feels socially unacceptable, and 3) I'm worried I'm using it to cover up something else (that I'm not sure what it is).
+- I feel shame when I do things for myself. I feel like I should be doing things for other people, but that I'm failing at doing that. I'm not allowing myself to meet my own needs.
+
+* August 11th
+- Follow up with Insurance and Car
+- Ok, so I think I understand Guix shell and ASDF/Guix a bit better. What am I working on today?
+- 1-1 with Will today is at 11:30 instead of 1, so I have all afternoon to work on Guix.
+- I think I need a blog... I should be sharing my findings since there's a dearth of accessible materials on Guix. And it'd be easier for me to find my own stuff if I run into the same problems again.
+  - A good blog post would be recording my experience trying to build asusctl as a package. Using guix shell to set up an environment, and then slowly try to get it to build.
+- I should try building a comint mode for the reader... I think that's a good next step. That'll probably lead to having a major mode.
+  - Yea, it's probably good if I dive into writing some emacs lisp, learn to use it as a platform. It's not going anywhere, so it's probably a good investment to make for the future.
+  - Since I'd like to start recording my stuff in Cyfer.
+  - Thing is, once I start recording stuff in Cyfer, I'm gonna want to replicate it for backups.
+- Alright, cleaned up my system config file a bit.
+  - I should set up substitutes for it.
+  - Wtf, now I'm getting a no code for module (nongnu packages linux)...
+  - Hmm, none of the nongnu ones are loading...
+  - guix describe isn't showing nonguix in the list of channels. No idea why not.
+  - Oh, I think it's because guix home is supposed to manage it.
+  - Hmm, firefox isn't a package???
+  - Wtf, it's not adding nonguix as a channel...
+- This system makes no fucking sense. Why is guix describe different than guix home describe???
+  - I guess we need to manage the guix channels as a dotfile instead of in home. It's kind of dumb now that I think of it, it makes the channels definition dependent on the home, which is itself dependent on the channels...
+  - huh, I had guix listed as a package in the home... that doesn't make sense.
+  - ok, that seems to be the issue. I wonder how much of my weird shit is due to that...
+  - Ok, I think I have the substitutes working, it does list it as looking at nonguix.
+- I wonder if my issues with SBCL come from it being in my home.
+- Okay, so if I create an SBCL package, and then open a shell with it, it'll find it so long as the system is in ~/common-lisp/cyfer-cli, since that's the default load path.
+- I'm not sure how SBCL determines whether or not to show the REPL. I guess it must check if it's running within a terminal?
+  - Oh, lol it doesn't. You can type directly into the inferior lisp buffer, hit enter, and it executes it lmao.
+  - Oh yea it even has a prompt at the top.
+  - So yea, I guess setting up a port isn't any different than connecting from Sly automatically. The difference is it uses a Unix domain socket I guess.
+- Ok got a bit of a dev script set up. Gonna go for a walk now.
+- Alright, back from my walk.
+- I think I should set up an ASDF/Guix config to actually build an executable that we can use. It'll make interacting with comint easier I think.
+- Ok, I have it set up. It's kind of annoyingly built in that it doesn't say anything if you do something wrong. Also, if you use a package file it doesn't actually seem to notice changes that need to be rebuilt unless you force it with --rebuild-cache. That's kind of dumb.
+- I think I need to reorganize the repo a bit. I'll have a few different systems, the first being the core data model stuff (like the reader/printer/etc), that'll essentially be a library.
+- Oh, I created a cyfer-cli/build system, but that's actually unneccessary since the guix asdf build system creates a build-operation itself. Hence why you need to include cyfer-cli:main.
+  - Now I'm confused, I don't understand how it's calling main... it's not listed in the dependencies.
+  - I don't know, maybe it's pulling them in somehow...
+  - Or it's using the source in the store, but it might have changed?
+
+* August 10th
+- Contact RBC Insurance! I got the renewal for the car and the tenants insurance, both of which should be ending. At least they're dated for October 1st, so we'll switch them over before then.
+- We have a showing at 12-12:30 today I believe. Otherwise nothing really else to do today.
+- Doing some reading about Carp.
+  - I guess it compiles to C. http://blog.veitheller.de/Carp.html
+  - It's kind of sad that LLVM IR isn't exactly reliable as a target. It seems to change a lot?
+- Was wondering what the difference between native-inputs and inputs was in Guix packages. I guess it has to do with the distinction between the build environment and the target environment. Native-inputs typically defines things that are required to build the package, inputs are required at runtime. Notably, if you're cross compiling, native-inputs will be built for the target architecture of the build machine itself, whereas the inputs will be built for the architecture of the target platform.
+- Ok cool, I have an environment set up for cyfer-cli. Seems to have the dependencies list correctly.
+- Alright, back from DQ while the people were looking at the house. I'm feeling kind of weird. I'm getting like tightness on the left side of my chest, but also around my back. I'm also gassy. That's probably it.
+- Ok so the environment has /share/common-lisp/sbcl full of the dependencies which is good. And I can require them. But I'm not sure how to load the project itself.
+  - Man, I have no idea how to get this fucking thing to load... I'm not sure why it doesn't show up in SBCL.
+  - Like the central registry is NIL. I have no idea where it's loading things from...
+  - It's really weird. If I run it as --development it has all of the dependencies in the search paths, but if I don't, it doesn't have any of them...
+  - Hmm, when I run it in a container it works... I wonder if there's some local configuration issue or something.
+  - Ok, if I run it in a pure profile it also works, so yes, that implies something's up with the environment that's causing it not to see them...
+  - I can also manually install the package and it works...
+  - And if I pass in any other package, it sets up a profile.
+  - Maybe it's a bug that's been fixed. I'll try a guix pull
+  - Hmm, the blog seems to suggest using `guix shell --container --link-profile` to open a container with the local profile included. Then you use `guix build -f guix.scm` to actually build the package, which I guess makes sense.
+    - https://guix.gnu.org/en/blog/2023/from-development-environments-to-continuous-integrationthe-ultimate-guide-to-software-development-with-guix/
+    - Well that's dumb, link-profile didn't bring in guix...
+- I feel like something's wrong with my system... If I do guix shell vitetris, vitetris isn't there...
+- I think I need to better understand how the asdf build process works with Guix. I think I understand now where it looks for things (at least by itself), but no idea where it gets those paths in the first place.
+- I want to go for a walk, but it looks like it's gonna rain.
+- Hmm in looking at the source for the asdf build system in Guix, it looks like cl source packages propagate their dependencies, but SBCL ones do not. I guess that makes sense. From the looks of it, if I return the source package and open a shell with it, it seems to actually be there now.
+
+* August 9th
+- People are coming to see the house at 4:30. Otherwise, there's a global townhall this afternoon, and I need to ask the team about how to handle the modal closing with ESC.
+- I was thinking last night that I feel this tension between the fact that the stuff that I want to work on is really my "art", but it feels like it has no purpose? Like why am I doing it? There's a deep seated nagging in the back of my head about things being useful. I think it comes from mom. The always needing a job.
+- One nice thing about having a separate daemon to manage the store is that it gives us an opportunity to build our first application that communicates using binary Cyfer expressions.
+- Ok, I have my Cyfer-CLI up in a repo. I'll need to pull it to Nebula, and then maybe set up a guix profile for it?
+- I was thinking it'd be really cool to have a paralax effect when moving between desktop workspaces. Like if you swipe to the right, the background image moves slightly to the right as well. So you'd need like really long images. It'd be kind of cool to have an AI do outpainting to extend an initial image.
+- Alright done with townhall. I should ask the Neon team about my issue, and just get it over with.
+  - Alright message posted.
+- Sly REPL keybindings are now set up.
+- I think I need to figure out how to configure guix profiles for development work.
+- And we're done with work! Just need to send the team a message at the end of the day.
+- Looks like it should be easy to develop with Guix profiles. You add a guix.scm in the directory, and then if you call guix shell with --development, it'll open a new shell with the package under development (that is all of its inputs will be in the environment).
+
+* August 8th
+- Generate a credit statement for Mark!
+  - Done.
+- Have a meeting with the mortgage advisors today.
+- Also, once again completely forgot that Tuseday is when we do the Rembrandt weekly meeting.
+- Alright, booked an appointment with Dr. Pengelly on Monday.
+- I'm thinking of going through the nano.el source code step by step to see what customizations it makes. Since I do like the way it looks, I think it'll be an interesting way to learn about emacs visual customization.
+- I don't know what to do today. I have that meeting in the afternoon. I also should do some work. But I'm also feeling kind of... I don't know how to describe it.
+- Worked out. Deadlifts and squats.
+- I think much the same way as we were having trouble understanding how to approach options stuff yesterday, I'm having trouble understanding how to approach building a desktop environment. Like do I work on my CL implementation of Cyfer first? Or dive deep into like CLX or StumpWM config. I think the issue at least with working on Cyfer is that I need my own reader (which I've implemented to be fair), but that also means needing some way to interact with it. And that's either command line, which is alright, but not ideal. Or emacs, and at least with emacs I have no idea how I'd start.
+  - I guess you could combine them and try and make an interactive mode for the command line.
+  - I think that makes sense. I really want to be able to store stuff in my own environment.
+- Occurs to me that I can also study the tetris implementation in emacs to understand how to make "apps" with it.
+- Hmm, there's this guide on mastering emacs about comint mode, which is the basic mode for interacting with shells and REPLs. https://www.masteringemacs.org/article/comint-writing-command-interpreter
+  - I guess you can just call comint-run and provide it a program and it'll just go. Wonder how well that works with Cyfer as it is now.
+  - Hmm weird. So I can get it running, but not if I provide it with any arguments (such as --slynk-port 5555).
+  - Apparently comint mode is a pain for like the last 20% of things you'd want to do. It's super inconsistent with things. But it's probably OK as a start.
+- I think I haven't been horny because I've been using my genitals for relaxation and I've kind of forgotten how to be horny?
+- I think Cyfer needs to run as a daemon on the system, much like guix/nix do (since it needs to manage the store). My immediate question is, how does a Guix REPL communicate with the daemon?
+  - Apparently they use Unix domain sockets.
+  - Ok, so apparently on Guix you can set it with the GUIX_DAEMON_SOCKET, but that's clear on my system. Looks like the default then is /var/guix/daemon-socket/socket
+- Seems like you can't really use the cl- packages if they need to build code. And I guess that makes sense, Guix should handle it. Typically there's an sbcl-cl- variant though.
+- Alright, met with RBC for Heloc. Super straightforward, I'll get some signing docs. Big wup.
+- Ok, should do a bit of work. Alright, confirmed that the focus traps seem to work properly. Only problem now is that when you press Escape, all of the modals close. Turns out this is an issue due to the modals adding event listeners to the Window, so they all close. I'll ask the team tomorrow about how we might fix this.
+- Huh, there's a note in the StumpWM repo that CLX doesn't support the XKB extension, so xmodmap was the way to go!
+- What if my aversion to doing work is that I feel like it won't be valued? Either intrinsically because it's stupid (aka my job) or because while I find it interesting, other people (my parents) don't.
+- I clearly still have hang ups with respect to money. This is something to talk to a therapist about.
+
+* August 7th
+- Went to Daniel's today to work on Rembrandt. We did a bit of work building a wrapper for Polygon.io, but we're still kind of confused as to what exactly to do next. We figure it makes the most sense to just get data and then go from there. We'll figure out what we want out of it later.
+- The idea is we'd pull data from Polygon (or other sources) and then transform it and save it to our own disks. Then we can retrieve it ourselves to query over. Once we have the data, then we're likely to want to process it in some way, and that should lead to a language.
+
+* August 6th
+- Went to Toronto today for lunch with Sarah's cousin Pete. Then went to a showroom for bed frames. Home now. Going to walk the dog now I guess. It's a bit drizzly. But it's likely to continue, so may as well get it over with.
+- I love making myself feel good!
+- I'm my best friend! It's really great being me.
+- Fellow minds: https://www.reddit.com/r/masturbation/comments/11bsy7a/masturbation_is_so_satisfying/
+  - "It's the best relaxing thing to do feels amazing"
+
+* August 5th
+- Back from the LAN party! Man that was a lot of fun.
+- Hmm, apparently Bash uses readline to handle the shell. I was looking for how to get partial completions like if I type `cat` and then press up, I want to see previous times I entered cat rather than going to the immediately preceeding entry. I guess you can edit readline using .inputrc. That would be a good one to add to my dotfiles.
+  - Ah yep, that worked. Might want to look at more options too.
+- There are a few avenues to explore with Guix now. My configuration is up on Github, so I could try replicating it to another machine (such as the mac). Otherwise, I could clean up the files some more, such as breaking up my dependencies a bit instead of one big list. I'd also like to start fucking around with StumpWM some more. That will require figuring out how CL loads things with Guix. I think the issue is that the window manager has a different set of dependencies than my Home configuration for instance, so I can't just pull random dependencies in willy-nilly.
+  - There's probably some more tweaking that can be done with my emacs config, but whatever. I'd like to setup some shortcuts using the super key like I have on the mac, but until StumpWM supports my keyboard layout, I'm not too enthused about doing that.
+  - I'd also kind of like to understand how Guix works from startup through to the display manager. When the system boots there's a bunch of text it shows, and it makes mention of a REPL, then it shows a login screen in text, then it goes to GDM. How does that all work?
+  - I guess one of the reasons I want to undestand this is that I want to know where I should introduce Cyfer.
+- I think I want to figure out StumpWM. How do the dependencies get resolved? That would also mean essentially figuring out how builds work with ASDF and Guix, and maybe getting familiar with that build system will let me get familiar with other build systems as well. Eventually I'd like to get asusctl working so that I can control performance profiles, etc.
+- Ok weird. So the load-module command in StumpWM doesn't seem to work because its load-path var is empty. But I can load things from ASDF just fine. The load-module function just seems to invoke an asdf action anyways, so I guess I can just use that instead.
+- Ok dope! Got my first key bound to Hyper!
+- Another thing I noticed is that the fonts seemed kind of blurry. I guess you can clear the fontconfig cache and it listed Berkeley Mono as being "changed", after I did that it seemed that they were sharper??? But that might be my mind playing tricks on me.
+- Anyways, seems like I'm in a really good place to start improving the system!
+- Back from walking the dog!
+- I think now that I have essentially a blank canvas to work with (the fact that Hyper is free for adding window manager commands, and Super is free for Emacs commands), I should start looking for inspiration. What do I want it to look like? How do I want it to act?
+- Took a bigger dose of CBD along with my THC and I'm feeling really nice. Very good body high.
+- Another thing I was thinking is that having Cyfer as a database first and foremost is really good for configuration. For instance, I can create themes or rather colour palettes, and then have functions that convert the colours for use in emacs, or StumpWM, or Nyxt, or CSS, etc.
+  - And it'd be really cool if people could share those. You could have essentially a "marketplace" (for lack of a better word) for configuration details.
+- You know. I wonder if my guilty feelings around weed and masturbation are actually anxiety.
+- I'm definitely more creative and aesthetically minded when high.
+- You know. If we use it to experience life more fully, then that's good.
+- Come to think of it. I've never really tried experimenting with high CBD doses in combination with THC. I always seem to just do plain CBD and then feel underwhelmed. Firstly, that's odd because I've never actually tried BIG doses of CBD. And second, when I have done CBD with THC, I have almost always done a 1:1 ratio of THC:CBD or greater. Never significantly more CBD than THC.
+  - Like I don't ever think, "I want to get more high, I know, I'll increase my CBD levels!". It's always THC.
+- Sexuality is a creative act. There's an inherent beauty in all creative acts.
+
+* August 4th
+- Cleaners here today. And it's LAN party day! Need to update the computer and install games.
+- Hmm, I should read the Nix PhD Thesis. Guix draws on it a lot, since Guix is essentially just a reimplementation of Nix. I think it even uses some pieces from Nix (or it did originally).
+- Ok, BIOS updated. I wonder if I can run 128GB at a reasonable frequency now with the latest AGESA.
+  - Oh interesting, the new AGESA has allowed speeds up to 8000MT/s over the 6000MT/s that my kit is set up for.
+  - Like, I wonder if I can get it running at 5200 like those other kits. The memory timing is really weird though. I don't know of any guides or anything that explain how to do it.
+  - I guess a good test would be to see if it even posts at the JEDEC 4800MHz speed. If it can do that, then it could probably go a bit higher.
+- Alright, finished with my wrap up meeting and 1-1 with Will. What do I want to do with the rest of my day? Not sure I want to do actually PS work. Can push that off until Tuesday.
+- Maybe I should figure out Magit, and figure out how to organize my config files better.
+  - Might be good to use src in my home for keeping everything tidy. I'll probably want a few different repos. Probably one for guix home (and config essentially). And then one for guix systems.
+  - My emacs init will need to be outside of guix home, since I'll manually be editing my init.el a lot.
+  - Hmm, I was wondering why there were still backup files being created by emacs beside the files that I've opened. Like beside my init.el is a init.el~. I thought no-littering would get rid of those, but it looks like you have to turn this on manually (because backups could accidentally leak secrets). One thing it suggests is having a /tmp directory mounted as a tmpfs so that they're automatically cleared on reboot. I should look into setting that up with Guix.
+  - I guess the problem with /tmp being tmpfs is that it's RAM resident. So if you build software, which Guix does a lot of, you might fill that up quickly and then be out of RAM. I'm not sure how much of an issue that'd be for me though considering Nebula has 32GB of RAM.
+  - I guess I could just use stow for emacs. Really, I should stick to stow for things, and only move them to Guix home when it makes sense to.
+- It's interesting that the Dell 6K is almost always on sale for 3250. Makes me think that's the actual price and they just set it at 4350 so that it's not "always on sale".
+- Okay, should have most of my files in .dotfiles now (and up on github). I think the next thing is to reign in my guix configuration.
+- Might just make sense to keep everything in a Guix folder in my home. Probably fine to just have home, system, and channels for now. If I want to make my own channel for things, I guess that can come later. You know, it's probably not worth thinking too much about at the moment. It'll evolve as I understand it better.
+  - Ok cool, got those up. I think it's time to go for a walk.
+  - Alright, org-mode config added to init.el as well.
+- I guess you can more or less do anything in the home.scm and system.scm files, they're just scheme files. The only thing about them is that you have to return an operating-system record for system. Not sure about home though. It has services and home-environment records. I should look into how those are read.
+  - Oh, I'm just dumb. Home does return a home-environment, services is indented duh.
+- Huh, so CBD doesn't seem to have tolerance issues like THC, and they are independent since THC mostly binds to CB1 receptors and CBD doesn't. I'm curious to see what a large CBD dose feels like, since it may help to cycle through them, more THC on weekends, more CBD earlier in the week.
+  - CBD might down regulate CB1 receptors. So yea, I should really think about trying large CBD doses, I've never really tried before.
+  - And like what's her name said on Twitter, CBD might give a really nice body high. Which is what I really want out of masturbation for instance. It's the relaxation effects.
+  - It's interesting that you need to take more CBD, and it's generally cheaper, but it's harder to find high concentration oils.
+- Hmmmmmmm, my prescripition renews on September 18th...
+  - Should probably book an appointment with my doctor before I go.
+
+* August 3rd
+- Took the dog to daycare. Going to see Barbie tonight!
+- Today I probably should do a bit of work for PS.
+- Otherwise, need to think about next steps for my overall project. I think I need to plan this out a bit.
+  - First thing is that I want to create an emacs major mode for interacting with the Cyfer store. I should be able to just pull up buffers as text and see them based on their hash.
+  - That requires interacting with a socket to the CL process in charge of the storage. Could actually be quite a bit easier if we just have it call an executable with the hash and then its output goes directly to emacs as file.
+  - I do need to setup SSH on Nebula and get it working with Github. Maybe worth learning magit too.
+- Should also boot Hyperion and make sure it has all updates and stuff. And maybe install whatever games need installing.
+- Cool, got buffer dimming working.
+- And Ivy set up for recent buffers. I wonder how I get it to show buffers from previous sessions...
+- I really need to get the keyboard changes working. I'd like to rebind my modifiers as well as swap the semicolon/colon.
+- I think I need to learn to use tab-bar mode with projects, and then have tab-bars set up for each project. So, how can I get the tab-bar to display which project it is?
+  - Hmm, I guess projects are based on version control. Since if I just open a random directory, it doesn't seem to notice it as a project.
+  - Ok, I think I should work out and then come back to this. In particular, I need to set up git! Then set up repos for guix, and home. This is the most important thing I should be doing, since once that's ready, I can try Guix on a different machine.
+  - And I honestly should be using git for this shit. Keeping track of my changes.
+  - Should probably learn magit too...
+- Phew! Did bench and pull-ups and that fucking wrecked me! I'm used to doing 5 reps of pullups, but I started with 10, and the next only did 7, and then 6.
+- Ok, so it seems I just do SSH as usual? The home configuration is about things like known hosts.
+  - I'm in!
+  - I wonder how I should structure these repos. Like, home and system should probably just be in the same config no? What about emacs?
+- Oh, it's easy to use xmodmap to swap keys... I can just set up an Xmodmap file in my config I guess and then have it load that.
+  - Hmm, for some reason the clear command didn't actually clear one of the modifiers for some reason? But it seems to work now.
+  - Simple to swap characters, and now I have the modifiers set up to mimic the mac. (Alt is now Super, and Super is now Alt).
+  - That means I can set up nicer keyboard shortcuts in emacs.
+  - Let's see if the modmap is loaded on start. Apparently GDM just does it? At least according to Arch wiki. But not sure if that'll be the case in Guix.
+  - Hmm, it worked on a logout. Let's try a full restart though.
+  - Yep!
+  - Ok this is much nicer.
+  - Oh, I wonder if this will work in Stump. Hmm nope. I guess I'll need to source it or something.
+- Alright, I think I need to do some work. Now that I at least have xmodmap working in XFCE, I feel more comfortable there. I think my next step is to figure out how CL systems work in Guix since I'll probably be spending a lot of time with them.
+  - XFCE is also kinda shit though. I really wish I could figure out what the fuck was going on with Gnome.
+- Just got back from my walk. I guess I have to go pick up the dog tonight too...
+- Did some work today! On top of working out, and figuring some stuff out with Guix.
+- Huh, there's another BIOS update for the PC. Guess I'll be doing that tomorrow too.
+- Man, my foreskin is so loose these days. Fucking great.
+
+* August 2nd
+- Things to do today: haircut, but also need to call Sheffield and make the deposit. That means I need to grab my wallet.
+- Otherwise, think I need to exit StumpWM, and login with Gnome again. One thing I'd like to figure out is why ESC kills windows.
+  - I also need to get my stuff up on git. It would be good to see if I can replicate everything on the mac.
+  - One thing that's a bit confusing is how best to configure systems with different stuff. It's kinda weird that everything goes into an operating-system statement, it really needs to be composed.
+  - I need to better manage my scheme config files as well.
+  - Huh, Gnome is broken... I can't login. Gives me an error then boots me out.
+  - Also, sometimes in StumpWM I get logged out. Or maybe it crashes? But no, the session is still there when I login... like the apps are all still open.
+  - Ok, I've added wayland and debug flags to the GDM config.
+  - It must be something in the Home? The system config hasn't really changed...
+  - Ok, let's try a Guix pull and rebuild.
+  - Well that didn't do anything. Still broken. Maybe check local files I guess.
+  - This is so dumb. Like, it gives no indication about what failed...
+  - Guess I'm stuck on Stump? This is so dumb. Maybe I can try an old boot.
+  - Ok no dice on the old boot. Must be something in my home?
+  - It's so dumb that it gives you no indication of where the problem is. Just expects you to divine where the errors are.
+  - I guess I'll need to try another user? And if that doesn't work it implies something's wrong with the system somewhere.
+  - Hmm, doesn't work with a new user either... this is so fucking bizarre.
+  - I guess I can try XFCE then.
+  - Alright, XFCE works... guess that'll have to do. That's so bizarre. Really goes to show that you need everything to have snapshots, not just the system installation.
+    - I'll probably want to use something like btrfs or zfs for system snapshots.
+- Time to workout! I think I need to stop with cardio, as much as I like it, it's really annoying to Sarah due to the squeaking.
+  - And weights done!
+- Just need to update some pixel values on the table MR for work. Then take a look at focus traps ticket.
+- Something else I just noticed, XFCE doesn't use the system keyboard layout either...
+- Ah looks like emacs keyboard-quit-escape actually deletes all other windows if there isn't just a single window.
+- Something that occurred to me while working out is that I could actually do a fresh install directly on the machine by formatting the second drive and installing Guix there. I wonder how support is for dual booting?
+- The guix installer just generates a system.scm file. We can do the same thing. We want to have Cyfer generate the file by composing the various attributes we want from the system.
+- I think I need to understand the GExpressions and store.
+  - In particular, how do I create a file and save it to the store from the REPL?
+- One thing I find particularly annoying about the documentation is that it'll give code examples without listing which modules are required to use said code.
+- So I guess the point about GExpressions is that they're a language that gets passed to the build server (in a sense). So it's less that you're doing this in guile, you're creating an expression to be evaluated by the store.
+  - Okay, so derivations have to be buildt to see them in the store. So you take a GExp, turn it into a derivation (which I guess resolves the dependencies), then you can build it to make it exist in the store.
+  - Ok, so that kind of makes sense to me now. But how do we actually use these in our home? I'm guessing a system or a home is just a derivation build?
+- Once again thinking about Cyfer on thue walk. I think the distinction between irreducible and reducible remains relevant and is how I'd probably teach it. Irreducible forms are data, that is they stand exactly for themselves. That includes numbers (of various types), properties (nominal symbols), and lists (square brackets). These are so versatile, you can build representations of pretty much anything you want with them. They also have value semantics. That is, two data structures are considered equal in the mathematical sense iff they are the same atomic values or lists containing the same values (recursively).
+  - An analogy I was thinking about was a grocery list. You might have a list of items (properties), and organized unders sections.
+  - Of course, entering data structures and getting them back is all fine and good, but it's tedious. How can we retrieve the list without having to type it all in again. And is there a way for us to manipulate the list in some fashion? Like, if I want the first item in the list, how can I get the computer to do it for me?
+  - This is where reducible forms come in. The first reducible form is the symbol. A symbol is a name that stands in for some piece of data. Its reduction is the data itself.
+  - The ability to name things alone gives us a powerful way to compose data. Instead of having each section listed manually, we can break them apart into named substructures.
+  - But we want more. How can we get the computer to manipulate the data structures itself?
+  - What if we could name things abstractly such as the first of some list?
+  - We use pairs. A pair is a simple association. The head denotes the verb, the tail the arguments. Pairs are reduced from left to right. First the head is reduced, then the list.
+  - Quote only becomes relevant when working with syntax, that is, when you want to talk about code literally (i.e. storing and retrieving it).
+    - It's kind of funny, but clojure essentially recognized the need for m-expressions, but it uses s-expressions for m-expressions, and m-expressions for data.
+    - Also, I think it's worthwhile to have single quote instead of backquote. Quote only works differently in lists essentially.
+  - Approaching things in that order makes it clear that it's a database essentially. Define (that is to modify the env) is a meta-function.
+- Interesting: https://neurocritic.blogspot.com/2007/06/new-penile-homunculus.html
+  - In a natural penis, there are five regions that are most sensitive to pressure/fine-touch. All five of those are routinely removed during circumcision. All of those are more sensitive than the most sensitive part on a circumcised penis (the circumcision scar).
+  - I'm so happy I'm uncircumcised...
+- I'm so good at pleasuring myself!
+- You know, as a wealthy man who essentially finished a giant quest, no reason why I shouldn't be fucking horny. I'm a fucking stud.
+- I love my penis! I love my penis! I love my penis!
+  - I love stroking it.
+  - I love caressing it.
+  - I love gently twisting it.
+  - I love pulling the skin back over the head.
+- You know, I'm probably not breathing enough. Might even account for my low Vo2 that the apple watch tells me about. Reasons:
+  - I'm self-conscious about my belly, so I always draw it in, even unconsciously.
+  - My nose is perpetually sort of blocked. Means I can't draw in as much breath anyways.
+- There's a nice cool breeze tonight, and there was last night too (I had the window open all night). AND IT'S DIVINE. Smells so nice. Feels so good on my skin.
+- Masturbating is like the main way I get in touch with my body.
+  - Like it's not bad to just be present with myself. How is this any different than meditating?
+  - It's good to enjoy being me.
+  - Where's this guilt coming from? You seem to be doing everything you want to be doing. Be real about it.
+  - We want to play with computers, and play with ourself. That's exactly what we're doing, no???
+
+* August 1st
+- Once again forgot that we have a meeting to talk about Rembrandt at 10am on Tuesdays.
+  - Damn, Will sure loves to talk.
+  - Looks like I'll be going to work with Daniel on Monday (holiday).
+- Need to book a haircut. And send Mark a statement for July.
+  - Have a 1-1 with Jonathan today, but otherwise, nothing.
+  - Need to hit the gym today. Should do weights.
+- Need to figure out what I want to do today.
+  - Probably getting the keyboard layout working properly with Stump. And click a window to make active.
+  - Would be nice to have automatically generated statements for my credit line. Generating a PDF from a table of calculations...
+- One thing I was thinking about last night is that I should set up a recurring service that reminds me to send texts to mom with variations on "luv you". Could hook up an LLM, and then feed her responses into it and provide response options. It wouldn't send anything, just provide me options.
+  - I think iMessage just uses SQLite, Daniel has something set up to scrape messages and use it with his phone, kinda sketch, but points in an interesting direction.
+- Hmm, let's think through what I need to do then. I need to tailor Stump to be more liveable. In particular, I'd like to get keyboard layouts set up properly. Firstly, by having it load directly in Stump, but later, translate it to guix and then have StumpWM load from the guix configuration. This points in an interesting direction.
+  - Apart from the needing to swap control and caps lock, I'd like to swap colon and semicolon, and I'd like to set up right control and alt as different system level keys. Alt could be for layers like KMonad, and then Ctrl could be Hyper (which I think I'd need to configure as such in the system). Fn-Right Ctrl is also menu. Interesting, by default that opens M-x on emacs...
+  - Need to set up the modeline for time.
+  - Need to set up Berkeley mono as the font.
+  - Also, need to actually upload my configuration to git! And try that out on this laptop, and eventually Hyperion.
+- Ok, let's update this font.
+- Actually, let's invert the scrolling of the mouse.
+  - Oh interesting, scrolling behaviour is based on the input method. ChatGPT showed me how to do this with xinput. In fact, "Natural Scrolling Enabled" is a property. Looks like it's libinput.
+  - Uh oh, I think I fucked something up. Won't hit the login screen now...
+  - Well that's cool, was able to restart into the previous system configuration!
+  - Ah, didn't have an EndSection. Let's try this again!
+  - Cool, that worked!
+  - It's interesting that it's not getting the correct keyboard layout.
+  - This is so dumb. I have no idea how any of this is supposed to work. Like, where does run/current-system get its files from?
+  - I'm so confused. I have no idea how this is supposed to work.
+- Ok, walked the dog. Occurred to me that the store can just store files/dir structures, and derivations are essentially just the end product of a build process resulting in a file/dir structure. If that's the case, there's no reason not to just modify the files in place as a new store item. I guess that's what inheritance is for. The problem is then that I don't know how to make my derived version the one to use.
+  - Finally, have a file added. I'm still not sure if this is really the best approach though.
+  - You know, it's probably okay. What should happen is we depend on the xkeyboard-config package to plunder its content, but then install our own files instead.
+- I think it's important for me to figure this out. I can't remember the last time I undertook such a large project to understand something. I see this as a test of my capabilities. If I'm having trouble figuring this out, maybe I need to develop some tools to help me! For instance, we can pull down the full repository locally, and then feed it through an embedding model to make it searchable semantically. Then, if I'm having trouble figuring something out, I can search for information relavently instead of having to Google everything (everything can be on my machine!). Then, I should hook up GPT-4 or Turbo, and create prompts to use with it to have it explain things to me. If I convert the query to an embedding, I can find relevant information and provide it as context to the LLM. (By saving the results of these, I'll be able to build up a history of examples that I could use to finetune a local model).
+- I want to understand everything from boot to window manager in terms of dependencies. And the window manager should more or less implement a language.
+- Not everything necessarily needs to be done in Guix. We can just use it as a target for Cyfer Scheme. We'd be storing our actual configuration all in Cyfer!
+  - Cyfer is the Window Manager, or rather entire desktop environment. Might make sense to build something directly from wlroots. Build it from the bottom up. I'd like to understand login managers too.
+  - I'm pretty sure the login manager has to essentially be the initial supervisor process.
+  - I think what I need to do is chill out a bit, and just stick to using Gnome, and try and get really comfortable with emacs. That means setting it up so that windows work alright, and I have Common Lisp all working. My first project is essentially to start working on Cyfer on the laptop. And build it out. Once that's ready, I'll be comfortable with the environment enough in emacs to use it with a more primitive window manager like stumpwm, which would give me an excuse to integrate it with Cyfer!

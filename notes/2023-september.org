@@ -1,0 +1,985 @@
+* September 29th
+- Sleepy.
+- I think the weed or vyvanse, no crossing the streams makes a lot of sense. Make it a trade off.
+- Sex toys are in Burlington as of yesterday. Yea, these will be a next week delivery.
+- Ordered the Quest 3 yesterday. Sure it might be only $200 more than the 2 or something like that, but everything else is more expensive because they essentially unbundled the accessories. Used to be, you get the elite strap with battery and the case together. But no, those are separate purchases. Likewise, a silicone insert for the face is a separate purchase. And of course I've ordered everything lol. I didn't get the case though, I'm not taking it anywhere, so I got the charging dock instead (about the same price as a case). Oh, and I ordered the silicone facial insert (since I get sweaty), and they also have "active straps" which are essentially Meta official versions of the straps I just bought for the quest 2 controllers.
+  - Hmm, it's complaining about my payment information for both of my orders.
+  - One of them seems to have worked.
+  - Chatting with their chat support now I guess. I think I can also pre-order with Best Buy.
+- Well, talk to them then I'm thinking I'll do some VR working out (maybe try Supernatural).
+- Should also upgrade the memory in the laptop for the second time lol.
+- Time to work out!
+- Then I think I should call RBC to see if there's a hold or something on the charge from Meta. Really weird.
+- Plates are out for delivery. Wonder if I'll get them in time to walk bubs.
+- Might actually be better to take THC in the mornings anyways, since that way I get most of it out of my system before bed.
+- Okay so the charge was flagged by security (RBC). Which is odd seeing as how they approved the other one just fine. Very odd.
+  - So they've transferred me to security, and they have high call volume. I'm gonna get a call back in 45-70min.
+- Switched to this new chair to see how it is.
+  - Lol, so I finally found out what the USB port is for since it's not even mentioned in the manual. It's a massager lol.
+- Hmm, just got a promotional email from SexLikeReal about 67% off. And I was thinking about resubscribing. I wonder if you can download from them though.
+  - 30 videos per 6 days. Not bad. I already have a bunch.
+  - I wonder if I should download the full size ones. They take a lot of space though, and I don't think they make a meaningful difference. Maybe with the Quest 3 though?
+  - I mean... good reason to build a NAS no?
+- Alright, so for work today, it's just me getting the keyboard set up, and then start fucking with emacs. I just can't remember what I did for keyboard exactly. Karabiner config should be easy, it's Ukelele I think that's odd?
+- You know. Nice thing about a built in foot rest in the chair? I can move my subwoofer to somewhere more acoustically convenient.
+- Ok perfect, there's a cask for ukelele.
+- Okay, I think US Semicolon Swap is the one?
+  - Oh, but my current one has Canada as the region...
+  - God dammit. I have the new one installed, but it didn't rename it properly. So it now says "Semicolon Swapped copy"...
+  - For fucks sake. I thought I found the last one, but apparently not.
+  - WTF, it's not saving it...
+  - Maybe I just need to make one from scratch. :/
+  - Okay, I think I might have it...
+  - Yep, that worked. At least now I have a DMG that I can use instead.
+- I think I'll take bubs for a walk after I get this call back from RBC.
+- Okie dokie, keyboard seems to be working fine now.
+- Okay, charge hold resolved.
+- And dog walked. Sarah's taking them to the vet today at 2:30.
+- I guess next thing to do is the emacs config. I should look at the specific things I have for the mac in this config.
+- Alright, moving it over. Let's see if this loads!
+  - Seems to still be doing shit. But it's complaining about counsel not existing.
+  - Woah wtf, the battery is 1% now...
+- So the keyboard shortcuts aren't working... and it looks like it's this keyboard layout doing it. *sigh*
+  - What the hell. It works fine on this machine...
+- Something's going on with the battery on the intel mac. It eats 3% on a restart...
+- Ok well seems to be working now. But it's hanging. I think it's hanging when loading files.
+  - Hmm, I think it's mini-frame-mode actually.
+  - God font sizes are dumb. 110 looks good on Linux, but it's tiny as shit on macOS.
+- Alright, I think that works. I think it'd be good to have a separate file for configuring macOS specific things.
+- I think I need to work out. I'm kind of bored, and I don't want to work on emacs anymore. That fucking keyboard thing was really frustrating.
+- I also need to upgrade Nebula's memory today.
+- Was thinking about work a bit, and I think a lot of my issues with it come down to not getting much in the way of positive emotions with it. Like, Dr. K had a video talking about how he really enjoys what he does. But, one of the things he does is to make sure to do the things that aren't fun on the weekend such that he can spend the whole week on the things he does enjoy. And... I don't know if I even enjoy what I do anymore. A lot of programming for me is just deeply frustrating. And at least when it comes to fixing things around the house, there's a satisfaction in doing something so tangible. But with software, things happen so fast, the progress almost becomes invisible. Not to mention most of the work seems to boil down to yak shaving and trying to find out why something is broken. And I don't know, maybe it's just the fact that I've done that so many times, the satisfaction that comes from fixing a bug just isn't really there anymore. Like sure, the situation may be different every time, but the process and frustration is the same. I always just end up thinking, "why did I spend so much time on something so stupid."
+- But like, I don't know what I'd do otherwise? Like I'm not even sure what I'm interested in outside of computers anymore. I just don't really get excited about them in the same way.
+- And it's not like I'm depressed or anything. I'm still very excited by things (like the house, and the hot tub, and the barbecue, and the baby, and all of that). I just can't bring myself to want to work on computers because they just feel so fucking frustrating now.
+- So what's the point in putting myself through that you know? It's not like I need money. Like I could rough it for a salary, I did that. But I don't need that anymore, and so I don't know what I find passion in.
+- There was a tweet or something recently that was like "all great founders start religions", and I think that's really true. It's true of open source as well. They're all about promoting a vision of some sort. And maybe I just don't have a vision for what I want to achieve and so the fun is gone.
+- It could also be that I just need to put it aside. Like that's the point of a sabbatical. Just consciously put it down for now.
+- I was going so hard on the Cyfer stuff that I think I demotivated myself when I hit any blocks. And I didn't really have anyone to show things to.
+- Meanwhile, Rembrandt is more about doing something with friends. But I don't really find it EXCITING. It's not something I'm gonna get up and rave about all day.
+- Perhaps that's why I wanted to read more. Get inspired again.
+- There's also an aspect of it feels like I have no time to enjoy things like video games anymore (which started in part due to the way my schedule worked out with PS). But like, why don't I just do that during the day? Maybe that's something I really want to do, and I'm denying myself the opportunity out of some misplaced sense of duty to work (even if I don't end up doing any work).
+  - I just don't want to let Daniel and Will down.
+  - But maybe a few hours a week is all I need anyway.
+  - Although, due to the house I've been working like a mad man, and adding work onto that is too much of a commitment.
+  - Like it wasn't that long ago that I was writing code at night due to being inspired. What's stopping me from doing that?
+- I'm sure the sale was a big part of what killed my enthusiasm to start another company. It just felt like an endless source of negative emotion and work that was meaningless in the grand scheme of things. And that came up when I had to do shit with excel again. It was just a thankless job.
+- Like dude, look, everything you've been excited about recently is shit that's for relaxing. Lean into that dude. Stop sitting at the computer feeling bad about yourself when you could be sitting in the hot tub.
+- Alright man. We're gonna go do some weights. Then go and take the form to Dogtopia and pick up the steak lovers box. I also want to demolish a pizza from Domino's tonight.
+- Hey, the weighted vest is here! Also the measuring scoops.
+
+* September 28th
+- Aww yeeeaaaaa. Hot tub installed. It should be at max temperature now. It was 59f when it was filled, and it was set to heat up to 104f. I need to add chemicals to it, and then also reach out to Rahul about it.
+- Nice, vibrator is in Calgary. BUt no updates on the larger sex toy order. Still says "to be routed". Yea, no idea when it will be either. All of my previous orders were through Canada Post.
+  - Says it was dispatched the other day though. So no idea why their system wouldn't show any updates. I feel like I've had something through this delivery company before and a similar thing happened.
+- Steamy hot tub this morning. Added the first bit of chemicals, and reached out to Rahul. We'll see what the strips say in a bit now that we've added chlorine. I think we need to bring the pH down a bit, and the alkalinity a bit too.
+  - Alright, ordered a set of measuring cups/spoons for the hot tub stuff (they're on a chain link thing).
+- And we have a barbecue coming today! Such a big day.
+- Vibe is out for delivery!
+- I need to go out tonight to check out the butcher, but also need to get cleaning stuff for the barbecue.
+- Alright, got all of the shit for the barbecue. I have an order for a steak lovers box tomorrow. I also bought some peppers and portobellos today (and two new york strips). Fuck I'm really hungry right now.
+- My vibe came. Also, my new chair (and the memory for Nebula) are out for delivery.
+  - The Love Honey order now has updates. It's crossing the border and in transit to carrier hub. Apple express is the delivery partner.
+- Okay, time to check the hot tub, and then let's start the grill.
+- Excited to see how this new chair is.
+- I've left the hot tub open and the jets running, but it still shows chlorine being rather high.
+- Oh, ordered a steak lovers box from Harry's Natural Meats, that'll be ready tomorrow. But I also bought two new york strips for today. Holy shit, good beef. They're cut way thicker than the grocery store, and when you're eating them it's like soft butter. So good.
+- I bought an Apple TV, fucking home kit doesn't let you control lights anymore without a home hub, and the only things that can be home hubs are home pods (yuck) or an apple TV. Was gonna use my apple credit, but apparently you can only use that when you order online. Eh. At least this way we'll have a more traditional remote for the TV in the bedroom rather than having to deal with the xbox controller (which can be rather annoying when you accidentally hit the bumpers).
+- Tenuto is still charging, I've moved it to the dedicated charger in the bedroom, since not sure how much it can draw from Hyperion when it's asleep.
+- Gotta pick the dog up before 7, but seeing as how I've had a large meal today, and all of my errands are done, can do that whenever I feel like it. I just want to get a lifting session in before I go and pick her up.
+- Ooo, vibe is charged.
+- I'm gonna install emacs on the Intel MBP and get started making this emacs config working.
+- Hmm, there's an emacs overlay giving you emacs unstable on Nix.
+- Not sure about emacs mac port though. Might need to just install that with homebrew. I wonder if you can provide options in the nix config though.
+- LOL, the vibe needs a firmware update.
+- Well, the mac seems to be installing emacs. It went to sleep and it paused I think, but now that it's awake, the fans are on lol.
+- Okay yep, emacs is installed. Now to start thinking about installing my preferences. Although. I think I should get my keyboard stuff set up first.
+- The warming lube gets pretty tacky. I wonder if it's better in a fleshlight. Not so great when exposed to air. Maybe good mixed with another lube.
+- I want to get high...
+  - I think I need to set some rules for myself though if I'm gonna start taking it again.
+  - First of all, why do I feel like doing it?
+  - Second, I need to talk to a therapist (and actually book one).
+- Because otherwise, my life is really great.
+- Oh, well I can't really do that right now because I don't have ID. Unless I use a passport.
+  - Alright, well I've place an order. Time to work out though.
+  - Figure I'll work out, then go and get the dog (and the cannabis).
+- I'm wondering if I'm feeling the need to get high because of rembrandt? It feels like an obligation?
+  - I can't do this every day. Only Thursday-Saturday. Sunday through Wednesday are for recovery.
+- I had a brilliant idea. I can have weed ONLY on days I don't take ADHD medicine (and vice versa obviously).
+  - That means I get a break from each drug.
+  - And I have natural drive to have productive days, so dedicate them for productivity.
+  - But likewise, you need dedicated days to unwind and relax.
+
+* September 27th
+- It's hot tub day!!!
+- Now that I have a hot tub, I should get some more speedos (preferably a bit larger than the ones I have).
+- Well car is now registered in Alberta. Had to take off the plate covers, because even clear ones are illegal here I guess (I'd noticed nobody had them). As for the front plate, I've put the Prince Edward Island decorative one on the front. I'm sure I could take the front plate holder off, but I'm pretty sure there would be screws in the bumper, so... decorative plate it is!
+- Also got the draft. I'm still unsure if it's the electrician doing the install or not. This has been very confusing. But it does say that they do the deliveries. So... dunno.
+- Just checked, my current speedo is size 32, and it still feels tight on me (big ass). So I should aim for 34 or maybe even 36 depending on if people say a certain type fits tighter than usual.
+- WTF, Rogers wants to offer me an additional 10GB/month for free for the next 24 months... okay, so now I get 35GB/month lol. I barely use 2GB a month from the looks of it (and that's when I didn't have home internet).
+- Don't really want to do anything right now since I'm expecting this delivery.
+- Oh, I really need to call/reach out to people.
+- Alright filled out the form for Foothills Roofing.
+- Now RBC Concierge I guess.
+  - Emailed!
+- I should eat something.
+- Finding a Doctor is going to be fun.
+- Saw a truck slow down and go by, but looks like a delivery for someone down the street.
+- I should order the bidet seats. You can't just buy them in store, so may as well order them ASAP.
+- I probably underestimated the effect of having a nice quiet office again.
+- Only thing left to reach out about is a therapist.
+- I should also book a massage.
+- Alright, ordered the bidets! About $1500 total. But did the measurements and we're looking good.
+  - These new ones will be pretty cool. They have a remote (along with a few buttons on the side), but they come with wall mounts for the remotes which is cool.
+  - Not only are they heated, they have multiple temperatures, not only for the water, but the seat itself.
+  - And they have a carbon air filter to clean the air of your shit.
+  - And to top it all off, they have two user profiles, so we can each have our preferred tempertatures, pressure, etc.
+- I suppose I can look for a therapist. Kind of annoying waiting for such a large delivery window, not sure when they'll be here, so can't exactly do VR or work out.
+- Sarah also wants me to take her to her IUD appointment today at 7:30.
+- Speedos ordered.
+- It's here!!! Electricians are here first. The tub is coming in about 30min.
+
+* September 26th
+- Right, have a 1-1 with Jonathan today.
+- I should tell Mark the news today.
+- I think I've been trying to do too many things in a day, and then I get disappointed because I run out of time to do things I want.
+- I should go deal with my car. Take a shit, go get my car transfered to AB.
+- The new Cyberpunk update and DLC look pretty cool.
+- Hmmmm, they're giving me more tickets. Tickets that don't look fun.
+- There are a lot of options for gaming chairs that seem surprisingly cheap? Well, cheaper than the one I got at staples. There's one with pocket springs, which I'm thinking of ordering (and a foot rest which would be nice). I'm primarily looking for one for Hyperion rather than my main desk. But who knows, if it's nicer I might end up using it?
+  - Also looking at floor mats again.
+  - Oh, and there's a 64GB DDR4 kit from this other rando brand that's cheaper than the Crucial. Since Nebula isn't my main computer, may as well give it a shot.
+- My carpet is a bit over half an inch, so I guess that qualifies as high pile.
+  - Kind of hard to sus out which option for a carpet mat. If you search plush or high pile, you get all of the results for medium and shit, which is no different. I don't want to have to go through each one.
+- Ordered the chair and memory.
+- Well was standing in line at the registry office and remembered "fuck, I need proof of insurance". So now I'm home and have emailed RBC Insurance. Hopefully can get that sorted out quickly so that I can go in later today or tomorrow.
+- I'm not sure where to mount the AP in my office. I think it should go on the wall here, but where? Probably depends on where the studs are. And also what else I want to hang there. I think I'd like to put dad's painting up there. I think I'll put it closer to the bookshelf sort of behind the monitor.
+  - Only thing is I'll need to move my desk out to do this. :/
+  - I wonder if I should screw the power bars into the desks so they're more out of the way.
+  - Hmm, they don't actually have screw holes (I must have imagined them having them). But they're long enough that I could probably use the double sided tape and have them adhere pretty well.
+  - I should also cable manage my stuff. I have so many cable ties, I can use them for my desk stuff too.
+- Based on the conversation from yesterday. Daniel will focus on automation with Will, meanwhile I need to focus on more technical backend stuff. The big things here would be 1) setting up an emacs config like I'd mentioned to Daniel, 2) getting Linux installed on Hyperion to try out SB-SIMD, and 3) figuring out if tailscale will work for us.
+  - For emacs config, that means keep setting up my intel mac. Which is in a good place, so just need to install emacs and then try my config.
+  - For SB-SIMD, that needs more thought. Do I try out Guix? Do I stick with Manjaro? Do I just use WSL2?
+  - For tailscale, that also just needs research, and might depend on the setup for Hyperion, since if I could have tailscale-udm setup on a VLAN, then it might be a matter of autoconfiguring via passing through one of the NICs.
+- Ok, time to unplug my shit to install this. Good news, if I take out the wifi up here, shouldn't affect Sarah since she's hard wired in.
+- Ok damn, yea mounting the power bar to the desk is really nice. Seems to be holding really well. I'll do some more cable management once I've mounted the wifi. Time to do the other desk.
+  - I also realized that I can probably mount the power bricks for the CalDigit and the LG monitor, they aren't very heavy and that'd clear up the floor even more. Will make vacuuming way easier. I'll need to get more double sided tape though. (The double sided tape is much easier to use when you use long strips rather than small squares, I wonder if they have pre-cut ones for that use case).
+  - Oh no, I ran out on the second power bar! I guess I need to go get some more... At least I can leave the backing on.
+  - And I can leave the power bar unplugged since the switch is PoE. Nice.
+- Oh okay, I thought those tickets were brought up to this sprint, but they were brought up for the next sprint. I hope they aren't too involved.
+- 11:35 for meeting with Jonathan, then take dog for walk, then maybe go get double sided tape?
+- Looks like the love honey order is coming from the states. So estimated delivery of next week. Looks like Tenuto as well.
+- Man, we really need to look for a Doctor.
+- Hmm, I'm gonna need to mount the power bar on the big desk laterally, kind of annoying, but it is what it is.
+- Seeing as how I had everything unplugged, I just moved the other two legs of the desk.
+- Lol, so having took my car to the dealer yesterday, I switched the key I was using, and I guess that one was low on battery because the car told me "change key battery". Anyways, the batteries always come in twos, and after the move it turns out I had like 3 single batteries still in the package because I guess I forgot I had one EVERY SINGLE TIME I needed to replace the battery.
+- Well, essentially not a meeting with Jonathan. Time to walk the dog I guess.
+- Ok, walked the dog, and RBC got back to me about insurance. They wanted Sarah's license as well? But she doesn't have it, so, I just want my policy updated so I can get my car registered.
+- God my fucking ankle is gonna blister from those stupid shoes. Like, you need ankle socks for those shoes, but the lip goes past the ankle sock...
+  - I'm gonna look for more at Walmart when I go. Hopefully I can get my documents fast, so I can just go and do the car today and get it over with.
+- It was really windy last night (and today), and the bathroom fans in the master bath are rattling. I think it might have been what kept waking me up last night.
+  - It doesn't seem like the ones in the other bathroom make that noise though. So I wonder if there are dampers there, they just have an obstruction...
+  - I wonder if that would be under warranty???
+- I'm gonna go to Walmart, the Registry isn't far if RBC gets back to me.
+- Ok, sorted out the other desk and plugged everything back in. Looks much nicer.
+- All of the sex toys are supposed to be delivered next Tuesday. :(
+- The lubes are here. Interested to see how they feel. Put a little of each on the back of each hand.
+  - The warming one smells a bit like cinnamon. The other is ginko extract. Both smell nice.
+  - Kind of hard to tell the effect when they're just sitting there evaporating on my hands. But at least I'll see if I get a bad reaction.
+- The VR grips seem like they'll do a good job. It even came with this little light blocker nose pad thingy, and it does block a lot of excess light actually. I'll give that a shot in a bit.
+- Last thing to do with the office is mounting the wifi. Only reason I'm putting that off I think is that I don't really want to move my desk... Although, apart from the side part, it should just slide actually...
+- Rest of today, I need to pressure wash the cement pad outside the basement in preparation for the hot tub delivery.
+- Otherwise, should probably keep on trucking with the emacs config for the Intel Mac. I think I'm feeling some negative emotion around this for some reason. Not sure what.
+- Am I using stuff needing done around the house to escape doing work on the computer?
+- Alright, pressure washed the outside cement in preparation for the hot tub. That's technically everything I needed to do TODAY. I think that's why I'm already feeling better about it.
+- My weighted vests should be here this week, which is good. I still feel like I should be doing more weight stuff though. Especially upper body. Probably shoulder related stuff.
+- ChatGPT says to focus on shoulders, upper back, and core to counter-balance the forward-leaning posture associated with desk work. I have a good routine for my lower back and legs, but I do feel like my upper is lacking.
+  - Hmm, the first mentioned was face pulls or band pull-aparts. I can't do face pulls (don't have the equipment), but I CAN do the band pull-aparts.
+  - I do do pull-ups. But I should be doing more.
+  - Says to do planks, and yea, probably a good idea.
+  - Oh external rotations are also using a band. I suppose you can keep increasing those by getting even bigger bands.
+  - And it says rows. Yea.
+  - Hmm, instead of bench, I think I should focus on doing more and more pushups. And I can always add weight with my weighted vest. They're a better compound exercise.
+- 50 pushups is tough, even if you break it up into 5 sets of 10.
+- You know, maybe I do just need to do whatever is the most pressing on my plate be that home, personal, or work first thing... It's not like I won't do computer stuff outside of office hours. I just seem to follow a schedule of "work during day" which I've inherited from school.
+- I think part of me doesn't want to work out because it's an obligation. Meanwhile, I really like doing VR because it's a game. But like, I'm less interested in Ring Fit because it's first and foremost about working out, with a game tacked on. But when it comes to lifting weights, another way to view it is as dedicated twitter/youtube time (especially once we have a theater setup).
+- I'm kind of surprised by how healthy protein shakes are. I use about 400mL of 2% Milk. That's 208 calories, 8g of fat, 20g of sugar, 14.4g of protein, 48% of daily calcium, 72% of vitamin D. Then a scoop of the protein powder is 120 cal, 24g of protein, 1.5g of fat, 1g of sugar, and 10% of calcium. So total is like 330 calories (not bad), 58% calcium, 38.4g of protein. Sugar is 21g, but that's less than a can of coke.
+- Hmm, grocery deliveries is probably a good idea at some point. I don't mind going for small things, but I hate having to go for bigger shops. And the butcher will be automated too, so may as well fill out the rest.
+- Last thing I want to do today is mount the wifi AP to my wall.
+- I think tomorrow is my "contact people" day. Namely Doctor, therapist, and contractor for fixing the bathroom fan. Meanwhile, the hot tub delivery will be a big part of the afternoon.
+- Oh nice, the vibe is now due on the 28th.
+  - No updates on the rest of the sex toys though.
+- Right, first thing to do tomorrow is go to get a draft for the hot tub balance.
+- AP mounted beside my desk, sort of behind the second monitor. With the LED off, it really just blends into the background. I'll need some cable wrap for it though (just one of the long ones should work, I have two couplings for the ends). Otherwise, I just need to mount the two power bricks (the caldigit one and the LG monitor one), and then it'll look really good back there.
+- The desk itself needs a bit of cleaning up though. There's a lot of crap on it.
+- I think I should read before bed. But not in bed necessarily. Like do it in the living room.
+- Honestly, should just restrict youtube and twitter to when I'm working out. That's a time I can "catch up".
+- I do want to play more video games too. But not sure where to fit them in. It might just be a matter of time becoming available as the house gets settled.
+- Wondering if I should do VR in the morning instead of the evening. I don't exactly do a lot in the morning anyways. Lately, it's been just life stuff.
+  - Doing it in the morning would also essentially give me morning exercise. It's worth experimenting with.
+- We'll have to see when it makes sense to get the hot tub in. Might be a matter of reading, then hot tub for a bit so you get nice and sleepy for bed. I've been going to bed around 10, but a little later because of device time again. But I think I should be wrapping up around 9, do some reading, then hot tub, then bed.
+- Huh, I had no idea True Lies was a James Cameron film.
+- Oh, add to the list tomorrow of people to contact: RBC Concierge for date nights.
+
+* September 25th
+- Spoke with Keerthi, I'll just need to address Brian's comments today (once I get back), and make sure to submit my hours on Tempo (most of them have been added, so won't take long).
+- I've got this weird bump or scratch or something behind my ear and it hurts when touched. I've also got some other bumps around my ear, and I have no idea where they came from. I have a bump on the top of my head, but I'm pretty sure that's from when I bonked my head when assembling the power rack. But I'm really confused about the others, since they don't seem like bug bites, so I have no idea. If they haven't gotten better by Wednesday, I think I should go to a clinic or something.
+- Well, gotta take my car in in 15min, that should be fun. I'll make sure to note the issue with the air suspension.
+- I should reach out to Mobile Solutions about CarPlay for my Benz.
+- Otherwise, this afternoon I'd like to try out the hose and pressure washer.
+- And should maybe do a bit more work on Rembrandt. Although might consider just lumping in this Emacs config as part of it. Daniel likes the idea of a standard issue emacs config.
+- Alright, reached out to Mobile Solutions, we'll see what they say!
+- I noticed last night that from the utility room, you can directly access the ceiling above the downstairs hallway. I'm wondering if I should just park a AP right there overhead. I totally have a line of cabling long enough. It could show up directly overhead and would give a great connection for VR, but it'd be perfect for the theater room, the hot tub, and the spare bedroom. I bet it'd work for Sarah's office too (though how much longer she'll spend in there is anyone's guess).
+  - And it might make sense to make that one have its own SSID for gaming specific. That way I can ensure that the VR always connects to it for a good connection.
+  - Hmm, it looks like a plate goes on the other side of the ceiling and you have to reach it for the nuts... I wonder if I can reach that far back.
+  - But that would be an ideal location for it. You could even leave the LED light on as essentially a night light (and you can always turn it off if you want for movies).
+- I should take the dog for walk shortly too.
+- Ok, let's finish up my stuff for PS today, then maybe take a look downstairs? Then take the dog for a walk.
+- Ok, to patch dry wall, will need a spudger and patching compound. Also, I bought a doorstop yesterday, but it was too small for the garage door (since it's like elevated, kinda dumb).
+  - For larger holes, you need drywall mesh tape, and then you put the compound over it. You'll need to do multiple passes, and then you'll need to sand it (120grit). Pretty sure we have all of the paint though. I'd leave the painting up to Sarah.
+  - I guess you can feasibly use caulking to patch, but the issue is it often shrinks, and some paints won't adhere properly.
+- Alright, feedback addressed and Tempo submitted! Should check my Domo status. And good shit, 6.18hrs on TREE for the quarter.
+- Rembrandt sync up pushed up to today at 2pm. Reminds me, I have a 1-1 with Jonathan tomorrow at 11:35. At least I can say all of my TREE is up to date.
+- Lol, I don't have a big enough drill bit for the ethernet cable. It's 18mm, but I only have up to 9mm. So I guess I'll just need to go hog wild on it lmao.
+- Well let's go take a look at this.
+  - If I want to center it, I'd need a bigger ladder. I can't reach far enough back to be able to screw it in.
+  - I can reach it if I put it beside the light instead of in line with it. But that wouldn't look as good obviously. I'll need to get Sarah's input.
+  - I mean a bit more dangerous, but I could lift myself into the ceiling a bit just to get them screwed in.
+  - Hmm, but someone would need to push the screws in first, which means another ladder. Unless Sarah can stand on one of the benchs? Ceiling isn't that high.
+  - I wonder if you could just do the drywall anchors though. It can't be that heavy...
+  - Oh, people say the plate is for if you have like removable ceilings that are typical in offices. For dry wall ceiling just use the anchors. In which case, I can totally do this. I just need to put the anchors in, put a hole, and then feed the ethernet through the hole. Should be pretty straightforward.
+- Oh, there's a wall repair kit: https://www.homedepot.ca/product/dap-wall-repair-patch-kit-with-drydex-spackling/1000752384
+  - That includes a patch for larger holes. That's exactly what I'd need. Just some sand paper I guess.
+- I'm gonna need to unplug one of the ethernet cables from the gateway though. May as well be the Office High one.
+  - Well, I'll try that this afternoon I guess.
+- Time to walk dog!
+- May as well try and mount it now? Sarah's going for her appointment, and then I have my meeting at 2pm. So I have about an hour to kill. Not gonna start anything else right now.
+- And installed the wifi in the ceiling! Looks really good actually. It's nice since it can essentially be a night light, seeing as how dark it gets down there. I also finally got the power bar for the rack, so I installed that, and did a bit of cable management by putting the excess fibre in the box on the wall and closing it up (along with the coax cables going to the various rooms). Still need to actually cable manage the stuff ON the rack, but won't really bother until I have something to mount to it.
+- I should move my office AP to by this desk, which would free up some space on the other desk/wall.
+- Lone Star called, the rear break rotors need replacing and the pads are close to needing replacement anyways. $900 for the lot. Not bad. Then they mentioned it needs some general tuning up, and I said we'll wait for when it tells me to book it (essentially an A or B service).
+- I should call BMO to cancel that MasterCard.
+  - Cancelled!
+- I should also check up no how much money I've spent! Good thing I don't have rent payments anymore lmao.
+- Oh the Tenuto 2 is cheaper than I thought. I thought the price was listed in USD, but it was in CAD. Plus got another discount of 10% on top of the 20% off sale right now. So only $300ish.
+  - Alright, time to shop for Fleshlights.
+- Looks like Mercedes is on the way. Will be here in a few minutes. I should do some weights when I get back.
+  - Alright, got my car back. Now to pressure wash the deck.
+- Then, thinking I'll do weights.
+- Did weights. Feels good.
+- And I just spent about a grand on sex toys lmao. Sarah added a magic wand and a clitoral shower head that we can put on the bath. But that added another $200 or so, so I was just like fuck it, let's get em all. So I've ordered 3 Fleshlights, sex toy cleaner, and a bit of lube. That was $600 on Love Honey, then I spent the $300 on that vibrator. Now time to cap it off with some warming and tingling lube from Amazon. Alright, ordered (along with some straps for the quest 2 controllers).
+- God it's good being rich. None of this is all that expensive in the grand scheme of things. It's fun spending money on toys.
+- We pressure washed the deck today. Could obviously use some more love, but it's a really good first pass, and the winter will make it look more shitty anyways. Figure we'll do the soap attachment in the spring. But tomorrow I'll do the cement pad in preparation for the hot tub.
+
+* September 24th
+- Had Dim Sum with Will this morning and told him that Sarah's pregnant.
+- I guess we'll be moving ahead with incorporating, to make it legit and add some pressure. I guess his boss has one foot out the door, and the other person at his level has given her notice, and now he does not want to stick around any longer. Which, fair.
+- Sarah spent like 3 hours at the walk-in clinic to get her next steps from OBGYN. We need to look for a doctor. Probably a good idea for tomorrow.
+- I don't really have much else to do with the house I don't think. I think it's mostly Sarah now (organizing the kitchen some more, organizing the bathroom, etc.). I straightened out all of the door handles, and today I put the shower heads up (although one of them really needs a vinegar bath). Only main thing I can think of is putting on the thread lock on the remaining toilet paper holders. Also should bring the AP from Sarah's office and put it in the basement.
+- I was thinking last night that I should be reading more fiction, in particular like Ready Player One, and more Neal Stephenson stuff. I have the new Musk bio to read as well, it's just with fiction, I think I could use some inspiration.
+- For the rest of today, I think I want to initiate the OS reinstall on the Intel MBP. There's also the new 2.0 update to CyberPunk coming out.
+  - I think I need a comfier place to sit in the office if I want to game at the computer. I don't really like sitting in this chair. But I'm not sure what a better one would be.
+  - Lol, unless I got like a lazy boy. That'd be funny.
+  - It's just... I got this big ultrawide, and it'd be weird to stream from the PC to another display lol.
+  - Really curious though to see what the AV people suggest for gaming with respect to projectors or TVs.
+- Maybe I shold be taking Juniper for her walk in the morning now that I think of it. I could do it right after standup in the morning.
+  - I'm not sure I like how it bijects my day. Especially since I don't really like lifting weights in the morning, and would prefer to do that later in the day. If I have walking the dog as a task then, it makes me want to work out less.
+- Alright, rebooting Intel MBP into recovery, and then I should also clear the NVRAM and SMC.
+  - NVRAM, hold Command-Option-P-R, hold for 20 seconds, (it might chime a second time).
+  - SMC, shut down mac. Press and hold power button for 10 seconds, then release. After a few seconds, press the power button to turn on.
+    - Or, press and hold Control-Option-Shift (which might turn the Mac on), hold for 7 seconds, then press and hold the power button. If the Mac is on, it will turn off while you hold down the keys for another 7 seconds. Then release the keys, wait a few seconds and turn on the laptop.
+- Then we have the fun task of installing homebrew, emacs, and all of our software... yay!
+  - Well, even worse, trying to figure to remember all of our configuration options.
+- I'm thinking that when I spec out a server, I'll get dual 3090s for it. I think 4U cases support full size PCIe.
+  - There are a fair number of them available in Calgary for decent prices. 3090tis are pretty rare though. Although probably not really that much of a difference (especially seeing as how I have a 4090).
+- Holy mother of dust bunnies under my chair.
+- Well, macOS is installing, that'll take awhile.
+- Given it's pretty hard to even find Genoa CPUs, feels like it'd make more sense to just build a bunch of Ryzen machines. If you need compute, just add compute nodes.
+- Man yea, I feel so much better knowing that the dog's already been walked. I think a lot of my personal feelings on work come down to "am I expecting I have to do something else". So if I just get the big things out of the way first, then I don't have a looming sense of "something else needs to be done".
+- Oh actually, one issue with building Ryzen machines a lack of memory and PCIe lanes. It's just kinda weird that the only place I can find Genoa chips is on Amazon, and they're from weird nameless resellers. Fuck, not even Dell seems to sell them.
+- Really, I should be able to just nuke my two macs at any point and restore them effortlessly.
+  - Makes me wonder if there's a good solution for Time Machine backups to a local NAS.
+- Alright, Intel MBP has a fresh install. Installing Xcode now, then will do the NVRAM and SMC clear.
+- Wondering if I should bite the bullet and figure out Nix. Might be easier with ChatGPT to help.
+- I wonder how much work it'd be to get Guix running on Mac. I'd imagine a fair bit.
+- Interesting, just learned about OnyX, which is a UI for managing various things about the Mac that would otherwise require console fu.
+- Might be nice to get another dock for the other desk for the Ally but also the Intel Mac.
+  - Oh, maybe one of these: https://www.amazon.ca/dp/B088F7SY6S?ascsubtag=UUmuoUeUpU2027251&linkCode=gs2&tag=mak0954-20
+- The thing is, I'm pretty sure if Guix was available on macOS, that'd single handedly drive A LOT more adoption.
+- Hmm, I didn't buy compressed air since I didn't think I'd need it, but I just remembered... butterfly keyboard.
+- Daniel shared his Nix profile with me. That'll be good to look at.
+- Lol, apparently the Mac Studio is kind of the best for local LLM inference because you can get a ton of RAM and the unified memory architecture means the GPUs can use it. (That's for the 70B models that is). Otherwise you need like 3 4090s and that ain't cheap nor is it easy to find a board that'd fit that many.
+  - Huh, a 7950x3D can apparently do like 3-5 tokens per second at 8bit quantization of 70B models. I'll be able to try that once I get a 192GB kit.
+  - Thing about 3090s is I think they're legit 3 slots instead of the stupid 3.5.
+- Top of the line Mac Studio would be about $9000, which is pretty decent I think.
+  - God the Mac Pro is so stupid. Rack mount base model starts at $9600. Pushes near $13K for the same spec as the Mac Studio, for... not much reason?
+- OK, I think I've figured out how to bootstrap Nix from the files that Daniel provided me. It was just a bit weird since I have a flake.nix now, but what do I actually do with it? So I found the instructions on nix-darwin which say to run this: `nix run nix-darwin -- switch --flake ~/.config.nix` which uses the flake.nix file in that directory.
+  - Mostly just a matter of crushing errors that came up from me copying things wrong.
+  - Nix feels so yucky in comparison to Guix, and that says something.
+- Hopefully I can get this working and all of the software installed.
+  - Then I'll need to set up emacs somehow. Not sure what the best way will be for that, whether the traditional route using homebrew, or if there's emacsmacport on nix.
+- Hmm, guess you need to install homebrew separately.
+- I'm not sure how the different Nix darwinConfigurations work. You can seemingly list multiple ones, but how do you select which one to use?
+- Lol, there are aftermarket rack mounts for the Mac Studio. US$450 and you can put two in them!
+  - The rack mount is 3U, the Mac Pro is 5U!!!
+  - Lol, you can fit three external SSDs under each Mac Studio.
+- I wonder when Zen 4 Threadrippers will come out.
+- Dope, Intel MBP is all set up for the most part. I just need to pull my keyboard configuration over and figure out emacs.
+- Thinking of ordering one of these: https://mysteryvibe.com/products/tenuto
+  - And then two fleshlights.
+- Tomorrow and Tuesday are supposed to still be pretty nice out. Need to unbox the hose and pressure washer and test them out.
+
+* September 23rd
+- I've got a bite behind my ear or something and it hurts. And then my legs are sore from the gym the other day...
+- Was really foggy this morning. It's already letting up from the looks of it.
+- Alright, vacuumed the basement and the upstairs, only took me like an hour and a half! Sarah has agreed to do the swiffering of the main floor, which honestly shouldn't be that bad. It's pretty dirty right now, but that's because I literally have not cleaned it since we moved in.
+- The attachement that holds the pet hair eraser on the old vacuum was broken, so you couldn't pull the eraser off without taking the whole thing. It looks like it just cracked in transit without losing anything, so I tried gorilla super glue on it. And great success! That shit adheres so quick, and holds the plastic together well which was interesting because the plastic definitely was under tension.
+- I think I'd like to go to K&W AV today (they're not open tomorrow), and get a sense of what an install would look like given our arrangement, I'm thinking what would the all in cost be for labour more specifically (seeing as how you can do crazy shit anyways).
+  - While I'm out, I should take out a bunch of the cardboard that is piling up in the hall way, and go to world of spas to pay the balance on the hot tub.
+- Occurs to me that I could feasibly run Hyperion with Guix, and then have it run Windows as a VM and pass through the 4090. Since it does have internal AMD graphics, you can use that as a second source if needed (and I can always plug it in as a second source to the monitor, or use the portable monitor).
+- Oh damn, just checked the toilet paper roll holder that I put thread lock on yesterday, and wow, yea, that shit is in nicely! Will have to do the rest today.
+  - Also good thing I bought the extra bits for the LTT screwdriver, the toilet paper holders used a hex bit size that didn't come in the default bits.
+- Went to T&T, couldn't find gluten free gochugang... looks like you can order it on amazon though. So will need to do that next time I do korean something with Sarah. I got kimchi and gluten gochugang though, so I can do ramen.
+- Couldn't pay the hot tub off, would've been a 5% charge for Amex, which is a bit too steep for me. I'll just do bank draft I guess. Need to grab that the morning of.
+- Also went to Aston Martin. They had a DB12, pretty car. The DB9 on consignment has gone back to the owner, but is probably still available. Either way, won't do anything until spring.
+  - Interestingly learned that radar detectors and radar jammers are legal in Alberta. Wtf.
+  - Didn't go to the theater place, I figure Sarah will want to come.
+- Still, can't believe how much of my Saturday was spent on WORK. Vacuuming, fixing shit in the garage, then out on errands. Took so much time. Gotta take the dog for a walk in a bit. It's almost 4.
+- Curious what's happening at PowerSchool that Will only wants to talk about in person. He says it's accelerating his drive to leave. Interesting.
+- Well it's 4:30. Figure I can do a bit of work or something now. Then I want to do some more Beat Saber/other games I bought.
+- One thing I'm worried about is that when I want to work, there are too many things I want to do, so I don't know how to prioritize them.
+- I think maybe I should take a look at getting my emacs config working on the Intel MBP, which means backing it up.
+  - Which also reminds me that instead of Backblaze, once I have a NAS, I should set up backups to it (as well as to Daniel's, and vice versa for him), with the NAS then also backing up to Backblaze with their API option.
+- I think I'm worried that I'll lose something important on the Intel MBP that I've somehow forgotten about. Perhaps in part due to it housing my dad's stuff. Although that stuff should all be on here too.
+- Alternatively, I could just back up this one's emacs folder...
+  - Or rather, the Intel one's.
+- I think what I'm feeling is a general sense of helplessness? Or overwhelm at the idea that I'll just be spending the rest of my time on stuff that I don't want to do. And maybe it's because we just have a new house, and there's a lot of stuff to work through with it, but it feels like I've just been working non-stop. And I have very little time to like just relax, because there's so much that still needs to be done. And then between having to make an effort at work, and Will wanting to go full bore on Rembrandt, it feels like I won't have any time to do stuff for myself. And now that we have a baby on the horizon, it'll just be me taking on everything else that Sarah's been doing, and also the baby stuff. And I'm just like, can I have a break?
+  - And that's all bubbling up such that my own stuff now takes an absolute back seat, so I feel like when I do have time to sit down and do my own stuff, I feel like I need to be doing something else instead, otherwise I'll fall behind.
+  - So I don't even end up wanting to work on my own stuff, because I'm just stuck with a bunch of negative emotion to deal with, and next thing you know, there's no more time.e
+- At least I feel like I've been using my body a lot, rather than sitting around. But if I do sit around, I feel like I need to be spending even more time being active, and I don't know how to balance it.
+- Okay, went through the Downloads folder on the iMBP. Now just transferring over the Projects folder, and then it should be good for a reinstall. I wonder if it'll feel better/faster after a reinstall. I think I've done straight upgrades since I got it in 2018. That's a lot of crap that's probably accumulated for spotlight indexing for instance.
+- Should probably ignore copying over the Chalk stuff apart from maybe old school Planboard (which is more interesting to me).
+- Ok, going to backup dad's stuff into an archive, and I think that's it.
+- I think it's really cool that Daniel has his printer set up to scan things to FTP, which goes to his NAS, then a service does OCR on it and categorizes it. King shit.
+- I wonder if there are any Chalk records that I threw in the trash that I should back up. I'll do that tomorrow and wipe this fucker.
+- I'm excited to enter my data hoarder era. No thinking, just keep it all.
+- Maybe I put off doing my own work because it is in fact hard to do. I just haven't been seeing it as such. I should actually feel more accomplished when I do do those things. I tend to view it as stupid for taking so long, but it takes a long time because it's hard.
+
+* September 22nd
+- Gotta follow up with the electrician.
+- Then a bunch of meetings!
+- Once again noting how annoying it is to have to poop at stand up time, EVERY DAY.
+- Lol, the power bar is now listed as "Running late" and no other status updates.
+- Alright, chatted with Daniel. He's not really sure which option to use for VPN since he hasn't really looked into it yet. So I think we need to do some research and planning.
+  - Also chatted a bit about NAS, I guess he uses something called radarr and sonarr for torrenting shows and movies. It's all automated.
+  - A box with 12 hot swappable drive bays would fit up to 240TB (assuming no redundancy). That'd set me back about $6000 in drives. Though Daniel says he's only at about 70 something TBs right now, and I know a lot of people use his setup.
+- I should probably do the 3032 ticket today, just get it done. I don't think it'll be a lot of work.
+- Alright, followed up with the electrician. Today need to actually take a stab at using the thread lock (especially on the toilet paper holder in the basement, it's super loose), and installing the better shower heads.
+- It's really weird that we just did weekly wrap up, and it's only quarter to 11.
+- Found out there's a tailscale for UDM, so you could feasibly configure the gateway to handle tailscale routing without needing to install tailscale on every local device. Which would be convenient. I imagine Daniel might take a look at that (I sent it to him).
+- Well, good thing I looked at my Quest. One of the controllers was at 20% battery while the other was at 80%. Turns out the 20% one was corroding! So I took that out, and the terminal has residue on it (it's now a bit fussy as to whether or not it's connected to the battery). So I guess I need to buy some alcohol to clean it (I should check to make sure we have quetips too).
+  - Another thing is that if you put rechargeable batteries in, they only show as 80% charged. Turns out it's because rechargeable batteries are 1.2V fully charged, but alkaline AAs are 1.5V. So I guess I should just use alkaline ones.
+- Oculus is weird. To re-pair your controllers you need to do it through the mobile app. Meanwhile the app says that I have a bunch of apps that need updating through the headset... but I have no idea how to do that?
+  - Apparently I need to reboot the headset. But I kind of just did that to install a system update?
+  - Ok, I did a factory reset and now that seems to be working.
+  - So apparently to stop it asking you to continue as a given person, you have to remove other profiles from the device. Which I guess I can do, Sarah never uses it anyways.
+- Think I'm gonna go pick up some alcohol and quetips.
+- Hmm, spent way too much time at shoppers trying to find alcohol. Could only find alcohol pads... so went to Save-on-foods and they had some. Lunch, then clean controller, then work.
+- Ok, I think that looks better now? We'll see.
+- And done work! Hurray!
+- I bought lube at Shoppers, which reminds me! I need some new toys. 🥰
+- Oh, well don't need to remove the other profile on the Quest, factory reset did that for me lol.
+- One thing that's odd is that the Quest seems to be connecting to an access point far away, and not the one in the office. It's only showing 2 bars, which is odd. I think the Steam Deck did the same thing. I wonder if I can set affinity or something.
+- I wonder if the AP in Sarah's office should go to the basement instead. Because it's in the middle of the house, things seem to prefer it to the other APs in the bedrooms.
+- Wait wtf, the Oculus is connecting to the master bedroom one...
+  - Ok, it reconnected to the office. Maybe because I'm at my desk now? I think it's based on which AP responds first. Either way, I do think I should move the other one to the basement.
+  - Good thing I have a lot of cabling now!
+  - Once we have AV people in, we'll mount it to the wall in the theater room I guess.
+- Ok, Hyperion has a static IP now (was kind of weird, I would set it but then it wouldn't change, so just went with the one it was assigned already): 192.168.1.64
+  - Confirmed that wake on lan works too.
+- World of Spas called, but I missed it. I'll try again in a few minutes.
+- Omg, I just came EVERYWHERE. Holy shit I haven't came that much in god knows how long.
+- Think I should take the dog for a walk. Maybe try the thread lock when I get back.
+- Oh, World of Spas just sent me an email too.
+- Ok, Hot Tub should be coming on Wednesday! I wish Jeff would get back to me though.
+- Alright, time to walk d o g.
+- Doing indian for dinner tonight. Place about 15min away looks decent. We'll give them a shot first.
+- Thinking I should get a legit fleshlight or two this time. I don't think I ever really used them without the case, but not only is it so much more convenient, it's more versatile that way too.
+- Ahhh, good to play beat saber again. There are a bunch of new music packs available, which is pretty dope. I bought the Queen one, but I'm sure I'll buy the others soon.
+  - I wonder what would be a good choice for workout on the apple watch for these.
+  - Oh, there's a Move app on the Quest that you can set up. And then you can connect it to the phone, and from there you can sync that information to Apple Health.
+  - I guess I could also choose like dance or something.
+  - This is interesting: http://vrhealth.institute/vr-ratings/
+    - They measured how many calories you burn per minute for given VR games. Surprisingly Pistol Whip is about the same as Beat Saber, but either way they're both about 7kCals per minute, which is about 420 per hour. Pretty good!
+    - Supernatural is 10-13!
+    - Interesting, that makes beat saber similar to tennis (which makes sense), and supernatural similar to biking.
+- Indian food was decent. The biryani and naan was good, the butter chicken wasn't really butter chicken though (wasn't really creamy), but it was still a good curry. The girl at the front desk was really pretty too.
+- Holy moly, gorilla glue binds to your fingers VERY quickly. But the model cars should be good now (fixed the windshield wiper on the aston, and the roll bar on the Z3 roadster).
+- Feeling pretty bloated from the curry though. Need to lie down. Maybe should play some Diablo. It's been awhile.
+
+* September 21st
+- Finally, Sarah's mom is going home.
+- Today I officially become an Albertan. Gonna hit up the Registry and exchange my license/health card and get the form for vehicle certification.
+- The electrician just reached out asking if I was available now-ish. So he'll be here in 20min. Gotta get off this call and take a shit though...
+- I also have a meeting with Brian at 4. Originally booked it for 10, but with the electrician coming now, I had to push it back.
+- Alright, electrician was in, might end up being a bit costly because my panel is pretty full. He's going to give a few different options. The panel is essentially for 100amps, but the city provides up to 200amps in. That'd need a bigger panel, but the wiring goes through the concrete. I guess to have it meet code, we'd need a special switch or something that'd also be kind of costly. But, depending on how much it costs to get the panel upgraded, it may make sense to go ahead and do that. In particular, for if I eventually want to put solar panels on the roof, or install an outlet for a car/truck.
+  - He also says the install for the outlets to the bidet would be easy too. The walls probably don't have any insulation, making it pretty trivial.
+- Transfered US$1,050,000 to DS.
+- When I take money out of the HELOC to invest, I've been viewing it as "for this purpose", but I can look at it as blended across all of my investments. So if I'm taking it out for Rembrandt, that doesn't necessarily mean it's just for Rembrandt. It's spread across Rembrandt and RBC. The alternative would be me literally selling assets from RBC to invest, and then putting the leverage back in. Although I might actually need to do that for tax purposes though...
+- Should transfer excess cash to my eSavings (pays out 1.7% right now). Wonder what EQ is at these days... 2.5%. Not much difference on like $40K. About $320 over a year. Is that worth me having to manage transfers in and out? Well they are CDIC insured. So I could keep up to $100K with them. May not be horrible. Only thing is it takes a bit longer to transfer out, although I don't think that much more. If I really need cash on a moment's notice that's more what you'd use a line for.
+- Pretty bullish on the value of my house. Sure Calgary is a boom-bust economy, but on the other hand housing is SO expensive everywhere else in Canada that anecdotally, many people I've talked to have noted how many people have moved here recently from Ontario. I'm really curious how that'll pan out in the next census.
+- Hmm, since my heating and cooking is all gas, my electric bill may be pretty small comparatively than before. Probably could cover our usage with solar panels...
+  - It's a shame there isn't an SUV equivalent of the F150 Lightning.
+- Alright, well should think about going to get my license changed. Should make sure I have photos for each of my driver's license, health card, and probably registration for the car.
+  - I don't think I'll need my birth certificate.
+  - Oh, passport would be proof of citizenship too.
+  - I'll hit up Home Depot too and grab one of the vapor pads for the humidifier
+- Okay, license has transfered. Should be here in 2 weeks-ish. Health card is more like three months. And I have the thing for the certification. I'm booked at Lone Star Mercedes for Monday at 10am. Interestingly, the reviews for them is like 4.4 on Google, but the downtown one is like 4.6, and I was wondering "why the difference?". So I looked at the one in Kitchener and it was 4.2 lol.
+- Humidifier vapor pad has been replaced and I've turned the humidifier back on. I'll go check on it after lunch to see how it's doing.
+- Ok turns out you can decrease the motion sensitivity on the Arlo. Was default at 80, I've reduced it to 50, we'll see how that goes. Most of the notifications are for things that go by really quickly (cars, people walking).
+- Ok, the shitty squatty potty has been refunded, and I've ordered another one.
+- Not really anything I can do at PS today, I need to talk to Brian about that ticket at 4. So that'll be for tomorrow. Rest of the day I can spend on my own shit (finally).
+- The humidifier seems to be working, there's still water being drained (but through the actual drain part, so I installed it properly).
+- I need to poop again...
+- Need to respond to the quote from the electrician. Not sure if that includes the washroom outlets (at least, I don't see parts listed that makes sense for that).
+- Kind of odd, the power bar is listed as arriving today by 10PM, but it still hasn't been listed as out for delivery, but the rest of the stuff I've ordered has... Not a big deal if it doesn't come, just kind of odd.
+- Should I get a whiteboard??? Don't really have anywhere to put it now.
+- Meta algorithm for figuring out what to do next. Can't do something right now? Break that shit in half. Still can't do it right now? Break it in half again. Repeat until base level achieved.
+- For Rembrandt, need to explore MMAP and SIMD, since those are the two big aspects for performance. I can play around with MMAP on my Mac, but not SIMD (since Intel only). That means, to explore SIMD, I need to get Hyperion working with Linux (or Nebula with AVX2 only, which might be fine). Nebula would also be decent for testing at 64GB of RAM.
+  - Might be worth exploring just MMAP for now then. That way I have something to showcase for our weekly catch up (since I haven't had anything as of late).
+  - Meanwhile, getting Hyperion running with Linux will be more involved, and a longer term project.
+- On the other hand, getting my configuration for emacs to also work on the Mac would be a worthwhile endeavour. It might actually be easier to do a clean OS install on the Intel MBP and start with a clean emacs config there so I don't break this one. That way I'll know that they're both replicated.
+  - A nice thing to have would be some emacs functions to like "connect to Hyperion", "connect to Nebula". Like, have the machines talk to each other about which services are running.
+  - Also should chat with Daniel next week about connecting our networks in some fashion. Since we'll want to share data for Rembrandt, but also probably Plex. Then I can start specing out a server.
+- Aside from this, I also need to figure out a plan for study. I think I want to go through some of the CL books again. But also, I want to practice leetcode. My problem with Leetcode is that not a lot of services are configured to work with CL, which is what I'd prefer to use at this point.
+- As for house things to do today. I'm thinking replace the shower heads, and try out the thread lock on one of the toilet paper holders.
+- I also need to get back into the gym today, now that Sarah's mom has left.
+- I need to hit up the grocery store tonight too (running low on diet coke, and I need oatmeal, I'm alright for everything else though).
+- For getting a cleaner, I think they should mostly focus on the kitchen counter, bathrooms, dusting, etc. But we need to swiffer the floors and vacuum weekly. The pets put out too much hair to ignore for that long.
+- I don't need Guix on Hyperion at first, we can stick with Manjaro for the time being to at least try things out. But I'll still need to research it on Nebula.
+- With my car going in at 9:30ish on Monday, need to reschedule my meeting with Daniel maybe to tomorrow if he's available.
+  - Rescheduled to tomorrow.
+- I think I'll take the dog for a walk at 4:30ish, so right after my call with Brian. Then come back and do weights.
+- I don't think bringing my config over to the Mac should be that bad. I can set up a separate file for each platform for things that are more specific. But otherwise, I think all of the packages I use on here have been installed on Nebula too (apart from Nano). The main differences would be keybindings I think.
+- Alright, the rack shelf arrived. Can't really install that until Sarah's done work really (since I might disturb the internet). But I've set up the Ethernet cabling in the master bedroom. There are too many power bricks there. I can't actually install the Ignite TV stick thing.
+- Hmm, can't install SBCL 2.3.8. I imagine it's the same issue as before...
+  - God dammit. It's not in my notes.
+  - Yep, same thing. zstd.
+  - Must be in my zsh history.
+  - Yep! Here they are for posterity:
+    - export CPATH=/opt/homebrew/include
+    - export LIBRARY_PATH=/opt/homebrew/lib
+  - Do those, then the build should work. May make sense to add those to my .zshrc
+- The nice thing about emacs is that if I bring my config over to the mac, I can essentially use it as the interface to remote services (like the other machines). If I make it fullscreen, I can essentially use it as its own window manager as well.
+- Ok, so mmap is a pretty trivial wrapper over top of the actual mmap calls, which makes sense. To actually access things in memory, you use a cffi call, which is mem-aref.
+  - I suppose I should do some reading on CFFI then.
+- Damn, killed emacs lol.
+  - Okay, WTF, I can't dismiss SLY messages.
+  - Well, just did a pull of all packages. Maybe it's a known bug? Time to reload emacs.
+- ChatGPT is helpful for reading disassembly. Although it's really annoying that it repeats the question back. The thing is, using it to explain ranges of code is pretty helpful, and it makes me think that it's probably a good idea to break functions up into more logical units that can be looked at piece by piece.
+  - I think I'm gonna take the dog for a walk now.
+- I should look at the dense array library and see what it does.
+- I'm really curious how sbcl SIMD works with CFFI. Since it is essentially intrinsics, you need to load those registers somehow.
+- No way that power bar is coming today. Still isn't listed as out for delivery.
+- I think when I hit up the grocery store I should look at the baked beans lmao.
+- Man, it's so good that Sarah took the main floor office. It's way warmer down there than up here. The thermostat was showing 25c (it's only 15c outside) because having the windows open to sunlight just heats up the living room like no one's business. Meanwhile, it's warm up here, but not nearly as much, only 23c on the register. So I've set it to cool, which should keep it nicer up here and at least introduce an exchange of air as that works its way downstairs. I could also open my window.
+  - But man, it's also really good that this office is North facing. No direct sunlight, so it stays relatively cool.
+- Interesting article that just came up on HN today: https://notes.eatonphil.com/2023-09-21-how-do-databases-execute-expressions.html
+  - It looks at different database engines and asks: "how does it execute queries?"
+  - And then it shows, oh this looks like a tree walking interpreter, this looks like a VM of some sort, this is a JIT.
+  - More importantly it actually links to the code for each, which is really cool.
+- Alright, spoke with Brian. Time to work out.
+  - Ok, let's go. Stop looking at HN.
+- Done, feels good to work out. Took about 45min. I did three sets of ab rollers, then pull ups to failure (hit 11).
+- I SHOULD PLAY BEAT SABRE FOR CARDIO!
+  - There's that other game too.
+- I should order a plate carrier. Need to measure myself though. Ok, yep. Small lmao.
+  - Ok, will order a pair of 5lbs and pair of 10lb plates, allowing me to do 5lbs, 10lbs, 15lbs, and 20lbs. And once I'm past that, I can order the 20lb ones.
+  - Alright, ordered. That should really help over the course of a 30min walk.
+  - Lol, I could totally wear it with beat sabre too.
+  - It's also good that you can close the door to the basement. I could use the theatre room for now too.
+- Oh supernatural is fucking expensive. I was like oh, looks interesting, but it's $25/month! Like wtf. I'll just stick to beatsabre.
+- Hmm the quest pro controllers can be used with the new quest 3, but they are a separate purchase of $400. Considering the quest pro is $1400 and it'd come with it, wonder if it's worth it.
+- Looks like I should just wait for the Quest 3. Apparently the jump from 2 to Pro didn't seem like much, but going back to the 2 is really hard because the lenses are a LOT better. And the 3 will have the same type of lenses but more resolution. And since the 3 is supposed to launch this fall (aka, soon), I can wait.
+  - Oh, it literally should be launching next week (or we'll get a firmer date next week, since that's when their event is scheduled).
+- Going to the grocery store in about 20min, may as well put together the rack shelf.
+- Went grocery shopping. Also the stupid rack mount screw mount stabbed my thumb!
+- I think I should Beat Saber in the morning.
+  - Oh, I won't have time between standup, chatting with Daniel, and wrap up...
+
+* September 20th
+- Sarah's mom woke us up at 5am because the "furnace was letting out a lot of water". Looks like the seal or something wasn't set properly on the humidifier. On looking at the insert though, I wonder if it needed to be cleaner or replaced at some point because I don't think the previous owners ever did. I need to look into that and then reattach it. For now I've turned the humidifier off (I'd turned it up earlier since the house has been so fucking dry).
+- Hmm the home owner's inspection report recommends cleaning the washer drum. I wonder how to do that.
+  - Oh, do need to buy extinguishers.
+  - Ah yea, humidifier filters should be changed every 3 months (same as furnace). Good to know. Alright, just need to find the model number, then they're only like $15-20. I bet they never changed them.
+  - Same with softener filter replacement, every 3 months, again, did they ever do that?
+- I need to go through this whole manual and come up with a plan, what needs to be done monthly, quarterly, annually, etc.
+- Hmm, might be able to find the humidifier manual downstairs. I should move all of those to the filing cabinet.
+  - No manual, and there isn't really a model number or anything...
+- Well, when the Shaw guy gets here, I'll go down to the basement again and take a look. I should contact Enmax though.
+- Nice doorbell is out for delivery. I'm so excited to get my car back though. And to set up dual WAN.
+- I've got the new Elon Musk biography from Walter Isaacson coming today.
+- I really need to start planning out my own personal study and plan for diving back into programming. I was thinking a bit last night that I should go through my Lisp books again, but like, fill in the blanks. Instead of just following along, try and do them from scratch and see if I can replicate the top level APIs.
+- Rogers is almost here, I should also be receiving a callback from Enmax shortly...
+- Oh nice, my bit holder is out for delivery. Lots of stuff coming today.
+- Enmax called back, the gas line wasn't set up for billing, but they're expediting it up the management chain so that it should be resolved tomorrow.
+- And Shaw is working! Two internets baby!!
+- Will sent me some videos about the Dream Machine. I guess he set up a VLAN for his IOT stuff so that it's logically separated to another network and isolated. Might do that. I also might set up a different Wifi just for Sarah. I think we can set up 4 different SSIDs through the same AP (or 8 if we do combined 2.4/5Ghz). But that'd let us have Mr. Chalk, a IOT, and then hers. I should also look at traffic QOS to make sure my in-home streaming is faster.
+  - IOT would be my doorbell, Hue, the stupid IQ Panel.
+  - I wonder if I can set up a route so that I can access the Rogers modem directly (in case I need to look at it).
+  - Interesting, you can set up a floorplan map. I should have those...
+- And the doorbell and bit holder are here!
+- Ok this bit holder is really nice actually, especially for a home made 3d printed thing. You put the bits in about half way and the little magnet at the bottom will pull it in the rest of the way. The orange colour is a bit warmer, but eh, it's homemade. Still way nicer than the little cardboard boxes.
+- Before I set up the Doorbell, I should set up the IoT network, to make it easier to set everything up.
+  - Will sent me this video (which is a bit outdated since it uses the old UI), but I'm following it fine so far: https://www.youtube.com/watch?v=UGBobTInIBc
+  - LAN In means from device to Gateway.
+  - Okay this seems pretty straightforward. He does a good job of explaining it. You have to block the IoT network from sending any packets to any other network. Then you have to block it from accessing the UDM Gateway addresses of other VLANs (like 192.168.1.1), then you have to block it specifically from sending packets to port 80, 443, and 22 to any gateway. That way the IoT devices get isolated (but can still talk to the gateway, just without accessing the portal). Makes sense.
+- Alright, now let's look at installing the doorbell.
+  - Hmm, I need to know where the chime box is... where is it?
+- Okay cool, the cars are 10min out. And the new doorbell is installed (much nicer than that chinese shit we had before).
+- I've set the IQ Panel to the IoT network and the Doorbell. No problems! Doorbell got its latest firmware.
+- Looks like Sarah will be going into Banff with her mom since we're getting the cars shortly.
+- Another good thing about the doorbell is that there was a test doorbell button. Since it's hard wired to our normal doorbell, bubby is like "huh? Are we not going to look at who's there???"
+- I'VE GOT MY CAR AGAIN!!!
+  - Now I can go to MemoryExpress, and program my garage door opener.
+  - I've asked will where he went for his vehicle certification. I figure I'll want to kick start all of that process tomorrow.
+  - Oh okay, I thought the certification expired 14 days after you bought it, but it's 14 days after the completed inspection, it doesn't otherwise expire. In which case, I should go to the registry agent today. No real use waiting.
+- Eh, Memory Express cable is more expensive, but not like crazily so. Convenience of being able to go to a store.
+- Wait wtf, 50 is like $30, but on Amazon it's like $13... Hmm, I don't really want to wait though. I just want this mounted (I also want to drive my car).
+  - I think I'll order the smaller cables from Amazon though.
+- Alright, the cable wrap has been assembled. Looks so much better than having a wire going around. It's not perfect, but if you're not looking for it, it blends into the floorboards/doorframe.
+- Successful day.
+- I wonder how this streaming box from Rogers is.
+- I think I figured out what vapor pad I need for the humidifier. There were two sizes at Home Depot that looked like the one I had, got home and measured mine and it was 9.5" by 10", which was one of the ones available for sale. Good thing is it's the cheaper one too. I'll have to go buy one tomorrow so I can turn the humidifier back on.
+- It's a little daunting trying to find a new therapist. Gotta go through a few of them to see how they are...
+- Wonder if I should buy two 3090s since you can run them with NVLink, and two of them from FB Marketplace go for less than another 4090. The big thing being that they have 24GB of RAM (just like a 4090).
+- I tried out the K100 at a Best Buy, and yea, might pick it up at some point (when it's on sale). It feels interesting, and would be better for gaming than the Keychron one I have right now.
+- I'm really not sure what to do with the home theatre. Do you go for just a projector for gaming? Or do you need a TV? Also, how well will a projector work for that room considering it has a bunch of windows.
+- I should start getting ready for bed. Sarah's on her way home, probably will be about an hour.
+- Oh good, the weather is supposed to warm up a bit this weekend, which means I should try out the pressure washer and hose (because I'll need to eventually turn them off for winter).
+- I should reach out to the electricians again tomorrow (I never heard back from them).
+
+* September 19th
+- Dropped the truck off at enterprise. Took the C-Train most of the way home, then ubered the rest. The C-Train line goes right by stampede park which is good to know. Means we could park by the station, and just ride the rest of the way in.
+- Well, on to the new bottle of Vyvanse.
+- I think I need to address some feedback on the last ticket, and then otherwise I'm gonna put together this cable wrap, boot Hyperion, and finish off cleaning this desk.
+  - Uhhhh, don't want to right now. Caffeine helps a bit, but Vyvanse will take a bit to kick in. Also kind of cold in the house today. Switched to turning the heat on, since it's only a high of 15c today.
+- Thank god the dog didn't wake us up at 5am today. I went to bed at like 9:30, so I ended up sleeping for like 10hrs.
+- Ordered an Arlo wired doorbell. Might arrive tomorrow. Went for the white one since our door frame is white. I think the previous owners had something like this, since it's an old school doorbell now, but I seem to remember seeing something like an Arlo when we were first looking at the house.
+- I should look for a therapist. Also need to look for doctors (might get Sarah to do that).
+- If I don't hear from the electricians today, I'll need to send them another email tomorrow morning.
+- Oh dope, my bit holder cleared customs and has arrived at Facility (lol, where? just says CA). So should arrive this week I'd guess.
+- Well fuck. I didn't get a long enough ethernet cord. I was putting it all through the wire wrap and I was getting near the end and realized not only would I probably not make the full run of wrap, but even if I did, I would have no slack in the line. I thought I'd bought a 50' cable, but apparently I only bought a 35' one. Good news is that a 50' should totally work. In terms of wire wrap I have 25' in full length ones, then a 3' one cut in half (using both), then of the remaining 2 3' wraps, I cut off about 20". Let's say we used them all (due to spacing between the couplings and at the corners), that leaves us with 34' feet of wrap. So yea, I guess I could fit them all together, but there'd be no slack in the line. So if I get a 50' line, I'll have about 7' on each end, which should work. Ok yea, just confirmed using one of my 6' cables that 7' on each end will be perfect (enough room to maneuver, without being too much).
+  - Sad that I'll have to wait until tomorrow afternoon though.
+  - Good thing I decided to measure and put everything in the wrap before taking actually mounting it on the wall though.
+  - Let's see when MemoryExpress is open until tomorrow. Hoping our cars come closer to 12 anyways.
+- I need to look into home theatre people.
+- Ordered a rack mount power bar and shelf. I should be able to mount the shelf near the front and the power bar near the back so that they share 1U.
+  - I'll need an idea of how many Us I'm gonna use in the near future so that I can buy the OCD panels lol.
+- I think I need to review my finances today. Should look at sending most of my money to Andrew and having them convert some of it. Oh good, market is doing shit! To bad the canadian dollar has been doing a rebound though.
+- But big thing I need to do today is try out Hyperion. Should check and see if there's any new BIOS updates.
+  - Also plug in Nebula.
+- Okay, cleaned up the wiring a bit on my main desk. I always seem to forget that the Caldigit doesn't really fit under the laptop stand with everything plugged in, it sticks out a bit. So I've pulled that all back out. I've plugged in the LG monitor, and brought Nebula out of its box. If I want to plug it in to the network in addition to the mac, I'll need another mini switch. I'll have to try the unmanaged ones to see how that actually works in the software though (since if it's fine, I'll just use the two I have for this desk as well as the entertainment unit in the bedroom). I've also cleaned up Hyperion's desk a bit. I'm thinking I'll put the Steam Deck Docking station and the little ROG stand on that desk too. So it's more gaming oriented. Could also plug the Steam Deck docking station into the network which is cool.
+  - Still need to take the Intel MBP out of its box and plug it in. Might do that on the other desk as well.
+  - I'm gonna need a larger carpet mat for this desk though.
+  - I'm so glad I took those really long power bars from the office. They're so useful.
+  - I also had a genius idea. There's this big mark on the wall above Hyperion from the previous owner. Realized I could put the wireless AP over it lmao. Although could also do a poster or something. I should figure that all out before mounting things.
+  - I think the wall behind the mac would be good to put dad's painting up. It's one I really like looking at.
+- Unboxed the Steam Deck and it was pretty dirty. Reminds me that I need to buy some device cleaner when I go to Memory Express.
+- Okay, making my lunch. Then should do a bit of work before jumping to Hyperion to see how things are going with it. Also, Daniel pushed up his code!
+- Oh I think the squatty pottys should get here today. Yep. Today by 10pm.
+- Hmm, I've never been to Visions electronics before. I think there was one in Kitchener, and I've seen one here. They carry the L800s though.
+- I wonder how the Caldigit vs the internal headphone jack sounds on the mac. I'm not sure if I can really tell to be honest. And it's really convenient to have volume control on my mouse. Think I'll just keep that.
+  - Hmm, I think the bass gets passed through better when provided as digital.
+  - Ah maybe not, I can always boost it a bit on the sub itself.
+- Still not sure whether or not I should upgrade Nebula to 64GB of RAM. It's $150, and you won't be able to buy DDR4 for much longer I don't think.
+- Oh shit you can buy 192GB of RAM with XMP support on my board now...
+- Looks like there's a new chipset driver? It came out on August 8th. Not sure if I've installed it or not. They also suggest uninstalling the old driver first.
+- Latest BIOS is 1602, not sure if I installed that or not.
+- OK, let's do a bit of work first. Need to go through the comments that Brian said he left.
+  - Alright, resolved.
+- Interesting, so I've logged into the Unifi Portal and apparently the Master Bedroom has a meh connection or something. It says to replace the cable since it's only getting 100Mbps. Both offices are good though. I wonder if it's the local cable then.
+  - Okay, it's GBE now. The cable I had it plugged into was Cat5e, now it's Cat7 (although the connector is a bit big for it). Let's try plugging in one of the old switches.
+  - I need to buy some more 6-10' cables. That or learn how to terminate my own cabling...
+- Oh, ok, the unmanaged hubs just don't even show up, so it looks like all of their devices are on the same level of the topology. That's fine then. I'll just use the unmanaged one here and in the bonus room. No need to buy anything else.
+- Lol, I forget the key bindings I set up for Nebula... huzzah!
+- I think I'm gonna take a walk and then come back and fuck around with Hyperion.
+- Hmm, looks like I'll need to figure out how to get external displays working with Stump! Works fine with Gnome Wayland.
+- I should put the Hue Bridge in the bedroom too, though not sure what to plug it into. It works with the USB to barrel adapter from the looks of it though. It's just got such a stupid wall wart. I suppose an iPhone one would work.
+- Alright, dog walked. Need to bring up the new steam cleaner and get it out of its box. Also need to remember to take out the recycling and green bin tonight (specifically all of my old shawarmas).
+- Lol, Daniel said his lisp code was shitty, and yea, it's interesting to look at. I think he has his WIP.lisp as essentially a script that he executes. Which, that's fair. It does point out that we might want to clean up the naming situation, having rembrandt/sources/thetadata is a lot of keystrokes and really ugly.
+- Ok, let's boot up Hyperion. Then we should think a bit more about what we need to study/research/etc for Rembrandt and also personally. I think the house is beginning to be pretty sorted out. It's mostly just organizing stuff downstairs. Otherwise it's just a bit more furniture and filling out the theatre room for instance.
+- So noted, don't put my weight on the table, it'll lean forwards! I wonder what I can do to reinforce it a bit.
+  - I could actually move the legs out a bit from the looks of it. I wouldn't be able to bolt them all in though, just two, but that's probably fine. I think I'll do that.
+  - Moved the legs, that helps a lot.
+- Updated the BIOS on Hyperion and all of the drivers and shit. Also found out that Starfield is on Game Pass and it has cross progression, so I could also play between PC and Xbox. Pretty cool.
+- Squatty Pottys came and... one of them is used. :/ Why do I always get used stuff that's gross. Like the fucking vacuum. It has someone's long hair and shit stains on it, and the whole thing is discoloured for some reason. At least it came in a separate box.
+- New doorbell comes tomorrow.
+- Alright, green bin and recycle are out.
+- Oh, need to check Enmax. I got a letter today about gas and electricity from the previous owner's provider.
+  - Hmm, I think I need to contact them. It doesn't really have anything about plans. Although I'm pretty sure I set those up.
+  - Okay, yea I did sign up for both (as well as water). But probably worth a call to confirm.
+- I'm so excited to get my car back. I should probably send it to the dealer for a service.
+- I'm wondering if I should just start a new CAA account through AMA instead of trying to transfer my weird basic one.
+  - Well fuck I have to somehow cancel it since it's set up for auto billing.
+  - Guess I'll be doing that tomorrow.
+- Jesus, Toyota has so many models of SUV. Was looking at the Highlander, but it looks like the Grand Highlander is probably the better bet (it has more space in the third row). Then there's also the Sequoia which is even more expensive. But apparently the Grand Highlander has more trunk space and the third row seating is more comfortable. So seems like the best bet. Then, since it'd be a hybrid, it'll probably end up better on gas than Sarah's car (or at least similar).
+  - The Sequoia seems more like a Range Rover alternative (but like, way cheaper).
+  - Hmm, there are two different hybrid systems. One that's more focused on economy, and the other on performance (with fuel economy closer to my Benz, but probably taking regular).
+  - Has Car Play too. Good shit.
+  - I think it'll be worth visiting a dealer to see what they're like. Sarah won't like them, but... honestly she just needs to man up and drive the bigger vehicle. They aren't hard.
+
+* September 18th
+- Alright, the cars are coming on Wednesday. And I've emailed the electricians.
+- Once again, 8:30 rolls around and I need to poop just as stand up starts. Hate this for me.
+- Daniel had to cancel our 1-1, but that's fine. Gives me some time to do shit.
+- I put together the little baby gate for the cat, and the litter locker and cat crapper both fit perfectly under the sink in the half bath. It's the perfect place for it. If he takes a real dump, you can close the door and turn the fan on. And it's perfect for guests since the bathroom in the basement won't end up with a bunch of litter everywhere. I'm so happy with this setup. Not happy that I have to do the litter now, but...
+- The dog kennel fits in a little cubby area beside the garage door. Perfect for when we come home and open the door. "Bubby! We're home!".
+- Oh yea, I should set up Shaw. Maybe I'll do that when I get back this afternoon.
+- I think I should do a bit of work for the next little bit before we go. Sarah said she was going to shower, but she was just assembling the shower area and still hasn't showered, so she'll still be awhile.
+- While we're out today, I think it'd also be good to get some of the cable run stuff for the ethernet. I'll make sure to do a bit of measuring for the Wifi spots too. Although those won't need much. I wonder how high up they should go.
+- Speaking of which, I'll need to order one more of those for the basement, but that can come later. But I think I need to order another switch or two. One for the master would be good. And get some of those OCD panels for the rack lol. Otherwise the setup is pretty damn good.
+- So today I learned how aria roles and shit works. I had the focus trap set up for the layout detail and it failed QA back in August which was weird. Turns out that Screen Readers have additional ways to interact beyond Tab and Shift Tab for focus. You can use the left and right arrows to navigate and highlight elements that wouldn't typically be tabbable like paragraphs (which makes sense). Thing is, because of that, they will ignore the focus traps. The way you disable moving outside of a modal is to set it as an ariaModal and set the role to dialog. Then you can't move outside of it. Who knew! Funnily enough that apparently made it past QA for the actual Modal Dialogs since they also needed that change to be made.
+- I think I'll set up my LG monitor in the corner of the desk here, may or may not connect it to the Mac. Not sure.
+- My LTT bit holder made its way to California, and left that facility on the 16th. No updates since.
+- Hmm, still need to research new office chairs.
+- Honestly, need to chat with Daniel about peering and setting up NAS here, then just cancel all of the TV services.
+- Ok, signing up for Shaw. Passphrase for the phone is "juniper!"
+- Omg, my finger print has changed again lol. Need to rescan on both. At least my phone doesn't have this shit anymore.
+- Alright, signed up for Shaw! 500/100 for $75/month. The lowest tier was $55/month, but that's only 75mbps symmetric. And the next one up was 250/100, but the same price as 500. Meanwhile, it'd be $95/month for 1000/100, or $105/month for 1500/150, which, blech. No need with symmetric gigabit through Telus. That and 1.5 is stupid since I can't even run it that fast anywhere in my house. Oh damn, Telus goes up to 3Gbps.
+  - Setup is Wednesday morning between 9 and 11.
+  - At least that's pretty decent for upload speed on cable. It does seem like they have a fibre line into the house, I wonder if I can get the tech to just do SFP? Since I realized that you can set both SFP ports to be WAN on the Dream Machine, it just defaults to having the 2.5GB port being WAN. But if you set it to LAN, the other SFP port can be set to WAN (must mean it can only handle two WANs total). But if not, I'll use the 2.5 as the Shaw port, and I think the SFP would then connect to the bigger switch once I need it?
+  - All very interesting.
+- I need to play around a bit more with the Unifi stuff from my browser instead of just the phone.
+- Seeing as how we have the weekly meeting for Rembrandt tomorrow, I really need to review Daniel's code. Hopefully I can do that this afternoon.
+- Alright, bought a BBQ, just over $1200 with delivery, assembly, and a heavy duty cover. Arrives next Thursday, and should be pretty much plug and play.
+  - Need to decide on things like BBQ brush and spatulas and tongs and shit.
+  - Not sure where I land on grill brushes. Like people end up in the ER, but people are also really fucking dumb.
+  - There's this thing called a grill stone that's apparently four times more effective. Maybe a combination of that and a bristle free one?
+- I got the wire wrap. Think I'll do that next.
+- Just remembered I need to extend the car rental by two days. They close at 5, and now I'm on hold for god knows how long. First time I spent like 15min on the call, then it said I couldn't be transferred...
+  - Well, calling the main line just makes the main office send them a note...
+
+* September 17th
+- So picked Sarah and her mom up from the airport yesterday. What started as a good day sort of turned sour. Sarah told me that her mom and her had had a fight the day before or so, so when they arrived they weren't exactly talkative or in very good spirits, which I picked up on before she even told me about it.
+- We spent the rest of the day more or less getting sorted with the stuff that she needed. So spent time at Walmart, then went to buy new sheets from Sleep Country.
+- Then, over night the cat was being a fucking pain in the ass. He turned on the stove! So at 5am I was awoken by the dog making a racket. I got downstairs and could smell something thinking she might have shit herself or something, so I was looking all over the kennel, and took her out to pee before I came back in and realized the stove was on. Then on top of that he was trying to break into a bunch of treat bags that were strewn all over the place. Could've fucking strangled him.
+  - So now we need to get some sort of child proof covers for the knobs on the stove, and at least I figured out that you can set a control lock for the stove controls. But that means I have to check that literally every night before bed because stupid cat might try and kill us while we sleep.
+  - I was so fucking pissed, and it took me forever to get back to sleep because I was worried he'd do it or something else again.
+- Sarah's off her ADHD medication now because of the pregnancy, so I'm not expecting her to be much help for anything for awhile. And then her mom is here until Thursday morning, so I have that constant feeling of needing to entertain when all I really want is to get this house sorted out as best we can.
+- Sarah wanted to go to Banff today because the weather was nice, and after last night, I just was not up to that. Like she and her mom wouldn't consider driving the truck (I don't know why they're so intimidated by it, you just familiarize yourself with it for a bit and you're good; all of the new sensors and cameras on cars these days makes them so fucking easy to drive). Thankfully we're not going, and instead are gonna do some more shopping (Canadian Tire for carpet solution, and maybe look at hot tubs).
+- Meanwhile I got a text from Reid last night telling me that he'd told Ursula, but that he was feeling depressed about the whole situation because it makes him feel shitty about his life I think. I told him he really shouldn't be comparing himself to me since it's not fair (and honestly my whole life feels unfair), but I haven't heard back from him. I just hope he's okay.
+- Otherwise, I have all of the Wifi set up. And the printer (which fits PERFECTLY on the filing cabinet).
+- Alright, Sarah and her mom are going for naps. After that we'll go shopping.
+- I think I should make sure Hyperion is good.
+- Measurements for the wall (routing cable):
+  - 2.05m for height of door (about 7 feet):
+  - 0.82m for width of door frame
+  - 0.57m for door frame to window wall
+  - 3m+ for the windowed wall through to back of desk
+- I need to work on not responding to Sarah as if she's making accusations, she often makes comments that I don't think she intends as accusatory, but I seem to read them as such. I mean she also needs to work on not being passive aggressive, since it makes it hard to determine her intent. She literally told me about this yesterday because her mom kept the window open one night and Sarah was freezing. And the next night she asked her mom: "so what aren't we going to do tonight?". Like fuck, why would you ask her like that???
+- Holy shit, I bought a hot tub!
+  - We spent a solid hour or so at World of Spas. He took us through most of the main models, and we ended up with a Masterspa Twilight series. 7.25ft (square), total came out to $21K after tax and delivery, which is about what I was expecting to pay, but it's actually a lot more kitted out than I'd initially would have thought we'd end up getting. Of course it has the lighting features and a fucking built in speaker system lol, but it also has an ozone system for keeping the water clean which means less chemical/chlorine use. I have his number and he says to contact him if I have any questions about pH levels and shit like that.
+  - It's a sizable tub too, I was thinking we'd get like a 4 person, maybe 5, but this one is rated for 7 people (although realistically more like 6). Either way, bigger than I'd have initially thought.
+  - Oh, has a reinforced and locking cover, which can support like 400lbs or something, so big, but we also went for the arm to make it easy to open and close. I could easily open and close it with one hand, Sarah could too, which is awesome. It also keeps the lid upright, so it doubles as a bit of a privacy screen.
+  - I didn't know this, but all of the jet nozzles are replaceable. So you can get like different types of heads for them that disperse the water in different ways.
+  - And perhaps the coolest thing is not only does it have a little waterfall feature for one of the seats, one of them is like a proper spa for upper back issues. It has these downward facing jets to target your neck and shoulders.
+  - It was interesting learning about all of the different variants of tubs based on need. Like some tubs are more uniform, so think more for entertaining where you want everyone to be comfortable. Whereas others are almost isolating? Like their seats are really deep and it feels like you can be in the tub together, but kind of alone. (Good for like a YMCA or something where you're with strangers). The one we went with was more of a spa oriented one, so it has 4 main seats that are a bit deeper, and there's stuff for your feet in the center. And you can fit another 2 or 3 people in, but they would be in less desirable seats. But that makes sense when it'd mostly be for the two of us, with occasional company.
+  - Something else interesting is that I think with the ozone system, you 1) don't smell chlorine as much, but 2) you don't need to shower before you get in and when you get out! The sales guy has a four year old and one year old and he says the real benefit of this obviously is that you can put the kids to be like right out of the tub, since showering would wake them up.
+  - I'm so excited for this.
+  - Oh, and we'll need an electrician to come in and get a big outlet set up, but that works out because we need an electrician anyways to put the outlets in for the bidets (and maybe install a second outlet in the basement panel?).
+- Okay, just checked and there are a couple other spots in the breaker panel to add more. I was wondering because I remembered the panel looking pretty fucking full to begin with. But we'll have to add one for the tub, and then maybe an additional one for the rack. I'll also have to ask about the outlet (since Rahul said they had them their and not to got to Home Depot for them).
+- Tomorrow after chatting with Daniel I'll be taking Sarah and her mom to Ikea while I go to the BBQ place.
+- Oh and I need to call the cars obviously. I think I'll do that first thing (and email/call the electricians).
+- Oh I should check if the BBQ place has like child proofing things for the gas stove.
+- Will need to buy some grilling accessories too. Like spatulas, probably more cutting boards, things of that nature.
+- I should transfer my money in to Andrew, and exchange some cash to CAD. Figure out how much I need to cover the rest of the hot tub and stuff for Mark, etc.
+- I'm pretty excited to have a BBQ actually, same with actually trying out our gas range. I like the idea of doing rather simple things.
+  - The butcher has a medium family box that comes with chicken breasts, chicken legs, pork chops, a pot roast, some steaks, some ground beef, and some sausages. Which is actually a good mix for the kinds of stuff we like, such as the creamy mushroom pork chops, and tacos.
+  - I should look at things to do with chicken legs and chicken breasts. I haven't really cooked chicken all that much.
+- Hmm, was curious, looks like costco is $60 per year. The executive membership is $120, and the difference is that you save 2% on your purchases up to $1000. So that would only make sense for if we actually find ourselves shopping there a lot.
+  - Closest one is in Woodbine, which is about 15min, there's also one by the Ikea, but that's more like 20-25min depending on traffic. The one in Woodbine has better reviews too from the looks of it.
+  - Might want to go take a look soon. Especially once we have a grill.
+- Okay, so to exchange our driver's licenses and health card, we go to Alberta Registry Office. The closest one is in the plaza across the highway, literally right by the Petsmart.
+- OHHHH, that Costco is the one on the reservation. Cheap gas. Good shit.
+
+* September 15th
+- Today is the delivery of the bed frame (apparently a total of 350lbs for it and the bench at the end). And I think I should be getting my LTT stuff, so that'll include the desk pad so I can sort out my desk.
+- I should call Hansen's today to find out what's going on with the cars. I might need to extend the truck rental otherwise.
+- Ok yea WTF, the Arlo model number is the same on the Arlo Canada site and Best Buy, but the price on Best Buy is literally half the price.
+  - Isn't available in store though, need to order it. I should see if white or black would be better.
+- I wonder if I can get a smart lock for the front door? It's a weird design. I doubt it. I'd probably need to replace it all.
+- I wish I could stop the basement from getting so cold. It's fine for me, but a little odd for the guest rooms and theatre room. It's just odd that there aren't any vents there.
+- Ok, extending the rental is just a matter of calling the office, and they'll put an additional hold charge on the card. And I'll get the weekly rate. But first, call Hansen's.
+  - Although, even if Hansen's delivers, we'll need to get them certified in Alberta.
+  - First thing we should do is go to the service Alberta equivalent once Sarah's here (or on Monday).
+- The LTT bit holder shipped via USPS, it's at the Anchorage distribution centre as of yesterday early morning. But it doesn't give an indication of delivery (probably because it has to go through customs?). So who knows how long it'll take.
+- This house has a humidifier option, but I kind of wonder if it's more about just dehumidifying. Since I set it to 60%, but seems to hover around 40%, which is really dry.
+- I have a review of the focus trap stuff with Brian at 12.
+- Otherwise, I think I should set up the desktop and think about how I want to work with it for Rembrandt. The big technical challenges being investigating SIMD and mmapped files. I can't really do SIMD on the mac anyways since it's ARM.
+  - Thing is, I'm gonna need to run Linux on it. But how? And what? Guix would be nice of course.
+  - But the other thing is that if we're doing things regularly with it, I won't really be able to game on it lol.
+  - I suppose if we start really using it consistently, we can just build out an Epyc server to rack mount.
+  - We could go WSL2, but I think because we're interested in the performance characteristics, it'd be better to limit the indirection through a VM for now. Since we'll almost certainly go with bare metal in deployment.
+- Oh man, I feel my abs today. Doing the ab roller clearly did something.
+- I should try the thread lock today, and super glue (gluing the pieces of the cars back together).
+- Fuck ya. LTT out for delivery. I should also follow up with Telus about the TV box.
+- I bought a new mouse for the desktop yesterday and was looking at keyboards (gaming keyboards), and there was this one from Corsair, the K100 which uses optical mechanical switches, and I'm really curious how those are. I'm not sure I'd want to spend the money on it ($300) without actually trying the keys though. They had a place on the shelf for it at Best Buy, but it was missing. I wonder if one of the other ones has a display model. I mean I could always buy and return it.
+- Holy shit, all of my packages came all at once. The Ubiquiti stuff, the printer, the rack, the bedframe. Only thing outstanding is the LTT order. The bed frame truck rolled up, and as I was meeting the driver, the purolator guy arrived right behind him. Pretty sure it was the same Purolator guy as yesterday with the monitor. Poor guy is probably like "who the fuck is this guy and why does he order so many large packages?".
+  - So lots to assemble.
+- Also, Daniel kindly provided the link to his baby gate for the cat. Amazon special. If I order today, it should come tomorrow. Good shit.
+- Yea, I ain't getting the headboard upstairs by myself... and Will's going to the airport directly after work, so I'm gonna need to enlist the help of the neighbour.
+  - Got everything else upstairs though (except the bench, but that'd just be in the way anyways).
+- Alright, have the meeting to talk about the focus trap, booked for an hour but doubt it'll take that long. Then I think I'll call Reid.
+  - Probably good idea to then setup my desk before heading out to the haircut, after which I will pick up shawarma for an early dinner/late lunch.
+- And done work for the day! (Well, gotta push the code up for review, but I'll do that in a bit).
+
+* September 14th
+- Sarah got her blood test results. Looks like she's 5-6 weeks pregnant. So tracks around my birthday, or sometime a bit before. That's far enough along that she can get an ultrasound, so the Dr. was able to get her an appointment at the hospital at 2:30. She'll find out then if it's ectopic or not, and if it is, she'll go straight into the emergency room. But based on the levels of HCG, and that she's not been in pain, the Dr. doubts it is.
+  - Mom just texted that "then you'll find out it's twins".
+  - Sarah also independently said that she has a feeling it's twins, and so does her mom.
+  - Please no.
+- My monitor is supposed to arrive today. Looks like it's coming from Edmonton. It arrived in Calgary, so it just needs to go out for delivery.
+- My order from LTT has an expected delivery date of tomorrow morning. Which is exciting.
+  - It's coming from Richmond. I was curious, looks like that's an 11hr drive. So almost like going to Thunder Bay actually. Though it'd be a nicer drive probably.
+  - Good to know for a road trip to Vancouver. Kelowna is 7h30m, so you'd stay over there.
+  - And my order for the bit holder also shipped. Though it's coming from Anchorage of all places. So who knows how long that'll take. Maybe not long since it'd be flying.
+- I woke up again this morning with a stiff neck. I wish I knew why this happened to me so much.
+  - Chatty-G says it could be from sleeping on my stomach with my head turned to one side for long periods.
+  - Maybe I need a contoured pillow.
+- WTF, my Pro Display keeps flashing...
+  - Oh, its brightness was at 110%. I'll turn it down a bit.
+- I still kinda want to get a Dell 6K.
+  - Once again, it's on sale for $3250... Hmmmmm...
+  - The webcam being built-in to the display is really convenient.
+- Oh shit. Amazon says the printer and rack will show up on Monday, but they both arrived at the purolator facility in Calgary last night. So I wonder if they'll actually get here tomorrow.
+- Sarah got a voicemail from the delivery company for the bed looking to schedule a delivery. That means I really need to clean up the master bedroom. She's gonna call them back after she's done calling IT (she's locked out of her account lmao). But if that's today, I'll need to clean up ASAP. Otherwise, if it's tomorrow, that'll have to be this evening.
+  - I should call Hansen's too. My car is in Calgary according to the AirTag, and it has been since Monday. So it must be coming soon...
+- Monitor is out for delivery!
+- Ubiquiti stuff still won't come until Monday probably. It's coming from Etobicoke.
+  - So did the stuff from Amazon though... and they're all shipping with Purolator Ground.
+- Alright, bed comes tomorrow between 10-2.
+- With the monitor coming today, I'm not gonna attempt to do RingFit unless it's already arrived. But I should maybe do stairs.
+- I also need to run Ethernet to this desk. Shouldn't be too bad to run from the wall with the workbench, around the closet door, then along the wall. Will need a few runs of straight channels. I'll need one corner piece to go where the walls meet. Then four pieces for around the door frame. I think that means, 1 outside elbow (I think, maybe 2 if I want to run it the full length of the windowed wall), and then 4 flat elbows. I should measure the runs though, also to understand how long of an ethernet cable I need.
+  - Either way, looks like all of that stuff is at Home Depot and in stock.
+- Nice, 930Mbps symmetric no problem. The long cable I have here is Cat5e. But I don't know if it's worth going to Cat6 anyways since the wiring in the house is Cat5e too.
+- God this is annoying. I'm supposed to chat with Scott, but Siddi is taking a solid fucking HOUR going through something.
+- Oh, I should order 3 more squatty pottys. These toilets seem taller than our previous ones. Might be better to get the 9" ones. Pretty sure the old one is 7". Yea, it's 7". The 7" ones are out of stock, but honestly the 7" feels a bit low on these toilets. I'll just move the old one to the basement.
+  - Okay, ordered.
+- Okay, I was really confused why the focus trap seemed to work fine. Turns out the issue is around closing a menu you already had open. The one thing I didn't test lol. Otherwise the focus trap stuff works better than the old style. So figuring that out is what I need to do today. May as well do that now, then the rest of the day can be FOR ME.
+- I should look at booking a massage, and dentist appointment actually. Will sent me both of the places he goes to.
+  - Oh damn, the girl he sees has an availability at 8pm today. I think I might do that. Oddly they list like three different types, therapeutic, relaxation, and deep tissue.
+  - Alright, should fill out the forms and send them ahead of time.
+  - And forms sent!
+  - They confirmed they look good, but I responded with an updated form adding Sarah's plan as secondary coverage for direct billing. Good shit. $1400 worth of massages per year.
+- Wondering if I should get a smart door bell. Maybe security cameras too? Ubiquiti has cameras.
+- FedEx just went buy. I hope Purolator comes soon.
+- Well that was dumb. What a spaghetti code base.
+- Sarah should be face timing me shortly. Her appointment is now, but you know hospitals/doctors...
+- Given the bed should be coming tomorrow morning, and I have a massage tonight, I should handle the master bedroom this afternoon.
+- I really do need to do some stuff with Rembrandt. So should really look at reviewing Daniel's code.
+- Oh, Ubiquiti has a smart door bell. Apparently not great and expensive. Also WTF, the Arlo is like ridiculously priced in Canada. It's US$130 regularly, but it's $200 Canadian, which is like way more than it should be. Lol, Best Buy has them on sale... for $1 off! Oh wait no, Best Buy has them at $100 Canadian. Are these the same? Oh wait those are the Essential. I don't know what the difference is. Oh it is the same, that's really weird.
+- Well, guess the Dr.'s office fucked up or something, so Sarah might need to go to emergency instead because they didn't actually send the requisition forms for some reason... god those people are awful.
+- Feels weird waiting for so much stuff right now. Can't go for a walk since Purolator might come, waiting to see what Sarah is up to...
+- I suppose I can start cleaning the master. May as well do that now. I need a break from the computer.
+- Well, it's not ectopic. That's all they'd tell us (and even then, they weren't supposed to tell us anything?) Only reason we know is that they asked what her Dr. said and she said "if it's ectopic I go straight to emergency, otherwise I can go home" and then they said "you can go home."
+- Well, bedroom has been sorted out a bit. There's a lot of Sarah's crap in one corner, but the mirror and entertainment unit has all been put back together. The dressers are in the closet, and all of the stuff for the washroom has been stowed away.
+  - The bedroom gets really warm during the day, even with the blinds closed, the vents open, and the fan set to ON. Oddly though the washroom feels cooler...
+- I think I need to go for a walk, then do some working out. Probably not weights though. Maybe ring fit, it's been awhile.
+- Well, didn't get to Ring Fit, the switch was dead and so was one of the joycons. But did a bunch of body weight exercises.
+- Then before taking a shower, I took the trimmer to my insane amount of hair. Only to find out that I didn't bring the razer handles lol. So couldn't actually shave to touch up. I figure honestly that I'll just cancel Dollar Shave Club and get something at the grocery store for now. I don't shave that much these days.
+- Alright, Dollar Shave Club cancelled.
+- I'm feeling a bit overwhelmed now. Or at least I was before the walk. Now that we know the pregnancy is not ectopic, it's become a lot more real and starting to set in. It's definitely a bit of a mixed emotion. On the one hand, I know we're ready. Like, there's no better position to be in to have kids. But at the same time, I know that my life is going to change a lot, but I'm not exactly sure how.
+  - Like it also crossed my mind that I'm going to be the least important person in the house, and yea it's for a really good reason, but seeing as how I've felt, I don't know, lonely? Or unappreciated? I'm worried that that might get worse. I'm not sure.
+  - I also really want to talk to Will about it. Or Zamal about it. But I can't. Because it's not my decision to make.
+  - I think the other side of the uncertainty is that I feel like I'm gonna let other people down because I'll have to focus on the family?
+  - Oh, and I think a big part of it is I'm not exactly sure... what to do. Like this is something that's going to happen. And I'm gonna help her through it. But it's like, how much can I focus on other things? Am I letting her down by doing things for myself?
+  - It feels kind of isolating.
+
+* September 13th
+- Holy shit she's pregnant.
+  - Assuming this pregnancy turns out, this will be pretty fucking funny to explain to said kid when they're older. "Was I planned?" "Yes, and no..."
+  - It does suck not having had sex for the purpose of procreation though. Feel a little gyped.
+- Nice, the Ubiquiti stuff has an expected delivery date of Monday as well. So looks like I'll get a printer, rack, and networking equipment.
+- Well, told mom about the pregnancy. She's obviously happy about it.
+- I feel like there was something I had to go out and get today...
+  - Oh right, figuring out the fridge filter.
+- Okay, I want to do that after this bi-weekly hangout and then need to figure out what I'm doing for work/study/all that jazz.
+- I think I need to fix that focus trap stuff today. Shouldn't be hard. Finish that code review. Make a little splash you know. Then start sort of planning for Rembrandt.
+- Man this fridge manual is stupid. The filter status is apparently for the water filter? But not the air filter. There was also no air filter in the door... even though this is the correct air filter? Maybe it doesn't include it?
+  - OK, I don't think this fridge has an air filter. Guess I have to buy a box of baking soda. That's fine.
+  - Got the water filter out.
+  - Ok, looks like Home Depot has them. $70!
+- Alright, got the filter and some baking soda and picked up lunch. Signed up for Thai Express rewards since you get 1 point per dollar spent, and at 75 points you get $5 off. Good shit.
+- Amazing, the Typescript course kept playing while I was away. LinkedIn learning is the way to rack up hours I guess.
+- Hmm, I need to sign up for CAA, but like in Alberta.
+- Holy fuck, you have to put 15L of water through the filter in 5s alternating bursts. Just did 8L, I'll do some more later.
+- Alright, what's the plan for the rest of the day? I need to start putting another routine in place. Looking forward, I'd like to do bigger lunches, so that means cooking around 12, which is traditionally when I'd work out. I have two options here. I can work out in the morning, which is probably not a bad idea if I'm not hitting up Tims (which takes about 30min anyways). But I'd prefer to do cardio in the morning I think. So that means either stairs or ring fit. Weights I think make sense after work. What about body weight?
+- I'm at $13K on the RBC card ($2K was applied the other day), and $25K on the Amex lol. So that's $38K in total? Eh, not bad actually. I have $46K in my chequing right now, and I'll get paid twice before the actual cycle comes through, so that'll be like $7.5K. Alright, should be no problem buying the monitor tonight. It looks like it's the Amex that is on a 13th of the month cadence, the RBC is on the 21st (this is flipped from the old amex and BMO I think).
+- Nice, 2.25H from Linkedin. Another 1.33H in the kitty. And did a solid 2H in a stupid litmos course. That'll take me to 5.5H. Oh I only need 6H. This is dope. Just gotta find some internal course to fill it out.
+- Realistically, I should probably spend an hour or so a day on PS stuff (plus stand up). That's probably an appropriate amount of work. More than what I've been doing, but not so much that I want to kill myself. As for the rest of my day, not sure what makes sense. Cardio in the morning and some body weight exercises maybe? How about weights? Still gonna need to take the dog for a walk in the afternoon/evening. If I do cardio before standup, that means 9am until 12 is is free for working. And then 1 to 4 is also free. 4 is probably when I'd walk the dog. And might make sense to just do weights like immediately after coming home with her. Then I'd be done around 5ish.
+  - As for body weight exercises, thinking that'll just be pushups, maybe some pullups, maybe some abs? I'd also like to do grip strength training. But maybe I can set a reminder for that during the day.
+  - If I do 9am to 12 as PS work (which would also encompass my 1-1 with Jonathan), I can fill it out with work for Rembrandt.
+  - Then the afternoon can be all work for myself/Rembrandt. I'd like to set up some regular cadence of study as well. Be that leetcoding, or stats, etc.
+  - Now that I have a lot of work on my emacs config on Nebula, I should really look at transferring it over to the Mac as well. Specifically so that I can sync up my notes between the two. That'll probably require me to set up new keyboard shortcuts and shit though.
+- Alright, ordered the new monitor for the desktop. I think I'm gonna try setting up the LG on the desk beside me. I still have so much space.
+- One thing I need to think on is how to handle todos a bit better. Like I could use Org mode. But that might involve using tags and shit which I'm not familiar with.
+  - I also need to split them up into personal, PS, Rembrandt.
+- Another thing I want to put into my schedule is some sort of meditation practice. Doesn't have to be long. Might be good before bed though.
+- At the same time, I've been really happy with the ability to go out and do random things during the day. I'm not sure how to replicate that on an ongoing basis though. I really like running errands and shit. It feels like more of an accomplishment than doing stuff on the computer. :/ Maybe I need to think about the things I'm doing on a day to day basis more. Could also mean picking up a more physically oriented hobby of some sort (like when I was fucking around with embedded stuff).
+- That reminds me, I need to develop a maintenance schedule for the house. That can be taken in part from the home owner's manual (lol), but stuff like salt for the softener (speaking of which, I need to look at that), and furnace filters, and fridge filters, etc. It'd be nice to have those automated in a way.
+- I'm a bit worried and confused by why I felt so listless back in Ontario and I'm afraid of regressing to that. It felt like living in groundhog day. Everything felt really difficult. And now that I've been off of THC for two weeks, I'm not feeling the urge to get back on it. I think it definitely contributed to the not wanting to do things. But why was I using it in the first place? Like what part of my life was it covering up for. I also haven't felt the need to use my boosters in the afternoon either. I definitely want to keep using Vyvanse, like I'm 100% sure that it's responsible for me being able to do so much lately. Which means yea, gotta find a doctor.
+- Okay, I think I'll just keep todos in Notes for now, especially since it syncs to the phone. Would be cool to build a personal assistant though. Big thing is categorizing things such that if I'm at walmart, it can say "hey, buy these things while you're here."
+- Ok, let's do this focus trap stuff, then do the code review, and put the laptop on training for the rest of the afternoon.
+- Well Sarah is waiting on blood test results, but Dr. seems to have no reason not to think she's pregnant (3 positive tests is a pretty high indication). Blood test will tell how far along she is, which determines when she can get an ultrasound since it needs to be a certain time along to see anything. That way they'd confirm if it's ectopic or not. But pregnancy tests aren't very good at picking up ectopic pregnancies as is, and the fact that she isn't in pain or anything is a really good indication. Also, apparently they leave the IUD in. It'll come out with the baby. I guess taking it out is risky since you might disturb the fetus, so they only take it out if you're terminating it. And having it in won't cause issues. Which I guess works out for Sarah since it means she doesn't need to worry about taking it out (which she was dreading). This surprise pregnancy sort of forced her hand considering how wishy-washy she's been about it (which I get, it's scary).
+- Need to hit up the grocery store, get some hot sauce (oh, I wonder if you can get garlic sauce like for shawarma).
+- Alright, I did some work on the focus trap, but will need to chat with Scott about it tomorrow. Also should be wrapping up with the training shortly. Gonna go for a walk, then go to the grocery store, then probably come back and finish setting up the rack. Maybe do some weights.
+
+* September 12th
+- Ok, Ameer got back to me yesterday. Looks like the way I calculated the gains was correct (and not the way Will did lmao).
+- Today I'm supposed to review code for Scott.
+- I also need to send Mark the interest for the month.
+- Instead of a 6K Dell, I wonder if I should go for a OLED G9 for the desktop. Interesting, 5120x1440, so two 1440p displays effectively.
+  - Like, it's cheaper and HiDPI scaling isn't really that great on Windows/Linux especially.
+- I think I'm gonna try bringing the table upstairs. I wonder if I can mount it on the base with the base standing.
+- Cool, the LTT bits are back in stock. Just need the specialty bits and metric hex. And I just ordered a thing from Etsy to hold the extra bits (60 of them total, with the basic bits going in the screwdriver base itself).
+  - I'm not sure which size of desk pad to get. The table is 2m x 1m I believe. Right yep. Obviously don't want to cover the whole thing. Since the wood looks nice. Maybe like 1m x 0.5m?
+- Alright! Got the table upstairs without killing myself. Wasn't that bad putting it together upright either (I think the carpet really helps).
+  - I also ordered the desk pad and extra bits.
+- Hmm, so gas card would save Mark about 2000 a year after interest expense. So I guess kind of worth it?
+- You know, I do like being done stand up at like 9am latest. It's far better than having it biject my day essentially.
+- I still need to cancel all of the stuff for the old place. Actually, should figure that out today while Sarah is still in town. I think it's gas/water (city), hydro, and reliance.
+  - Alright filled out the form for water/gas. Now for hydro.
+  - Oh, I really need to set up mail forwarding. I should go do that today.
+  - Ok, hydro cancellation submitted.
+  - And reliance submitted.
+- I really need to go through my recurring bills to see if I have things that I should cancel.
+- I also need to pay off the ring soon.
+  - The promotion expiration date is Jan 25, 2024. But I should probably call to confirm how that works.
+- The only other thing I need to do today is get the details from Ameer about calculating tax. Then I kind of need to figure that out for myself as well.
+- I was thinking last night that I should be doing leetcode lmao. And I don't need to do them by myself, I can use GPT as a sounding board.
+  - Only annoying thing is that leetcode only has Racket, no Common Lisp which is kinda sad.
+- PC seems to have survived the journey with no issues (at least visually). Was a good idea to take the card out.
+- Oh shit, my 1-1 with Jonathan is at 11:35...
+  - Lol, so he did my review for the quarter and apparently I'm partially meeting expectations, which according to him is essentially a B. That's pretty good as far as I'm concerned, especially seeing how little I do. And sure, I may not be up to calibre for a software architect, but I'm not being paid commensurate to that position either, so...
+- Mail forwarding set up.
+- Sarah's concerned that she might be pregnant. Her period is 21 days late and she said she's been feeling a bit nauseous in the mornings. She's gonna take a pregnancy test later today. Thing is because she has the IUD in, it might be concerning if it's positive (since there's a higher risk of ectopic pregnancies). So we'll see what happens.
+- Alright, tax stuff sorted. Good news is the government probably owes me money this year. Good shit. I fucking hate excel/word though.
+- Dinner at Will's tonight.
+- I need to replace the shower heads still. Which isn't hard just need to do it.
+- I also need to put the gym together. Might give that a shot now, at least getting the base done, then might need someone to help.
+- Also need to figure out how the fridge filters work. Both for the water, and for the air filter. There's a weird tube thing on top which I think must be the air filter. But not sure. The air filter needs to be changed (at least according to the fridge). Better look at the manual.
+- I need to start doing my body weight exercises, and setting up a routine for doing stairs. I find I don't stick to these sorts of exercises because they don't really feel like "doing something". Versus say, going to use the elliptical, or lifting weights. Those feel more like an event in a way that body weights don't.
+  - I can also restart ring fit. That kicks my ass a lot actually.
+  - One thing I'd like to look into is yoga, maybe somewhere nearby. Oh, there's a hot yoga place like 6min away via car.
+  - Another thing is getting a meditation schedule set up. Not sure what type of meditation to do. Dr. K. mentioned that different types are good for different things (like focusing on breath vs mantra). Maybe he has a video on it?
+  - Hmm stairs would be good if you do explosive run up stairs and then slowly walk down (since down is harder on the knees apparently). Make it more like HIIT.
+- Holy shit somehow I did it. I put the rack together all by myself. I think it was actually easier to do than with two people following the instructions because I kind of did it in stages where I assembled it so it was structurally sound, and then undid bolts to put the next piece in. The hardest part was the beginning where I had to sort of balance the standing pieces to bind them.
+
+* September 11th
+- Alright, had my one on one with Daniel, caught up with Scott, and did stand up. I think I can get used to an 8:30am stand up. Just means it's the first thing to do in the morning and then the rest of the day is mine pretty much. Also is a forcing factor to do coffee at home instead of Tims.
+- Speaking of which, I should look into descaling for the Nespresso, and also where the nearest Nespresso store is.
+  - Looks like it's the one at the Chinook Centre.
+- My only task at work right now is to look into the focus traps again for the popovers. I think I just need to add a parameter to some function so that it can be selectively enabled for certain components. Otherwise, since I've been gone, they haven't assigned me any other tickets. Nothing on the backlog.
+- Alright, Best Buy is open, so I'll go there and pick up another spool of speaker wire. Maybe pick up another cheap bidet for upstairs which we can move to the main floor later.
+  - Actually yea, would be good to go now, since who knows when the lady will be here to pick up the boxes.
+- Ok, back from the stores. The boxes have been taken away. I need to figure out what to do about the cap gains calculation.
+- For the cap gains, I have the number from the sale, it's been plugged into the sheet, and the numbers look right as far as payouts to people go. I guess I just need to figure out what they made first, and then calculate the difference.
+- God I fucking excel.
+- Alright, emailed Ameer to clarify the mechanics of the cap gains.
+
+* September 10th
+- Man, putting together all of the Ikea furniture has a done a number on my right index finger. My Mac doesn't recognize my finger print lol.
+- Plan for today is to finish building the furniture and move the trash to the garage. Only have a desk to do now I believe. Should take the lamps in the bedroom out of their boxes too.
+- I also want to move the filing cabinet into the closet.
+- I put together my new bookcases yesterday, they look so much nicer than the white ones, and man, two of those bookcases holds way more stuff than three of the little ones. I have like 6 full shelves that are empty. So I'll put stuff like the cars on them.
+- I really just want to get this office cleaned up. I might try bringing the dining room table up here and using it as a desk, but I'm not sure if I'll be able to or not. It's really difficult to flip by myself.
+- Alright, booked a haircut for 3pm on Friday. Should look fresh to pick up bubs.
+- I wonder if instead of a 6K dell I should get one of the ultra wides for that huge desk. Although, I'm not really sure how those are for gaming anyways... Might be good with a tiling window manager though.
+- Hmm, so was gonna buy this Brother Printer, but looks like there's another model up the range with scanning and copying (which I'd like). It's the same price on Amazon and at Staples but unfortunately they don't sell them in-store at Staples, so Amazon it is!
+- Ok, all of the Ikea furniture has been assembled. Holy shit there's so much packing material. I hope the unpacking lady will take it away for me tomorrow.
+  - Oh, still need to unpack the lamps.
+- House is looking a lot better already though. My office is pretty much sorted now. I've moved the Chalk records to banker boxes, and put my own stuff into the filing cabinet. I've cleared off most of the stuff from the floor and put it on the shelves, just a bit of loose odds and ends on my desk.
+- The spare bedroom is nearly done too. Moved most of the shit that was in there and assembled the desk.
+- Next thing up is, 1) installing the bidet in the spare bathroom, then moving the books out of the way in the bonus room so that I can put the couches in place. Then putting everything on the bookshelves. I don't think I'll be able to do the TV by myself, but at least I can get the speakers probably installed. After which, it's just the master bedroom, which is waiting on the new bedframe and shit anyways.
+- Not much in the basement to do, just assembling the rack, and that'll clear up most of it.
+- I'm not really going to touch the main floor until Sarah is here, it's a lot of her shit and stuff for the pets.
+- I'm thinking of getting a weighted vest for walking the dog. I already commit to doing 30-40min of walking everyday, why not make it a bit harder? I can also use the weighted vest going up and down the stairs, and doing pushups/pullups/squats. Makes for a really versatile way to add weight to body weight exercises. Actually, from that point of view, may not even make sense to get an elliptical. Since apparently it shoots your heart rate up a LOT while walking (especially on an incline). Stairs in particular are a real son of a bitch.
+  - Beat Sabre and Ring Fit are also good additions I think.
+
+* September 9th
+- Alright, nice long sleep last night. First time I got to sleep in in for everrrr.
+- Plan for the weekend is pretty much keep working on getting the house ready. Thinking I might hit up Ikea and get a bookshelf or two for the office.
+- I'm thinking of setting up the bonus room today, as best I can that is.
+- I think our bedframe is supposed to get here on the 12th, which would be tuesday.
+- Need to figure out the TV mounting. There's a plate on the wall, not sure if I can just use that or if I need to replace it.
+- I think today, I'll go to Ikea to pick up two of those bookcases for my office. And the bouclair is there too I think, so I have to pick up the lamps for Sarah.
+- Ikea has much nicer dining tables as general tables. Like this one: https://www.ikea.com/ca/en/p/moerbylanga-table-oak-veneer-brown-stained-50386245/
+  - Too bad it has that line through the middle, would work great as a desk.
+- Oh, I wonder if I could use our current dining room table as a second desk up here...
+- Another thing I had an idea to do was to call RBC concierge and have them put together an itinerary of restaurants for weekly date nights. Like plan out a bunch of places that'll meet Sarah's dietary requirements, and allow us to see more of the City.
+  - Like, I don't like researching things for dates, but I could get them to do it!
+  - Same thing for like, random events and just general date night ideas. Fun things to do.
+- I think I should get a stud finder, and also some drill bits?
+- Alright, let's order the networking equipment!
+  - Ok, rack ordered. Says delivery is the 18th... A bit far out. Let's see how long it'll take to order the Ubiquiti stuff, if it's pretty quick, might just wait until the next CC cycle.
+  - For Wifi, I'm thinking one in my office, one in the main bedroom, then another in Sarah's office? And maybe one in the theater room (more for when we have it built out, and the hot tub). Should give amazing coverage. I can just order probably three for now.
+  - Hmm, those are PoE. So I'll need an adapter for them I think...
+  - Ok, they have adapters for PoE, $10 each.
+  - I don't think these come with any ethernet cables though. In particular I'll need some PoE ones. The rest I should have enough of though.
+  - I'll need two switches, one for my office, and another for the bonus room.
+  - Oh, all Cat6 can handle PoE, and even Cat5e...
+  - Alright, I'm pretty sure all of my patch cables are Cat6. So I'll order the PoE adapters just in case (they aren't that expensive).
+  - Lol, ok those amazon ones I have are Cat7.
+  - Alright ordered. No estimate for when it'll arrive though.
+- I should also update my address on a bunch of stuff...
+  - Really nice of RBC to update my address for me. Just did the Amex.
+- Sarah wants me to try out a bunch of different couches, but not buy them until she's here. So may as well do that while I'm there. Ikea will be last though since I'll have to put stuff in the truck bed.
+- Looks like I did use the points on my BMO mastercard. So I can go ahead and cancel that card!
+- Oh no way, there aren't any Canada Computers in Alberta. I need a new computer store...
+  - Looks like Memory Express is the way to go. Some random poll on Reddit comparing the two had ME WAY ahead in support. Their customer service must be a lot better.
+- Alright, time to go do some shoppin.
+
+* September 8th
+- Welcome to Calgary! Everything has been unpacked, just a matter of putting it all away where it belongs. I'll try and do my best to get it put away. But lord knows Sarah'll want to reorganize a bunch of stuff once she's here on the 16th.
+- I've got the Pro Display set up and my laptop as well. I've made a bit of a layout change with the L being the other orientation. I'm thinking I'll just use the Pro Display and the internal display for the Mac. I find it's a bit of a strain to look at 3 monitors and so I don't even use the internal display all that much, which is odd since it's the better display than the 4K. The receiver is now set up behind the monitor and the monitor is a bit lower and forward.
+- This office is a fair bit bigger than my previous one, which is nice. With more space, I'm thinking of getting another desk for the PC. Not sure. I could also set the PC up to my right, there's some space. But I'd need a little table or something to put the tower on. Another approach would be to put the PC in the basement with the home theater maybe.
+- There's a lot more furniture Sarah wants to buy. I think I'll let her handle a lot of that once she gets here. There's so much money flying around right now it's kind of nuts. But all in good time.
+- My main tasks for the next little bit will be getting my office sorted and the more notably the networking equipment. I can put my old TPLinks to use with the nice ethernet backhaul that we have.
+- I'd like to get a better solution for the chairs on the carpet. This carpet is quite nice, but I'm so sick of moving the fucking padding around all the god damn time. But I'm not sure what's better. Hardwood is obviously easiest, but the carpet is a lot nicer on the feet.
+- For my books, I'm gonna get some new shelves. One of mine didn't survive the journey entirely, and another is on its last legs. Oh well, they were cheap. But my last office started to feel a bit claustrophobic with so many books. What I'd like to do is just get some shelves for my technical books and stuff, and then move all of my other books into a main sort of library with Sarah's books. Another thing I'd like to do is box up whatever stuff is left from the Chalk records and use the filing cabinet for our own stuff like car records, and financials and shit like that.
+- I don't think I'm gonna do anything with the home theater downstairs until later. Probably around the same time we look at the hot tubs. Focus should be on the main floor and upstairs for now.
+- Nice thing with the bonus room is that it's bigger than our previous living room. We can use the sectional as a sectional (what a crazy notion).
+- One thing I'm a bit concerned about is getting a primary care physician. I haven't been taking my boosters, so I'm developing a stock pile, and I have at least three months of vyvanse on top of the last few weeks of what I had before. That should last me at least six months, but six months is the wait time for a private physician, and no idea what it's like for an Alberta Healthcare provider. And then there's the issue of, will they accept my diagnosis or not...
+- Oh, I think the prior owner was a bit of a bozo. There were a bunch of little things that I had to fix, and I can't believe they didn't drive him insane. Maybe they drove the wife insane, I don't know. Today I had to fix all of the toilet paper holders since they were all loose. Yesterday, I had to replace the batteries in one of the smoke detectors (could be all of the moving that did something). The door to the garage had a smart lock, and it was completely dead. The wife said they never used it, and they don't have a key for it... The garage door itself would always rebound once it hit the bottom and it didn't go all the way up either. Meanwhile, the front door lock was entirely fucked. Like, it was impossible to unlock it. The mechanism only works when this little part touches the door frame, which it didn't. And then the actual bolt was essentially jammed since they never used it (probably because they couldn't unlock it). So had to lubricate it, and put some spacing in the bolt panel. So weird.
+- All that said, this house is absolutely gorgeous. I can't stop looking out the back window, it's incredible. There are some houses going in with a direct line of sight, but it looks like there'll be trees in the way for the most part. And you can see the rockies from the bedroom and the shower in particular. Was a clear day yesterday and it was just stunning.
+- The orientation of the house is really good for developing a cross breeze. If you open a window in the front and one in the back, you get a proper breeze through the house.
+- I think tonight I'm gonna hit up the shawarma place I went to with Will back in July. And then build the bed in the basement.
+- Hmm, car is still in Winnipeg, where it's been for the past few days.
+- Oh yea, I bought a Sonos amp to connect to the speakers on the main floor and out back. Pretty cool. The wiring was a bit dumb, the colours for the outdoors and indoors were flipped. So outside left would've been inside right if I used the same colours. Dumb. The wiring for that comes out by all of the networking equipment, so I'll have to rackmount the amp lol.
+- Speaking of which, I'll have to order the ubiquiti stuff this weekend, maybe do that tonight.
+  - The tech who came out from Telus was the most competent tech I've ever seen. I told him verbatim the message Will sent me and he's like "oh yea, I'll leave the box open for you so you can take the SFP out and plug it directly into your Ubiquiti dream machine. It should connect without any issues". I guess once the casing goes on the box, it's typically really hard to get it back off lol.
+- All of the networking is in the basement, but there aren't any ethernet leads out of the furnace room and into other basement rooms. Just main floor and upstairs. At least every room upstairs has one.
+- Pretty excited to have dual zone climate control in the house. Sarah can be nice and warm downstairs, I can be nice and cool up here (which is also better for sleeping).
+- Man that shawarma place slaps.
+- I need to look for a butcher.
+
+* September 5th
+- Ok, did the walkthrough of the house. Possession should be shortly. Need to put together a list of things to buy. Tomorrow the Telus tech should be there from 8-10 I think. Then the steam cleaning is scheduled for 11am. But, the carpets of the place are still dirty. So I'll need to do some vacuuming. Not sure if I should buy a new one or not (since it's dog hair).
+  - I'm thinking I'll hit up home depot. Should look at getting a ladder.
+  - Need to get a bucket, some magic erasers, a ladder, plungers/brushes for the toilets.
+  - Oh damn, there's an upright vacuum and upholstery cleaner two in one thing... on sale for $300. Might buy that.
+  - Ok lots in stock.
+  - Oh, it's actually a carpet cleaner. Still might be worth a buy though.
+  - Oh yea garbage bags.
+- Looks like Canadian Tire and Home Depot are in the same location. Good shit.
+- Funnily enough, the owners missed a whole closet worth of shit, so they're going to come by at 3:30 to pick it up. Hopefully, I get the all good call for possession, then I can just run out and pick this shit up.
+- Also followed up with Sheffield for the final weighing.
+  - Oh, just looked and the original estimate did include unpacking. So that's good. Hopefully that means that they can unpack on Friday if the stuff is coming on Thursday.
+  - Will said they take AMEX lol. So that'd be good. Lots of points.
+- Will uses Freedom for his second internet provider. Interestingly they aren't taking new activations. But he said it's $60 for 75/15. But Shaw has a $55 plan (since we have Rogers mobility) and that's 75/75. I mean it makes sense to have the backup internet be cheap.
+- I should also buy a screwdriver so that I can open up the box that has all of the ethernet cabling in it.
+- Other things I need to do is set up mail forwarding to the new address, and get a key cut because apparently they only had one? So fucking weird.
+- Should look at smart doorbells.
+- I should also order the Ubiquiti stuff soon.
+- And look into mounting equipment for TVs. I was just gonna have the entertainment unit be in the bonus room, but it looks like they had a TV mounted there, and so if I just mount the TV, I don't have to patch anything.
+- Eh, may as well head out and do this stuff, grab some lunch, etc. I expect I'll get the all clear while I'm out, then I can just head right over.
