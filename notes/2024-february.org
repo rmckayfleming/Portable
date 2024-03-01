@@ -1,3 +1,42 @@
+* February 29th, 2024
+- Grated my finger while making cheese for pizzas last night. Just a gash, but now my right index finger is out of order. Once again, this means I can't use touch id. So I've decided to use my ring finger for that instead. Also, I can't fucking type on the split keyboard lol.
+- Thinking I'll take bubs for a walk, then not sure about what to do today. Probably spend it in the basement since I can't use my keyboard...
+- Took a bunch of cardboard to the recycling. Passed a Drive Safe car on the way back in a random neighbourhood. I swear to god if I get a fucking ticket I'm going to be pissed. Because I have no idea how fast I was going, and it's not like I'm going to keep a strict eye on my speed in a neighbourhood. I'm too busy looking out for people!
+  - Picked up some more vitamins and stuff from shoppers on the way back.
+- Not sure what I want to do with the rest of my day.
+- Wow, so the MSI Claw is $200 more than the Ally... and early reviews have it performing worse... but might be driver optimization.
+- I think I'm gonna work out today. Legs let's go!
+  - Otherwise, maybe try getting my emacs config made more portable?
+  - Do some reading?
+- Oh found out something interesting yesterday when playing Minecraft with the guys. On Ultrawide monitors, the FOV is usually fucked up, so usually I expect to increase the FOV to make it look right. Wider screen, wider FOV angle right? Wrong! You have to decrease the FOV to make it look right! Specifically, setting it somewhere in the 50-60 degree range.
+- Brought the lawn ornaments in. Fuck, getting the ground stakes out was almost as hard as getting them in... I moved the wheelbarrow down the side of the house and turned it upside down to hopefully block the dog from going up the side. But who knows, she can be pretty motivated when she wants to be.
+- Sarah's taken the cat to the vet since he hasn't been eating much lately. I'm expecting a tearful phonecall, but we'll see.
+- I had the bandage off my finger, but in taking the fucking ground stakes out it's opened up a bit again so I've put one back on. I did want to clean up emacs, but... I don't really want to type and shit now.
+- Interesting, apparently on the Lisa you always created new documents on the desktop. You created a stationary item, and then could change it I guess.
+
+* February 28th, 2024
+- Went to an ultrasound appointment this morning. Baby's good. No more debris in the stomach.
+- Yesterday went to upload my save from Far Cry 6 on the PS5 so that I could use it on the Ally and... forgot that I'd uninstalled it. Lol. Not gonna reinstall it just to upload the save, so... guess I'll start a new game at some point.
+- Was thinking this morning that maybe I should install ChimeraOS on Nebula instead of Guix and just use Guix in QEMU if I want to fuck around with it. Would be interesting to see how it compares to SteamOS.
+  - Also, confusingly there's Chimera Linux, which is entirely different though interesting in that it's a Linux distro that uses the FreeBSD userland and LLVM instead of GCC.
+- Expecting a call from Taylor at 12:30 about the employment stuff. Just got back from a walk.
+- Ended up hitting up Tim's on the way to the ultrasound, got a coffee and it tasted so good. Though of course the after taste in my mouth after was awful.
+- Tried updating Oblivion's Nix packages and it said derivations failed to build without any indication of why... ah Nix.
+- Minecraft tonight! Hopefully get to see everyone. Figure I'll play in my office.
+- Where I'm at with the emulator/assembler is that I need a test suite, but I don't want to write one since that seems like a lot of work... and I can't find a lot of good stuff online either.
+  - It's so weird how anytime I see something as work, it becomes really hard to do for whatever reason. Unless it's for someone else, or it's physical in nature. And I was reminded of this yesterday when I saw a tweet or something about how optimizing a task for efficiency takes all of the fun out of things and makes you begin to hate it. It's better to do something inefficient if you enjoy doing it that way. And I think somewhere along the line, I seem to have lost a sense of "having fun" with computers. And I'm not sure how to get it back.
+- Photoshoot last night was pretty fun. Sarah had a great time too. The photos should turn out nicely.
+- Gonna work out today. Upper body.
+- Well, I've uploaded my emacs config and customization to Github. As well as my notes. That way I can pull them all down onto other machines. I think I just need to implement some commands within emacs to automatically push my notes up and sync them down, ideally on a keypress. Only thing is... not sure how to best do that. Maybe I should just bite the bullet and use Obsidian?
+- Work out complete. Feels good man.
+- Hmm, was looking into syncing Org mode files and someone uses syncthing, which I've used before. Might be worth looking into...
+  - Actually, that'd probably work fine for me come to think of it. I rarely use two computers at a time. Syncing between computers requires them to both be on of course, but I have a solution for that! Aegis! It's always on and available, so I could set up a syncthing docker service on it, and that way my stuff would be backed up as well.
+  - And done! I already had Syncthing setup for the torrents from Daniel's Euro machine, so just needed to add a Share and share it. Now we've backed everything up! I'll have to try on Oblivion next. Might not be a bad idea to sync my emacs config too come to think of it.
+- Syncing my emacs config shouldn't be that hard, I'll just need to reorganize some things. Ideally putting a brunt of the code in Portable. Then I'd just need a little stub in the emacs.d folder to load from there.
+- Syncthing set up on Oblivion too. Next thing to do is make syncthing.mckayfleming.systems work instead of needing to enter a port number.
+  - Done! Had to change the network that Syncthing was on. It was on bridge, but needed to be in the media network which is the same as all of the other exposed containers.
+- Huh, I should look at FUSE. Then I could write a storage layer that maps files to blocks.
+
 * February 27th, 2024
 - 1-1 with Daniel this morning. Have a haircut at 11am. Doubt I'll take the dog for a walk (it's -21c today).
 - Hey hey, got a response back from PS. They're adding $44K in additional comp on their original offer. Not bad, not bad.

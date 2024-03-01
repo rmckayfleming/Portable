@@ -1,0 +1,14 @@
+* March 1st, 2024
+- Well, no therapy today. Got a call from their office that the therapist is really sick (puking), so rebooked for Tuesday.
+- I'm feeling sad this morning. Not sure why. Or even what about exactly.
+- Ordered some Soylent last night. $180 for a taster pack which includes 12 bottles each of 3 flavours. Strawberry, Chocolate, and Mocha (which has caffeine).
+- Fixed my chair! Wasn't sitting up straight, turns out a bunch of the bolts were loose on the back. Cheap chair. What do you expect?
+- Lol, was thinking that I'd need to rename "remacs" since it's no longer about Rembrandt. However! It could just as easily mean "Ryan's Emacs". So there!
+  - Let's think this through. We want to sync our config with Syncthing, so we need one folder that'll be synced between devices, and others that won't be.
+  - First thing is that I could drop the default-init and just make that my personal one.
+  - Could also just put it in Portable! That's kinda the point of it. A place to keep everything that should be shared between machines automatically.
+  - Alright, things seem to be loading now! Will need to try on Oblivion next.
+  - Happy with this. Just gotta try it on Oblivion now. Should set up some macros for journal creation.
+- I really need to send Mark an updated statement for the taxi LOC. I'll do that after I go for a walk.
+  - Okay done. Shower time.
+- What do I want to do with the rest of my day? Did a bunch of stuff with Emacs, so should try that out on Oblivion. Otherwise... not sure.
